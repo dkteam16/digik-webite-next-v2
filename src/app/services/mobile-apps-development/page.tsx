@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { ComingSoonPage } from "@/components/coming-soon-page";
+
+export const metadata: Metadata = {
+  "title": "Mobile Apps Development",
+  "description": "Custom mobile applications for manufacturers and B2B industrial companies looking to extend their digital reach."
+};
+
 
 // TODO: Replace this placeholder with the real Figma design.
 // Figma file: Oa2R8GAiByOdXZGBfmicsQ, node-id: 568:525

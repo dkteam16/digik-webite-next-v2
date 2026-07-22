@@ -32,7 +32,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Digital Kangaroos | B2B Web Design Agency",
+  title: {
+    default: "Digital Kangaroos | B2B Web Design Agency",
+    template: "%s | Digital Kangaroos",
+  },
   description:
     "High-performance websites and SEO strategies for manufacturers, exporters, and B2B industrial companies.",
 };

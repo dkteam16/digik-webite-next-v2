@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { ComingSoonPage } from "@/components/coming-soon-page";
+
+export const metadata: Metadata = {
+  "title": "Q&Q Solutions — Case Study",
+  "description": "How we audited, cleaned, and optimised 240+ Google Business Profile listings for a pan-India franchise chain."
+};
+
 
 // TODO: Replace this placeholder with the real Figma design.
 // Figma file: Oa2R8GAiByOdXZGBfmicsQ, node-id: 1002:927

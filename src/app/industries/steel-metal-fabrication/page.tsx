@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { ComingSoonPage } from "@/components/coming-soon-page";
+
+export const metadata: Metadata = {
+  "title": "Steel & Metal Fabrication",
+  "description": "Web design and SEO built for steel and metal fabrication companies."
+};
+
 
 // TODO: Replace this placeholder with the real Figma design.
 // Figma file: Oa2R8GAiByOdXZGBfmicsQ, node-id: 875:330

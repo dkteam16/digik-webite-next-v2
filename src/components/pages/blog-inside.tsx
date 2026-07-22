@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { NewsletterForm } from "@/components/newsletter-form";
 
 const imgTransparent1 = "/images/blog-inside/imgTransparent1.png";
@@ -29,45 +30,45 @@ export function BlogInsidePage() {
       <Link href="/careers" className="-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(83.33%+36px)] not-italic text-[#cecece] text-[20px] text-right top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:369">Careers</Link>
       <Link href="/our-work" className="-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(83.33%-81px)] not-italic text-[#cecece] text-[20px] text-right top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:370">work</Link>
       <div className="-translate-x-1/2 absolute h-[56px] left-1/2 top-[24px] w-[208px]" data-node-id="1035:371" data-name="Transparent 1">
-        <img alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} />
+        <Image alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} fill sizes="100vw" />
       </div>
       <div className="absolute h-[692px] left-[124px] rounded-[16px] top-[232px] w-[1212px]" data-node-id="1035:484" data-name="image 215">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgImage215} />
+        <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgImage215} fill sizes="100vw" />
       </div>
       <div className="absolute bg-[#f5f5f5] border border-[rgba(0,0,0,0.09)] border-solid h-[392px] left-[calc(66.67%+76px)] rounded-[16px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[232px] w-[441px]" data-node-id="1035:486" />
       <div className="absolute bg-[#f5f5f5] border border-[rgba(0,0,0,0.09)] border-solid h-[392px] left-[calc(66.67%+76px)] rounded-[16px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[644px] w-[441px]" data-node-id="1035:495" />
       <div className="absolute bg-[#f5f5f5] border border-[rgba(0,0,0,0.09)] border-solid h-[392px] left-[calc(66.67%+76px)] rounded-[16px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[1759px] w-[441px]" data-node-id="1039:547" />
-      <p className="[word-break:break-word] absolute font-montserrat font-semibold font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[531px] tracking-[-0.4px] w-[394px]" data-node-id="1035:487">
-        Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)
+      <p className="[word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[531px] tracking-[-0.4px] w-[394px]" data-node-id="1035:487">
+        {`Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)`}
       </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-semibold font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[943px] tracking-[-0.4px] w-[394px]" data-node-id="1035:496">
-        Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)
+      <p className="[word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[943px] tracking-[-0.4px] w-[394px]" data-node-id="1035:496">
+        {`Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)`}
       </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-semibold font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[2058px] tracking-[-0.4px] w-[394px]" data-node-id="1039:548">
-        Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)
+      <p className="[word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[2058px] tracking-[-0.4px] w-[394px]" data-node-id="1039:548">
+        {`Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)`}
       </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-normal font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[501px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1035:488">
+      <p className="[word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[501px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1035:488">
         Jul 09, 2026
       </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-normal font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[913px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1035:497">
+      <p className="[word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[913px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1035:497">
         Jul 09, 2026
       </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-normal font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[2028px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1039:549">
+      <p className="[word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[2028px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1039:549">
         Jul 09, 2026
       </p>
       <div className="absolute contents left-[calc(66.67%+76px)] top-[232px]" data-node-id="1035:489" data-name="Mask group">
         <div className="-translate-y-1/2 absolute h-[251.715px] left-[calc(66.67%+76px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0.861px] mask-size-[441px_249.785px] top-[calc(50%-1277px)] w-[440.638px]" data-node-id="1035:491" style={{ maskImage: `url("${imgImage214}")` }} data-name="image 214">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(66.67%+76px)] top-[644px]" data-node-id="1035:498" data-name="Mask group">
         <div className="-translate-y-1/2 absolute h-[251.715px] left-[calc(66.67%+76px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0.861px] mask-size-[441px_249.785px] top-[calc(50%-865px)] w-[440.638px]" data-node-id="1035:500" style={{ maskImage: `url("${imgImage214}")` }} data-name="image 214">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(66.67%+76px)] top-[1759px]" data-node-id="1039:550" data-name="Mask group">
         <div className="-translate-y-1/2 absolute h-[251.715px] left-[calc(66.67%+76px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0.861px] mask-size-[441px_249.785px] top-[calc(50%+250px)] w-[440.638px]" data-node-id="1039:552" style={{ maskImage: `url("${imgImage214}")` }} data-name="image 214">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} fill sizes="100vw" />
         </div>
       </div>
       <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0] left-[calc(50%-836px)] not-italic text-[#333] text-[0px] top-[961px] tracking-[-0.4px] w-[1180px] whitespace-pre-wrap" data-node-id="1035:513">
@@ -114,8 +115,8 @@ export function BlogInsidePage() {
         <p className="leading-[normal] text-[20px]">What to do: Work with a professional corporate website design agency to conduct a design audit — a side-by-side comparison of your site against industry-current standards and your nearest competitors. A good agency will identify specifically which visual elements are dragging your credibility down and propose targeted improvements, whether that is a full visual redesign or a focused refresh of key pages.</p>
       </div>
       <div className="absolute bg-[#333] h-[683px] left-[calc(66.67%+76px)] rounded-[16px] top-[1056px] w-[441px]" data-node-id="1039:520" />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-montserrat font-semibold font-semibold leading-[normal] left-[calc(83.33%-24px)] text-[30px] text-center text-white top-[1080.79px] tracking-[-0.6px] whitespace-nowrap" data-node-id="1039:521">
-        Let's Move Forward Faster
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-24px)] text-[30px] text-center text-white top-[1080.79px] tracking-[-0.6px] whitespace-nowrap" data-node-id="1039:521">
+        {`Let's Move Forward Faster`}
       </p>
       <input
         type="text"
@@ -151,6 +152,7 @@ export function BlogInsidePage() {
       />
       <div className="absolute h-[73px] left-[calc(66.67%+148px)] top-[1562px] w-[298px]" data-node-id="1039:533" data-name="image 216">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element -- decorative background uses a custom percentage crop; next/image's fill sizing conflicts with it */}
           <img alt="" className="absolute h-[1038.36%] left-[-11.41%] max-w-none top-[-769.86%] w-[170.81%]" src={imgImage217} />
         </div>
       </div>
@@ -158,7 +160,7 @@ export function BlogInsidePage() {
         <div className="flex-none rotate-90">
           <div className="h-0 relative w-[9px]">
             <div className="absolute inset-[-3.68px_-5.56%_-3.68px_0]">
-              <img alt="" className="block max-w-none size-full" src={imgArrow1} />
+              <Image alt="" className="block max-w-none size-full" src={imgArrow1} fill sizes="100vw" />
             </div>
           </div>
         </div>
@@ -167,7 +169,7 @@ export function BlogInsidePage() {
         <div className="absolute bg-[#f4a31d] h-[56px] left-[calc(66.67%+203px)] rounded-[16px] top-[1658px] w-[187px]" data-node-id="1039:540" />
         <Link href="/contact" aria-label="Let's Connect" className="absolute border border-solid border-white h-[48px] left-[calc(66.67%+208px)] rounded-[13px] top-[1662px] w-[177px]" data-node-id="1039:541" />
         <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(83.33%-24px)] not-italic text-[20px] text-center text-white top-[1674px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1039:542">
-          Let's Connect
+          {`Let's Connect`}
         </p>
       </div>
       <div className="-translate-x-1/2 absolute bottom-0 contents left-1/2" data-node-id="1039:553">
@@ -182,12 +184,12 @@ export function BlogInsidePage() {
         </p>
         <div className="-translate-x-1/2 absolute h-0 left-1/2 top-[3233px] w-[1920px]" data-node-id="1039:557">
           <div className="absolute inset-[-0.5px_0]">
-            <img alt="" className="block max-w-none size-full" src={imgVector20} />
+            <Image alt="" className="block max-w-none size-full" src={imgVector20} fill sizes="100vw" />
           </div>
         </div>
         <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(16.67%+1px)] not-italic text-[16px] text-white top-[2914px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="1039:558">{`Web Development & Software Company`}</p>
         <div className="absolute h-[64px] left-[322px] top-[2845px] w-[234px]" data-node-id="1039:559" data-name="Transparent 1">
-          <img alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} />
+          <Image alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} fill sizes="100vw" />
         </div>
         <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0] left-[calc(50%-240px)] not-italic text-[0px] text-white top-[2841px] tracking-[-0.38px] uppercase w-[279px] whitespace-pre-wrap" data-node-id="1039:560">
           <p className="font-rajdhani font-semibold mb-0 text-[19px]">
@@ -234,21 +236,21 @@ export function BlogInsidePage() {
           <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">info@digitalkangaroos.com</p>
         </div>
         <Link href="https://www.facebook.com/digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="absolute inset-[89.2%_30.1%_9.39%_67.5%]" data-node-id="1039:566">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} fill sizes="100vw" />
         </Link>
         <Link href="https://www.linkedin.com/company/digital-kangaroos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+1304px)]" data-node-id="1039:567">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} fill sizes="100vw" />
         </Link>
         <Link href="https://www.instagram.com/digitalkangaroos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="absolute inset-[89.2%_23.4%_9.39%_74.21%]" data-node-id="1039:568">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} fill sizes="100vw" />
         </Link>
         <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="absolute inset-[89.2%_20.04%_9.39%_77.56%]" data-node-id="1039:572">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} fill sizes="100vw" />
         </Link>
         <div className="absolute contents inset-[89.2%_16.69%_9.39%_80.92%]" data-node-id="1039:575" data-name="Layer 3">
           <div className="absolute contents inset-[89.2%_16.69%_9.39%_80.92%]" data-node-id="1039:576" data-name="Color">
             <Link href="https://www.youtube.com/@digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="absolute inset-[89.2%_16.69%_9.39%_80.92%]" data-node-id="1039:577">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} />
+              <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} fill sizes="100vw" />
             </Link>
           </div>
         </div>

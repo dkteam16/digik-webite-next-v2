@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { ComingSoonPage } from "@/components/coming-soon-page";
+
+export const metadata: Metadata = {
+  "title": "B2B Branding",
+  "description": "Brand identity built for industrial companies — logos, visual systems, company profiles, and brand guidelines that build buyer trust."
+};
+
 
 // TODO: Replace this placeholder with the real Figma design.
 // Figma file: Oa2R8GAiByOdXZGBfmicsQ, node-id: 568:328

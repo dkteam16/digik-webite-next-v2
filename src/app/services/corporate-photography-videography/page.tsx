@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { ComingSoonPage } from "@/components/coming-soon-page";
+
+export const metadata: Metadata = {
+  "title": "Corporate Photography & Videography",
+  "description": "Professional photography and videography that showcases your factory, products, and process to build buyer trust."
+};
+
 
 // TODO: Replace this placeholder with the real Figma design.
 // Figma file: Oa2R8GAiByOdXZGBfmicsQ, node-id: 619:2

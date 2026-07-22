@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { ComingSoonPage } from "@/components/coming-soon-page";
+
+export const metadata: Metadata = {
+  "title": "Octave Mettle — Case Study",
+  "description": "How we repositioned a CNC machine shop with a new strategy, homepage, sitemap, and SEO keywords targeting global OEM buyers."
+};
+
 
 // TODO: Replace this placeholder with the real Figma design.
 // Figma file: Oa2R8GAiByOdXZGBfmicsQ, node-id: 1002:663

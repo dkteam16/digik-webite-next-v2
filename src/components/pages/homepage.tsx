@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { NewsletterForm } from "@/components/newsletter-form";
 
 const img134641 = "/images/homepage/img134641.jpg";
@@ -114,6 +115,7 @@ export function HomePage() {
           <div className="-rotate-90 flex-none">
             <div className="h-[1921px] relative w-[663px]" data-name="13464 1">
               <div className="absolute inset-0 opacity-16 overflow-hidden pointer-events-none">
+                {/* eslint-disable-next-line @next/next/no-img-element -- decorative background uses a custom percentage crop; next/image's fill sizing conflicts with it */}
                 <img alt="" className="absolute h-[101.98%] left-[-55.85%] max-w-none top-[-0.99%] w-[197.23%]" src={img134641} />
               </div>
             </div>
@@ -134,6 +136,7 @@ export function HomePage() {
       <div className="-translate-x-1/2 absolute bg-[#333] h-[878px] left-1/2 top-[9399px] w-[1920px]" data-node-id="183:2233" />
       <div className="absolute blur-[5.95px] h-[949px] left-0 top-0 w-[1920px]" data-node-id="131:6" data-name="image 1">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* eslint-disable-next-line @next/next/no-img-element -- decorative background uses a custom percentage crop; next/image's fill sizing conflicts with it */}
           <img alt="" className="absolute h-[138.35%] left-[-17.76%] max-w-none top-[-19.17%] w-[135.52%]" src={imgImage1} />
         </div>
       </div>
@@ -143,7 +146,7 @@ export function HomePage() {
       <Link href="/industries" className="[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(10%+116px)] not-italic text-[20px] text-white top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="141:746">Industries</Link>
       <Link href="/contact" className="[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(30%-131px)] not-italic text-[20px] text-white top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="222:2679">Contact</Link>
       <div className="-translate-x-1/2 absolute h-[117px] left-1/2 top-[333px] w-[426px]" data-node-id="139:733" data-name="Transparent 1">
-        <img alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} />
+        <Image alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} fill sizes="100vw" />
       </div>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-1/2 not-italic text-[32.871px] text-center text-white top-[460.96px] tracking-[-0.6574px] uppercase whitespace-nowrap" data-node-id="141:753">
         B2B Web Design agency
@@ -160,13 +163,13 @@ export function HomePage() {
           <p className="leading-[19px]">for more</p>
         </div>
         <div className="absolute h-[81px] left-[calc(40%+122px)] top-[844px] w-[140px]" data-node-id="141:762">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup263} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup263} fill sizes="100vw" />
         </div>
         <div className="absolute flex h-[12px] items-center justify-center left-[calc(40%+192px)] top-[900px] w-0" data-node-id="141:763">
           <div className="flex-none rotate-90">
             <div className="h-0 relative w-[12px]">
               <div className="absolute inset-[-7.36px_-8.33%_-7.36px_0]">
-                <img alt="" className="block max-w-none size-full" src={imgVector2} />
+                <Image alt="" className="block max-w-none size-full" src={imgVector2} fill sizes="100vw" />
               </div>
             </div>
           </div>
@@ -176,7 +179,7 @@ export function HomePage() {
         Export Company Website Design
       </p>
       <div className="absolute left-[calc(100%+51.33px)] size-[12.496px] top-[965.51px]" data-node-id="141:778">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse6} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse6} fill sizes="100vw" />
       </div>
       <div className="-translate-x-1/2 absolute bg-[#333] h-[106px] left-1/2 top-[953px] w-[1920px]" data-node-id="141:766" />
       <div className="-translate-x-1/2 absolute bg-[#333] h-[106px] left-1/2 top-[1825px] w-[1920px]" data-node-id="145:874" />
@@ -224,16 +227,16 @@ export function HomePage() {
       </p>
       <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(90%-341px)] not-italic text-[24.993px] text-white top-[987.34px] tracking-[-0.4999px] uppercase whitespace-nowrap" data-node-id="141:771">{`B2B Website Design & Development`}</p>
       <div className="absolute inset-[7.97%_95.42%_91.55%_1.51%]" data-node-id="145:799">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup266} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup266} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[7.99%_73.59%_91.57%_23.28%]" data-node-id="145:812">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup267} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup267} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[7.96%_49.9%_91.55%_46.93%]" data-node-id="145:814" data-name="Outline">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgOutline} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgOutline} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[7.95%_28.65%_91.49%_68.39%]" data-node-id="145:820">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup268} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup268} fill sizes="100vw" />
       </div>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-semibold leading-[23px] left-1/2 not-italic text-[#333] text-[22px] text-center top-[2102px] tracking-[-0.44px] uppercase w-[656px] whitespace-pre-wrap" data-node-id="148:916">
         Check out what we have been crafting.
@@ -272,27 +275,27 @@ export function HomePage() {
       </div>
       <div className="absolute contents left-[calc(40%+270px)] top-[3419px]" data-node-id="145:857" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[211px] left-[calc(70%-164px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[9px_3px] mask-size-[285px_204px] top-[calc(50%-2590.5px)] w-[302px]" data-node-id="198:339" style={{ maskImage: `url("${imgDk12}")` }} data-name="DK (1) 2">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDk13} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDk13} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%+183px)] top-[3254px]" data-node-id="145:861" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[262px] left-[calc(70%+124px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[42px_5px] mask-size-[267px_252px] top-[calc(50%-2732px)] w-[350px]" data-node-id="145:859" style={{ maskImage: `url("${imgImg02891}")` }} data-name="IMG_0289 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg2892} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg2892} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%+183px)] top-[3545px]" data-node-id="145:865" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[242px] left-[calc(80%-41px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[1px_32px] mask-size-[321px_178px] top-[calc(50%-2478px)] w-[322px]" data-node-id="145:863" style={{ maskImage: `url("${imgImg02901}")` }} data-name="IMG_0290 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg2902} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg2902} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%-24px)] top-[3173px]" data-node-id="145:869" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[266px] left-[calc(70%-117px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[148px_45px] mask-size-[165px_218px] top-[calc(50%-2851px)] w-[494px]" data-node-id="154:1051" style={{ maskImage: `url("${imgUntitled1}")` }} data-name="Untitled 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgUntitled2} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgUntitled2} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(40%+344px)] top-[3633px]" data-node-id="145:873" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[180px] left-[calc(70%-147px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[35px_1px] mask-size-[170px_176px] top-[calc(50%-2390px)] w-[240px]" data-node-id="154:1053" style={{ maskImage: `url("${imgImg02911}")` }} data-name="IMG_0291 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg2912} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImg2912} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute bg-[#f4a31d] h-[88px] left-[263px] rounded-[16px] top-[3601px] w-[304px]" data-node-id="150:940" />
@@ -317,20 +320,20 @@ export function HomePage() {
       </p>
       <div className="absolute contents left-[47px] top-[2306px]" data-node-id="152:949" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[675px] left-[calc(10%+154px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[207px_130px] mask-size-[598px_500px] top-[calc(50%-3598.5px)] w-[1012px]" data-node-id="152:948" style={{ maskImage: `url("${img1197211}")` }} data-name="119721 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img1197212} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img1197212} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(20%+277px)] top-[2306px]" data-node-id="152:953" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[516px] left-[calc(50%+105px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[55px_8px] mask-size-[598px_500px] top-[calc(50%-3556px)] w-[918px]" data-node-id="152:951" style={{ maskImage: `url("${img1197211}")` }} data-name="image 208">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage208} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage208} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%+123px)] top-[2306px]" data-node-id="152:957" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[510px] left-[calc(90%-154px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[193px_5px] mask-size-[598px_500px] top-[calc(50%-3556px)] w-[984px]" data-node-id="152:955" style={{ maskImage: `url("${img1197211}")` }} data-name="image 209">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage209} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage209} fill sizes="100vw" />
         </div>
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[689px] left-[calc(70%+39px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[505px_0px] mask-size-[598px_500px] top-[calc(50%-3461.5px)] w-[1226px]" data-node-id="360:2463" style={{ maskImage: `url("${img1197211}")` }} data-name="image 213">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage213} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage213} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute bg-[#f4a31d] h-[46px] left-[248px] rounded-[16px] top-[2333px] w-[180px]" data-node-id="152:958" />
@@ -441,7 +444,7 @@ export function HomePage() {
       <div className="absolute border border-[#f4a31d] border-solid left-[calc(20%+351px)] size-[61px] top-[4289px]" data-node-id="154:1101" />
       <div className="absolute contents left-[calc(20%+351px)] top-[4768px]" data-node-id="854:2">
         <div className="absolute inset-[39.14%_59.32%_60.62%_39.11%]" data-node-id="154:1085" data-name="Group">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} fill sizes="100vw" />
         </div>
         <div className="absolute border border-[#f4a31d] border-solid left-[calc(20%+351px)] size-[61px] top-[4768px]" data-node-id="154:1102" />
       </div>
@@ -542,22 +545,22 @@ export function HomePage() {
         Keyword Strategy
       </p>
       <div className="absolute inset-[35.22%_87.76%_64.54%_10.71%]" data-node-id="154:1154">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup5} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup5} fill sizes="100vw" />
       </div>
       <div className="absolute contents inset-[35.22%_59.35%_64.54%_39.11%]" data-node-id="154:1200">
         <div className="absolute inset-[35.22%_59.35%_64.54%_39.11%]" data-node-id="154:1201" data-name="Layer 2">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer2} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer2} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute inset-[35.21%_30.83%_64.53%_67.5%]" data-node-id="154:1203">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup8} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup8} fill sizes="100vw" />
       </div>
       <div className="absolute contents left-[189px] top-[4768px]" data-node-id="854:4">
         <div className="absolute border border-[#f4a31d] border-solid left-[189px] size-[61px] top-[4768px]" data-node-id="154:1100" />
         <div className="absolute contents inset-[39.14%_87.81%_60.63%_10.7%]" data-node-id="154:1205">
           <div className="absolute contents inset-[39.14%_87.81%_60.63%_10.7%]" data-node-id="154:1206" data-name="Group">
             <div className="absolute inset-[39.14%_87.81%_60.63%_10.7%]" data-node-id="154:1207" data-name="Group">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+              <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} fill sizes="100vw" />
             </div>
           </div>
         </div>
@@ -567,7 +570,7 @@ export function HomePage() {
         <div className="absolute contents inset-[39.15%_30.89%_60.64%_67.55%]" data-node-id="154:1211" data-name="Group">
           <div className="absolute contents inset-[39.15%_30.89%_60.64%_67.55%]" data-node-id="154:1212" data-name="Group">
             <div className="absolute inset-[39.15%_30.89%_60.64%_67.55%]" data-node-id="154:1213" data-name="Group">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup2} />
+              <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup2} fill sizes="100vw" />
             </div>
           </div>
         </div>
@@ -593,6 +596,7 @@ export function HomePage() {
         <div className="-rotate-90 flex-none">
           <div className="h-[1921px] relative w-[878px]" data-name="13464 2">
             <div className="absolute inset-0 opacity-16 overflow-hidden pointer-events-none">
+              {/* eslint-disable-next-line @next/next/no-img-element -- decorative background uses a custom percentage crop; next/image's fill sizing conflicts with it */}
               <img alt="" className="absolute h-[101.98%] left-[-17.69%] max-w-none top-[-0.99%] w-[148.93%]" src={img134641} />
             </div>
           </div>
@@ -607,7 +611,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[334.2px] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:1907" />
         </div>
         <div className="absolute bottom-[52.64%] left-[349.7px] top-[46.72%] w-[139.587px]" data-node-id="178:1910">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup196} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup196} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(20%+131px)] top-[5668px]" data-node-id="428:2932">
@@ -615,7 +619,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(20%+131px)] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:1916" />
         </div>
         <div className="absolute inset-[46.83%_64.86%_52.74%_27.34%]" data-node-id="178:1921">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup199} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup199} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%+85px)] top-[5668px]" data-node-id="428:2936">
@@ -623,7 +627,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(60%+85px)] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:1948" />
         </div>
         <div className="absolute inset-[46.79%_27.28%_52.69%_65.05%]" data-node-id="178:1950">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup3} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup3} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%+266px)] top-[5668px]" data-node-id="428:2937">
@@ -631,7 +635,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(60%+266px)] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:1920" />
         </div>
         <div className="absolute h-[46.829px] left-[calc(60%+276px)] top-[5728px] w-[150.521px]" data-node-id="178:1965" data-name="main-logo 1">
-          <img alt="Digital Kangaroos" className="absolute block inset-0 max-w-none size-full" src={imgMainLogo1} />
+          <Image alt="Digital Kangaroos" className="absolute block inset-0 max-w-none size-full" src={imgMainLogo1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(40%+289px)] top-[5668px]" data-node-id="428:2935">
@@ -639,10 +643,10 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(40%+289px)] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:1946" />
         </div>
         <div className="absolute h-[37px] left-[calc(40%+294px)] top-[5733px] w-[35px]" data-node-id="178:2027" data-name="image 115">
-          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage115} />
+          <Image alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage115} fill sizes="100vw" />
         </div>
         <div className="absolute h-[37px] left-[calc(40%+329px)] top-[5733px] w-[125px]" data-node-id="202:346" data-name="image 208">
-          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage210} />
+          <Image alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage210} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(80%+63px)] top-[5668px]" data-node-id="428:2938">
@@ -651,7 +655,7 @@ export function HomePage() {
         </div>
         <div className="absolute contents left-[calc(80%+71px)] top-[5732px]" data-node-id="178:2028">
           <div className="absolute h-[39.208px] left-[calc(80%+71px)] top-[5732px] w-[153.429px]" data-node-id="178:2029" data-name="Layer_1">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer1} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer1} fill sizes="100vw" />
           </div>
         </div>
       </div>
@@ -660,7 +664,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[151px] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:2034" />
         </div>
         <div className="absolute h-[21px] left-[166px] top-[5741px] w-[140px]" data-node-id="202:342" data-name="sddasas 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSddasas1} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSddasas1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(20%+311px)] top-[5845px]" data-node-id="428:2943">
@@ -670,7 +674,7 @@ export function HomePage() {
         <div className="absolute contents inset-[48.33%_55.37%_51.33%_36.61%]" data-node-id="178:2060" data-name="Group">
           <div className="absolute contents inset-[48.33%_55.37%_51.33%_36.61%]" data-node-id="178:2061" data-name="Clip path group">
             <div className="absolute inset-[48.33%_55.37%_51.33%_36.61%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-size-[153.866px_41.253px]" data-node-id="178:2064" style={{ maskImage: `url("${imgGroup4}")` }} data-name="Group">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup6} />
+              <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup6} fill sizes="100vw" />
             </div>
           </div>
         </div>
@@ -681,7 +685,7 @@ export function HomePage() {
         </div>
         <div className="absolute h-[48.501px] left-[calc(40%+301px)] overflow-clip top-[5904px] w-[144.668px]" data-node-id="178:2094" data-name="wathif_big-03 1">
           <div className="absolute inset-[5.43%_4.25%_10.97%_3.48%]" data-node-id="178:2095" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup7} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup7} fill sizes="100vw" />
           </div>
         </div>
       </div>
@@ -690,7 +694,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[331px] rounded-[18px] top-[5845.28px] w-[170.421px]" data-node-id="178:2057" />
         </div>
         <div className="absolute inset-[48.25%_74.56%_51.25%_17.86%]" data-node-id="178:2104">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup219} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup219} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%+266px)] top-[5845px]" data-node-id="428:2939">
@@ -698,10 +702,10 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(60%+266px)] rounded-[18px] top-[5845px] w-[170.421px]" data-node-id="178:2048" />
         </div>
         <div className="absolute h-[62.711px] left-[calc(60%+317.96px)] top-[5886.88px] w-[64.991px]" data-node-id="178:2120" data-name="image 205">
-          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage205} />
+          <Image alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage205} fill sizes="100vw" />
         </div>
         <div className="absolute h-[15.963px] left-[calc(60%+278.05px)] top-[5954.15px] w-[145.945px]" data-node-id="178:2121" data-name="image 206">
-          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage206} />
+          <Image alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage206} fill sizes="100vw" />
         </div>
       </div>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(50%+0.5px)] not-italic text-[#333] text-[20px] text-center top-[6195px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="164:1235">
@@ -778,68 +782,68 @@ export function HomePage() {
       </p>
       <div className="absolute h-0 left-[195px] top-[7860px] w-[224px]" data-node-id="178:2171">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector7} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector7} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute h-0 left-[calc(40%+165px)] top-[7860px] w-[236px]" data-node-id="178:2172">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector9} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector9} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute h-0 left-[calc(60%+121px)] top-[7860px] w-[232px]" data-node-id="178:2173">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector10} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector10} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute h-0 left-[calc(20%+140px)] top-[7860px] w-[304px]" data-node-id="178:2174">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector8} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector8} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute inset-[64.14%_17.88%_35.56%_80.14%]" data-node-id="178:2175" data-name="Icon">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon} fill sizes="100vw" />
       </div>
       <div className="absolute contents inset-[64.14%_35.4%_35.55%_62.6%]" data-node-id="178:2181">
         <div className="absolute inset-[64.14%_35.4%_35.55%_62.6%]" data-node-id="178:2182" data-name="layer1">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer3} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer3} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents inset-[64.11%_53.02%_35.53%_44.69%]" data-node-id="178:2184">
         <div className="absolute contents inset-[64.11%_53.02%_35.68%_44.69%]" data-node-id="178:2185" data-name="Group">
           <div className="absolute inset-[64.11%_53.02%_35.68%_44.69%]" data-node-id="178:2186" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup9} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup9} fill sizes="100vw" />
           </div>
         </div>
         <div className="absolute contents inset-[64.43%_53.71%_35.53%_45.37%]" data-node-id="178:2188" data-name="Group">
           <div className="absolute inset-[64.43%_53.71%_35.53%_45.37%]" data-node-id="178:2189" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup10} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup10} fill sizes="100vw" />
           </div>
         </div>
         <div className="absolute contents inset-[64.2%_53.56%_35.59%_45.23%]" data-node-id="178:2191" data-name="Group">
           <div className="absolute inset-[64.2%_53.56%_35.59%_45.23%]" data-node-id="178:2192" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup11} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup11} fill sizes="100vw" />
           </div>
         </div>
         <div className="absolute contents inset-[64.32%_54.1%_35.66%_45.77%]" data-node-id="178:2194" data-name="Group">
           <div className="absolute inset-[64.32%_54.1%_35.66%_45.77%]" data-node-id="178:2195" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup12} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup12} fill sizes="100vw" />
           </div>
         </div>
       </div>
       <div className="absolute contents inset-[64.14%_74.43%_35.55%_23.59%]" data-node-id="178:2197">
         <div className="absolute contents inset-[64.14%_74.43%_35.67%_24.37%]" data-node-id="178:2198" data-name="Group">
           <div className="absolute inset-[64.14%_74.43%_35.67%_24.37%]" data-node-id="178:2199" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup13} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup13} fill sizes="100vw" />
           </div>
         </div>
         <div className="absolute contents inset-[64.2%_74.86%_35.61%_23.98%]" data-node-id="178:2201" data-name="Group">
           <div className="absolute inset-[64.2%_74.86%_35.61%_23.98%]" data-node-id="178:2202" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup14} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup14} fill sizes="100vw" />
           </div>
         </div>
         <div className="absolute contents inset-[64.14%_74.47%_35.55%_23.59%]" data-node-id="178:2204" data-name="Group">
           <div className="absolute inset-[64.14%_74.47%_35.55%_23.59%]" data-node-id="178:2205" data-name="Group">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup15} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup15} fill sizes="100vw" />
           </div>
         </div>
       </div>
@@ -860,10 +864,10 @@ export function HomePage() {
       </p>
       <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[24px] left-[calc(90%-223px)] not-italic text-[#535353] text-[19px] top-[7991px] tracking-[-0.38px] w-[307px]" data-node-id="303:2032">{`Everything we build for you is something you own and that compounds in value over time. Never a subscription to someone else's platform.`}</p>
       <div className="absolute inset-[64.13%_91.54%_35.55%_6.41%]" data-node-id="178:2222">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup16} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup16} fill sizes="100vw" />
       </div>
       <div className="-translate-x-1/2 absolute h-[117px] left-1/2 top-[9470px] w-[124px]" data-node-id="183:2240" data-name="Transparent 2">
-        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgTransparent2} />
+        <Image alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgTransparent2} fill sizes="100vw" />
       </div>
       <p className="[word-break:break-word] absolute font-days-one leading-[43.552px] left-[calc(30%-190px)] not-italic text-[44.729px] text-white top-[9821.9px] tracking-[-0.8946px] uppercase w-[339px]" data-node-id="187:3">
         Marked movements
@@ -894,28 +898,28 @@ export function HomePage() {
       </div>
       <div className="absolute contents left-[calc(40%+357.87px)] top-[9751.06px]" data-node-id="187:37" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(70%-14.59px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[31.802px_30.741px] mask-size-[408.128px_408.128px] size-[470.672px] top-[calc(50%+3843.66px)]" data-node-id="187:39" style={{ maskImage: `url("${img647341}")` }} data-name="64734 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647342} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647342} fill sizes="100vw" />
         </div>
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[440.938px] left-[calc(90%-208.8px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[-60.546px_15.697px] mask-size-[408.128px_408.128px] top-[calc(50%+3843.84px)] w-[665.567px]" data-node-id="187:44" style={{ maskImage: `url("${img647341}")` }} data-name="15337 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img153371} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img153371} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(40%+210px)] top-[9751.06px]" data-node-id="187:40" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(70%-162.47px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[31.802px_30.741px] mask-size-[408.128px_408.128px] size-[470.672px] top-[calc(50%+3843.66px)]" data-node-id="187:42" style={{ maskImage: `url("${img647341}")` }} data-name="64734 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647342} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647342} fill sizes="100vw" />
         </div>
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(50%+92px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[141.275px_11.212px] mask-size-[408.128px_408.128px] size-[430.552px] top-[calc(50%+3843.13px)]" data-node-id="189:45" style={{ maskImage: `url("${img647341}")` }} data-name="2150917204 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img21509172041} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img21509172041} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(40%+245.87px)] top-[9713px]" data-node-id="187:34" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(70%-89.25px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[37.636px_36.382px] mask-size-[483px_483px] size-[557.018px] top-[calc(50%+3843.13px)]" data-node-id="187:36" style={{ maskImage: `url("${img647343}")` }} data-name="64734 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647342} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img647342} fill sizes="100vw" />
         </div>
       </div>
       <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+1px)] top-[8539px] w-[1376px]" data-node-id="189:54">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector12} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector12} fill sizes="100vw" />
         </div>
       </div>
       <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[34.682px] left-[calc(30%-243.27px)] not-italic text-[#333] text-[24.085px] top-[8612.81px] tracking-[-0.4817px] uppercase whitespace-nowrap" data-node-id="189:56">
@@ -948,40 +952,40 @@ export function HomePage() {
       <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-243.27px)] not-italic text-[#535353] text-[18px] top-[9005.21px] tracking-[-0.36px] uppercase w-[677.269px]" data-node-id="189:69">{`We're based in one of India's biggest industrial hubs. We understand Indian manufacturing from the inside — and we build websites that speak to the world.`}</p>
       <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-243.27px)] not-italic text-[#535353] text-[18px] top-[9124.67px] tracking-[-0.36px] uppercase w-[677.269px]" data-node-id="189:70">{`No platform lock-in. No proprietary CMS you can't control. Every website we build is fully owned by you, on technology you control.`}</p>
       <div className="absolute inset-[70.51%_84.43%_29.34%_14.6%]" data-node-id="189:71" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[71.48%_84.43%_28.37%_14.6%]" data-node-id="189:73" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[72.46%_84.43%_27.39%_14.6%]" data-node-id="189:75" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[73.44%_84.43%_26.41%_14.6%]" data-node-id="189:77" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[74.41%_84.43%_25.44%_14.6%]" data-node-id="189:79" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check} fill sizes="100vw" />
       </div>
       <div className="absolute bg-[#333] h-[713px] left-[calc(40%+315px)] rounded-[18px] top-[8588px] w-[565px]" data-node-id="189:81" />
       <div className="absolute bg-[#424242] h-[290px] left-[calc(40%+342px)] rounded-[18px] top-[8885px] w-[511px]" data-node-id="189:82" />
       <div className="absolute h-0 left-[calc(40%+344px)] top-[8944px] w-[509px]" data-node-id="189:83">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector14} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector14} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute h-0 left-[calc(40%+344px)] top-[9001px] w-[509px]" data-node-id="189:84">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector14} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector14} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute h-0 left-[calc(40%+344px)] top-[9059px] w-[509px]" data-node-id="189:85">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector14} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector14} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute h-0 left-[calc(40%+344px)] top-[9117px] w-[509px]" data-node-id="189:86">
         <div className="absolute inset-[-0.5px_0]">
-          <img alt="" className="block max-w-none size-full" src={imgVector14} />
+          <Image alt="" className="block max-w-none size-full" src={imgVector14} fill sizes="100vw" />
         </div>
       </div>
       <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(70%-234px)] not-italic text-[#f4a31d] text-[20px] top-[8614px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="189:89">
@@ -1022,46 +1026,46 @@ export function HomePage() {
         We Check
       </p>
       <div className="absolute inset-[72.86%_21.38%_26.99%_77.6%]" data-node-id="189:102" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[73.32%_21.38%_26.52%_77.6%]" data-node-id="189:104" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[73.81%_21.38%_26.04%_77.6%]" data-node-id="189:106" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[74.26%_21.38%_25.58%_77.6%]" data-node-id="189:108" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[74.76%_21.38%_25.08%_77.6%]" data-node-id="189:110" data-name="7-Check">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img7Check1} fill sizes="100vw" />
       </div>
       <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(70%-270px)] not-italic text-[#333] text-[20px] top-[11409.33px] tracking-[-0.4px] uppercase w-[705px]" data-node-id="198:276">{`Let's build a website and SEO strategy that works as hard as your factory does.`}</p>
       <p className="[word-break:break-word] absolute font-days-one leading-[56.6px] left-[calc(70%-270px)] not-italic text-[#333] text-[30px] top-[11346.33px] tracking-[-0.6px] uppercase whitespace-nowrap" data-node-id="198:275">
         stalk us.
       </p>
       <div className="absolute inset-[93.78%_41.3%_5.79%_55.94%]" data-node-id="198:277" data-name="Vector">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} fill sizes="100vw" />
       </div>
       <div className="-translate-y-1/2 absolute aspect-[29/29] left-[59.84%] right-[37.4%] top-[calc(50%+5377.83px)]" data-node-id="198:278" data-name="Vector">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[93.78%_33.51%_5.79%_63.72%]" data-node-id="198:279">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup17} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup17} fill sizes="100vw" />
       </div>
       <div className="absolute inset-[93.78%_29.62%_5.79%_67.6%]" data-node-id="198:283">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup18} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup18} fill sizes="100vw" />
       </div>
       <div className="absolute contents inset-[93.78%_25.73%_5.79%_71.49%]" data-node-id="198:286" data-name="Layer 2">
         <div className="absolute contents inset-[93.78%_25.73%_5.79%_71.49%]" data-node-id="198:287" data-name="Color">
           <div className="absolute inset-[93.78%_25.73%_5.79%_71.49%]" data-node-id="198:288" data-name="02.YouTube">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} fill sizes="100vw" />
           </div>
         </div>
       </div>
       <div className="absolute contents left-0 top-[11133px]" data-node-id="198:337" data-name="Mask group">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[672px] left-[calc(30%-96px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[2px_37px] mask-size-[960px_597px] top-[calc(50%+5320px)] w-[964px]" data-node-id="213:2618" style={{ maskImage: `url("${imgDk61}")` }} data-name="DK (6) 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDk62} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDk62} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(20%+311px)] top-[5668px]" data-node-id="428:2933">
@@ -1069,7 +1073,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(20%+311px)] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:1918" />
         </div>
         <div className="absolute h-[58px] left-[calc(20%+328px)] top-[5723px] w-[136px]" data-node-id="202:344" data-name="SADASDA 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSadasda1} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSadasda1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(40%+108px)] top-[5668px]" data-node-id="428:2934">
@@ -1077,7 +1081,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(40%+108px)] rounded-[18px] top-[5668px] w-[170.421px]" data-node-id="178:1943" />
         </div>
         <div className="absolute h-[65px] left-[calc(40%+126px)] top-[5720px] w-[135px]" data-node-id="202:348" data-name="in 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgIn1} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgIn1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(20%+130px)] top-[5845px]" data-node-id="428:2944">
@@ -1085,7 +1089,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(20%+130px)] rounded-[18px] top-[5845px] w-[170.421px]" data-node-id="178:2046" />
         </div>
         <div className="absolute h-[24px] left-[calc(20%+143px)] top-[5917px] w-[145px]" data-node-id="202:349" data-name="rrr 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRrr1} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRrr1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(40%+108px)] top-[5845px]" data-node-id="428:2942">
@@ -1093,7 +1097,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(40%+108px)] rounded-[18px] top-[5845px] w-[170.421px]" data-node-id="178:2059" />
         </div>
         <div className="absolute h-[27px] left-[calc(40%+123px)] top-[5915px] w-[141px]" data-node-id="202:350" data-name="st 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSt1} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSt1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute contents left-[calc(60%+87px)] top-[5845px]" data-node-id="428:2940">
@@ -1101,7 +1105,7 @@ export function HomePage() {
           <div className="absolute bg-[rgba(245,245,245,0.12)] h-[167.012px] left-[calc(60%+87px)] rounded-[18px] top-[5845px] w-[170.421px]" data-node-id="178:2053" />
         </div>
         <div className="absolute h-[31px] left-[calc(60%+102px)] top-[5913px] w-[140px]" data-node-id="202:351" data-name="sdasas 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSdasas1} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSdasas1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute bg-[#f4a31d] h-[88px] left-[322px] rounded-[16px] top-[10812px] w-[344px]" data-node-id="195:126" />
@@ -1117,7 +1121,7 @@ export function HomePage() {
       </p>
       <div className="absolute contents left-[calc(40%+311.37px)] top-[10403px]" data-node-id="494:375">
         <div className="absolute h-[240.283px] left-[calc(60%+202px)] top-[10469px] w-[217px]" data-node-id="198:265">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup292} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup292} fill sizes="100vw" />
         </div>
         <div className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[0] left-[calc(70%+88.3px)] not-italic text-[12.429px] text-center text-white top-[10577.02px] tracking-[-0.2486px] uppercase whitespace-nowrap" data-node-id="198:266">
           <p className="leading-[14.07px] mb-0">PROUDLY</p>
@@ -1125,18 +1129,18 @@ export function HomePage() {
         </div>
         <div className="absolute contents left-[calc(40%+311.37px)] top-[10403px]" data-node-id="213:2585">
           <div className="absolute h-[614.153px] left-[calc(40%+311.37px)] top-[10403px] w-[518.268px]" data-node-id="195:130" data-name="Kangaroo 1">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgKangaroo1} />
+            <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgKangaroo1} fill sizes="100vw" />
           </div>
           <div className="absolute h-[44.908px] left-[calc(40%+319.86px)] top-[10994.09px] w-[443.016px]" data-node-id="198:269">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse19} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse19} fill sizes="100vw" />
           </div>
         </div>
         <div className="absolute contents left-[calc(60%-18px)] top-[10812px]" data-node-id="213:2578">
           <div className="absolute left-[calc(60%-18px)] size-[104px] top-[10812px]" data-node-id="211:2551">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
           </div>
           <div className="absolute left-[calc(60%-11.5px)] size-[91px] top-[10818.5px]" data-node-id="211:2552">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} fill sizes="100vw" />
           </div>
           <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(60%+34.21px)] not-italic text-[41.188px] text-center text-white top-[10837.62px] tracking-[-0.8238px] uppercase whitespace-nowrap" data-node-id="211:2574">
             DK
@@ -1145,14 +1149,14 @@ export function HomePage() {
       </div>
       <div className="absolute contents left-[125px] top-[3026px]" data-node-id="213:2596">
         <div className="absolute left-[125px] size-[170px] top-[3026px]" data-node-id="207:383">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse22} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse22} fill sizes="100vw" />
         </div>
         <div className="absolute left-[130px] size-[159px] top-[3032px]" data-node-id="213:2594" data-name="sadsaas 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSadsaas1} />
+          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSadsaas1} fill sizes="100vw" />
         </div>
       </div>
       <div className="absolute inset-[7.96%_3.36%_91.57%_93.65%]" data-node-id="215:2637" data-name="Group">
-        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup19} />
+        <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup19} fill sizes="100vw" />
       </div>
       <Link href="/services/b2b-branding" className="[word-break:break-word] absolute font-days-one leading-[34px] left-[calc(70%-63px)] not-italic text-[#333] text-[25px] top-[4864px] tracking-[-0.5px] uppercase w-[310px] hover:text-[#f4a31d] transition-colors" data-node-id="428:2768">
         b2b Branding
@@ -1162,13 +1166,13 @@ export function HomePage() {
       </p>
       <div className="absolute contents left-[calc(80%+55px)] top-[3785px]" data-node-id="448:3376">
         <div className="absolute left-[calc(80%+55px)] size-[170px] top-[3785px]" data-node-id="448:3377">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse22} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse22} fill sizes="100vw" />
         </div>
         <div className="absolute left-[calc(80%+60px)] size-[160px] top-[3790px]" data-node-id="448:3378">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse23} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse23} fill sizes="100vw" />
         </div>
         <div className="absolute inset-[31.4%_9.2%_68.46%_83.77%]" data-node-id="448:3379" data-name="Group">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup20} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup20} fill sizes="100vw" />
         </div>
         <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-semibold leading-[16.027px] left-[calc(90%-52px)] not-italic text-[19.726px] text-center text-white top-[3864.84px] tracking-[-0.3945px] uppercase w-[156px]" data-node-id="448:3390">
           (Shopify division of digital kangaroos)
@@ -1176,13 +1180,13 @@ export function HomePage() {
       </div>
       <div className="absolute contents left-[125px] top-[9335px]" data-node-id="448:3411">
         <div className="absolute left-[125px] size-[170px] top-[9335px]" data-node-id="448:3412">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse22} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse22} fill sizes="100vw" />
         </div>
         <div className="absolute left-[130.38px] size-[159.241px] top-[9340.38px]" data-node-id="448:3413">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse24} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse24} fill sizes="100vw" />
         </div>
         <div className="absolute inset-[76.64%_87.59%_22.89%_9.49%]" data-node-id="448:3414" data-name="Group">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup21} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup21} fill sizes="100vw" />
         </div>
         <div className="absolute contents left-[155px] top-[9430.66px]" data-node-id="448:3419">
           <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[210.5px] not-italic text-[17.093px] text-center text-white top-[9430.66px] tracking-[-0.3419px] uppercase whitespace-nowrap" data-node-id="448:3420">
@@ -1192,7 +1196,7 @@ export function HomePage() {
             4.7
           </p>
           <div className="absolute h-[12.939px] left-[186px] top-[9451.21px] w-[66.372px]" data-node-id="448:3422">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup300} />
+            <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup300} fill sizes="100vw" />
           </div>
         </div>
       </div>
@@ -1215,12 +1219,12 @@ export function HomePage() {
         </p>
         <div className="-translate-x-1/2 absolute h-0 left-1/2 top-[12189px] w-[1920px]" data-node-id="261:136">
           <div className="absolute inset-[-0.5px_0]">
-            <img alt="" className="block max-w-none size-full" src={imgVector20} />
+            <Image alt="" className="block max-w-none size-full" src={imgVector20} fill sizes="100vw" />
           </div>
         </div>
         <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-255px)] not-italic text-[16px] text-white top-[11870px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="261:137">{`Web Development & Software Company`}</p>
         <div className="absolute h-[64px] left-[322px] top-[11801px] w-[234px]" data-node-id="261:138" data-name="Transparent 1">
-          <img alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} />
+          <Image alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} fill sizes="100vw" />
         </div>
         <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0] left-[calc(50%-240px)] not-italic text-[0px] text-white top-[11797px] tracking-[-0.38px] uppercase w-[279px] whitespace-pre-wrap" data-node-id="261:139">
           <p className="font-rajdhani font-semibold mb-0 text-[19px]">
@@ -1267,21 +1271,21 @@ export function HomePage() {
           <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">info@digitalkangaroos.com</p>
         </div>
         <Link href="https://www.facebook.com/digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="absolute inset-[97.11%_30.1%_2.51%_67.5%]" data-node-id="261:145">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector3} fill sizes="100vw" />
         </Link>
         <Link href="https://www.linkedin.com/company/digital-kangaroos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+5782px)]" data-node-id="261:146">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector4} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector4} fill sizes="100vw" />
         </Link>
         <Link href="https://www.instagram.com/digitalkangaroos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="absolute inset-[97.11%_23.4%_2.51%_74.21%]" data-node-id="261:147">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} fill sizes="100vw" />
         </Link>
         <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="absolute inset-[97.11%_20.04%_2.51%_77.56%]" data-node-id="261:151">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} fill sizes="100vw" />
         </Link>
         <div className="absolute contents inset-[97.11%_16.69%_2.51%_80.92%]" data-node-id="261:154" data-name="Layer 3">
           <div className="absolute contents inset-[97.11%_16.69%_2.51%_80.92%]" data-node-id="261:155" data-name="Color">
             <Link href="https://www.youtube.com/@digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="absolute inset-[97.11%_16.69%_2.51%_80.92%]" data-node-id="261:156">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube1} />
+              <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube1} fill sizes="100vw" />
             </Link>
           </div>
         </div>
@@ -1303,13 +1307,13 @@ export function HomePage() {
         <div className="absolute bg-[#f4a31d] h-[54.6px] left-[calc(100%-65px)] rounded-bl-[65.867px] rounded-tl-[65.867px] top-[447.2px] w-[65px]" data-node-id="215:2651" />
         <div className="absolute bg-[#f4a31d] h-[54.6px] left-[calc(100%-65px)] rounded-bl-[65.867px] rounded-tl-[65.867px] top-[506.13px] w-[65px]" data-node-id="215:2652" />
         <div className="absolute inset-[3.31%_1.13%_96.5%_97.7%]" data-node-id="215:2655" data-name="XMLID_7_">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgXmlid7} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgXmlid7} fill sizes="100vw" />
         </div>
         <div className="absolute inset-[3.76%_0.81%_95.99%_97.65%]" data-node-id="215:2665">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup303} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup303} fill sizes="100vw" />
         </div>
         <div className="absolute inset-[4.24%_0.81%_95.53%_97.79%]" data-node-id="215:2667" data-name="Layer_10">
-          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer10} />
+          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgLayer10} fill sizes="100vw" />
         </div>
       </div>
     </div>

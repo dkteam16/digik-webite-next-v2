@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const logoSrc = "/images/about/imgTransparent1.png";
@@ -64,10 +65,12 @@ export function PixelHeader() {
         href="/"
         className="-translate-x-1/2 absolute h-[56px] left-1/2 top-[24px] w-[208px] z-20"
       >
-        <img
+        <Image
           alt="Digital Kangaroos"
           className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
           src={logoSrc}
+          fill
+          sizes="208px"
         />
       </Link>
     </>

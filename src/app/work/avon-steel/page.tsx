@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { ComingSoonPage } from "@/components/coming-soon-page";
+
+export const metadata: Metadata = {
+  "title": "Avon Steel — Case Study",
+  "description": "How we transformed a legacy steel manufacturer's outdated digital presence into a bold, future-ready website with a full brand identity system."
+};
+
 
 // TODO: Replace this placeholder with the real Figma design.
 // Figma file: Oa2R8GAiByOdXZGBfmicsQ, node-id: 989:2
