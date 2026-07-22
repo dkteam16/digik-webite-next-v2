@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { NewsletterForm } from "@/components/newsletter-form";
+import { CareerForm } from "./career-form";
 
 const imgTransparent1 = "/images/career/imgTransparent1.png";
 const imgSadsaas1 = "/images/career/imgSadsaas1.png";
@@ -89,30 +91,7 @@ export function CareerPage() {
         </div>
       </div>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[normal] left-[calc(50%+0.5px)] not-italic text-[#333] text-[50px] text-center top-[1187px] tracking-[-1px] uppercase whitespace-nowrap" data-node-id="1029:3">{`Don't wait for a job listing.`}</p>
-      <div className="absolute bg-[#f5f5f5] h-[48px] left-[364px] rounded-[13px] top-[1282px] w-[586px]" data-node-id="1029:4" />
-      <div className="absolute bg-[#f5f5f5] h-[48px] left-[364px] rounded-[13px] top-[1341px] w-[586px]" data-node-id="1029:5" />
-      <div className="absolute bg-[#f5f5f5] h-[118px] left-[364px] rounded-[13px] top-[1401px] w-[1192px]" data-node-id="1029:60" />
-      <div className="absolute bg-[#f5f5f5] h-[48px] left-1/2 rounded-[13px] top-[1282px] w-[596px]" data-node-id="1029:8" />
-      <div className="absolute bg-[#f5f5f5] h-[48px] left-1/2 rounded-[13px] top-[1341px] w-[596px]" data-node-id="1029:9" />
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(25%-95px)] not-italic text-[17px] text-[rgba(0,0,0,0.28)] top-[1295px] whitespace-nowrap" data-node-id="1029:10">
-        Full Name
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(25%-95px)] not-italic text-[17px] text-[rgba(0,0,0,0.28)] top-[1354px] whitespace-nowrap" data-node-id="1029:11">
-        Mobile Number
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(75%-458px)] not-italic text-[17px] text-[rgba(0,0,0,0.28)] top-[1295px] whitespace-nowrap" data-node-id="1029:14">
-        Email
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(75%-458px)] not-italic text-[17px] text-[rgba(0,0,0,0.28)] top-[1354px] whitespace-nowrap" data-node-id="1029:15">
-        Area Of Interest
-      </p>
-      <div className="-translate-x-1/2 absolute contents left-[calc(50%+0.5px)] top-[1553px]" data-node-id="1029:21">
-        <div className="absolute bg-[#f4a31d] h-[56px] left-[867px] rounded-[16px] top-[1553px] w-[187px]" data-node-id="1029:16" />
-        <div className="absolute border border-solid border-white h-[48px] left-[872px] rounded-[13px] top-[1557px] w-[177px]" data-node-id="1029:17" role="button" tabIndex={0} aria-label="Apply Now" />
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-1/2 not-italic text-[20px] text-center text-white top-[1569px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1029:18">
-          APPLY NOW
-        </p>
-      </div>
+      <CareerForm />
       <div className="-translate-x-1/2 absolute bottom-0 contents left-1/2" data-node-id="1029:24">
         <div className="-translate-x-1/2 absolute flex h-[6px] items-center justify-center left-1/2 top-[1713px] w-[1920px]" data-node-id="1029:25">
           <div className="-scale-y-100 flex-none">
@@ -176,33 +155,26 @@ export function CareerPage() {
           <p className="font-rajdhani font-semibold leading-[23.6px] mb-0 text-[#f4a31d] text-[19px]">Email:</p>
           <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">info@digitalkangaroos.com</p>
         </div>
-        <div className="absolute inset-[84.05%_30.1%_13.87%_67.5%]" data-node-id="1029:37" data-name="Vector">
+        <Link href="https://www.facebook.com/digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="absolute inset-[84.05%_30.1%_13.87%_67.5%]" data-node-id="1029:37">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
-        </div>
-        <div className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+776.5px)]" data-node-id="1029:38" data-name="Vector">
+        </Link>
+        <Link href="https://www.linkedin.com/company/digital-kangaroos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+776.5px)]" data-node-id="1029:38">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
-        </div>
-        <div className="absolute inset-[84.05%_23.4%_13.87%_74.21%]" data-node-id="1029:39">
+        </Link>
+        <Link href="https://www.instagram.com/digitalkangaroos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="absolute inset-[84.05%_23.4%_13.87%_74.21%]" data-node-id="1029:39">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} />
-        </div>
-        <div className="absolute inset-[84.05%_20.04%_13.87%_77.56%]" data-node-id="1029:43">
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="absolute inset-[84.05%_20.04%_13.87%_77.56%]" data-node-id="1029:43">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} />
-        </div>
+        </Link>
         <div className="absolute contents inset-[84.05%_16.69%_13.87%_80.92%]" data-node-id="1029:46" data-name="Layer 3">
           <div className="absolute contents inset-[84.05%_16.69%_13.87%_80.92%]" data-node-id="1029:47" data-name="Color">
-            <div className="absolute inset-[84.05%_16.69%_13.87%_80.92%]" data-node-id="1029:48" data-name="02.YouTube">
+            <Link href="https://www.youtube.com/@digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="absolute inset-[84.05%_16.69%_13.87%_80.92%]" data-node-id="1029:48">
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} />
-            </div>
+            </Link>
           </div>
         </div>
-        <div className="absolute bg-white h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[2015px] w-[274px]" data-node-id="1029:51" />
-        <div className="absolute bg-[#f4a31d] h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[2074px] w-[114px]" data-node-id="1029:52" />
-        <p className="[word-break:break-word] absolute font-days-one leading-[25px] left-[calc(75%-127px)] not-italic text-[17px] text-[rgba(0,0,0,0.38)] top-[2025px] tracking-[-0.34px] uppercase whitespace-nowrap" data-node-id="1029:53">
-          EMAIL ADDRESS
-        </p>
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[25px] left-[calc(75%-87px)] not-italic text-[17px] text-center text-white top-[2084px] tracking-[-0.34px] uppercase whitespace-nowrap" data-node-id="1029:54">
-          SUBMIT
-        </p>
+        <NewsletterForm inputClassName="absolute bg-white h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[2015px] w-[274px]" buttonClassName="absolute bg-[#f4a31d] h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[2074px] w-[114px]" />
         <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(25%-159px)] not-italic text-[16px] text-white top-[2185px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="1029:55">
           © Digital Kangaroos | All Rights Reserved 2026
         </p>
@@ -215,9 +187,6 @@ export function CareerPage() {
           </p>
         </div>
       </div>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(25%+414px)] not-italic text-[17px] text-[rgba(0,0,0,0.28)] top-[1449px] whitespace-nowrap" data-node-id="1029:61">
-        Upload Your CV
-      </p>
       <div className="absolute contents inset-[65.48%_46.56%_33.76%_52.66%]" data-node-id="1029:62">
         <div className="absolute inset-[65.48%_46.56%_33.76%_52.66%]" data-node-id="1029:63">
           <div className="absolute inset-[-5.93%_-6.67%]">

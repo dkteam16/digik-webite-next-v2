@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterForm } from "@/components/newsletter-form";
 
 const img134641 = "/images/about/img134641.jpg";
 const imgKangaroo1 = "/images/about/imgKangaroo1.png";
@@ -371,13 +372,13 @@ export function AboutPage() {
         If you are a manufacturer, exporter, or B2B industrial company that is serious about growing through digital — not just having a website, but building a genuine lead generation asset — we should talk. Start with a free audit of your current website. No cost, no obligation, delivered in 48 hours.
       </p>
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[72.6px] left-[calc(50%+0.5px)] not-italic text-[#242832] text-[60px] text-center top-[5892px] tracking-[-1.2px] w-[929px]" data-node-id="207:2509">{`Let's Build Something That Actually Works.`}</p>
-      <div className="absolute border border-black border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(20%+73px)] px-[20px] py-[10px] rounded-[16px] top-[744px]" data-node-id="227:2728" role="button" tabIndex={0} aria-label="Get a Free Audit">
+      <Link href="/contact" aria-label="Get a Free Audit" className="absolute border border-black border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(20%+73px)] px-[20px] py-[10px] rounded-[16px] top-[744px]" data-node-id="227:2728">
         <p className="[word-break:break-word] font-rajdhani font-bold leading-[normal] not-italic relative shrink-0 text-[23px] text-black text-center tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="227:2729">
           GET A FREE AUDIT
         </p>
-      </div>
+      </Link>
       <div className="absolute bg-[#f4a31d] h-[88px] left-[129px] rounded-[16px] top-[744px] w-[304px]" data-node-id="227:2730" />
-      <div className="absolute border border-solid border-white h-[74px] left-[136px] rounded-[13px] top-[751px] w-[290px]" data-node-id="227:2731" role="button" tabIndex={0} aria-label="See Our Work" />
+      <Link href="/our-work" aria-label="See Our Work" className="absolute border border-solid border-white h-[74px] left-[136px] rounded-[13px] top-[751px] w-[290px]" data-node-id="227:2731" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(10%+88.5px)] not-italic text-[23px] text-center text-white top-[773px] tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="227:2732">
         SEE OUR WORK
       </p>
@@ -549,7 +550,7 @@ export function AboutPage() {
         <span className="font-rajdhani font-semibold leading-[normal]">{`  Delivered in 48 Hours`}</span>
       </p>
       <div className="absolute bg-[#f4a31d] h-[88px] left-[calc(40%+23px)] rounded-[16px] top-[6169px] w-[338px]" data-node-id="256:82" />
-      <div className="absolute border border-solid border-white h-[74px] left-[calc(40%+32px)] rounded-[13px] top-[6176px] w-[320px]" data-node-id="256:83" role="button" tabIndex={0} aria-label="Get Your Free Website Audit" />
+      <Link href="/contact" aria-label="Get Your Free Website Audit" className="absolute border border-solid border-white h-[74px] left-[calc(40%+32px)] rounded-[13px] top-[6176px] w-[320px]" data-node-id="256:83" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(50%-1px)] not-italic text-[23px] text-center text-white top-[6198px] tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="256:84">
         get your free website audit
       </p>
@@ -635,33 +636,26 @@ export function AboutPage() {
           <p className="font-rajdhani font-semibold leading-[23.6px] mb-0 text-[#f4a31d] text-[19px]">Email:</p>
           <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">info@digitalkangaroos.com</p>
         </div>
-        <div className="absolute inset-[94.88%_30.1%_4.45%_67.5%]" data-node-id="712:92" data-name="Vector">
+        <Link href="https://www.facebook.com/digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="absolute inset-[94.88%_30.1%_4.45%_67.5%]" data-node-id="712:92">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
-        </div>
-        <div className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+3108.5px)]" data-node-id="712:93" data-name="Vector">
+        </Link>
+        <Link href="https://www.linkedin.com/company/digital-kangaroos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+3108.5px)]" data-node-id="712:93">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
-        </div>
-        <div className="absolute inset-[94.88%_23.4%_4.45%_74.21%]" data-node-id="712:94">
+        </Link>
+        <Link href="https://www.instagram.com/digitalkangaroos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="absolute inset-[94.88%_23.4%_4.45%_74.21%]" data-node-id="712:94">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} />
-        </div>
-        <div className="absolute inset-[94.88%_20.04%_4.45%_77.56%]" data-node-id="712:98">
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="absolute inset-[94.88%_20.04%_4.45%_77.56%]" data-node-id="712:98">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} />
-        </div>
+        </Link>
         <div className="absolute contents inset-[94.88%_16.69%_4.45%_80.92%]" data-node-id="712:101" data-name="Layer 3">
           <div className="absolute contents inset-[94.88%_16.69%_4.45%_80.92%]" data-node-id="712:102" data-name="Color">
-            <div className="absolute inset-[94.88%_16.69%_4.45%_80.92%]" data-node-id="712:103" data-name="02.YouTube">
+            <Link href="https://www.youtube.com/@digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="absolute inset-[94.88%_16.69%_4.45%_80.92%]" data-node-id="712:103">
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} />
-            </div>
+            </Link>
           </div>
         </div>
-        <div className="absolute bg-white h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[6678px] w-[274px]" data-node-id="712:106" />
-        <div className="absolute bg-[#f4a31d] h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[6737px] w-[114px]" data-node-id="712:107" />
-        <p className="[word-break:break-word] absolute font-days-one leading-[25px] left-[calc(70%-31px)] not-italic text-[17px] text-[rgba(0,0,0,0.38)] top-[6688px] tracking-[-0.34px] uppercase whitespace-nowrap" data-node-id="712:108">
-          EMAIL ADDRESS
-        </p>
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[25px] left-[calc(70%+9px)] not-italic text-[17px] text-center text-white top-[6747px] tracking-[-0.34px] uppercase whitespace-nowrap" data-node-id="712:109">
-          SUBMIT
-        </p>
+        <NewsletterForm inputClassName="absolute bg-white h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[6678px] w-[274px]" buttonClassName="absolute bg-[#f4a31d] h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[6737px] w-[114px]" />
         <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-255px)] not-italic text-[16px] text-white top-[6848px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="712:110">
           © Digital Kangaroos | All Rights Reserved 2026
         </p>

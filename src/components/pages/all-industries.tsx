@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterForm } from "@/components/newsletter-form";
 
 const imgTransparent1 = "/images/all-industries/imgTransparent1.png";
 const imgSadsaas1 = "/images/all-industries/imgSadsaas1.png";
@@ -102,13 +103,13 @@ export function AllIndustriesPage() {
       <p className="[word-break:break-word] absolute font-days-one font-normal leading-[72.6px] left-[calc(70%-140px)] text-[#f4a31d] text-[64.976px] top-[684px] tracking-[-1.2995px] uppercase whitespace-nowrap" data-node-id="656:47" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
         ₹0
       </p>
-      <div className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(20%+173px)] px-[20px] py-[10px] rounded-[16px] top-[676px]" data-node-id="656:31" role="button" tabIndex={0} aria-label="See Industries We Serve">
+      <Link href="/industries" aria-label="See Industries We Serve" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(20%+173px)] px-[20px] py-[10px] rounded-[16px] top-[676px]" data-node-id="656:31">
         <p className="[word-break:break-word] font-rajdhani font-bold font-bold leading-[normal] relative shrink-0 text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="656:32" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
           See Industries We Serve ↓
         </p>
-      </div>
+      </Link>
       <div className="absolute bg-[#f4a31d] h-[88px] left-[229px] rounded-[16px] top-[676px] w-[304px]" data-node-id="656:33" />
-      <div className="absolute border border-solid border-white h-[74px] left-[236px] rounded-[13px] top-[683px] w-[290px]" data-node-id="656:34" role="button" tabIndex={0} aria-label="Get Free Website Audit" />
+      <Link href="/contact" aria-label="Get Free Website Audit" className="absolute border border-solid border-white h-[74px] left-[236px] rounded-[13px] top-[683px] w-[290px]" data-node-id="656:34" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(10%+188.5px)] not-italic text-[23px] text-center text-white top-[705px] tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="656:35">
         Get Free Website Audit
       </p>
@@ -417,13 +418,13 @@ export function AllIndustriesPage() {
           </div>
         </div>
       </div>
-      <div className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(40%+281px)] px-[20px] py-[10px] rounded-[16px] top-[4958px]" data-node-id="712:34" role="button" tabIndex={0} aria-label="Call Us Now">
+      <Link href="tel:+919814820845" aria-label="Call Us Now" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(40%+281px)] px-[20px] py-[10px] rounded-[16px] top-[4958px]" data-node-id="712:34">
         <p className="[word-break:break-word] font-rajdhani font-bold leading-[normal] not-italic relative shrink-0 text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="712:35">
           Call Us Now
         </p>
-      </div>
+      </Link>
       <div className="absolute bg-[#f4a31d] h-[88px] left-[calc(20%+337px)] rounded-[16px] top-[4958px] w-[304px]" data-node-id="712:36" />
-      <div className="absolute border border-solid border-white h-[74px] left-[calc(20%+344px)] rounded-[13px] top-[4965px] w-[290px]" data-node-id="712:37" role="button" tabIndex={0} aria-label="Get Free Audit" />
+      <Link href="/contact" aria-label="Get Free Audit" className="absolute border border-solid border-white h-[74px] left-[calc(20%+344px)] rounded-[13px] top-[4965px] w-[290px]" data-node-id="712:37" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(50%-88px)] not-italic text-[23px] text-center text-white top-[4987px] tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="712:38">
         Get Free Audit
       </p>
@@ -490,33 +491,26 @@ export function AllIndustriesPage() {
           <p className="font-rajdhani font-semibold leading-[23.6px] mb-0 text-[#f4a31d] text-[19px]">Email:</p>
           <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">info@digitalkangaroos.com</p>
         </div>
-        <div className="absolute inset-[93.78%_30.1%_5.41%_67.5%]" data-node-id="712:668" data-name="Vector">
+        <Link href="https://www.facebook.com/digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="absolute inset-[93.78%_30.1%_5.41%_67.5%]" data-node-id="712:668">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} />
-        </div>
-        <div className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+2509px)]" data-node-id="712:669" data-name="Vector">
+        </Link>
+        <Link href="https://www.linkedin.com/company/digital-kangaroos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+2509px)]" data-node-id="712:669">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} />
-        </div>
-        <div className="absolute inset-[93.78%_23.4%_5.41%_74.21%]" data-node-id="712:670">
+        </Link>
+        <Link href="https://www.instagram.com/digitalkangaroos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="absolute inset-[93.78%_23.4%_5.41%_74.21%]" data-node-id="712:670">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} />
-        </div>
-        <div className="absolute inset-[93.78%_20.04%_5.41%_77.56%]" data-node-id="712:674">
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="absolute inset-[93.78%_20.04%_5.41%_77.56%]" data-node-id="712:674">
           <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} />
-        </div>
+        </Link>
         <div className="absolute contents inset-[93.78%_16.69%_5.41%_80.92%]" data-node-id="712:677" data-name="Layer 3">
           <div className="absolute contents inset-[93.78%_16.69%_5.41%_80.92%]" data-node-id="712:678" data-name="Color">
-            <div className="absolute inset-[93.78%_16.69%_5.41%_80.92%]" data-node-id="712:679" data-name="02.YouTube">
+            <Link href="https://www.youtube.com/@digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="absolute inset-[93.78%_16.69%_5.41%_80.92%]" data-node-id="712:679">
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} />
-            </div>
+            </Link>
           </div>
         </div>
-        <div className="absolute bg-white h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[5480px] w-[274px]" data-node-id="712:682" />
-        <div className="absolute bg-[#f4a31d] h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[5539px] w-[114px]" data-node-id="712:683" />
-        <p className="[word-break:break-word] absolute font-days-one leading-[25px] left-[calc(70%-31px)] not-italic text-[17px] text-[rgba(0,0,0,0.38)] top-[5490px] tracking-[-0.34px] uppercase whitespace-nowrap" data-node-id="712:684">
-          EMAIL ADDRESS
-        </p>
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[25px] left-[calc(70%+9px)] not-italic text-[17px] text-center text-white top-[5549px] tracking-[-0.34px] uppercase whitespace-nowrap" data-node-id="712:685">
-          SUBMIT
-        </p>
+        <NewsletterForm inputClassName="absolute bg-white h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[5480px] w-[274px]" buttonClassName="absolute bg-[#f4a31d] h-[46px] left-[calc(60%+144px)] rounded-[12px] top-[5539px] w-[114px]" />
         <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(20%-63px)] not-italic text-[16px] text-white top-[5650px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="712:686">
           © Digital Kangaroos | All Rights Reserved 2026
         </p>
