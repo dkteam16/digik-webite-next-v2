@@ -1,8 +1,7 @@
-import Link from "next/link";
+import { PixelHeader } from "@/components/layout/pixel-header";
+import { PixelSiteFooter } from "@/components/layout/pixel-site-footer";
 import Image from "next/image";
-import { NewsletterForm } from "@/components/newsletter-form";
 
-const imgTransparent1 = "/images/blog/imgTransparent1.png";
 const imgImage215 = "/images/blog/imgImage215.png";
 const imgImage216 = "/images/blog/imgImage216.png";
 const imgImage217 = "/images/blog/imgImage217.png";
@@ -17,30 +16,11 @@ const imgImage225 = "/images/blog/imgImage225.png";
 const imgImage226 = "/images/blog/imgImage226.png";
 const imgArrow22 = "/images/blog/imgArrow22.svg";
 const imgImage214 = "/images/blog/imgImage214.svg";
-const imgVector20 = "/images/blog/imgVector20.svg";
-const imgVector = "/images/blog/imgVector.svg";
-const imgVector1 = "/images/blog/imgVector1.svg";
-const imgGroup294 = "/images/blog/imgGroup294.svg";
-const imgGroup295 = "/images/blog/imgGroup295.svg";
-const img02YouTube = "/images/blog/img02YouTube.svg";
 
 export function BlogPage() {
   return (
     <div className="bg-white relative w-[1920px] h-[2123px]">
-      <div className="absolute bg-[#333] h-[108px] left-0 top-0 w-[1920px]" data-node-id="1035:9" />
-      <Link href="/about" className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(12.5%-124px)] not-italic text-[#cecece] text-[20px] text-center top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:10">About</Link>
-      <Link href="/services" className="[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(12.5%-53px)] not-italic text-[#cecece] text-[20px] top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:11">Services</Link>
-      <Link href="/industries" className="[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(12.5%+68px)] not-italic text-[#cecece] text-[20px] top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:12">Industries</Link>
-      <Link href="/contact" className="[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(12.5%+205px)] not-italic text-[#cecece] text-[20px] top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:13">Contact</Link>
-      <Link href="/blog" className="-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(87.5%+42px)] not-italic text-[#cecece] text-[20px] text-right top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:14">blog</Link>
-      <p className="-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(87.5%+150px)] not-italic text-[#cecece] text-[20px] text-right top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:15">
-        Search
-      </p>
-      <Link href="/careers" className="-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(87.5%-44px)] not-italic text-[#cecece] text-[20px] text-right top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:16">Careers</Link>
-      <Link href="/our-work" className="-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(87.5%-161px)] not-italic text-[#cecece] text-[20px] text-right top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1035:17">work</Link>
-      <div className="-translate-x-1/2 absolute h-[56px] left-1/2 top-[24px] w-[208px]" data-node-id="1035:18" data-name="Transparent 1">
-        <Image alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} fill sizes="100vw" />
-      </div>
+      <PixelHeader activeHref="/blog" />
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[56.6px] left-1/2 not-italic text-[#333] text-[50px] text-center top-[174px] tracking-[-1px] uppercase whitespace-nowrap" data-node-id="1035:180">
         Blogs
       </p>
@@ -196,101 +176,7 @@ export function BlogPage() {
           <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage226} fill sizes="100vw" />
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute bottom-0 contents left-1/2" data-node-id="1035:326">
-        <div className="-translate-x-1/2 absolute flex h-[6px] items-center justify-center left-1/2 top-[1623px] w-[1920px]" data-node-id="1035:327">
-          <div className="-scale-y-100 flex-none">
-            <div className="bg-[#f4a31d] h-[6px] relative w-[1920px]" />
-          </div>
-        </div>
-        <div className="-translate-x-1/2 absolute bg-[#333] h-[494px] left-1/2 top-[1629px] w-[1920px]" data-node-id="1035:328" />
-        <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(50%-75px)] not-italic text-[#f4a31d] text-[16px] top-[2095px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="1035:329">
-          DK Company projects
-        </p>
-        <div className="-translate-x-1/2 absolute h-0 left-1/2 top-[2088px] w-[1920px]" data-node-id="1035:330">
-          <div className="absolute inset-[-0.5px_0]">
-            <Image alt="" className="block max-w-none size-full" src={imgVector20} fill sizes="100vw" />
-          </div>
-        </div>
-        <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(12.5%+81px)] not-italic text-[16px] text-white top-[1769px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="1035:331">{`Web Development & Software Company`}</p>
-        <div className="absolute h-[64px] left-[322px] top-[1700px] w-[234px]" data-node-id="1035:332" data-name="Transparent 1">
-          <Image alt="Digital Kangaroos" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} fill sizes="100vw" />
-        </div>
-        <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0] left-[37.5%] not-italic text-[0px] text-white top-[1696px] tracking-[-0.38px] uppercase w-[279px] whitespace-pre-wrap" data-node-id="1035:333">
-          <p className="font-rajdhani font-semibold mb-0 text-[19px]">
-            <span className="leading-[23.6px] text-[#f4a31d]">India:</span>
-            <span className="leading-[23.6px]">{` SCO-4, 1st Floor, Omaxe Royal Residency, Ludhiana, 142022.`}</span>
-          </p>
-          <p className="leading-[23.6px] mb-0 text-[19px]">​</p>
-          <p className="font-rajdhani font-semibold text-[19px]">
-            <span className="leading-[23.6px] text-[#f4a31d]">{`USA: `}</span>
-            <span className="leading-[23.6px]">48870 Eagle View Terrace, Fremont CA 94539.</span>
-          </p>
-        </div>
-        <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0] left-[calc(62.5%-134px)] not-italic text-[19px] text-white top-[1696px] tracking-[-0.38px] uppercase whitespace-nowrap" data-node-id="1035:334">
-          <Link href="/" className="block leading-[28px] mb-0 hover:text-[#f4a31d] transition-colors">Home</Link>
-          <p className="leading-[28px] mb-0">
-            <Link href="/about" className="hover:text-[#f4a31d] transition-colors">about</Link>
-            <br aria-hidden />
-            <Link href="/services" className="hover:text-[#f4a31d] transition-colors">services</Link>
-          </p>
-          <Link href="/industries" className="block leading-[28px] mb-0 hover:text-[#f4a31d] transition-colors">industries</Link>
-          <Link href="/our-work" className="block leading-[28px] mb-0 hover:text-[#f4a31d] transition-colors">work</Link>
-          <Link href="/careers" className="block leading-[28px] mb-0 hover:text-[#f4a31d] transition-colors">careers</Link>
-          <Link href="/blog" className="block leading-[28px] mb-0 hover:text-[#f4a31d] transition-colors">blog</Link>
-          <Link href="/contact" className="block leading-[28px] mb-0 hover:text-[#f4a31d] transition-colors">contact</Link>
-          <p className="leading-[28px] mb-0">Faqs</p>
-          <p className="leading-[28px] mb-0">Press Release</p>
-          <p className="leading-[28px] mb-0">Privacy Policy</p>
-          <p className="leading-[28px]">{`Terms & Conditions`}</p>
-        </div>
-        <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0] left-[calc(62.5%+96px)] not-italic text-[19px] text-white top-[1699px] tracking-[-0.38px] uppercase whitespace-nowrap" data-node-id="1035:335">
-          <p className="leading-[25px] mb-0">Stalk us. feed your</p>
-          <p className="leading-[25px]">creativity</p>
-        </div>
-        <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0] left-[calc(87.5%-384px)] not-italic text-[19px] text-white top-[1856px] tracking-[-0.38px] uppercase whitespace-nowrap" data-node-id="1035:336">
-          <p className="leading-[25px] mb-0">Sign up for the digital kangaroos</p>
-          <p className="leading-[25px]">newsletter</p>
-        </div>
-        <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0] left-[37.5%] not-italic text-[0px] text-white top-[1844px] tracking-[-0.38px] uppercase whitespace-nowrap" data-node-id="1035:337">
-          <p className="font-rajdhani font-semibold leading-[23.6px] mb-0 text-[#f4a31d] text-[19px]">Phone:</p>
-          <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">+91 9814820845</p>
-        </div>
-        <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0] left-[37.5%] not-italic text-[0px] text-white top-[1920px] tracking-[-0.38px] uppercase whitespace-nowrap" data-node-id="1035:338">
-          <p className="font-rajdhani font-semibold leading-[23.6px] mb-0 text-[#f4a31d] text-[19px]">Email:</p>
-          <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">info@digitalkangaroos.com</p>
-        </div>
-        <Link href="https://www.facebook.com/digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="absolute inset-[83.37%_30.1%_14.46%_67.5%]" data-node-id="1035:339">
-          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector} fill sizes="100vw" />
-        </Link>
-        <Link href="https://www.linkedin.com/company/digital-kangaroos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[calc(50%+731.5px)]" data-node-id="1035:340">
-          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector1} fill sizes="100vw" />
-        </Link>
-        <Link href="https://www.instagram.com/digitalkangaroos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="absolute inset-[83.37%_23.4%_14.46%_74.21%]" data-node-id="1035:341">
-          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup294} fill sizes="100vw" />
-        </Link>
-        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="absolute inset-[83.37%_20.04%_14.46%_77.56%]" data-node-id="1035:345">
-          <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup295} fill sizes="100vw" />
-        </Link>
-        <div className="absolute contents inset-[83.37%_16.69%_14.46%_80.92%]" data-node-id="1035:348" data-name="Layer 3">
-          <div className="absolute contents inset-[83.37%_16.69%_14.46%_80.92%]" data-node-id="1035:349" data-name="Color">
-            <Link href="https://www.youtube.com/@digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="absolute inset-[83.37%_16.69%_14.46%_80.92%]" data-node-id="1035:350">
-              <Image alt="" className="absolute block inset-0 max-w-none size-full" src={img02YouTube} fill sizes="100vw" />
-            </Link>
-          </div>
-        </div>
-        <NewsletterForm inputClassName="absolute bg-white h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[1925px] w-[274px]" buttonClassName="absolute bg-[#f4a31d] h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[1984px] w-[114px]" />
-        <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(12.5%+81px)] not-italic text-[16px] text-white top-[2095px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="1035:357">
-          © Digital Kangaroos | All Rights Reserved 2026
-        </p>
-        <div className="-translate-x-1/2 [word-break:break-word] absolute contents font-rajdhani font-semibold leading-[normal] left-[calc(87.5%-172px)] not-italic text-[16px] text-white top-[2095px] tracking-[-0.32px] uppercase whitespace-nowrap" data-node-id="1035:358">
-          <p className="absolute left-[calc(87.5%-264px)] top-[2095px]" data-node-id="1035:359">
-            Cart Potato
-          </p>
-          <p className="absolute left-[calc(87.5%-151px)] top-[2095px]" data-node-id="1035:360">
-            DK SCHOOL
-          </p>
-        </div>
-      </div>
+      <PixelSiteFooter />
     </div>
   );
 }
