@@ -22,7 +22,7 @@ export function BlogInsidePage({ post }: { post: BlogPost }) {
   );
 
   return (
-    <div className="bg-white relative w-[1920px] h-[3268px]">
+    <div className="bg-white relative w-480 h-817">
       <PixelHeader activeHref="/blog" />
       <div className="absolute h-[692px] left-[124px] rounded-[16px] top-[232px] w-[1212px]" data-node-id="1035:484" data-name="image 215">
         <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={post.heroImage} fill sizes="100vw" />
@@ -51,7 +51,7 @@ export function BlogInsidePage({ post }: { post: BlogPost }) {
         <p className="font-rajdhani font-bold leading-[normal] mb-0 text-[40px]">{`Your Website Is Either Working For You — Or Against You `}</p>
         <p className="leading-[normal] mb-0 text-[20px]">​</p>
         <p className="mb-0 text-[20px]">
-          <span className="leading-[20px]">{`Here is something most business owners do not want to hear: your website might be your most expensive employee — and it might be doing `}</span>
+          <span className="leading-5">{`Here is something most business owners do not want to hear: your website might be your most expensive employee — and it might be doing `}</span>
           <span className="leading-[normal]">{`absolutely nothing useful. `}</span>
         </p>
         <p className="leading-[normal] mb-0 text-[20px]">{` `}</p>
@@ -89,61 +89,61 @@ export function BlogInsidePage({ post }: { post: BlogPost }) {
         <p className="leading-[normal] mb-0 text-[20px]">{` `}</p>
         <p className="leading-[normal] text-[20px]">What to do: Work with a professional corporate website design agency to conduct a design audit — a side-by-side comparison of your site against industry-current standards and your nearest competitors. A good agency will identify specifically which visual elements are dragging your credibility down and propose targeted improvements, whether that is a full visual redesign or a focused refresh of key pages.</p>
       </div>
-      <div className="absolute bg-[#333] h-[683px] left-[calc(66.67%+76px)] rounded-[16px] top-[1056px] w-[441px]" data-node-id="1039:520" />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-24px)] text-[30px] text-center text-white top-[1080.79px] tracking-[-0.6px] whitespace-nowrap" data-node-id="1039:521">
+      <div className="absolute bg-[#333] h-170.75 left-[calc(66.67%+76px)] rounded-[16px] top-264 w-110.25" data-node-id="1039:520" />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-24px)] text-[30px] text-center text-white top-270.1975 tracking-[-0.6px] whitespace-nowrap" data-node-id="1039:521">
         {`Let's Move Forward Faster`}
       </p>
       <input
         type="text"
         name="name"
         placeholder="Name"
-        className="absolute bg-[#f5f5f5] h-[48px] left-[calc(66.67%+101px)] rounded-[13px] top-[1138px] w-[390px] px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
+        className="absolute bg-[#f5f5f5] h-12 left-[calc(66.67%+101px)] rounded-[13px] top-284.5 w-97.5 px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
       />
       <input
         type="text"
         name="company"
         placeholder="Company"
-        className="absolute bg-[#f5f5f5] h-[48px] left-[calc(66.67%+101px)] rounded-[13px] top-[1199px] w-[390px] px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
+        className="absolute bg-[#f5f5f5] h-12 left-[calc(66.67%+101px)] rounded-[13px] top-299.75 w-97.5 px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
       />
-      <div className="absolute bg-[#cbcbcb] flex items-center justify-center h-[48px] left-[calc(66.67%+101px)] rounded-[13px] top-[1260px] w-[75px] font-rajdhani text-[20px] text-black" data-node-id="1039:534">
+      <div className="absolute bg-[#cbcbcb] flex items-center justify-center h-12 left-[calc(66.67%+101px)] rounded-[13px] top-315 w-18.75 font-rajdhani text-[20px] text-black" data-node-id="1039:534">
         +91
       </div>
       <input
         type="tel"
         name="phone"
         placeholder="Phone Number"
-        className="absolute bg-[#f5f5f5] h-[48px] left-[calc(66.67%+176px)] rounded-[13px] top-[1260px] w-[315px] px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
+        className="absolute bg-[#f5f5f5] h-12 left-[calc(66.67%+176px)] rounded-[13px] top-315 w-78.75 px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
       />
       <input
         type="email"
         name="email"
         placeholder="Email"
-        className="absolute bg-[#f5f5f5] h-[48px] left-[calc(66.67%+101px)] rounded-[13px] top-[1321px] w-[390px] px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
+        className="absolute bg-[#f5f5f5] h-12 left-[calc(66.67%+101px)] rounded-[13px] top-330.25 w-97.5 px-4 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d]"
       />
       <textarea
         name="projectDetails"
         placeholder="Project Details"
-        className="absolute bg-[#f5f5f5] h-[157px] left-[calc(66.67%+101px)] rounded-[13px] top-[1382px] w-[390px] px-4 py-3 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d] resize-none"
+        className="absolute bg-[#f5f5f5] h-39.25 left-[calc(66.67%+101px)] rounded-[13px] top-345.5 w-97.5 px-4 py-3 font-rajdhani text-[20px] text-black placeholder:text-black outline-none focus:ring-2 focus:ring-[#f4a31d] resize-none"
       />
-      <div className="absolute h-[73px] left-[calc(66.67%+148px)] top-[1562px] w-[298px]" data-node-id="1039:533" data-name="image 216">
+      <div className="absolute h-18.25 left-[calc(66.67%+148px)] top-390.5 w-74.5" data-node-id="1039:533" data-name="image 216">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* eslint-disable-next-line @next/next/no-img-element -- decorative background uses a custom percentage crop; next/image's fill sizing conflicts with it */}
           <img alt="" className="absolute h-[1038.36%] left-[-11.41%] max-w-none top-[-769.86%] w-[170.81%]" src={imgImage217} />
         </div>
       </div>
-      <div className="absolute flex h-[9px] items-center justify-center left-[calc(66.67%+155px)] top-[1280px] w-0" data-node-id="1039:537">
+      <div className="absolute flex h-2.25 items-center justify-center left-[calc(66.67%+155px)] top-320 w-0" data-node-id="1039:537">
         <div className="flex-none rotate-90">
-          <div className="h-0 relative w-[9px]">
+          <div className="h-0 relative w-2.25">
             <div className="absolute inset-[-3.68px_-5.56%_-3.68px_0]">
               <Image alt="" className="block max-w-none size-full" src={imgArrow1} fill sizes="100vw" />
             </div>
           </div>
         </div>
       </div>
-      <div className="-translate-x-1/2 absolute contents left-[calc(83.33%-23.5px)] top-[1658px]" data-node-id="1039:539">
-        <div className="absolute bg-[#f4a31d] h-[56px] left-[calc(66.67%+203px)] rounded-[16px] top-[1658px] w-[187px]" data-node-id="1039:540" />
-        <Link href="/contact" aria-label="Let's Connect" className="absolute border border-solid border-white h-[48px] left-[calc(66.67%+208px)] rounded-[13px] top-[1662px] w-[177px]" data-node-id="1039:541" />
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(83.33%-24px)] not-italic text-[20px] text-center text-white top-[1674px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1039:542">
+      <div className="-translate-x-1/2 absolute contents left-[calc(83.33%-23.5px)] top-414.5" data-node-id="1039:539">
+        <div className="absolute bg-[#f4a31d] h-14 left-[calc(66.67%+203px)] rounded-[16px] top-414.5 w-46.75" data-node-id="1039:540" />
+        <Link href="/contact" aria-label="Let's Connect" className="absolute border border-solid border-white h-12 left-[calc(66.67%+208px)] rounded-[13px] top-415.5 w-44.25" data-node-id="1039:541" />
+        <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(83.33%-24px)] not-italic text-[20px] text-center text-white top-418.5 tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="1039:542">
           {`Let's Connect`}
         </p>
       </div>

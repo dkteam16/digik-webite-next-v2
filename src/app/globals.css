@@ -138,4 +138,14 @@
   .focus-visible-ring {
     @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f4a31d];
   }
+
+  /* Figma-exported text nodes use this font-variation-settings pairing repeatedly */
+  .fvs-normal {
+    font-variation-settings: "CTGR" 0, "wdth" 100;
+  }
+
+  /* Figma-exported masked image frames repeat this same 4-utility combo */
+  .mask-frame {
+    @apply mask-alpha mask-intersect mask-no-clip mask-no-repeat;
+  }
 }

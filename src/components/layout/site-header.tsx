@@ -15,7 +15,7 @@ const navLinksRight = [
 
 export function SiteHeader() {
   return (
-    <header className="relative flex h-[108px] w-full items-center justify-between bg-[#333] px-6 md:px-12">
+    <header className="relative flex h-27 w-full items-center justify-between bg-[#333] px-6 md:px-12">
       <nav className="flex items-center gap-6">
         {navLinks.map((link) => (
           <Link

@@ -38,9 +38,9 @@ const ROWS: RowConfig[] = [
 
 export function BlogPage() {
   return (
-    <div className="bg-white relative w-[1920px] h-[2123px]">
+    <div className="bg-white relative w-480 h-530.75">
       <PixelHeader activeHref="/blog" />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[56.6px] left-1/2 not-italic text-[#333] text-[50px] text-center top-[174px] tracking-[-1px] uppercase whitespace-nowrap" data-node-id="1035:180">
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-14.15 left-1/2 not-italic text-[#333] text-[50px] text-center top-43.5 tracking-[-1px] uppercase whitespace-nowrap" data-node-id="1035:180">
         Blogs
       </p>
       {COLUMNS.map((col, colIdx) =>
@@ -70,7 +70,7 @@ export function BlogPage() {
             <Image alt="" className="block max-w-none size-full" src={imgArrow22} fill sizes="100vw" />
           </div>
         </div>
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(37.5%+212px)] text-[20px] text-black text-center top-[1556px] tracking-[-0.4px] whitespace-pre" data-node-id="1035:199">{`1      2      3    ....    8`}</p>
+        <p className="-translate-x-1/2 [word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(37.5%+212px)] text-[20px] text-black text-center top-389 tracking-[-0.4px] whitespace-pre" data-node-id="1035:199">{`1      2      3    ....    8`}</p>
       </div>
       <PixelSiteFooter />
     </div>
