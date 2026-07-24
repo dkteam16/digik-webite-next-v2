@@ -16,7 +16,7 @@ const INDUSTRIES = [
 ];
 
 const inputCls =
-  "absolute bg-white border border-[rgba(0,0,0,0.14)] border-solid rounded-[13px] px-4 font-rajdhani text-[17px] text-[#333] placeholder:text-[rgba(0,0,0,0.28)] outline-none focus:border-[#f4a31d]";
+  "absolute bg-white border border-[rgba(0,0,0,0.14)] border-solid rounded-[52px] px-4 font-rajdhani text-[17px] text-[#333] placeholder:text-[rgba(0,0,0,0.28)] outline-none focus:border-[#f4a31d]";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "submitted">("idle");
@@ -35,34 +35,34 @@ export function ContactForm() {
         name="fullName"
         required
         placeholder="Full Name"
-        className={`${inputCls} h-12 left-[calc(50%+36px)] top-127 w-69.25`}
+        className={`${inputCls} h-[12px] left-[calc(50%+36px)] top-[127px] w-69.25`}
       />
       <input
         type="text"
         name="companyName"
         required
         placeholder="Company Name"
-        className={`${inputCls} h-12 left-[calc(50%+323px)] top-127 w-69.25`}
+        className={`${inputCls} h-[12px] left-[calc(50%+323px)] top-[127px] w-69.25`}
       />
       <input
         type="email"
         name="email"
         required
         placeholder="Email"
-        className={`${inputCls} h-12 left-[calc(50%+36px)] top-141.75 w-69.25`}
+        className={`${inputCls} h-[12px] left-[calc(50%+36px)] top-[141.75px] w-69.25`}
       />
       <input
         type="tel"
         name="mobileNumber"
         required
         placeholder="Mobile Number"
-        className={`${inputCls} h-12 left-[calc(50%+323px)] top-141.75 w-69.25`}
+        className={`${inputCls} h-[12px] left-[calc(50%+323px)] top-[141.75px] w-69.25`}
       />
       <select
         name="industry"
         required
         defaultValue=""
-        className={`${inputCls} h-12 left-[calc(50%+36px)] top-156.75 w-141 appearance-none`}
+        className={`${inputCls} h-[12px] left-[calc(50%+36px)] top-[156.75px] w-[141px] appearance-none`}
       >
         <option value="" disabled>
           Select Your Industry
@@ -77,11 +77,11 @@ export function ContactForm() {
         name="message"
         required
         placeholder="Tell us more"
-        className={`${inputCls} h-19.75 left-[calc(50%+36px)] top-171.5 w-141 py-3 resize-none`}
+        className={`${inputCls} h-[19.75px] left-[calc(50%+36px)] top-[171.5px] w-[141px] py-3 resize-none`}
       />
       <button
         type="submit"
-        className="absolute bg-[#f4a31d] border-2 border-solid border-white h-14 left-[calc(50%+213px)] rounded-[16px] top-195 w-46.75 flex items-center justify-center font-rajdhani font-bold text-[20px] text-center text-white tracking-[-0.4px] uppercase hover:opacity-90 transition-opacity"
+        className="absolute bg-[#f4a31d] border-2 border-solid border-white h-[14px] left-[calc(50%+213px)] rounded-[64px] top-[195px] w-[46.75px] flex items-center justify-center font-rajdhani font-bold text-[20px] text-center text-white tracking-[-0.4px] uppercase hover:opacity-90 transition-opacity"
       >
         {status === "submitted" ? "Sent!" : "Send Message"}
       </button>

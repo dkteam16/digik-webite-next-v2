@@ -42,13 +42,13 @@ export function CorporatePhotographyVideographyPage() {
           Professional factory photography, product shoots, and brand videos for manufacturing and industrial companies — the visual content that makes international buyers trust what they see on your website before they ever visit in person.
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[490px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[490px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Discuss a Shoot
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[490px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[490px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           See Our Work
         </p>
@@ -156,8 +156,8 @@ export function CorporatePhotographyVideographyPage() {
       <p className="-translate-x-1/2 absolute font-rajdhani text-[#535353] text-[18px] leading-[26px] left-1/2 text-center top-[2130px] w-[1300px]">
         One day of professional photography produces visual content that works for your business for years. It&apos;s the highest ROI content investment most manufacturing companies never make — until they see what it does for their enquiry rate.
       </p>
-      <Link href="/contact" className="-translate-x-1/2 absolute bg-[#f4a31d] block h-[88px] left-1/2 rounded-[16px] top-[2230px] w-[320px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="-translate-x-1/2 absolute bg-[#f4a31d] block h-[88px] left-1/2 rounded-[64px] top-[2230px] w-[320px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Book a Factory Shoot
         </p>

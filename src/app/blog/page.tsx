@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <FigmaScaleFrame width={1920} height={2123}>
+    <FigmaScaleFrame width={1920} height={2213}>
       <BlogPage />
     </FigmaScaleFrame>
   );

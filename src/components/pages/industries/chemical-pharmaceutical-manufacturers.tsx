@@ -86,7 +86,7 @@ const APPROACH_ROWS = [
 
 export function ChemicalPharmaceuticalManufacturersPage() {
   return (
-    <div className="bg-white relative w-[1920px] h-[3820px]">
+    <div className="bg-white relative w-[1920px] h-[3780px]">
       <PixelHeader activeHref="/industries" />
 
       {/* Hero */}
@@ -101,13 +101,13 @@ export function ChemicalPharmaceuticalManufacturersPage() {
           Chemical and pharma buyers don&apos;t just evaluate price — they evaluate your documentation, certifications, regulatory compliance, and quality systems before they even send an inquiry. Your website needs to demonstrate all of this clearly and credibly.
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Get Free Website Audit
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[700px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[700px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           See Industry Examples
         </p>
@@ -184,7 +184,7 @@ export function ChemicalPharmaceuticalManufacturersPage() {
             {CHECKLIST.slice(row * 3, row * 3 + 3).map((item) => (
               <div
                 key={item.title}
-                className={`bg-[#f5f5f5] rounded-[16px] w-[533px] px-[32px] py-[32px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
+                className={`bg-[#f5f5f5] rounded-[64px] w-[533px] px-[32px] py-[32px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
               >
                 <div className="size-[52px] rounded-[10px] bg-white flex items-center justify-center">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#f4a31d" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-[26px]">
@@ -229,23 +229,26 @@ export function ChemicalPharmaceuticalManufacturersPage() {
       })}
 
       {/* CTA */}
+      <div className="absolute bg-[#f5f5f5] left-0 top-[2760px] w-[1920px] h-[520px]" />
       <p className="-translate-x-1/2 absolute font-days-one text-[#242832] text-[50px] leading-[60px] left-1/2 text-center top-[2840px] tracking-[-1px] w-[1100px]">
         Is Your Chemical or Pharma Website Winning International Buyers?
       </p>
       <p className="-translate-x-1/2 absolute font-rajdhani font-semibold text-[#535353] text-[20px] left-1/2 text-center top-[3000px] tracking-[-0.4px] uppercase w-[725px]">
         Free website audit for chemical manufacturers and pharmaceutical exporters across India.
       </p>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[16px] top-[3090px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
-        <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
-          Get Free Audit
-        </p>
-      </Link>
-      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[16px] top-[3090px] hover:bg-[#333]/5 transition-colors">
-        <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
-          WhatsApp Us
-        </p>
-      </Link>
+      <div className="-translate-x-1/2 absolute flex items-center justify-center gap-[24px] left-1/2 top-[3090px]">
+        <Link href="/contact" className="relative bg-[#f4a31d] block h-[88px] rounded-[64px] w-[304px] hover:opacity-90 transition-opacity">
+          <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
+          <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
+            Get Free Audit
+          </p>
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="relative border border-[#333] border-solid flex h-[88px] items-center justify-center px-[36px] rounded-[64px] hover:bg-[#333]/5 transition-colors">
+          <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
+            WhatsApp Us
+          </p>
+        </Link>
+      </div>
       <div className="absolute left-[1588px] top-[2810px] size-[170px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         <div className="absolute left-[5.4px] top-[5.4px] size-[159px]">

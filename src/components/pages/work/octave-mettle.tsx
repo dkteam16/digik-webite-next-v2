@@ -66,7 +66,7 @@ export function OctaveMettlePage() {
       <p className="absolute font-rajdhani text-[#535353] text-[18px] leading-[26px] left-[162px] top-[330px] w-[900px]">
         A pan-India franchise chain with 240+ locations and Google Business Profiles that were inconsistent, inaccurate, and costing them local visibility. We fixed all 240+ in a single, systematic engagement.
       </p>
-      <div className="absolute bg-[#f5f5f5] rounded-[16px] left-[162px] top-[440px] w-[620px] h-[170px] p-[28px]">
+      <div className="absolute bg-[#f5f5f5] rounded-[64px] left-[162px] top-[440px] w-[620px] h-[170px] p-[28px]">
         <div className="grid grid-cols-[130px_1fr] gap-y-[12px] font-rajdhani text-[17px]">
           <span className="font-bold text-[#f4a31d] uppercase">Client:</span>
           <span className="text-[#333]">Octave Mettle, Pan-India</span>
@@ -161,7 +161,7 @@ export function OctaveMettlePage() {
       </div>
 
       {/* Sidebar */}
-      <div className="absolute left-[1420px] top-[860px] w-[338px] bg-[#f5f5f5] rounded-[16px] p-[28px]">
+      <div className="absolute left-[1420px] top-[860px] w-[338px] bg-[#f5f5f5] rounded-[64px] p-[28px]">
         <p className="font-rajdhani font-bold text-[#f4a31d] text-[16px] uppercase tracking-[-0.32px]">Services Delivered</p>
         <ul className="font-rajdhani text-[#333] text-[16px] leading-[22px] mt-[16px] flex flex-col gap-[10px]">
           {SERVICES_DELIVERED.map((item) => (
@@ -169,7 +169,7 @@ export function OctaveMettlePage() {
           ))}
         </ul>
       </div>
-      <div className="absolute left-[1420px] top-[1230px] w-[338px] bg-[#f5f5f5] rounded-[16px] p-[28px]">
+      <div className="absolute left-[1420px] top-[1230px] w-[338px] bg-[#f5f5f5] rounded-[64px] p-[28px]">
         <p className="font-rajdhani font-bold text-[#f4a31d] text-[16px] uppercase tracking-[-0.32px]">Industry</p>
         <ul className="font-rajdhani text-[#333] text-[16px] leading-[22px] mt-[16px] flex flex-col gap-[10px]">
           {INDUSTRY.map((item) => (
@@ -177,7 +177,7 @@ export function OctaveMettlePage() {
           ))}
         </ul>
       </div>
-      <div className="absolute left-[1420px] top-[1470px] w-[338px] bg-white border border-[#e0e0e0] rounded-[16px] p-[28px] text-center">
+      <div className="absolute left-[1420px] top-[1470px] w-[338px] bg-white border border-[#e0e0e0] rounded-[64px] p-[28px] text-center">
         <p className="font-rajdhani font-bold text-[#242832] text-[16px] uppercase tracking-[-0.32px] leading-[22px]">
           Multiple Locations and Inconsistent Online Presence?
         </p>
@@ -194,13 +194,13 @@ export function OctaveMettlePage() {
       <p className="-translate-x-1/2 absolute font-rajdhani text-[#535353] text-[18px] left-1/2 text-center top-[2530px] uppercase tracking-[-0.36px] whitespace-nowrap">
         If you&apos;re a manufacturer, exporter, or B2B industrial company — we should talk.
       </p>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[16px] top-[2620px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[64px] top-[2620px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Get Free Audit
         </p>
       </Link>
-      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[16px] top-[2620px] hover:bg-[#333]/5 transition-colors">
+      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[64px] top-[2620px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           WhatsApp Us
         </p>

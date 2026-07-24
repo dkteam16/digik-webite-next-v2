@@ -42,13 +42,13 @@ export function MobileAppsDevelopmentPage() {
           Custom iOS and Android applications for manufacturing and B2B industrial companies — from dealer portals and order management systems to customer-facing product catalogues and field sales apps.
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[450px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[450px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Discuss Your App
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[450px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[450px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           See Our Work
         </p>
@@ -153,8 +153,8 @@ export function MobileAppsDevelopmentPage() {
       <p className="-translate-x-1/2 absolute font-rajdhani text-[#535353] text-[18px] leading-[26px] left-1/2 text-center top-[2080px] w-[1300px]">
         Most industrial companies are still running their dealer and customer interactions over WhatsApp and phone calls. A properly built app changes that — and gives you a competitive advantage your competitors don&apos;t have.
       </p>
-      <Link href="/contact" className="-translate-x-1/2 absolute bg-[#f4a31d] block h-[88px] left-1/2 rounded-[16px] top-[2180px] w-[320px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="-translate-x-1/2 absolute bg-[#f4a31d] block h-[88px] left-1/2 rounded-[64px] top-[2180px] w-[320px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Discuss Your App Project
         </p>

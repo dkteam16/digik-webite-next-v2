@@ -32,7 +32,7 @@ const ACCORDION_ROWS = [
 
 export function HosieryTextileExportersPage() {
   return (
-    <div className="bg-white relative w-[1920px] h-[3480px]">
+    <div className="bg-white relative w-[1920px] h-[3420px]">
       <PixelHeader activeHref="/industries" />
 
       {/* Hero */}
@@ -47,13 +47,13 @@ export function HosieryTextileExportersPage() {
           Hosiery and textile exporters in Ludhiana, Tirupur, and across India are losing export orders to competitors who look more professional online — not because they produce better quality, but because their website says so.
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Get Free Audit
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[700px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[700px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           See What We Build
         </p>
@@ -171,24 +171,27 @@ export function HosieryTextileExportersPage() {
       })}
 
       {/* CTA */}
+      <div className="absolute bg-[#f5f5f5] left-0 top-[2400px] w-[1920px] h-[520px]" />
       <p className="-translate-x-1/2 absolute font-days-one text-[#242832] text-[50px] leading-[60px] left-1/2 text-center top-[2480px] tracking-[-1px] w-[900px]">
         Let Your Website Do the Export Sales Work
       </p>
       <p className="-translate-x-1/2 absolute font-rajdhani font-semibold text-[#535353] text-[20px] left-1/2 text-center top-[2640px] tracking-[-0.4px] uppercase w-[900px]">
         {`Free audit for hosiery and textile exporters. We'll show you what your competitors' websites are doing that yours isn't.`}
       </p>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[16px] top-[2750px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
-        <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
-          Get Free Website Audit
-        </p>
-      </Link>
-      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[16px] top-[2750px] hover:bg-[#333]/5 transition-colors">
-        <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
-          WhatsApp Us
-        </p>
-      </Link>
-      <div className="absolute left-[1660px] top-[2470px] size-[170px]">
+      <div className="-translate-x-1/2 absolute flex items-center justify-center gap-[24px] left-1/2 top-[2750px]">
+        <Link href="/contact" className="relative bg-[#f4a31d] block h-[88px] rounded-[64px] w-[304px] hover:opacity-90 transition-opacity">
+          <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
+          <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
+            Get Free Website Audit
+          </p>
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="relative border border-[#333] border-solid flex h-[88px] items-center justify-center px-[36px] rounded-[64px] hover:bg-[#333]/5 transition-colors">
+          <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
+            WhatsApp Us
+          </p>
+        </Link>
+      </div>
+      <div className="absolute left-[1660px] top-[2450px] size-[170px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         <div className="absolute left-[5.4px] top-[5.4px] size-[159px]">
           <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} fill sizes="100vw" />

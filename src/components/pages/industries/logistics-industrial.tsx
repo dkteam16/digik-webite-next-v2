@@ -68,7 +68,7 @@ const WHY_CARDS = [
 
 export function LogisticsIndustrialPage() {
   return (
-    <div className="bg-white relative w-[1920px] h-[3760px]">
+    <div className="bg-white relative w-[1920px] h-[3690px]">
       <PixelHeader activeHref="/industries" />
 
       {/* Hero */}
@@ -83,13 +83,13 @@ export function LogisticsIndustrialPage() {
           Whether you provide 3PL warehousing, industrial freight, CFS services, or supply chain solutions — your corporate clients search for logistics partners online. If you&apos;re not on page 1, you&apos;re not in the conversation.
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Get Free Website Audit
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[700px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[700px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           See Examples
         </p>
@@ -195,13 +195,13 @@ export function LogisticsIndustrialPage() {
         We Understand B2B. We Understand Industrial. We Understand India.
       </p>
       <p className="-translate-x-1/2 absolute font-rajdhani text-[#535353] text-[18px] leading-[26px] left-1/2 text-center top-[2255px] w-[1300px]">
-        {`We're not a generalist agency that accidentally does B2B work. We are exclusively focused on Indian manufacturers, exporters, and industrial service companies — which means we understand your buyers, your sales cycle, and what it actually takes to generate a qualified B2B lead from a website.`}
+        {`We're not a generalist agency that accidentally does B2B work. We are exclusively focused on Indian manufacturers, exporters, and industrial service companies — which means we understand your buyers, your sales cycle, and what it takes to generate a qualified B2B lead from a website.`}
       </p>
       <div className="absolute left-[162px] top-[2370px] flex items-center gap-[30px]">
         {WHY_CARDS.map((card) => (
           <div
             key={card.title}
-            className={`bg-white rounded-[16px] w-[420px] shadow-[0px_2px_12px_0px_rgba(0,0,0,0.06)] px-[28px] py-[32px] ${card.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
+            className={`bg-white rounded-[64px] w-[420px] shadow-[0px_2px_12px_0px_rgba(0,0,0,0.06)] px-[28px] py-[32px] ${card.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
           >
             <div className="size-[48px] rounded-[10px] bg-[#fdf1e0] flex items-center justify-center">
               <svg viewBox="0 0 24 24" fill="none" stroke="#f4a31d" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="size-[24px]">
@@ -219,23 +219,26 @@ export function LogisticsIndustrialPage() {
       </div>
 
       {/* CTA */}
+      <div className="absolute bg-[#f5f5f5] left-0 top-[2670px] w-[1920px] h-[520px]" />
       <p className="-translate-x-1/2 absolute font-days-one text-[#242832] text-[46px] leading-[56px] left-1/2 text-center top-[2750px] tracking-[-0.92px] w-[1100px]">
         Ready to Win More Logistics Contracts Through Your Website?
       </p>
       <p className="-translate-x-1/2 absolute font-rajdhani font-semibold text-[#535353] text-[20px] left-1/2 text-center top-[2940px] tracking-[-0.4px] uppercase w-[725px]">
         Free audit for industrial logistics and supply chain companies across India.
       </p>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[16px] top-[3030px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
-        <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
-          Get Free Audit
-        </p>
-      </Link>
-      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[16px] top-[3030px] hover:bg-[#333]/5 transition-colors">
-        <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
-          WhatsApp Us
-        </p>
-      </Link>
+      <div className="-translate-x-1/2 absolute flex items-center justify-center gap-[24px] left-1/2 top-[3030px]">
+        <Link href="/contact" className="relative bg-[#f4a31d] block h-[88px] rounded-[64px] w-[304px] hover:opacity-90 transition-opacity">
+          <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
+          <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
+            Get Free Audit
+          </p>
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="relative border border-[#333] border-solid flex h-[88px] items-center justify-center px-[36px] rounded-[64px] hover:bg-[#333]/5 transition-colors">
+          <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
+            WhatsApp Us
+          </p>
+        </Link>
+      </div>
       <div className="absolute left-[1660px] top-[2740px] size-[170px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         <div className="absolute left-[5.4px] top-[5.4px] size-[159px]">

@@ -66,7 +66,7 @@ const ACCORDION_ROWS = [
 
 export function CycleSportsEquipmentPage() {
   return (
-    <div className="bg-white relative w-[1920px] h-[4144px]">
+    <div className="bg-white relative w-[1920px] h-[4120px]">
       <PixelHeader activeHref="/industries" />
 
       {/* Hero */}
@@ -81,13 +81,13 @@ export function CycleSportsEquipmentPage() {
           Ludhiana manufactures 70% of India&apos;s cycles and cycle parts — yet most manufacturers in the cluster are invisible online to the global buyers who want to source from them. We fix that.
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Get Free Audit
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[700px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[700px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           View Our Work
         </p>
@@ -180,7 +180,7 @@ export function CycleSportsEquipmentPage() {
       {OPPORTUNITY_ITEMS.map((item, i) => (
         <div
           key={item.n}
-          className={`absolute bg-[#f5f5f5] rounded-[16px] w-[420px] h-[230px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
+          className={`absolute bg-[#f5f5f5] rounded-[64px] w-[420px] h-[230px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
           style={{ left: 162 + i * 450, top: 1436 }}
         >
           <div className="absolute border border-[#f4a31d] border-solid left-[32px] top-[32px] size-[61px] flex items-center justify-center">
@@ -193,7 +193,7 @@ export function CycleSportsEquipmentPage() {
       ))}
 
       {/* Quote */}
-      <div className="absolute bg-[#333] rounded-[16px] left-[162px] top-[1724px] w-[1600px] h-[186px]">
+      <div className="absolute bg-[#333] rounded-[64px] left-[162px] top-[1724px] w-[1600px] h-[186px]">
         <div className="absolute bg-[#f4a31d] left-0 top-[24px] w-[6px] h-[138px]" />
         <p className="absolute font-rajdhani font-semibold text-[#f4a31d] text-[20px] leading-[28px] left-[48px] top-[36px] w-[1500px]">
           {`"Before Digital Kangaroos, we got zero direct enquiries from international buyers online. Within four months of the new website going live, we had three serious European importers contact us directly through our website."`}
@@ -230,7 +230,7 @@ export function CycleSportsEquipmentPage() {
         {FOUND_ITEMS.map((item) => (
           <div
             key={item.n}
-            className={`bg-white rounded-[16px] w-[420px] px-[28px] py-[28px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
+            className={`bg-white rounded-[64px] w-[420px] px-[28px] py-[28px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
           >
             <div className="border border-[#f4a31d] border-solid size-[52px] flex items-center justify-center">
               <p className="font-days-one text-[#f4a31d] text-[24px]">{item.n}</p>
@@ -246,24 +246,27 @@ export function CycleSportsEquipmentPage() {
       </div>
 
       {/* CTA */}
+      <div className="absolute bg-[#f5f5f5] left-0 top-[3100px] w-[1920px] h-[520px]" />
       <p className="-translate-x-1/2 absolute font-days-one text-[#242832] text-[50px] leading-[60px] left-1/2 text-center top-[3174px] tracking-[-1px] w-[1100px]">
         {`Let's Put Ludhiana's Cycle Cluster on the Global Map`}
       </p>
       <p className="-translate-x-1/2 absolute font-rajdhani font-semibold text-[#535353] text-[20px] left-1/2 text-center top-[3334px] tracking-[-0.4px] uppercase w-[725px]">
         Free website audit for cycle and sports equipment manufacturers. No commitment, just clarity.
       </p>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[16px] top-[3434px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
-        <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
-          Get Free Audit
-        </p>
-      </Link>
-      <Link href="tel:+919814820845" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[16px] top-[3434px] hover:bg-[#333]/5 transition-colors">
-        <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
-          Call Us Now
-        </p>
-      </Link>
-      <div className="absolute left-[1660px] top-[3144px] size-[170px]">
+      <div className="-translate-x-1/2 absolute flex items-center justify-center gap-[24px] left-1/2 top-[3434px]">
+        <Link href="/contact" className="relative bg-[#f4a31d] block h-[88px] rounded-[64px] w-[304px] hover:opacity-90 transition-opacity">
+          <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
+          <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
+            Get Free Audit
+          </p>
+        </Link>
+        <Link href="tel:+919814820845" className="relative border border-[#333] border-solid flex h-[88px] items-center justify-center px-[36px] rounded-[64px] hover:bg-[#333]/5 transition-colors">
+          <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
+            Call Us Now
+          </p>
+        </Link>
+      </div>
+      <div className="absolute left-[1660px] top-[3150px] size-[170px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         <div className="absolute left-[5.4px] top-[5.4px] size-[159px]">
           <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} fill sizes="100vw" />

@@ -26,7 +26,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   if (!post) notFound();
 
   return (
-    <FigmaScaleFrame width={1920} height={3268}>
+    <FigmaScaleFrame width={1920} height={3050}>
       <BlogInsidePage post={post} />
     </FigmaScaleFrame>
   );

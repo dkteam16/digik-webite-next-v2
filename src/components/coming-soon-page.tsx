@@ -14,7 +14,7 @@ export function ComingSoonPage({
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <SiteHeader />
-      <main className="flex flex-1 flex-col items-center justify-center px-6 py-24 text-center">
+      <main className="flex flex-1 flex-col items-center justify-center px-6 py-[24px] text-center">
         <p className="font-rajdhani font-semibold text-[#f4a31d] text-[18px] uppercase tracking-[-0.36px]">
           {eyebrow}
         </p>

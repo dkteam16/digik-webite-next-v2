@@ -27,7 +27,7 @@ const ACCORDION_ROWS = [
 
 export function SteelMetalFabricationPage() {
   return (
-    <div className="bg-white relative w-[1920px] h-[2780px]">
+    <div className="bg-white relative w-[1920px] h-[2740px]">
       <PixelHeader activeHref="/industries" />
 
       {/* Hero */}
@@ -42,13 +42,13 @@ export function SteelMetalFabricationPage() {
           Structural steel, rolling mills, fabrication shops, forging units — your buyers are engineers and procurement heads who do deep online research before shortlisting suppliers. Your website needs to speak their language.
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[700px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Get Free Website Audit
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[700px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[700px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           See Examples
         </p>
@@ -146,24 +146,27 @@ export function SteelMetalFabricationPage() {
       })}
 
       {/* CTA */}
+      <div className="absolute bg-[#f5f5f5] left-0 top-[1720px] w-[1920px] h-[520px]" />
       <p className="-translate-x-1/2 absolute font-days-one text-[#242832] text-[50px] leading-[60px] left-1/2 text-center top-[1800px] tracking-[-1px] w-[1000px]">
         Your Steel Business Deserves an <span className="text-[#f4a31d]">Industrial-Grade</span> Website
       </p>
       <p className="-translate-x-1/2 absolute font-rajdhani font-semibold text-[#535353] text-[20px] left-1/2 text-center top-[1960px] tracking-[-0.4px] uppercase w-[900px]">
         Free audit for steel manufacturers, fabricators, and rolling mill operators across India.
       </p>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[16px] top-[2050px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
-        <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
-          Get Free Audit
-        </p>
-      </Link>
-      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[16px] top-[2050px] hover:bg-[#333]/5 transition-colors">
-        <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
-          WhatsApp Us
-        </p>
-      </Link>
-      <div className="absolute left-[1660px] top-[1800px] size-[170px]">
+      <div className="-translate-x-1/2 absolute flex items-center justify-center gap-[24px] left-1/2 top-[2050px]">
+        <Link href="/contact" className="relative bg-[#f4a31d] block h-[88px] rounded-[64px] w-[304px] hover:opacity-90 transition-opacity">
+          <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
+          <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
+            Get Free Audit
+          </p>
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="relative border border-[#333] border-solid flex h-[88px] items-center justify-center px-[36px] rounded-[64px] hover:bg-[#333]/5 transition-colors">
+          <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
+            WhatsApp Us
+          </p>
+        </Link>
+      </div>
+      <div className="absolute left-[1660px] top-[1780px] size-[170px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         <div className="absolute left-[5.4px] top-[5.4px] size-[159px]">
           <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} fill sizes="100vw" />

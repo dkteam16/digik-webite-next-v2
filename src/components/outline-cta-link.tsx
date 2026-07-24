@@ -4,7 +4,7 @@ import { cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const outlineCtaLinkVariants = cva(
-  "absolute border border-[#333] border-solid content-stretch flex h-22 items-center justify-center px-5 py-2.5 rounded-[16px] hover:bg-[#333]/5 transition-colors"
+  "absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center px-8 py-3 rounded-[64px] hover:bg-[#333]/5 transition-colors"
 );
 
 export function OutlineCtaLink({

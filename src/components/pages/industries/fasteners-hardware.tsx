@@ -60,7 +60,7 @@ const KEYWORDS_ROW2 = [
 
 export function FastenersHardwarePage() {
   return (
-    <div className="bg-white relative w-[1920px] h-[3372px]">
+    <div className="bg-white relative w-[1920px] h-[3360px]">
       <PixelHeader activeHref="/industries" />
 
       {/* Hero */}
@@ -75,13 +75,13 @@ export function FastenersHardwarePage() {
           {`India's fastener industry exports to 80+ countries. But most manufacturers win these orders through personal relationships and trade fairs — a model that breaks down the moment a new international buyer searches for you on Google and finds nothing.`}
         </p>
       </div>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[16px] top-[610px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
+      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[162px] rounded-[64px] top-[610px] w-[304px] hover:opacity-90 transition-opacity">
+        <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
         <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
           Get Free Website Audit
         </p>
       </Link>
-      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[16px] top-[610px] hover:bg-[#333]/5 transition-colors">
+      <Link href="/our-work" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[482px] px-[20px] py-[10px] rounded-[64px] top-[610px] hover:bg-[#333]/5 transition-colors">
         <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
           See Industry Examples
         </p>
@@ -110,35 +110,35 @@ export function FastenersHardwarePage() {
       </div>
 
       {/* Divider + icon strip */}
-      <div className="absolute flex h-[6px] items-center justify-center left-0 top-[700px] w-[1920px]">
+      <div className="absolute flex h-[6px] items-center justify-center left-0 top-[740px] w-[1920px]">
         <div className="bg-[#f4a31d] h-[6px] w-[1920px]" />
       </div>
-      <div className="absolute bg-[#333] h-[106px] left-0 top-[705px] w-[1920px]" />
-      <div className="absolute flex items-center gap-[10px] left-[80px] top-[739px]">
+      <div className="absolute bg-[#333] h-[106px] left-0 top-[745px] w-[1920px]" />
+      <div className="absolute flex items-center gap-[10px] left-[80px] top-[779px]">
         <div className="absolute left-0 top-[-5px] w-[59px] h-[59px]">
           <Image alt="" className="absolute block inset-0 max-w-none object-contain size-full" src={imgGroup266} fill sizes="100vw" />
         </div>
         <p className="absolute font-rajdhani font-semibold text-[20px] text-white left-[75px] top-[8px] tracking-[-0.4px] uppercase whitespace-nowrap">Engineering Firm Web Design</p>
       </div>
-      <div className="absolute flex items-center gap-[10px] left-[470px] top-[739px]">
+      <div className="absolute flex items-center gap-[10px] left-[470px] top-[779px]">
         <div className="absolute left-0 top-[-2px] w-[60px] h-[54px]">
           <Image alt="" className="absolute block inset-0 max-w-none object-contain size-full" src={imgGroup267} fill sizes="100vw" />
         </div>
         <p className="absolute font-rajdhani font-semibold text-[20px] text-white left-[76px] top-[8px] tracking-[-0.4px] uppercase whitespace-nowrap">Web Design for Manufacturers</p>
       </div>
-      <div className="absolute flex items-center gap-[10px] left-[900px] top-[739px]">
+      <div className="absolute flex items-center gap-[10px] left-[900px] top-[779px]">
         <div className="absolute left-0 top-[-7px] w-[61px] h-[61px]">
           <Image alt="" className="absolute block inset-0 max-w-none object-contain size-full" src={imgOutline} fill sizes="100vw" />
         </div>
         <p className="absolute font-rajdhani font-semibold text-[20px] text-white left-[77px] top-[8px] tracking-[-0.4px] uppercase whitespace-nowrap">Industrial SEO Agency India</p>
       </div>
-      <div className="absolute flex items-center gap-[10px] left-[1310px] top-[739px]">
+      <div className="absolute flex items-center gap-[10px] left-[1310px] top-[779px]">
         <div className="absolute left-0 top-[-7px] w-[57px] h-[69px]">
           <Image alt="" className="absolute block inset-0 max-w-none object-contain size-full" src={imgGroup268} fill sizes="100vw" />
         </div>
         <p className="absolute font-rajdhani font-semibold text-[20px] text-white left-[73px] top-[8px] tracking-[-0.4px] uppercase whitespace-nowrap">{`B2B Website Design & Development`}</p>
       </div>
-      <div className="absolute flex items-center gap-[10px] left-[1780px] top-[739px]">
+      <div className="absolute flex items-center gap-[10px] left-[1780px] top-[779px]">
         <div className="absolute left-0 top-[-6px] w-[57px] h-[57px]">
           <Image alt="" className="absolute block inset-0 max-w-none object-contain size-full" src={imgGroup} fill sizes="100vw" />
         </div>
@@ -146,17 +146,17 @@ export function FastenersHardwarePage() {
       </div>
 
       {/* The Core Problem */}
-      <p className="absolute font-rajdhani font-semibold left-[162px] text-[#f4a31d] text-[20px] top-[850px] tracking-[-0.4px] uppercase">
+      <p className="absolute font-rajdhani font-semibold left-[162px] text-[#f4a31d] text-[20px] top-[890px] tracking-[-0.4px] uppercase">
         The Core Problem
       </p>
-      <p className="-translate-x-1/2 absolute font-days-one text-[#333] text-[42px] leading-[52px] left-1/2 text-center top-[893px] tracking-[-0.84px] uppercase w-[1200px]">
+      <p className="-translate-x-1/2 absolute font-days-one text-[#333] text-[42px] leading-[52px] left-1/2 text-center top-[933px] tracking-[-0.84px] uppercase w-[1200px]">
         Your Product Range Is Huge. Your Website Shows Almost None of It.
       </p>
       {ACCORDION_ROWS.map((label, i) => {
         const col = i % 2;
         const row = Math.floor(i / 2);
         const left = 162 + col * (798 + 30);
-        const top = 1040 + row * 209;
+        const top = 1080 + row * 209;
         return (
           <div key={label} className="absolute bg-[#f5f5f5] w-[798px] h-[179px] px-[28px] py-[24px]" style={{ left, top }}>
             <p className="font-rajdhani font-semibold text-[#f4a31d] text-[20px] uppercase tracking-[-0.4px]">{`Deliverable ${String(i + 1).padStart(2, "0")}`}</p>
@@ -168,8 +168,8 @@ export function FastenersHardwarePage() {
       {PROBLEM_ITEMS.map((item, i) => (
         <div
           key={item.n}
-          className={`absolute bg-[#f5f5f5] rounded-[16px] w-[420px] h-[230px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
-          style={{ left: 162 + i * 450, top: 1496 }}
+          className={`absolute bg-[#f5f5f5] rounded-[64px] w-[420px] h-[230px] ${item.featured ? "border-t-4 border-[#f4a31d]" : ""}`}
+          style={{ left: 162 + i * 450, top: 1536 }}
         >
           <div className="absolute border border-[#f4a31d] border-solid left-[32px] top-[32px] size-[61px] flex items-center justify-center">
             <p className="font-days-one text-[#f4a31d] text-[28px]">{item.n}</p>
@@ -181,14 +181,14 @@ export function FastenersHardwarePage() {
       ))}
 
       {/* SEO Keywords */}
-      <div className="absolute bg-[#f5f5f5] left-0 top-[1796px] w-[1920px] h-[446px]" />
-      <p className="absolute font-rajdhani font-semibold left-[162px] text-[#f4a31d] text-[20px] top-[1856px] tracking-[-0.4px] uppercase">
+      <div className="absolute bg-[#f5f5f5] left-0 top-[1836px] w-[1920px] h-[446px]" />
+      <p className="absolute font-rajdhani font-semibold left-[162px] text-[#f4a31d] text-[20px] top-[1896px] tracking-[-0.4px] uppercase">
         SEO Keywords We Target
       </p>
-      <p className="absolute font-days-one text-[#333] text-[42px] leading-[52px] left-[162px] top-[1899px] tracking-[-0.84px] uppercase w-[1100px]">
+      <p className="absolute font-days-one text-[#333] text-[42px] leading-[52px] left-[162px] top-[1939px] tracking-[-0.84px] uppercase w-[1100px]">
         How Fastener Buyers Search – and How We Get You Found
       </p>
-      <div className="absolute left-[1660px] top-[1856px] size-[170px]">
+      <div className="absolute left-[1660px] top-[1896px] size-[170px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         <div className="absolute left-[5px] top-[6px] size-[160px]">
           <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse22} fill sizes="100vw" />
@@ -200,14 +200,14 @@ export function FastenersHardwarePage() {
           (Shopify division of digital kangaroos)
         </p>
       </div>
-      <div className="absolute left-[162px] top-[2086px] flex flex-wrap gap-[16px] w-[1596px]">
+      <div className="absolute left-[162px] top-[2126px] flex flex-wrap gap-[16px] w-[1596px]">
         {KEYWORDS_ROW1.map((kw, i) => (
           <div key={kw} className={`bg-white rounded-[10px] px-[20px] py-[14px] ${i === 1 ? "border border-[#f4a31d]" : ""}`}>
             <p className={`font-rajdhani font-semibold text-[18px] whitespace-nowrap ${i === 1 ? "text-[#f4a31d]" : "text-[#535353]"}`}>{kw}</p>
           </div>
         ))}
       </div>
-      <div className="absolute left-[162px] top-[2156px] flex flex-wrap gap-[16px] w-[1596px]">
+      <div className="absolute left-[162px] top-[2196px] flex flex-wrap gap-[16px] w-[1596px]">
         {KEYWORDS_ROW2.map((kw) => (
           <div key={kw} className="bg-white rounded-[10px] px-[20px] py-[14px]">
             <p className="font-rajdhani font-semibold text-[18px] text-[#535353] whitespace-nowrap">{kw}</p>
@@ -216,24 +216,27 @@ export function FastenersHardwarePage() {
       </div>
 
       {/* CTA */}
-      <p className="-translate-x-1/2 absolute font-days-one text-[#242832] text-[46px] leading-[56px] left-1/2 text-center top-[2380px] tracking-[-0.92px] w-[1000px]">
+      <div className="absolute bg-[#f5f5f5] left-0 top-[2340px] w-[1920px] h-[520px]" />
+      <p className="-translate-x-1/2 absolute font-days-one text-[#242832] text-[46px] leading-[56px] left-1/2 text-center top-[2420px] tracking-[-0.92px] w-[1000px]">
         Ready to Replace IndiaMart With <span className="text-[#f4a31d]">Your Own Lead Machine?</span>
       </p>
-      <p className="-translate-x-1/2 absolute font-rajdhani font-semibold text-[#535353] text-[20px] left-1/2 text-center top-[2540px] tracking-[-0.4px] uppercase w-[725px]">
+      <p className="-translate-x-1/2 absolute font-rajdhani font-semibold text-[#535353] text-[20px] left-1/2 text-center top-[2580px] tracking-[-0.4px] uppercase w-[725px]">
         Free website and SEO audit for fastener and hardware manufacturers.
       </p>
-      <Link href="/contact" className="absolute bg-[#f4a31d] block h-[88px] left-[calc(50%-160px)] rounded-[16px] top-[2630px] w-[304px] hover:opacity-90 transition-opacity">
-        <div className="absolute border border-solid border-white inset-[7px] rounded-[13px]" />
-        <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
-          Get Free Website Audit
-        </p>
-      </Link>
-      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="absolute border border-[#333] border-solid content-stretch flex h-[88px] items-center justify-center left-[calc(50%+164px)] px-[20px] py-[10px] rounded-[16px] top-[2630px] hover:bg-[#333]/5 transition-colors">
-        <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
-          WhatsApp Us
-        </p>
-      </Link>
-      <div className="absolute left-[1660px] top-[2380px] size-[170px]">
+      <div className="-translate-x-1/2 absolute flex items-center justify-center gap-[24px] left-1/2 top-[2670px]">
+        <Link href="/contact" className="relative bg-[#f4a31d] block h-[88px] rounded-[64px] w-[304px] hover:opacity-90 transition-opacity">
+          <div className="absolute border border-solid border-white inset-[7px] rounded-[52px]" />
+          <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 text-[23px] text-center text-white top-[29px] tracking-[-0.46px] uppercase whitespace-nowrap">
+            Get Free Website Audit
+          </p>
+        </Link>
+        <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" className="relative border border-[#333] border-solid flex h-[88px] items-center justify-center px-[36px] rounded-[64px] hover:bg-[#333]/5 transition-colors">
+          <p className="font-rajdhani font-bold text-[#333] text-[23px] text-center tracking-[-0.46px] uppercase whitespace-nowrap">
+            WhatsApp Us
+          </p>
+        </Link>
+      </div>
+      <div className="absolute left-[1660px] top-[2420px] size-[170px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         <div className="absolute left-[5.4px] top-[5.4px] size-[159px]">
           <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse21} fill sizes="100vw" />
