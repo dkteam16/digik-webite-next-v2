@@ -28,8 +28,7 @@ export function NewsletterForm({
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder={status === "submitted" ? "Thanks — you're subscribed!" : "EMAIL ADDRESS"}
-        className={`${inputClassName} px-4 font-days-one text-[17px] text-[rgba(0,0,0,0.38)] placeholder:text-[rgba(0,0,0,0.38)] tracking-[-0.34px] uppercase outline-none`}
-        style={{ lineHeight: "46px" }}
+        className={`${inputClassName} px-4 font-days-one text-[17px] leading-11.5 text-[rgba(0,0,0,0.38)] placeholder:text-[rgba(0,0,0,0.38)] tracking-[-0.34px] uppercase outline-none`}
       />
       <button
         type="submit"

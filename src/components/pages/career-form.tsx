@@ -31,27 +31,27 @@ export function CareerForm() {
         name="fullName"
         required
         placeholder="Full Name"
-        className={`${fieldCls} h-[48px] left-[364px] top-[1282px] w-[586px]`}
+        className={`${fieldCls} h-12 left-91 top-320.5 w-146.5`}
       />
       <input
         type="tel"
         name="mobileNumber"
         required
         placeholder="Mobile Number"
-        className={`${fieldCls} h-[48px] left-[364px] top-[1341px] w-[586px]`}
+        className={`${fieldCls} h-12 left-91 top-335.25 w-146.5`}
       />
       <input
         type="email"
         name="email"
         required
         placeholder="Email"
-        className={`${fieldCls} h-[48px] left-1/2 top-[1282px] w-[596px]`}
+        className={`${fieldCls} h-12 left-1/2 top-320.5 w-149`}
       />
       <select
         name="areaOfInterest"
         required
         defaultValue=""
-        className={`${fieldCls} h-[48px] left-1/2 top-[1341px] w-[596px] appearance-none`}
+        className={`${fieldCls} h-12 left-1/2 top-335.25 w-149 appearance-none`}
       >
         <option value="" disabled>
           Area Of Interest
@@ -62,7 +62,7 @@ export function CareerForm() {
           </option>
         ))}
       </select>
-      <label className={`${fieldCls} h-[118px] left-[364px] top-[1401px] w-[1192px] flex items-center cursor-pointer`}>
+      <label className={`${fieldCls} h-29.5 left-91 top-350.25 w-298 flex items-center cursor-pointer`}>
         <span className="pointer-events-none">
           {status === "submitted" ? "CV attached ✓" : "Upload Your CV"}
         </span>
@@ -76,7 +76,7 @@ export function CareerForm() {
       </label>
       <button
         type="submit"
-        className="absolute bg-[#f4a31d] border-2 border-solid border-white h-[56px] left-[867px] rounded-[16px] top-[1553px] w-[187px] flex items-center justify-center font-rajdhani font-bold text-[20px] text-center text-white tracking-[-0.4px] uppercase hover:opacity-90 transition-opacity"
+        className="absolute bg-[#f4a31d] border-2 border-solid border-white h-14 left-216.75 rounded-[16px] top-388.25 w-46.75 flex items-center justify-center font-rajdhani font-bold text-[20px] text-center text-white tracking-[-0.4px] uppercase hover:opacity-90 transition-opacity"
       >
         {status === "submitted" ? "Applied!" : "Apply Now"}
       </button>

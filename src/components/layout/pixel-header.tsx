@@ -39,7 +39,7 @@ export function PixelHeader({
   return (
     <>
       {variant === "solid" && (
-        <div className="absolute bg-[#333] h-[108px] left-0 top-0 w-[1920px] z-10" />
+        <div className="absolute bg-[#333] h-27 left-0 top-0 w-480 z-10" />
       )}
       {NAV_LINKS.map((link) => {
         const isActive = activeHref === link.href;
@@ -47,7 +47,7 @@ export function PixelHeader({
           <Link
             key={link.href}
             href={link.href}
-            className={`[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] not-italic text-[20px] top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap transition-colors z-20 ${link.className} ${
+            className={`[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] not-italic text-[20px] top-10.5 tracking-[-0.4px] uppercase whitespace-nowrap transition-colors z-20 ${link.className} ${
               isActive ? "text-[#f4a31d]" : `${textColor} hover:text-[#f4a31d]`
             }`}
           >
@@ -55,13 +55,13 @@ export function PixelHeader({
           </Link>
         );
       })}
-      <p className={`-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(100%-90px)] not-italic ${textColor} text-[20px] text-right top-[42px] tracking-[-0.4px] uppercase whitespace-nowrap z-20`}>
+      <p className={`-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(100%-90px)] not-italic ${textColor} text-[20px] text-right top-10.5 tracking-[-0.4px] uppercase whitespace-nowrap z-20`}>
         Search
       </p>
       {showLogo && (
         <Link
           href="/"
-          className="-translate-x-1/2 absolute h-[56px] left-1/2 top-[24px] w-[208px] z-20"
+          className="-translate-x-1/2 absolute h-14 left-1/2 top-6 w-52 z-20"
         >
           <Image
             alt="Digital Kangaroos"
