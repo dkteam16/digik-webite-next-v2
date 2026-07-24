@@ -480,11 +480,11 @@ export function IndustrialWebsiteDesignPage() {
       </div>
       <PixelSiteFooter />
       <PixelHeader activeHref="/services" />
-<div className="absolute contents left-[calc(80%+63px)] top-[47px]" data-node-id="409:2603">
-        <div className="absolute left-[calc(80%+63px)] size-[170px] top-[47px] z-[15]" data-node-id="409:2604">
+<div className="absolute contents left-[calc(80%+63px)] top-[110px]" data-node-id="409:2603">
+        <div className="absolute left-[calc(80%+63px)] size-[170px] top-[110px] z-[15]" data-node-id="409:2604">
           <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
         </div>
-        <div className="absolute left-[calc(80%+68px)] size-[159px] top-[53px] z-[15]" data-node-id="409:2605" data-name="sadsaas 1">
+        <div className="absolute left-[calc(80%+68px)] size-[159px] top-[116px] z-[15]" data-node-id="409:2605" data-name="sadsaas 1">
           <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSadsaas1} fill sizes="100vw" />
         </div>
       </div>

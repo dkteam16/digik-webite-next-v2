@@ -2,58 +2,52 @@ import Link from "next/link";
 import { PixelHeader } from "@/components/layout/pixel-header";
 import { PixelSiteFooter } from "@/components/layout/pixel-site-footer";
 import Image from "next/image";
+import type { BlogPost } from "@/data/blog-posts";
+import { BLOG_POSTS, BLOG_TITLE } from "@/data/blog-posts";
 
-const imgImage215 = "/images/blog-inside/imgImage215.png";
-const imgImage216 = "/images/blog-inside/imgImage216.png";
 const imgImage217 = "/images/blog-inside/imgImage217.png";
 const imgImage214 = "/images/blog-inside/imgImage214.svg";
 const imgArrow1 = "/images/blog-inside/imgArrow1.svg";
 
-export function BlogInsidePage() {
+const RELATED_ROWS = [
+  { bgTop: "top-[232px]", titleTop: "top-[531px]", dateTop: "top-[501px]", imageInnerTop: "top-[calc(50%-1277px)]" },
+  { bgTop: "top-[644px]", titleTop: "top-[943px]", dateTop: "top-[913px]", imageInnerTop: "top-[calc(50%-865px)]" },
+  { bgTop: "top-[1759px]", titleTop: "top-[2058px]", dateTop: "top-[2028px]", imageInnerTop: "top-[calc(50%+250px)]" },
+];
+
+export function BlogInsidePage({ post }: { post: BlogPost }) {
+  const currentIndex = BLOG_POSTS.findIndex((p) => p.slug === post.slug);
+  const relatedPosts = RELATED_ROWS.map(
+    (_, i) => BLOG_POSTS[(currentIndex + i + 1) % BLOG_POSTS.length]
+  );
+
   return (
     <div className="bg-white relative w-[1920px] h-[3268px]">
       <PixelHeader activeHref="/blog" />
       <div className="absolute h-[692px] left-[124px] rounded-[16px] top-[232px] w-[1212px]" data-node-id="1035:484" data-name="image 215">
-        <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgImage215} fill sizes="100vw" />
+        <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={post.heroImage} fill sizes="100vw" />
       </div>
-      <div className="absolute bg-[#f5f5f5] border border-[rgba(0,0,0,0.09)] border-solid h-[392px] left-[calc(66.67%+76px)] rounded-[16px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[232px] w-[441px]" data-node-id="1035:486" />
-      <div className="absolute bg-[#f5f5f5] border border-[rgba(0,0,0,0.09)] border-solid h-[392px] left-[calc(66.67%+76px)] rounded-[16px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[644px] w-[441px]" data-node-id="1035:495" />
-      <div className="absolute bg-[#f5f5f5] border border-[rgba(0,0,0,0.09)] border-solid h-[392px] left-[calc(66.67%+76px)] rounded-[16px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] top-[1759px] w-[441px]" data-node-id="1039:547" />
-      <p className="[word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[531px] tracking-[-0.4px] w-[394px]" data-node-id="1035:487">
-        {`Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)`}
-      </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[943px] tracking-[-0.4px] w-[394px]" data-node-id="1035:496">
-        {`Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)`}
-      </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black top-[2058px] tracking-[-0.4px] w-[394px]" data-node-id="1039:548">
-        {`Is Your Website Due for a Redesign? 10 Signs It's Hurting Your Sales (And What to Do Next)`}
-      </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[501px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1035:488">
-        Jul 09, 2026
-      </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[913px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1035:497">
-        Jul 09, 2026
-      </p>
-      <p className="[word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black top-[2028px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1039:549">
-        Jul 09, 2026
-      </p>
-      <div className="absolute contents left-[calc(66.67%+76px)] top-[232px]" data-node-id="1035:489" data-name="Mask group">
-        <div className="-translate-y-1/2 absolute h-[251.715px] left-[calc(66.67%+76px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0.861px] mask-size-[441px_249.785px] top-[calc(50%-1277px)] w-[440.638px]" data-node-id="1035:491" style={{ maskImage: `url("${imgImage214}")` }} data-name="image 214">
-          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} fill sizes="100vw" />
-        </div>
-      </div>
-      <div className="absolute contents left-[calc(66.67%+76px)] top-[644px]" data-node-id="1035:498" data-name="Mask group">
-        <div className="-translate-y-1/2 absolute h-[251.715px] left-[calc(66.67%+76px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0.861px] mask-size-[441px_249.785px] top-[calc(50%-865px)] w-[440.638px]" data-node-id="1035:500" style={{ maskImage: `url("${imgImage214}")` }} data-name="image 214">
-          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} fill sizes="100vw" />
-        </div>
-      </div>
-      <div className="absolute contents left-[calc(66.67%+76px)] top-[1759px]" data-node-id="1039:550" data-name="Mask group">
-        <div className="-translate-y-1/2 absolute h-[251.715px] left-[calc(66.67%+76px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0.861px] mask-size-[441px_249.785px] top-[calc(50%+250px)] w-[440.638px]" data-node-id="1039:552" style={{ maskImage: `url("${imgImage214}")` }} data-name="image 214">
-          <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage216} fill sizes="100vw" />
-        </div>
-      </div>
+      {relatedPosts.map((relatedPost, i) => {
+        const row = RELATED_ROWS[i];
+        return (
+          <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`} className="absolute contents cursor-pointer group">
+            <div className={`absolute bg-[#f5f5f5] border border-[rgba(0,0,0,0.09)] border-solid h-[392px] left-[calc(66.67%+76px)] rounded-[16px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] ${row.bgTop} w-[441px] transition-colors group-hover:bg-[#efefef]`} />
+            <p className={`[word-break:break-word] absolute font-montserrat font-semibold leading-[normal] left-[calc(83.33%-219px)] text-[20px] text-black ${row.titleTop} tracking-[-0.4px] w-[394px] transition-colors group-hover:text-[#f4a31d]`}>
+              {BLOG_TITLE}
+            </p>
+            <p className={`[word-break:break-word] absolute font-montserrat font-normal leading-[normal] left-[calc(83.33%-218.66px)] text-[16px] text-black ${row.dateTop} tracking-[-0.32px] whitespace-nowrap`}>
+              {relatedPost.date}
+            </p>
+            <div className={`absolute contents left-[calc(66.67%+76px)] ${row.bgTop}`} data-name="Mask group">
+              <div className={`-translate-y-1/2 absolute h-[251.715px] left-[calc(66.67%+76px)] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0.861px] mask-size-[441px_249.785px] ${row.imageInnerTop} w-[440.638px]`} style={{ maskImage: `url("${imgImage214}")` }} data-name="image 214">
+                <Image alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={relatedPost.cardImage} fill sizes="100vw" />
+              </div>
+            </div>
+          </Link>
+        );
+      })}
       <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0] left-[calc(50%-836px)] not-italic text-[#333] text-[0px] top-[961px] tracking-[-0.4px] w-[1180px] whitespace-pre-wrap" data-node-id="1035:513">
-        <p className="leading-[normal] mb-0 text-[20px]">{`April 30, 2026 `}</p>
+        <p className="leading-[normal] mb-0 text-[20px]">{`${post.date} `}</p>
         <p className="font-rajdhani font-bold leading-[normal] mb-0 text-[40px]">{`Your Website Is Either Working For You — Or Against You `}</p>
         <p className="leading-[normal] mb-0 text-[20px]">​</p>
         <p className="mb-0 text-[20px]">
