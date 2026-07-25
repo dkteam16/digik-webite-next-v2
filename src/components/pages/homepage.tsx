@@ -358,12 +358,12 @@ export function HomePage() {
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-poppins font-semibold leading-[normal] left-[calc(90%+48px)] not-italic text-[20px] text-center text-white top-[2341px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="152:965">
         WEBSITE
       </p>
-      <div className="absolute bg-[#f5f5f5] h-[269px] left-[calc(60%+173px)] top-[1158px] w-[502px]" data-node-id="154:1027" />
-      <div className="absolute bg-[#f4a31d] h-[269px] left-[calc(60%+173px)] top-[1457px] w-[502px]" data-node-id="154:1028" />
-      <div className="absolute bg-[#f5f5f5] h-[269px] left-[calc(40%+25px)] top-[1158px] w-[502px]" data-node-id="154:1029" />
+      <div className="absolute bg-[#f5f5f5] h-[269px] left-[calc(60%+173px)] top-[1158px] w-[502px] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" data-node-id="154:1027" />
+      <div className="absolute bg-[#f4a31d] h-[269px] left-[calc(60%+173px)] top-[1457px] w-[502px] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" data-node-id="154:1028" />
+      <div className="absolute bg-[#f5f5f5] h-[269px] left-[calc(40%+25px)] top-[1158px] w-[502px] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" data-node-id="154:1029" />
       <div className="absolute bg-[#f4a31d] h-[269px] left-[calc(40%+25px)] top-[1158px] w-[3px]" data-node-id="154:1030" />
       <div className="absolute bg-[#f4a31d] h-[269px] left-[calc(60%+173px)] top-[1158px] w-[3px]" data-node-id="154:1031" />
-      <div className="absolute bg-[#f5f5f5] h-[269px] left-[calc(40%+25px)] top-[1457px] w-[502px]" data-node-id="154:1032" />
+      <div className="absolute bg-[#f5f5f5] h-[269px] left-[calc(40%+25px)] top-[1457px] w-[502px] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl" data-node-id="154:1032" />
       <p className="[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(50%-141px)] not-italic text-[#f4a31d] text-[20px] top-[1176px] tracking-[-0.4px] whitespace-nowrap" data-node-id="154:1033">
         01
       </p>
@@ -408,12 +408,12 @@ export function HomePage() {
         No RFQ System, No Enquiry Flow
       </p>
       <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[24px] left-[calc(90%-380px)] not-italic text-[20px] text-white top-[1589px] tracking-[-0.4px] w-[449px]" data-node-id="154:1048">{`Your website has no structured RFQ form, no product catalogue with technical specifications, no clear pathway for a serious buyer to submit an enquiry. You're making it hard to be hired.`}</p>
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[4247px] w-[526px]" data-node-id="154:1072" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[4726px] w-[526px]" data-node-id="154:1073" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[4247px] w-[526px]" data-node-id="154:1074" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[4726px] w-[526px]" data-node-id="154:1076" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[4247px] w-[526px]" data-node-id="154:1077" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[4726px] w-[526px]" data-node-id="154:1078" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[4247px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="154:1072" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[4726px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="154:1073" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[4247px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="154:1074" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[4726px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="154:1076" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[4247px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="154:1077" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[4726px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="154:1078" />
       <Link href="/services/website-redesign-for-industry" className="[word-break:break-word] absolute font-days-one leading-[34px] left-[calc(70%-63px)] not-italic text-[#333] text-[25px] top-[4385px] tracking-[-0.5px] uppercase w-[310px] hover:text-[#f4a31d] transition-colors" data-node-id="154:1080">
         Website Redesign for Industry
       </Link>
@@ -714,12 +714,12 @@ export function HomePage() {
         </p>
         <p className="leading-[56.6px]">Your Sector, Our Expertise.</p>
       </div>
-      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6483px] w-[1740px]" data-node-id="178:2128" />
-      <div className="-translate-x-1/2 absolute bg-[#f4a31d] h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6612px] w-[1740px]" data-node-id="178:2131" />
-      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6741px] w-[1740px]" data-node-id="178:2134" />
-      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6870px] w-[1740px]" data-node-id="178:2137" />
-      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6999px] w-[1740px]" data-node-id="178:2140" />
-      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[7128px] w-[1740px]" data-node-id="178:2143" />
+      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6483px] w-[1740px] transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:bg-[#fff9ef]" data-node-id="178:2128" />
+      <div className="-translate-x-1/2 absolute bg-[#f4a31d] h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6612px] w-[1740px] transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:bg-[#e09212]" data-node-id="178:2131" />
+      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6741px] w-[1740px] transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:bg-[#fff9ef]" data-node-id="178:2134" />
+      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6870px] w-[1740px] transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:bg-[#fff9ef]" data-node-id="178:2137" />
+      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[6999px] w-[1740px] transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:bg-[#fff9ef]" data-node-id="178:2140" />
+      <div className="-translate-x-1/2 absolute bg-white h-[104px] left-1/2 rounded-[64px] shadow-[8px_8px_31.6px_0px_rgba(0,0,0,0.17)] top-[7128px] w-[1740px] transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:bg-[#fff9ef]" data-node-id="178:2143" />
       <Link href="/industries/auto-parts-engineering" className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-448px)] not-italic text-[42px] text-black top-[6511px] tracking-[-0.84px] uppercase whitespace-nowrap hover:text-[#f4a31d] transition-colors" data-node-id="178:2129">{`Auto Parts & Engineering Components`}</Link>
       <Link href="/industries/fasteners-hardware" className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-448px)] not-italic text-[42px] text-black top-[6640px] tracking-[-0.84px] uppercase whitespace-nowrap hover:text-[#f4a31d] transition-colors" data-node-id="178:2132">{`Fasteners & Hardware Manufacturers`}</Link>
       <Link href="/industries/steel-metal-fabrication" className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(10%-64px)] not-italic text-[42px] text-black top-[6769px] tracking-[-0.84px] uppercase whitespace-nowrap hover:text-[#f4a31d] transition-colors" data-node-id="178:2135">{`Steel & Metal Fabrication `}</Link>

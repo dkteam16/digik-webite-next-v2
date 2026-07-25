@@ -142,15 +142,15 @@ export function AllIndustriesPage() {
       <p className="[word-break:break-word] absolute font-days-one leading-[56.6px] left-[calc(30%-414px)] not-italic text-[#333] text-[50px] top-[1165px] tracking-[-1px] uppercase w-[950px]" data-node-id="660:96">
         Your Industry. Our Expertise. Your Growth.
       </p>
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[162px] rounded-[64px] top-[1392px] w-[384px]" data-node-id="660:98" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[162px] rounded-[64px] top-[1721px] w-[384px]" data-node-id="660:300" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[162px] rounded-[64px] top-[2050px] w-[384px]" data-node-id="660:500" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(20%+182px)] rounded-[64px] top-[1392px] w-[384px]" data-node-id="660:149" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(20%+182px)] rounded-[64px] top-[1721px] w-[384px]" data-node-id="660:301" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(40%+202px)] rounded-[64px] top-[1392px] w-[384px]" data-node-id="660:199" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(40%+202px)] rounded-[64px] top-[1721px] w-[384px]" data-node-id="660:302" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(60%+222px)] rounded-[64px] top-[1392px] w-[384px]" data-node-id="660:249" />
-      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(60%+222px)] rounded-[64px] top-[1721px] w-[384px]" data-node-id="660:303" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[162px] rounded-[64px] top-[1392px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:98" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[162px] rounded-[64px] top-[1721px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:300" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[162px] rounded-[64px] top-[2050px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:500" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(20%+182px)] rounded-[64px] top-[1392px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:149" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(20%+182px)] rounded-[64px] top-[1721px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:301" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(40%+202px)] rounded-[64px] top-[1392px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:199" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(40%+202px)] rounded-[64px] top-[1721px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:302" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(60%+222px)] rounded-[64px] top-[1392px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:249" />
+      <div className="absolute bg-[#f5f5f5] h-[309px] left-[calc(60%+222px)] rounded-[64px] top-[1721px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="660:303" />
       <div className="absolute border border-[#f4a31d] border-solid left-[calc(20%+220px)] size-[61px] top-[1434px]" data-node-id="660:150" />
       <div className="absolute border border-[#f4a31d] border-solid left-[calc(20%+220px)] size-[61px] top-[1763px]" data-node-id="660:304" />
       <div className="absolute border border-[#f4a31d] border-solid left-[200px] size-[61px] top-[1434px]" data-node-id="660:99" />
@@ -326,10 +326,10 @@ export function AllIndustriesPage() {
         +
       </p>
       <div className="absolute bg-[#f4a31d] h-[3px] left-[calc(20%+315px)] top-[3722px] w-[525px]" data-node-id="691:34" />
-      <div className="absolute bg-white h-[309px] left-[162px] rounded-[64px] top-[4220px] w-[384px]" data-node-id="691:647" />
-      <div className="absolute bg-white h-[309px] left-[calc(20%+182px)] rounded-[64px] top-[4220px] w-[384px]" data-node-id="691:648" />
-      <div className="absolute bg-white h-[309px] left-[calc(40%+202px)] rounded-[64px] top-[4220px] w-[384px]" data-node-id="691:649" />
-      <div className="absolute bg-white h-[309px] left-[calc(60%+222px)] rounded-[64px] top-[4220px] w-[384px]" data-node-id="691:650" />
+      <div className="absolute bg-white h-[309px] left-[162px] rounded-[64px] top-[4220px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl border border-transparent hover:border-[#f4a31d]/40" data-node-id="691:647" />
+      <div className="absolute bg-white h-[309px] left-[calc(20%+182px)] rounded-[64px] top-[4220px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl border border-transparent hover:border-[#f4a31d]/40" data-node-id="691:648" />
+      <div className="absolute bg-white h-[309px] left-[calc(40%+202px)] rounded-[64px] top-[4220px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl border border-transparent hover:border-[#f4a31d]/40" data-node-id="691:649" />
+      <div className="absolute bg-white h-[309px] left-[calc(60%+222px)] rounded-[64px] top-[4220px] w-[384px] transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl border border-transparent hover:border-[#f4a31d]/40" data-node-id="691:650" />
       <div className="absolute border border-[#f4a31d] border-solid left-[calc(20%+220px)] size-[61px] top-[4262px]" data-node-id="691:651" />
       <div className="absolute border border-[#f4a31d] border-solid left-[200px] size-[61px] top-[4262px]" data-node-id="691:652" />
       <div className="absolute border border-[#f4a31d] border-solid left-[calc(40%+240px)] size-[61px] top-[4262px]" data-node-id="691:653" />

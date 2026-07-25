@@ -124,13 +124,13 @@ export function AllServicesPage() {
       <div className="absolute bg-[#f4a31d] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[1965px] w-[526px]" data-node-id="409:2136" />
       <div className="absolute bg-[#f4a31d] h-[459px] left-[151px] rounded-[64px] top-[1486px] w-[526px]" data-node-id="409:1992" />
       <div className="absolute bg-[#f4a31d] h-[459px] left-[151px] rounded-[64px] top-[1965px] w-[526px]" data-node-id="409:2137" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[1000px] w-[526px]" data-node-id="409:1993" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[1958px] w-[526px]" data-node-id="409:2138" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[1479px] w-[526px]" data-node-id="409:1996" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[1958px] w-[526px]" data-node-id="409:2139" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[1000px] w-[526px]" data-node-id="409:1997" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[1479px] w-[526px]" data-node-id="409:1998" />
-      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[1958px] w-[526px]" data-node-id="409:2140" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[1000px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="409:1993" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[151px] rounded-[64px] top-[1958px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="409:2138" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[1479px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="409:1996" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(20%+313px)] rounded-[64px] top-[1958px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="409:2139" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[1000px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="409:1997" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[1479px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="409:1998" />
+      <div className="absolute bg-[#f5f5f5] h-[459px] left-[calc(60%+91px)] rounded-[64px] top-[1958px] w-[526px] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:bg-white border border-transparent hover:border-[#f4a31d]/40" data-node-id="409:2140" />
       <Link href="/services/website-redesign-for-industry" className="[word-break:break-word] absolute font-days-one leading-[34px] left-[calc(70%-63px)] not-italic text-[#333] text-[25px] top-[1138px] tracking-[-0.5px] uppercase w-[310px] hover:text-[#f4a31d] transition-colors" data-node-id="409:1999">
         Website Redesign for Industry
       </Link>
