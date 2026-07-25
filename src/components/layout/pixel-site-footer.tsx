@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "@/components/newsletter-form";
 
-const imgVector20 = "/images/contact/imgVector20.svg";
 const imgTransparent1 = "/images/contact/imgTransparent1.png";
 const imgVector = "/images/contact/imgVector.svg";
 const imgVector1 = "/images/contact/imgVector1.svg";
@@ -10,105 +9,151 @@ const imgGroup294 = "/images/contact/imgGroup294.svg";
 const imgGroup295 = "/images/contact/imgGroup295.svg";
 const img02YouTube = "/images/contact/img02YouTube.svg";
 
-/**
- * Shared footer for all real (Figma-built) pages. Every page's footer is a
- * pixel-identical 500px block (6px orange divider + 494px dark band) flush
- * to the bottom of its 1920px-wide canvas -- only the page's total height
- * differed, so this uses local (footer-relative) offsets via `bottom-[0px]`
- * instead of copy-pasting page-height-dependent `top-[Npx]` values.
- */
 export function PixelSiteFooter() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="absolute bottom-[0px] left-[0px] h-[500px] w-[1920px]" data-name="Footer">
-      <div className="absolute flex h-[6px] items-center justify-center left-1/2 top-[0px] w-[1920px] -translate-x-1/2">
-        <div className="-scale-y-100 flex-none">
-          <div className="bg-[#f4a31d] h-[6px] relative w-[1920px]" />
+    <footer className="w-full bg-[#333] text-white relative mt-auto border-t-4 border-[#f4a31d]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-8">
+          
+          {/* Column 1: Brand & Addresses */}
+          <div className="space-y-3">
+            <Link href="/" className="inline-block relative h-[44px] w-[170px]">
+              <Image
+                alt="Digital Kangaroos"
+                className="object-contain"
+                src={imgTransparent1}
+                fill
+                sizes="170px"
+              />
+            </Link>
+            <p className="font-rajdhani font-semibold text-[13px] uppercase tracking-wide text-white/90">
+              Web Development &amp; Software Company
+            </p>
+            <div className="space-y-1 font-rajdhani font-medium text-[14px] uppercase leading-snug">
+              <p>
+                <span className="text-[#f4a31d] font-bold">India:</span> SCO-4, 1st Floor, Omaxe Royal Residency, Ludhiana, 142022.
+              </p>
+              <p>
+                <span className="text-[#f4a31d] font-bold">USA:</span> 48870 Eagle View Terrace, Fremont CA 94539.
+              </p>
+            </div>
+            <div className="space-y-0.5 font-rajdhani font-medium text-[14px] uppercase">
+              <p><span className="text-[#f4a31d] font-bold">Phone:</span> +91 9814820845</p>
+              <p><span className="text-[#f4a31d] font-bold">Email:</span> info@digitalkangaroos.com</p>
+            </div>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div>
+            <h4 className="font-rajdhani font-bold text-[18px] uppercase text-[#f4a31d] mb-3">
+              Quick Links
+            </h4>
+            <ul className="grid grid-cols-2 gap-y-1.5 font-rajdhani font-semibold text-[14px] uppercase">
+              <li><Link href="/" className="hover:text-[#f4a31d] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#f4a31d] transition-colors">About</Link></li>
+              <li><Link href="/services" className="hover:text-[#f4a31d] transition-colors">Services</Link></li>
+              <li><Link href="/industries" className="hover:text-[#f4a31d] transition-colors">Industries</Link></li>
+              <li><Link href="/our-work" className="hover:text-[#f4a31d] transition-colors">Work</Link></li>
+              <li><Link href="/careers" className="hover:text-[#f4a31d] transition-colors">Careers</Link></li>
+              <li><Link href="/blog" className="hover:text-[#f4a31d] transition-colors">Blog</Link></li>
+              <li><Link href="/contact" className="hover:text-[#f4a31d] transition-colors">Contact</Link></li>
+              <li><span className="text-white/70">Faqs</span></li>
+              <li><span className="text-white/70">Privacy Policy</span></li>
+              <li><span className="text-white/70">Terms &amp; Conditions</span></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Social Links */}
+          <div className="space-y-3">
+            <h4 className="font-rajdhani font-bold text-[18px] uppercase text-white">
+              Stalk Us. Feed Your Creativity
+            </h4>
+            
+            {/* Social Icons Row */}
+            <div className="flex items-center gap-3">
+              <Link
+                href="https://www.facebook.com/digitalkangaroos"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="hover:scale-110 transition-transform"
+              >
+                <div className="relative size-6">
+                  <Image alt="Facebook" src={imgVector} fill className="object-contain" />
+                </div>
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/digital-kangaroos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:scale-110 transition-transform"
+              >
+                <div className="relative size-6">
+                  <Image alt="LinkedIn" src={imgVector1} fill className="object-contain" />
+                </div>
+              </Link>
+              <Link
+                href="https://www.instagram.com/digitalkangaroos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="hover:scale-110 transition-transform"
+              >
+                <div className="relative size-6">
+                  <Image alt="Instagram" src={imgGroup294} fill className="object-contain" />
+                </div>
+              </Link>
+              <Link
+                href="https://wa.me/919814820845"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="hover:scale-110 transition-transform"
+              >
+                <div className="relative size-6">
+                  <Image alt="WhatsApp" src={imgGroup295} fill className="object-contain" />
+                </div>
+              </Link>
+              <Link
+                href="https://www.youtube.com/@digitalkangaroos"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="hover:scale-110 transition-transform"
+              >
+                <div className="relative size-6">
+                  <Image alt="YouTube" src={img02YouTube} fill className="object-contain" />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Column 4: Newsletter */}
+          <div className="space-y-3">
+            <h4 className="font-rajdhani font-bold text-[18px] uppercase text-white">
+              Sign Up For Our Newsletter
+            </h4>
+            <NewsletterForm
+              inputClassName="w-full bg-white text-[#333] h-[40px] px-3 text-[14px] rounded-[8px] focus:outline-none focus:ring-2 focus:ring-[#f4a31d]"
+              buttonClassName="mt-2 w-full bg-[#f4a31d] text-white font-rajdhani font-bold h-[40px] text-[14px] rounded-[8px] uppercase hover:bg-[#d98d12] transition-colors"
+            />
+          </div>
+        </div>
+
+        {/* Footer Bottom Divider & Copyright */}
+        <div className="pt-4 border-t border-[#444] flex flex-col sm:flex-row items-center justify-between gap-3 font-rajdhani font-semibold text-[13px] uppercase text-white/80">
+          <p>© Digital Kangaroos | All Rights Reserved {currentYear}</p>
+          <p className="text-[#f4a31d]">DK Company Projects</p>
+          <div className="flex gap-4">
+            <span>Cart Potato</span>
+            <span>DK SCHOOL</span>
+          </div>
         </div>
       </div>
-      <div className="absolute bg-[#333] h-[494px] left-1/2 top-[6px] w-[1920px] -translate-x-1/2" />
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(50%-75px)] not-italic text-[#f4a31d] text-[16px] top-[472px] tracking-[-0.32px] uppercase whitespace-nowrap">
-        DK Company projects
-      </p>
-      <div className="absolute h-[0px] left-1/2 top-[465px] w-[1920px] -translate-x-1/2">
-        <div className="absolute inset-[-0.5px_0]">
-          <Image alt="" className="block max-w-none size-full" src={imgVector20} fill sizes="100vw" />
-        </div>
-      </div>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(25%-159px)] not-italic text-[16px] text-white top-[146px] tracking-[-0.32px] uppercase whitespace-nowrap">{`Web Development & Software Company`}</p>
-      <div className="absolute h-[64px] left-[322px] top-[77px] w-[234px]" data-name="Transparent 1">
-        <Image alt="Digital Kangaroos" className="absolute inset-[0px] max-w-none object-cover pointer-events-none size-full" src={imgTransparent1} fill sizes="100vw" />
-      </div>
-      <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0px] left-[calc(25%+240px)] not-italic text-[0px] text-white top-[73px] tracking-[-0.38px] uppercase w-[279px] whitespace-pre-wrap">
-        <p className="font-rajdhani font-semibold mb-[0px] text-[19px]">
-          <span className="leading-[23.6px] text-[#f4a31d]">India:</span>
-          <span className="leading-[23.6px]">{` SCO-4, 1st Floor, Omaxe Royal Residency, Ludhiana, 142022.`}</span>
-        </p>
-        <p className="leading-[23.6px] mb-[0px] text-[19px]">​</p>
-        <p className="font-rajdhani font-semibold text-[19px]">
-          <span className="leading-[23.6px] text-[#f4a31d]">{`USA: `}</span>
-          <span className="leading-[23.6px]">48870 Eagle View Terrace, Fremont CA 94539.</span>
-        </p>
-      </div>
-      <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0px] left-[calc(75%-374px)] not-italic text-[19px] text-white top-[73px] tracking-[-0.38px] uppercase whitespace-nowrap">
-        <Link href="/" className="block leading-[28px] mb-[0px] hover:text-[#f4a31d] transition-colors">Home</Link>
-        <p className="leading-[28px] mb-[0px]">
-          <Link href="/about" className="hover:text-[#f4a31d] transition-colors">about</Link>
-          <br aria-hidden />
-          <Link href="/services" className="hover:text-[#f4a31d] transition-colors">services</Link>
-        </p>
-        <Link href="/industries" className="block leading-[28px] mb-[0px] hover:text-[#f4a31d] transition-colors">industries</Link>
-        <Link href="/our-work" className="block leading-[28px] mb-[0px] hover:text-[#f4a31d] transition-colors">work</Link>
-        <Link href="/careers" className="block leading-[28px] mb-[0px] hover:text-[#f4a31d] transition-colors">careers</Link>
-        <Link href="/blog" className="block leading-[28px] mb-[0px] hover:text-[#f4a31d] transition-colors">blog</Link>
-        <Link href="/contact" className="block leading-[28px] mb-[0px] hover:text-[#f4a31d] transition-colors">contact</Link>
-        <p className="leading-[28px] mb-[0px]">Faqs</p>
-        <p className="leading-[28px] mb-[0px]">Press Release</p>
-        <p className="leading-[28px] mb-[0px]">Privacy Policy</p>
-        <p className="leading-[28px]">{`Terms & Conditions`}</p>
-      </div>
-      <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0px] left-[calc(75%-144px)] not-italic text-[19px] text-white top-[76px] tracking-[-0.38px] uppercase whitespace-nowrap">
-        <p className="leading-[25px] mb-[0px]">Stalk us. feed your</p>
-        <p className="leading-[25px]">creativity</p>
-      </div>
-      <div className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[0px] left-[calc(75%-144px)] not-italic text-[19px] text-white top-[233px] tracking-[-0.38px] uppercase whitespace-nowrap">
-        <p className="leading-[25px] mb-[0px]">Sign up for the digital kangaroos</p>
-        <p className="leading-[25px]">newsletter</p>
-      </div>
-      <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0px] left-[calc(25%+240px)] not-italic text-[0px] text-white top-[221px] tracking-[-0.38px] uppercase whitespace-nowrap">
-        <p className="font-rajdhani font-semibold leading-[23.6px] mb-[0px] text-[#f4a31d] text-[19px]">Phone:</p>
-        <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">+91 9814820845</p>
-      </div>
-      <div className="[word-break:break-word] absolute font-poppins font-normal leading-[0px] left-[calc(25%+240px)] not-italic text-[0px] text-white top-[297px] tracking-[-0.38px] uppercase whitespace-nowrap">
-        <p className="font-rajdhani font-semibold leading-[23.6px] mb-[0px] text-[#f4a31d] text-[19px]">Email:</p>
-        <p className="font-rajdhani font-semibold leading-[23.6px] text-[19px]">info@digitalkangaroos.com</p>
-      </div>
-      <Link href="https://www.facebook.com/digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="absolute inset-[147px_30.1%_307px_67.5%]">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgVector} fill sizes="100vw" />
-      </Link>
-      <Link href="https://www.linkedin.com/company/digital-kangaroos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="-translate-y-1/2 absolute aspect-[29/29] left-[70.83%] right-[26.77%] top-[170px]">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgVector1} fill sizes="100vw" />
-      </Link>
-      <Link href="https://www.instagram.com/digitalkangaroos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="absolute inset-[147px_23.4%_307px_74.21%]">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup294} fill sizes="100vw" />
-      </Link>
-      <Link href="https://wa.me/919814820845" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="absolute inset-[147px_20.04%_307px_77.56%]">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup295} fill sizes="100vw" />
-      </Link>
-      <Link href="https://www.youtube.com/@digitalkangaroos" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="absolute inset-[147px_16.69%_307px_80.92%]">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={img02YouTube} fill sizes="100vw" />
-      </Link>
-      <NewsletterForm inputClassName="absolute bg-white h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[302px] w-[274px]" buttonClassName="absolute bg-[#f4a31d] h-[46px] left-[calc(50%+336px)] rounded-[12px] top-[361px] w-[114px]" />
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(25%-159px)] not-italic text-[16px] text-white top-[472px] tracking-[-0.32px] uppercase whitespace-nowrap">
-        © Digital Kangaroos | All Rights Reserved {new Date().getFullYear()}
-      </p>
-      <div className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(75%+68px)] not-italic text-[16px] text-white top-[472px] tracking-[-0.32px] uppercase whitespace-nowrap">
-        <p className="absolute left-[calc(75%-24px)] top-[472px]">
-          Cart Potato
-        </p>
-        <p className="absolute left-[calc(75%+89px)] top-[472px]">
-          DK SCHOOL
-        </p>
-      </div>
-    </div>
+    </footer>
   );
 }

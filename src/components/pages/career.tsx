@@ -1,147 +1,114 @@
 import Link from "next/link";
 import { PixelHeader } from "@/components/layout/pixel-header";
 import { PixelSiteFooter } from "@/components/layout/pixel-site-footer";
-import Image from "next/image";
 import { CareerForm } from "./career-form";
-
-const imgSadsaas1 = "/images/career/imgSadsaas1.png";
-const imgGroup5 = "/images/career/imgGroup5.svg";
-const imgGroup = "/images/career/imgGroup.svg";
-const imgGroup1 = "/images/career/imgGroup1.svg";
-const imgEllipse20 = "/images/career/imgEllipse20.svg";
-const imgEllipse21 = "/images/career/imgEllipse21.svg";
-const imgGroup2 = "/images/career/imgGroup2.svg";
-const imgGroup300 = "/images/career/imgGroup300.svg";
+import { Card } from "@/components/ui/card";
+import { Target, Zap, Users, Award, Star } from "lucide-react";
 
 export function CareerPage() {
+  const perks = [
+    {
+      title: "Niche, Not Generic",
+      icon: Target,
+      desc: "We only work with manufacturers and industrial companies. You'll go deep in one vertical and become genuinely expert in B2B digital — not a generalist chasing every brief."
+    },
+    {
+      title: "Work That Ships",
+      icon: Zap,
+      desc: "No endless decks. No committee approvals. We build, we launch, we measure. Every project you work on goes live and has real commercial impact for a real business."
+    },
+    {
+      title: "Founder-Led Team",
+      icon: Users,
+      desc: "You'll work closely with the founder on strategy and delivery. There are no layers of management between you and the decisions that matter."
+    }
+  ];
+
   return (
-    <div className="bg-white relative w-[1920px] h-[2213px]">
+    <div className="w-full min-h-screen bg-white text-[#333] flex flex-col overflow-x-hidden">
       <PixelHeader activeHref="/careers" />
 
       {/* Hero Section */}
-      <Link
-        href="/careers"
-        className="-translate-x-1/2 absolute font-rajdhani font-semibold leading-[normal] left-1/2 not-italic text-[#f4a31d] text-[20px] text-center top-[170px] tracking-[-0.4px] uppercase whitespace-nowrap"
-      >
-        CAREERS
-      </Link>
-      <p className="-translate-x-1/2 absolute font-days-one leading-[56.6px] left-1/2 not-italic text-[#333] text-[50px] text-center top-[214px] tracking-[-1px] uppercase whitespace-nowrap">
-        WE BUILD FOR MANUFACTURERS.
-        <br />
-        WE HIRE FOR THE SAME STANDARD.
-      </p>
-      <p className="-translate-x-1/2 absolute font-rajdhani font-semibold leading-[normal] left-1/2 not-italic text-[#333] text-[20px] text-center top-[346px] tracking-[-0.4px] uppercase w-[905px]">
-        {`DIGITAL KANGAROOS IS A SPECIALIST WEB AND SEO AGENCY FOR B2B INDUSTRIAL COMPANIES. WE'RE A TIGHT TEAM — AND WE HIRE PEOPLE WHO CARE ABOUT THE WORK, NOT JUST THE BRIEF.`}
-      </p>
-
-      {/* Google Rating Badge (Right) */}
-      <div className="absolute right-[93px] top-[260px] w-[170px] h-[170px] z-20">
-        <div className="absolute inset-0 size-[170px]">
-          <Image alt="" className="block size-full" src={imgEllipse20} fill sizes="170px" />
-        </div>
-        <div className="absolute left-[5px] top-[5px] size-[159px]">
-          <Image alt="" className="block size-full" src={imgEllipse21} fill sizes="159px" />
-        </div>
-        <div className="absolute left-[57px] top-[34px] w-[56px] h-[58px]">
-          <Image alt="" className="block size-full" src={imgGroup2} fill sizes="56px" />
-        </div>
-        <p className="-translate-x-1/2 absolute font-rajdhani font-bold left-1/2 top-[96px] text-[17px] text-white tracking-[-0.34px] uppercase whitespace-nowrap">
-          GOOGLE RATING
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center space-y-6">
+        <span className="font-rajdhani font-bold text-lg text-[#f4a31d] uppercase tracking-wider">
+          Careers
+        </span>
+        <h1 className="font-days-one text-3xl sm:text-5xl lg:text-6xl text-[#333] uppercase leading-tight">
+          We Build For Manufacturers. <br className="hidden sm:inline" />
+          <span className="text-[#f4a31d]">We Hire For The Same Standard.</span>
+        </h1>
+        <p className="font-rajdhani font-semibold text-lg sm:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          Digital Kangaroos is a specialist web and SEO agency for B2B industrial companies. We're a tight team — and we hire people who care about the work, not just the brief.
         </p>
-        <div className="absolute left-[44px] top-[116px] flex items-center gap-1.5">
-          <span className="font-rajdhani font-bold text-[13.4px] text-white">4.7</span>
-          <div className="relative w-[66px] h-[13px]">
-            <Image alt="" className="block size-full" src={imgGroup300} fill sizes="66px" />
+
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-50 border border-yellow-200 rounded-full text-yellow-800 font-rajdhani font-bold text-sm">
+            <Star className="size-4 fill-yellow-500 text-yellow-500" />
+            <span>4.7 Google Rating</span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full text-amber-900 font-rajdhani font-bold text-sm">
+            <Award className="size-4 text-[#f4a31d]" />
+            <span>ISO 9001:2015 Certified Agency</span>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Why Join Us Section */}
-      <div className="-translate-x-1/2 absolute bg-[#f5f5f5] h-[601px] left-1/2 top-[460px] w-[1920px]" />
-      <p className="-translate-x-1/2 absolute font-rajdhani font-semibold left-1/2 text-[#f4a31d] text-[20px] text-center top-[520px] tracking-[-0.4px] uppercase whitespace-nowrap">
-        WHY JOIN US
-      </p>
-      <p className="-translate-x-1/2 absolute font-days-one leading-[56.6px] left-1/2 text-[#333] text-[50px] text-center top-[552px] tracking-[-1px] uppercase whitespace-nowrap">
-        A SMALL TEAM. A SHARP FOCUS.
-      </p>
+      <section className="py-20 bg-[#f5f5f5] px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="text-center space-y-3">
+            <span className="font-rajdhani font-bold text-lg text-[#f4a31d] uppercase tracking-wider">
+              Why Join Us
+            </span>
+            <h2 className="font-days-one text-3xl sm:text-5xl text-[#333] uppercase">
+              A Small Team. A Sharp Focus.
+            </h2>
+          </div>
 
-      {/* 3 Feature Cards */}
-      {/* Card 1 */}
-      <div className="absolute bg-white h-[329px] left-[364px] rounded-[64px] top-[655px] w-[384px] shadow-sm border border-[rgba(0,0,0,0.05)] p-10 flex flex-col justify-between">
-        <div className="w-[61px] h-[61px] border border-[#f4a31d] rounded-[16px] flex items-center justify-center p-3">
-          <div className="relative size-full">
-            <Image alt="" className="block size-full" src={imgGroup5} fill sizes="37px" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {perks.map((perk, idx) => {
+              const Icon = perk.icon;
+              return (
+                <Card
+                  key={idx}
+                  className={`p-8 rounded-[32px] space-y-6 bg-white border-2 ${
+                    idx === 1 ? "border-[#f4a31d] shadow-lg" : "border-transparent"
+                  } hover:border-[#f4a31d] transition-all flex flex-col justify-between`}
+                >
+                  <div className="space-y-4">
+                    <div className="size-14 rounded-2xl border-2 border-[#f4a31d] flex items-center justify-center text-[#f4a31d]">
+                      <Icon className="size-7" />
+                    </div>
+                    <h3 className="font-days-one text-2xl text-[#333] uppercase">{perk.title}</h3>
+                    <p className="font-rajdhani font-medium text-gray-700 text-base leading-relaxed">
+                      {perk.desc}
+                    </p>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
         </div>
-        <div>
-          <p className="font-days-one text-[#333] text-[25px] leading-[34px] tracking-[-0.5px] uppercase mb-3">
-            NICHE, NOT GENERIC
-          </p>
-          <p className="font-rajdhani font-medium text-[#333] text-[20px] leading-6 tracking-[-0.4px]">
-            {`We only work with manufacturers and industrial companies. You'll go deep in one vertical and become genuinely expert in B2B digital — not a generalist chasing every brief.`}
-          </p>
-        </div>
-      </div>
-
-      {/* Card 2 (Center - Highlighted) */}
-      <div className="absolute bg-[#f4a31d] h-[335px] left-[768px] rounded-[64px] top-[649px] w-[384px]" />
-      <div className="absolute bg-white h-[329px] left-[768px] rounded-[64px] top-[655px] w-[384px] shadow-sm p-10 flex flex-col justify-between">
-        <div className="w-[61px] h-[61px] border border-[#f4a31d] rounded-[16px] flex items-center justify-center p-3">
-          <div className="relative size-full">
-            <Image alt="" className="block size-full" src={imgGroup} fill sizes="37px" />
-          </div>
-        </div>
-        <div>
-          <p className="font-days-one text-[#333] text-[25px] leading-[34px] tracking-[-0.5px] uppercase mb-3">
-            WORK THAT SHIPS
-          </p>
-          <p className="font-rajdhani font-medium text-[#333] text-[20px] leading-6 tracking-[-0.4px]">
-            No endless decks. No committee approvals. We build, we launch, we measure. Every project you work on goes live and has real commercial impact for a real business.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 3 */}
-      <div className="absolute bg-white h-[329px] left-[1172px] rounded-[64px] top-[655px] w-[384px] shadow-sm border border-[rgba(0,0,0,0.05)] p-10 flex flex-col justify-between">
-        <div className="w-[61px] h-[61px] border border-[#f4a31d] rounded-[16px] flex items-center justify-center p-3">
-          <div className="relative size-full">
-            <Image alt="" className="block size-full" src={imgGroup1} fill sizes="37px" />
-          </div>
-        </div>
-        <div>
-          <p className="font-days-one text-[#333] text-[25px] leading-[34px] tracking-[-0.5px] uppercase mb-3">
-            FOUNDER-LED TEAM
-          </p>
-          <p className="font-rajdhani font-medium text-[#333] text-[20px] leading-6 tracking-[-0.4px]">
-            {`You'll work closely with the founder on strategy and delivery. There are no layers of management between you and the decisions that matter.`}
-          </p>
-        </div>
-      </div>
-
-      {/* ISO Certified Badge (Left) */}
-      <div className="absolute left-[93px] top-[880px] size-[170px]">
-        <div className="absolute inset-0 size-[170px]">
-          <Image alt="" className="block size-full" src={imgEllipse20} fill sizes="170px" />
-        </div>
-        <div className="absolute left-[5.5px] top-[5.5px] size-[159px]">
-          <Image alt="ISO 9001:2015 Certified Company" className="block object-cover size-full rounded-full" src={imgSadsaas1} fill sizes="159px" />
-        </div>
-      </div>
+      </section>
 
       {/* Apply Now Section */}
-      <p className="-translate-x-1/2 absolute font-rajdhani font-semibold left-1/2 text-[#f4a31d] text-[20px] text-center top-[1120px] tracking-[-0.4px] uppercase whitespace-nowrap">
-        APPLY NOW
-      </p>
-      <p className="-translate-x-1/2 absolute font-days-one leading-[normal] left-1/2 text-[#333] text-[50px] text-center top-[1152px] tracking-[-1px] uppercase whitespace-nowrap">
-        {`DON'T WAIT FOR A JOB LISTING.`}
-      </p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-12">
+        <div className="text-center space-y-3">
+          <span className="font-rajdhani font-bold text-lg text-[#f4a31d] uppercase tracking-wider">
+            Apply Now
+          </span>
+          <h2 className="font-days-one text-3xl sm:text-5xl text-[#333] uppercase">
+            Don't Wait For A Job Listing.
+          </h2>
+          <p className="font-rajdhani font-semibold text-gray-600 text-lg max-w-2xl mx-auto">
+            We are always open to meeting talented web developers, designers, and SEO specialists.
+          </p>
+        </div>
 
-      {/* Form Controls */}
-      <CareerForm />
+        <CareerForm />
+      </section>
 
-      {/* Footer */}
       <PixelSiteFooter />
     </div>
   );
 }
-

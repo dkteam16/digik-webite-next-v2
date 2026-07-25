@@ -1,77 +1,168 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X, Search } from "lucide-react";
 
 const logoSrc = "/images/about/imgTransparent1.png";
 
-const NAV_LINKS = [
-  { href: "/about", label: "About", className: "-translate-x-1/2 left-[calc(10%-76px)] text-center" },
-  { href: "/services", label: "Services", className: "left-[calc(10%-5px)]" },
-  { href: "/industries", label: "Industries", className: "left-[calc(10%+116px)]" },
-  { href: "/contact", label: "Contact", className: "left-[calc(30%-131px)]" },
-  { href: "/blog", label: "blog", className: "-translate-x-full left-[calc(90%-6px)] text-right" },
-  { href: "/careers", label: "Careers", className: "-translate-x-full left-[calc(90%-92px)] text-right" },
-  { href: "/our-work", label: "work", className: "-translate-x-full left-[calc(80%-17px)] text-right" },
+const LEFT_NAV_LINKS = [
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/industries", label: "Industries" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
-/**
- * Shared header for all real (Figma-built) pages. Positions are pixel-exact
- * and identical on every page (verified across About/Contact/Career/etc.,
- * which only differed in how their `calc()` arbitrary values expressed the
- * same final pixel offset). `variant="transparent"` matches the homepage,
- * whose header floats over the hero image instead of a solid bar.
- *
- * z-index: bg (z-10) sits below decorative badges that intentionally
- * peek up into the header band (z-15); nav text/logo (z-20) always
- * stays on top so it's never obstructed or unclickable.
- */
+const RIGHT_NAV_LINKS = [
+  { href: "/our-work", label: "Work" },
+  { href: "/careers", label: "Careers" },
+  { href: "/blog", label: "Blog" },
+] as const;
+
 export function PixelHeader({
   activeHref,
   variant = "solid",
+  isHome = false,
   showLogo = true,
 }: {
   activeHref?: string;
   variant?: "solid" | "transparent";
-  /** Homepage has its own large centered hero logo instead of the small corner one. */
+  isHome?: boolean;
   showLogo?: boolean;
 }) {
-  const textColor = variant === "transparent" ? "text-white" : "text-[#cecece]";
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const isTransparent = variant === "transparent" || isHome;
+
+  const bgClasses = isTransparent
+    ? "bg-gradient-to-b from-black/90 via-black/60 to-transparent border-b border-white/10"
+    : "bg-[#2b2b2b] border-b border-[#3d3d3d]";
+
+  const textColor = "text-white";
 
   return (
-    <>
-      {variant === "solid" && (
-        <div className="absolute bg-[#333] h-[64px] left-0 top-0 w-[1920px] z-10" />
-      )}
-      {NAV_LINKS.map((link) => {
-        const isActive = activeHref === link.href;
-        return (
+    <header className={`sticky top-0 z-50 w-full transition-colors duration-300 ${bgClasses}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[64px] flex items-center justify-between">
+        
+        {/* Desktop Left Navigation (ABOUT, SERVICES, INDUSTRIES, CONTACT) */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 w-1/3 justify-start">
+          {LEFT_NAV_LINKS.map((link) => {
+            const isActive = activeHref === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-rajdhani font-bold text-[17px] xl:text-[19px] uppercase tracking-wider transition-colors ${
+                  isActive ? "text-[#f4a31d]" : `${textColor} hover:text-[#f4a31d]`
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Center Brand Logo (Visible on inner pages, hidden on homepage hero header bar) */}
+        <div className="flex items-center justify-center w-auto lg:w-1/3 shrink-0">
+          {!isHome && showLogo ? (
+            <Link href="/" className="relative h-[38px] w-[180px] sm:w-[210px] block">
+              <Image
+                alt="Digital Kangaroos"
+                className="object-contain"
+                src={logoSrc}
+                fill
+                sizes="210px"
+                priority
+              />
+            </Link>
+          ) : (
+            <>
+              {/* Desktop space holder on homepage */}
+              <div className="hidden lg:block w-[180px]" />
+              {/* Mobile logo on homepage */}
+              <Link href="/" className="lg:hidden relative h-[36px] w-[160px] block">
+                <Image
+                  alt="Digital Kangaroos"
+                  className="object-contain"
+                  src={logoSrc}
+                  fill
+                  sizes="160px"
+                  priority
+                />
+              </Link>
+            </>
+          )}
+        </div>
+
+        {/* Desktop Right Navigation (WORK, CAREERS, BLOG, SEARCH) */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 w-1/3 justify-end">
+          {RIGHT_NAV_LINKS.map((link) => {
+            const isActive = activeHref === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-rajdhani font-bold text-[17px] xl:text-[19px] uppercase tracking-wider transition-colors ${
+                  isActive ? "text-[#f4a31d]" : `${textColor} hover:text-[#f4a31d]`
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+
+          {/* Search Link / Action */}
           <Link
-            key={link.href}
-            href={link.href}
-            className={`[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] not-italic text-[22px] top-[18px] tracking-[-0.4px] uppercase whitespace-nowrap transition-colors z-20 ${link.className} ${
-              isActive ? "text-[#f4a31d]" : `${textColor} hover:text-[#f4a31d]`
-            }`}
+            href="/contact"
+            className={`font-rajdhani font-bold text-[17px] xl:text-[19px] uppercase tracking-wider flex items-center gap-1.5 transition-colors ${textColor} hover:text-[#f4a31d]`}
           >
-            {link.label}
+            <span>Search</span>
           </Link>
-        );
-      })}
-      <p className={`-translate-x-full [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(100%-90px)] not-italic ${textColor} text-[22px] text-right top-[18px] tracking-[-0.4px] uppercase whitespace-nowrap z-20`}>
-        Search
-      </p>
-      {showLogo && (
-        <Link
-          href="/"
-          className="-translate-x-1/2 absolute h-[38px] left-1/2 top-[13px] w-[200px] z-20"
-        >
-          <Image
-            alt="Digital Kangaroos"
-            className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-            src={logoSrc}
-            fill
-            sizes="208px"
-          />
-        </Link>
+        </nav>
+
+        {/* Mobile Navigation Toggle */}
+        <div className="flex items-center gap-3 lg:hidden">
+          <Link
+            href="/contact"
+            className="p-1.5 text-white hover:text-[#f4a31d] font-rajdhani font-bold text-xs uppercase"
+          >
+            Search
+          </Link>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-lg text-white hover:text-[#f4a31d] hover:bg-[#383838] transition-colors"
+            aria-label="Toggle Navigation Menu"
+          >
+            {mobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Drawer Dropdown */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-[#242832] border-t border-[#383d4a] px-4 pt-4 pb-6 space-y-2 shadow-2xl animate-in slide-in-from-top-2 duration-200">
+          {[...LEFT_NAV_LINKS, ...RIGHT_NAV_LINKS].map((link) => {
+            const isActive = activeHref === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block font-rajdhani font-bold text-[18px] uppercase py-2 px-3 rounded-md transition-colors ${
+                  isActive
+                    ? "bg-[#f4a31d] text-white"
+                    : "text-[#cecece] hover:bg-[#333] hover:text-[#f4a31d]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
       )}
-    </>
+    </header>
   );
 }
+

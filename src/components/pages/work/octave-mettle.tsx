@@ -99,7 +99,7 @@ export function OctaveMettlePage() {
       </div>
       <div className="absolute left-[1660px] size-[130px] top-[300px]">
         <Image alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
-        <div className="absolute left-[4px] size-[122px] top-[4px]">
+        <div className="absolute left-[4px] size-[122px] top-[4px] rounded-full bg-[#333] overflow-hidden">
           <Image alt="ISO 9001:2015 certified badge" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSadsaas1} fill sizes="100vw" />
         </div>
       </div>

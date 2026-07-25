@@ -7,6 +7,8 @@ import Image from "next/image";
 import type { BlogPost } from "@/data/blog-posts";
 import { BLOG_POSTS, BLOG_TITLE } from "@/data/blog-posts";
 import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { ChevronRight, Send, CheckCircle2 } from "lucide-react";
 
 export function BlogInsidePage({ post }: { post: BlogPost }) {
   const currentIndex = BLOG_POSTS.findIndex((p) => p.slug === post.slug);
@@ -25,274 +27,204 @@ export function BlogInsidePage({ post }: { post: BlogPost }) {
     isRobotChecked: false,
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you! Your details have been submitted.");
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        name: "",
+        company: "",
+        phone: "",
+        email: "",
+        projectDetails: "",
+        isRobotChecked: false,
+      });
+    }, 4000);
   };
 
   return (
-    <div className="bg-white relative w-[1920px] h-[3050px]">
+    <div className="w-full min-h-screen bg-white text-[#333] flex flex-col overflow-x-hidden">
       <PixelHeader activeHref="/blog" />
 
-      {/* Main 2-Column Content Container */}
-      <div className="-translate-x-1/2 absolute left-1/2 top-[120px] w-[1588px] flex gap-[88px]">
-        {/* Left Column: Article Content (w-[1060px]) */}
-        <div className="w-[1060px] flex flex-col">
-          {/* Main Hero Banner Image */}
-          <div className="relative w-full h-[520px] rounded-[24px] overflow-hidden bg-[#eee] shadow-sm mb-8">
-            <Image
-              src={post.heroImage}
-              alt={BLOG_TITLE}
-              fill
-              priority
-              sizes="1060px"
-              className="object-cover"
-            />
-          </div>
-
-          {/* Post Metadata & Title */}
-          <p className="font-rajdhani font-medium text-[16px] text-[#777] mb-2">
-            {post.date}
-          </p>
-          <h1 className="font-days-one text-[#242832] text-[34px] leading-[44px] tracking-[-0.5px] mb-8">
-            Your Website Is Either Working For You — Or Against You
-          </h1>
-
-          {/* Article Body */}
-          <div className="font-rajdhani font-medium text-[18px] leading-[30px] text-[#333] space-y-6">
-            <p>
-              Here is something most business owners do not want to hear: your website might be your most expensive employee — and it might be doing absolutely nothing useful.
-            </p>
-            <p>
-              Every day, potential customers visit your website. They land on a page, spend a few seconds forming an impression, and then make a decision — to stay and explore, or to leave and find your competitor. You never find out which option they chose, because they never called to tell you. They simply left.
-            </p>
-            <p>
-              This silent, invisible loss of business happens on thousands of company websites every single day. And the brutal truth is that most of it is entirely preventable — because the reasons people leave are well understood, well documented, and very fixable.
-            </p>
-            <p>
-              According to web credibility research from Stanford University, 75% of users admit to making judgements about a company&apos;s credibility based on their website design. You have between 0.2 and 2.6 seconds to make a first impression on your site. In that blink of an eye, visitors decide whether your business is professional and trustworthy — or whether they should look elsewhere.
-            </p>
-            <p>
-              A site that focuses on superior user experience can have a visit-to-lead conversion rate that is more than 400% higher than a poorly designed site. That is not a marginal difference. That is the difference between a website that generates revenue and one that quietly bleeds it.
-            </p>
-            <p>
-              The question is not whether a good website design matters for your business. The data has settled that question definitively. The question is: does your current website make the cut?
-            </p>
-            <p>
-              In this guide, we walk through the 10 clearest warning signs that your business website is hurting your sales — and for each sign, we tell you exactly what to do about it. If you recognise three or more of these signs in your own website, it is time to have a serious conversation about a redesign.
-            </p>
-
-            <h2 className="font-days-one text-[#242832] text-[24px] leading-[32px] pt-4 mb-2">
-              Why This Matters More Than Ever in 2026
-            </h2>
-            <p>
-              Before we get into the signs, it is worth understanding why the standard for business websites has risen so dramatically in recent years.
-            </p>
-            <p>
-              Most website design and development experts recommend businesses undergo a website redesign every 3–4 years. The technology, the user expectations, and the competitive landscape all shift faster than most business owners realise. A website built in 2020 is not just six years old — in digital terms, it is practically a relic. The tools, frameworks, user experience standards, and SEO requirements that define a high-performing website in 2026 are significantly different from what they were even three years ago.
-            </p>
-            <p>
-              It takes about 0.05 seconds for a visitor to form an opinion after landing on your site. In that fraction of a second, they are not reading your copy. They are not evaluating your services. They are making a gut-level visual and experiential judgement about whether your business deserves their attention. And increasingly, the bar they are judging you against has been set by the best-designed websites they encounter daily — from major brands, tech companies, and your competitors who have invested in their digital presence.
-            </p>
-            <p>
-              A website redesign is a strategic business investment that directly impacts traffic, leads, and revenue — slow, outdated sites cause visitors to leave within seconds, costing you potential customers.
-            </p>
-            <p>
-              Now let us look at the specific, identifiable signs that your website has fallen behind.
-            </p>
-
-            <h2 className="font-days-one text-[#242832] text-[24px] leading-[32px] pt-4 mb-2">
-              Sign #1: Your Website Looks Noticeably Older Than Your Competitors&apos;
-            </h2>
-            <p>
-              Open your website and your top three competitors&apos; websites in separate tabs. Look at them honestly, as a potential customer would. Which one would you trust more with your business?
-            </p>
-            <p>
-              Design trends change. If your website has not had a facelift in 3–5 years, chances are it looks behind the times. Fonts, spacing, outdated visuals, and cluttered layouts can make your site feel stale — hurting your brand&apos;s credibility. Visitors will judge your business in seconds based on how your site looks.
-            </p>
-            <p>
-              This is not a superficial concern. Visitors form an impression within milliseconds, with about 94% based on visual elements like layout, colours, and fonts. An outdated website does not just look old — it communicates something damaging about your business: that you have not invested in your digital presence, which makes visitors wonder what else you have not invested in.
-            </p>
-            <p>
-              The signs of a visually dated website are usually obvious once you know what to look for: heavy drop shadows, busy backgrounds, excessive use of stock photography, cluttered page layouts with no breathing room, inconsistent fonts across pages, small body text, and colour schemes that feel like they belong to a different era. Individually, each of these is a minor issue. Together, they create the immediate impression of a business that has not kept up.
-            </p>
-
-            <div className="bg-[#f8f9fa] border-l-4 border-[#f4a31d] p-6 rounded-r-[16px] my-6">
-              <p className="font-rajdhani font-semibold text-[18px] text-[#242832]">
-                What to do: Work with a professional corporate website design agency to conduct a design audit — a side-by-side comparison of your site against industry-current standards and your nearest competitors. A good agency will identify specifically which visual elements are dragging your credibility down and propose targeted improvements, whether that is a full visual redesign or a focused refresh of key pages.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column: Sidebar (w-[440px]) */}
-        <div className="w-[440px] flex flex-col gap-6">
-          {/* Related Card 1 */}
-          <Link
-            href={`/blog/${relatedPosts[0].slug}`}
-            className="group bg-[#f8f9fa] rounded-[24px] overflow-hidden border border-[rgba(0,0,0,0.06)] shadow-sm hover:shadow-md transition-all flex flex-col h-[350px] cursor-pointer"
-          >
-            <div className="h-[180px] w-full relative overflow-hidden bg-[#eee]">
+      <main className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Left Main Article Column (lg:col-span-8) */}
+          <article className="lg:col-span-8 space-y-8">
+            {/* Banner Image */}
+            <div className="relative w-full h-[300px] sm:h-[450px] rounded-3xl overflow-hidden bg-gray-100 shadow-md">
               <Image
-                src={relatedPosts[0].cardImage}
-                alt=""
+                src={post.heroImage}
+                alt={BLOG_TITLE}
                 fill
-                sizes="440px"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="p-5 flex flex-col justify-between flex-1">
-              <p className="font-rajdhani font-medium text-[15px] text-[#777]">
-                {relatedPosts[0].date}
-              </p>
-              <p className="font-days-one text-[#242832] text-[16px] leading-[23px] tracking-[-0.3px] group-hover:text-[#f4a31d] transition-colors line-clamp-3">
-                {BLOG_TITLE}
-              </p>
-            </div>
-          </Link>
-
-          {/* Related Card 2 */}
-          <Link
-            href={`/blog/${relatedPosts[1].slug}`}
-            className="group bg-[#f8f9fa] rounded-[24px] overflow-hidden border border-[rgba(0,0,0,0.06)] shadow-sm hover:shadow-md transition-all flex flex-col h-[350px] cursor-pointer"
-          >
-            <div className="h-[180px] w-full relative overflow-hidden bg-[#eee]">
-              <Image
-                src={relatedPosts[1].cardImage}
-                alt=""
-                fill
-                sizes="440px"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="p-5 flex flex-col justify-between flex-1">
-              <p className="font-rajdhani font-medium text-[15px] text-[#777]">
-                {relatedPosts[1].date}
-              </p>
-              <p className="font-days-one text-[#242832] text-[16px] leading-[23px] tracking-[-0.3px] group-hover:text-[#f4a31d] transition-colors line-clamp-3">
-                {BLOG_TITLE}
-              </p>
-            </div>
-          </Link>
-
-          {/* Contact Widget ("Let's Move Forward Faster") */}
-          <form
-            onSubmit={handleSubmit}
-            className="bg-[#2d3139] rounded-[24px] p-6 text-white shadow-lg flex flex-col gap-3"
-          >
-            <h3 className="font-days-one text-[24px] text-white text-center mb-2 tracking-[-0.5px]">
-              Let&apos;s Move Forward Faster
-            </h3>
-
-            <input
-              type="text"
-              placeholder="Name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full h-[46px] bg-[#f5f5f5] rounded-[30px] px-5 font-rajdhani font-medium text-[16px] text-[#333] placeholder:text-[#888] outline-none focus:ring-2 focus:ring-[#f4a31d]"
-              required
-            />
-
-            <input
-              type="text"
-              placeholder="Company"
-              value={formData.company}
-              onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-              className="w-full h-[46px] bg-[#f5f5f5] rounded-[30px] px-5 font-rajdhani font-medium text-[16px] text-[#333] placeholder:text-[#888] outline-none focus:ring-2 focus:ring-[#f4a31d]"
-            />
-
-            <div className="flex gap-2">
-              <div className="w-[70px] h-[46px] bg-[#e5e5e5] rounded-[30px] flex items-center justify-center font-rajdhani font-bold text-[#333] text-[16px]">
-                +91 ↓
-              </div>
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="flex-1 h-[46px] bg-[#f5f5f5] rounded-[30px] px-5 font-rajdhani font-medium text-[16px] text-[#333] placeholder:text-[#888] outline-none focus:ring-2 focus:ring-[#f4a31d]"
-                required
+                priority
+                sizes="(max-width: 1024px) 100vw, 800px"
+                className="object-cover"
               />
             </div>
 
-            <input
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full h-[46px] bg-[#f5f5f5] rounded-[30px] px-5 font-rajdhani font-medium text-[16px] text-[#333] placeholder:text-[#888] outline-none focus:ring-2 focus:ring-[#f4a31d]"
-              required
-            />
+            {/* Post Metadata & Title */}
+            <div className="space-y-3">
+              <span className="font-rajdhani font-bold text-sm text-[#f4a31d] uppercase tracking-wider block">
+                {post.date}
+              </span>
+              <h1 className="font-days-one text-2xl sm:text-4xl text-[#242832] leading-tight">
+                Your Website Is Either Working For You — Or Against You
+              </h1>
+            </div>
 
-            <textarea
-              placeholder="Project Details"
-              rows={3}
-              value={formData.projectDetails}
-              onChange={(e) => setFormData({ ...formData, projectDetails: e.target.value })}
-              className="w-full bg-[#f5f5f5] rounded-[20px] p-4 font-rajdhani font-medium text-[16px] text-[#333] placeholder:text-[#888] outline-none focus:ring-2 focus:ring-[#f4a31d] resize-none"
-            />
+            {/* Article Content */}
+            <div className="font-rajdhani font-medium text-lg leading-relaxed text-[#333] space-y-6 pt-4">
+              <p>
+                Here is something most business owners do not want to hear: your website might be your most expensive employee — and it might be doing absolutely nothing useful.
+              </p>
+              <p>
+                Every day, potential customers visit your website. They land on a page, spend a few seconds forming an impression, and then make a decision — to stay and explore, or to leave and find your competitor. You never find out which option they chose, because they never called to tell you. They simply left.
+              </p>
+              <p>
+                This silent, invisible loss of business happens on thousands of company websites every single day. And the brutal truth is that most of it is entirely preventable — because the reasons people leave are well understood, well documented, and very fixable.
+              </p>
+              <p>
+                According to web credibility research from Stanford University, 75% of users admit to making judgements about a company&apos;s credibility based on their website design. You have between 0.2 and 2.6 seconds to make a first impression on your site. In that blink of an eye, visitors decide whether your business is professional and trustworthy — or whether they should look elsewhere.
+              </p>
+              <p>
+                A site that focuses on superior user experience can have a visit-to-lead conversion rate that is more than 400% higher than a poorly designed site. That is not a marginal difference. That is the difference between a website that generates revenue and one that quietly bleeds it.
+              </p>
 
-            {/* reCAPTCHA Mockup */}
-            <div className="bg-[#f9f9f9] border border-[#d3d3d3] rounded-[6px] p-3 flex items-center justify-between my-1">
-              <label className="flex items-center gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={formData.isRobotChecked}
-                  onChange={(e) => setFormData({ ...formData, isRobotChecked: e.target.checked })}
-                  className="w-6 h-6 rounded border-gray-300 text-[#f4a31d] focus:ring-[#f4a31d]"
-                />
-                <span className="font-rajdhani font-medium text-[14px] text-[#444]">
-                  I&apos;m not a robot
-                </span>
-              </label>
-              <div className="flex flex-col items-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
-                  alt="reCAPTCHA"
-                  className="w-6 h-6"
-                />
-                <span className="text-[9px] text-[#777] font-sans">reCAPTCHA</span>
+              <h2 className="font-days-one text-xl sm:text-2xl text-[#242832] pt-4">
+                Why This Matters More Than Ever in 2026
+              </h2>
+              <p>
+                Before we get into the signs, it is worth understanding why the standard for business websites has risen so dramatically in recent years.
+              </p>
+              <p>
+                Most website design and development experts recommend businesses undergo a website redesign every 3–4 years. The technology, the user expectations, and the competitive landscape all shift faster than most business owners realise. A website built in 2020 is not just six years old — in digital terms, it is practically a relic.
+              </p>
+
+              <div className="bg-[#f8f9fa] border-l-4 border-[#f4a31d] p-6 rounded-r-2xl my-6">
+                <p className="font-rajdhani font-semibold text-lg text-[#242832] leading-relaxed">
+                  What to do: Work with a professional corporate website design agency to conduct a design audit — a side-by-side comparison of your site against industry-current standards and your nearest competitors.
+                </p>
               </div>
             </div>
+          </article>
 
-            <button
-              type="submit"
-              className="w-full h-[50px] bg-[#f4a31d] hover:bg-[#e09215] text-white font-days-one text-[16px] uppercase tracking-wider rounded-[30px] transition-colors shadow-md cursor-pointer mt-1"
-            >
-              LET&apos;S CONNECT
-            </button>
-          </form>
+          {/* Right Sidebar Column (lg:col-span-4) */}
+          <aside className="lg:col-span-4 space-y-8 sticky top-28">
+            {/* Sidebar Contact Widget */}
+            <Card className="bg-[#2d3139] rounded-3xl p-6 text-white shadow-xl space-y-4 border-none">
+              <div className="text-center space-y-1">
+                <h3 className="font-days-one text-2xl text-white uppercase">
+                  Let's Move Forward Faster
+                </h3>
+                <p className="font-rajdhani text-xs text-gray-300">
+                  Speak with our B2B agency team today.
+                </p>
+              </div>
 
-          {/* Related Card 3 */}
-          <Link
-            href={`/blog/${relatedPosts[2].slug}`}
-            className="group bg-[#f8f9fa] rounded-[24px] overflow-hidden border border-[rgba(0,0,0,0.06)] shadow-sm hover:shadow-md transition-all flex flex-col h-[350px] cursor-pointer"
-          >
-            <div className="h-[180px] w-full relative overflow-hidden bg-[#eee]">
-              <Image
-                src={relatedPosts[2].cardImage}
-                alt=""
-                fill
-                sizes="440px"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+              {submitted ? (
+                <div className="p-4 bg-green-950/60 border border-green-500/40 text-green-300 rounded-2xl flex items-center gap-3 text-sm font-rajdhani font-semibold">
+                  <CheckCircle2 className="size-5 text-green-400 shrink-0" />
+                  <span>Thank you! Details submitted. We'll be in touch soon.</span>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <input
+                    type="text"
+                    placeholder="Name *"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full h-11 bg-white rounded-xl px-4 font-rajdhani font-medium text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d]"
+                    required
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Company Name"
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    className="w-full h-11 bg-white rounded-xl px-4 font-rajdhani font-medium text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d]"
+                  />
+
+                  <div className="flex gap-2">
+                    <div className="w-16 h-11 bg-gray-200 rounded-xl flex items-center justify-center font-rajdhani font-bold text-[#333] text-sm shrink-0">
+                      +91
+                    </div>
+                    <input
+                      type="tel"
+                      placeholder="Phone Number *"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full h-11 bg-white rounded-xl px-4 font-rajdhani font-medium text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d]"
+                      required
+                    />
+                  </div>
+
+                  <input
+                    type="email"
+                    placeholder="Email Address *"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full h-11 bg-white rounded-xl px-4 font-rajdhani font-medium text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d]"
+                    required
+                  />
+
+                  <textarea
+                    placeholder="Project Details"
+                    rows={3}
+                    value={formData.projectDetails}
+                    onChange={(e) => setFormData({ ...formData, projectDetails: e.target.value })}
+                    className="w-full bg-white rounded-xl p-3 font-rajdhani font-medium text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d] resize-none"
+                  />
+
+                  <button
+                    type="submit"
+                    className="w-full h-12 bg-[#f4a31d] hover:bg-[#d98d12] text-white font-days-one text-sm uppercase tracking-wider rounded-xl transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    <span>Let's Connect</span>
+                    <Send className="size-4" />
+                  </button>
+                </form>
+              )}
+            </Card>
+
+            {/* Related Posts */}
+            <div className="space-y-4 pt-4">
+              <h4 className="font-days-one text-xl text-[#333] uppercase">
+                Related Articles
+              </h4>
+
+              {relatedPosts.map((rPost, idx) => (
+                <Link key={idx} href={`/blog/${rPost.slug}`} className="block group">
+                  <Card className="p-4 bg-[#f8f9fa] hover:bg-white rounded-2xl border border-gray-200/70 hover:border-[#f4a31d] transition-all flex gap-4 items-center">
+                    <div className="size-20 relative rounded-xl overflow-hidden bg-gray-200 shrink-0">
+                      <Image
+                        src={rPost.cardImage}
+                        alt=""
+                        fill
+                        sizes="80px"
+                        className="object-cover group-hover:scale-105 transition-transform"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <span className="font-rajdhani font-semibold text-xs text-[#f4a31d] uppercase">
+                        {rPost.date}
+                      </span>
+                      <h5 className="font-days-one text-sm text-[#242832] group-hover:text-[#f4a31d] transition-colors line-clamp-2">
+                        {BLOG_TITLE}
+                      </h5>
+                    </div>
+                  </Card>
+                </Link>
+              ))}
             </div>
-            <div className="p-5 flex flex-col justify-between flex-1">
-              <p className="font-rajdhani font-medium text-[15px] text-[#777]">
-                {relatedPosts[2].date}
-              </p>
-              <p className="font-days-one text-[#242832] text-[16px] leading-[23px] tracking-[-0.3px] group-hover:text-[#f4a31d] transition-colors line-clamp-3">
-                {BLOG_TITLE}
-              </p>
-            </div>
-          </Link>
+          </aside>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
       <PixelSiteFooter />
     </div>
   );
 }
-

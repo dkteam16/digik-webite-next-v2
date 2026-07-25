@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Upload, CheckCircle2, Send } from "lucide-react";
 
 const AREAS_OF_INTEREST = [
   "Web Design",
@@ -11,115 +12,149 @@ const AREAS_OF_INTEREST = [
   "Other",
 ];
 
-const inputClass =
-  "absolute bg-[#f5f5f5] rounded-[52px] px-[28px] font-rajdhani text-[18px] text-[#333] placeholder:text-[#a0a0a0] outline-none focus:ring-2 focus:ring-[#f4a31d] transition-all";
-
 export function CareerForm() {
-  const [status, setStatus] = useState<"idle" | "submitted">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "submitted">("idle");
   const [fileName, setFileName] = useState<string | null>(null);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("submitted");
-    e.currentTarget.reset();
-    setFileName(null);
-    setTimeout(() => setStatus("idle"), 5000);
+    setStatus("submitting");
+    setTimeout(() => {
+      setStatus("submitted");
+      e.currentTarget.reset();
+      setFileName(null);
+      setTimeout(() => setStatus("idle"), 5000);
+    }, 800);
   }
 
   return (
-    <form onSubmit={handleSubmit} className="contents">
-      {/* Row 1 */}
-      <input
-        type="text"
-        name="fullName"
-        required
-        placeholder="Full Name"
-        className={`${inputClass} left-[364px] top-[1250px] w-[580px] h-[64px]`}
-      />
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="Email"
-        className={`${inputClass} left-[976px] top-[1250px] w-[580px] h-[64px]`}
-      />
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-4xl mx-auto">
+      {status === "submitted" && (
+        <div className="p-4 bg-green-50 border border-green-200 text-green-800 rounded-2xl flex items-center gap-3 font-rajdhani font-semibold text-base">
+          <CheckCircle2 className="size-5 text-green-600 shrink-0" />
+          <span>Application received! We'll review your CV and contact you if there's a match.</span>
+        </div>
+      )}
 
-      {/* Row 2 */}
-      <input
-        type="tel"
-        name="mobileNumber"
-        required
-        placeholder="Mobile Number"
-        className={`${inputClass} left-[364px] top-[1334px] w-[580px] h-[64px]`}
-      />
-      <div className="absolute left-[976px] top-[1334px] w-[580px] h-[64px]">
-        <select
-          name="areaOfInterest"
-          required
-          defaultValue=""
-          className={`${inputClass} inset-0 size-full appearance-none pr-[48px] text-[#333] invalid:text-[#a0a0a0]`}
-        >
-          <option value="" disabled>
-            Area Of Interest
-          </option>
-          {AREAS_OF_INTEREST.map((area) => (
-            <option key={area} value={area} className="text-[#333]">
-              {area}
-            </option>
-          ))}
-        </select>
-        <div className="absolute right-[24px] top-[26px] pointer-events-none text-[#333]">
-          <svg className="w-[14px] h-[14px] fill-current" viewBox="0 0 20 20">
-            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-          </svg>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-xs font-rajdhani font-bold text-gray-700 uppercase mb-1">
+            Full Name *
+          </label>
+          <input
+            type="text"
+            name="fullName"
+            required
+            placeholder="Your Full Name"
+            className="w-full bg-[#f5f5f5] focus:bg-white border border-transparent focus:border-[#f4a31d] rounded-2xl h-14 px-5 font-rajdhani text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d]/20 transition-all"
+          />
+        </div>
+
+        <div>
+          <label className="block text-xs font-rajdhani font-bold text-gray-700 uppercase mb-1">
+            Email Address *
+          </label>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="you@email.com"
+            className="w-full bg-[#f5f5f5] focus:bg-white border border-transparent focus:border-[#f4a31d] rounded-2xl h-14 px-5 font-rajdhani text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d]/20 transition-all"
+          />
         </div>
       </div>
 
-      {/* Row 3 - File Upload Dropzone */}
-      <label className="absolute left-[364px] top-[1418px] w-[1192px] h-[120px] bg-[#f5f5f5] rounded-[32px] flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#eaeaea] transition-colors border border-dashed border-[#d0d0d0]">
-        <div className="flex items-center gap-3">
-          <span className="font-rajdhani font-medium text-[18px] text-[#666]">
-            {fileName
-              ? `Attached: ${fileName}`
-              : status === "submitted"
-              ? "CV Uploaded Successfully ✓"
-              : "Upload Your CV"}
-          </span>
-          <svg
-            className="w-[20px] h-[20px] text-[#555]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
-            />
-          </svg>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-xs font-rajdhani font-bold text-gray-700 uppercase mb-1">
+            Mobile Number *
+          </label>
+          <input
+            type="tel"
+            name="mobileNumber"
+            required
+            placeholder="+91 98765 43210"
+            className="w-full bg-[#f5f5f5] focus:bg-white border border-transparent focus:border-[#f4a31d] rounded-2xl h-14 px-5 font-rajdhani text-base text-[#333] placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-[#f4a31d]/20 transition-all"
+          />
         </div>
-        <input
-          type="file"
-          name="cv"
-          accept=".pdf,.doc,.docx"
-          required
-          onChange={(e) => {
-            if (e.target.files && e.target.files[0]) {
-              setFileName(e.target.files[0].name);
-            }
-          }}
-          className="sr-only"
-        />
-      </label>
 
-      {/* Submit Button */}
-      <button
-        type="submit"
-        className="-translate-x-1/2 absolute bg-[#f4a31d] border-2 border-solid border-white h-[64px] left-1/2 rounded-[64px] top-[1568px] w-[304px] flex items-center justify-center font-rajdhani font-bold text-[22px] text-center text-white tracking-[-0.44px] uppercase hover:opacity-90 transition-opacity shadow-md cursor-pointer"
-      >
-        {status === "submitted" ? "APPLIED ✓" : "APPLY NOW"}
-      </button>
+        <div>
+          <label className="block text-xs font-rajdhani font-bold text-gray-700 uppercase mb-1">
+            Area of Interest *
+          </label>
+          <div className="relative">
+            <select
+              name="areaOfInterest"
+              required
+              defaultValue=""
+              className="w-full bg-[#f5f5f5] focus:bg-white border border-transparent focus:border-[#f4a31d] rounded-2xl h-14 px-5 font-rajdhani text-base text-[#333] appearance-none pr-10 outline-none focus:ring-2 focus:ring-[#f4a31d]/20 transition-all"
+            >
+              <option value="" disabled>
+                Select Area Of Interest
+              </option>
+              {AREAS_OF_INTEREST.map((area) => (
+                <option key={area} value={area}>
+                  {area}
+                </option>
+              ))}
+            </select>
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Dropzone File Upload */}
+      <div>
+        <label className="block text-xs font-rajdhani font-bold text-gray-700 uppercase mb-1">
+          Upload CV / Resume (PDF or DOCX) *
+        </label>
+        <label className="w-full h-32 bg-[#f5f5f5] hover:bg-[#ebebeb] border-2 border-dashed border-gray-300 rounded-3xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-colors p-4 text-center">
+          <Upload className="size-6 text-[#f4a31d]" />
+          <span className="font-rajdhani font-semibold text-base text-gray-700">
+            {fileName ? (
+              <span className="text-[#f4a31d] font-bold">Attached: {fileName}</span>
+            ) : (
+              "Click to choose or drag & drop your CV file"
+            )}
+          </span>
+          <input
+            type="file"
+            name="cv"
+            accept=".pdf,.doc,.docx"
+            required
+            onChange={(e) => {
+              if (e.target.files && e.target.files[0]) {
+                setFileName(e.target.files[0].name);
+              }
+            }}
+            className="sr-only"
+          />
+        </label>
+      </div>
+
+      <div className="flex justify-center pt-2">
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="w-full sm:w-auto min-w-[280px] bg-[#f4a31d] hover:bg-[#d98d12] text-white font-rajdhani font-bold text-lg h-14 px-8 rounded-full uppercase tracking-wider shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+        >
+          {status === "submitting" ? (
+            "Submitting..."
+          ) : status === "submitted" ? (
+            <>
+              Applied <CheckCircle2 className="size-5" />
+            </>
+          ) : (
+            <>
+              Apply Now <Send className="size-5" />
+            </>
+          )}
+        </button>
+      </div>
     </form>
   );
 }

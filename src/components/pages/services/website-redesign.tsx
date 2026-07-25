@@ -1,278 +1,176 @@
 import Link from "next/link";
-import { OutlineCtaLink } from "@/components/outline-cta-link";
-import { PixelSiteFooter } from "@/components/layout/pixel-site-footer";
-import Image from "next/image";
 import { PixelHeader } from "@/components/layout/pixel-header";
-
-const imgSadsaas1 = "/images/svc-website-redesign/imgSadsaas1.png";
-const imgEllipse8 = "/images/svc-website-redesign/imgEllipse8.svg";
-const imgVector21 = "/images/svc-website-redesign/imgVector21.svg";
-const imgEllipse20 = "/images/svc-website-redesign/imgEllipse20.svg";
-const imgGroup266 = "/images/svc-website-redesign/imgGroup266.svg";
-const imgGroup267 = "/images/svc-website-redesign/imgGroup267.svg";
-const imgOutline = "/images/svc-website-redesign/imgOutline.svg";
-const imgGroup268 = "/images/svc-website-redesign/imgGroup268.svg";
-const imgGroup = "/images/svc-website-redesign/imgGroup.svg";
-const imgEllipse21 = "/images/svc-website-redesign/imgEllipse21.svg";
-const imgGroup1 = "/images/svc-website-redesign/imgGroup1.svg";
-const imgEllipse22 = "/images/svc-website-redesign/imgEllipse22.svg";
-const imgGroup2 = "/images/svc-website-redesign/imgGroup2.svg";
-const imgGroup300 = "/images/svc-website-redesign/imgGroup300.svg";
+import { PixelSiteFooter } from "@/components/layout/pixel-site-footer";
+import { Card, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle2, FileSearch, Phone } from "lucide-react";
 
 export function WebsiteRedesignPage() {
+  const STATS = [
+    { value: "90+", label: "Google Best Practices Score" },
+    { value: "0%", label: "SEO Rankings Lost" },
+    { value: "6-8wk", label: "Avg. Redesign Timeline" }
+  ];
+
+  const SIGNS = [
+    "It Was Built Before 2024",
+    "Overseas Buyers Leave in Seconds",
+    "You Can't Update It Yourself",
+    "Not Ranking for Industrial Keywords?"
+  ];
+
+  const FEATURES = [
+    "Full Website Audit First",
+    "SEO Migration Guarantee",
+    "Parallel Development",
+    "Content Audit & Rewrite"
+  ];
+
   return (
-    <div className="bg-white relative w-[1920px] h-[3040px]">
-      <div className="-translate-x-1/2 absolute bg-[#f5f5f5] h-[518px] left-1/2 top-[1470px] w-[1920px]" data-node-id="568:243" />
-      <div className="-translate-x-1/2 absolute h-[640px] left-[calc(30%-65px)] top-[34px] w-[642px]" data-node-id="563:3">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgEllipse8} fill sizes="100vw" />
-      </div>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-326px)] not-italic text-[#333] text-[20px] top-[346px] tracking-[-0.4px] uppercase w-[729px]" data-node-id="563:4">
-        We rebuild manufacturing and industrial websites from the ground up — faster, more credible, fully SEO-optimised, and designed to convert buyers — without disrupting your existing business or losing your current search rankings.
-      </p>
-      <div className="[word-break:break-word] absolute font-days-one leading-[0px] left-[calc(30%-347px)] not-italic text-[#333] text-[50px] top-[156px] tracking-[-1px] uppercase w-[897px]" data-node-id="563:5">
-        <p className="mb-[0px]">
-          <span className="leading-[56.6px]">
-            Your Outdated Website
-            <br aria-hidden />
-            {`Is `}
+    <div className="w-full min-h-screen bg-white text-[#333] flex flex-col overflow-x-hidden">
+      <PixelHeader activeHref="/services" />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-b from-gray-50 to-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div className="lg:col-span-7 space-y-6">
+            <span className="font-rajdhani font-semibold text-xl text-[#f4a31d] uppercase tracking-wider">
+              Website Redesign
+            </span>
+
+            <h1 className="font-days-one text-4xl sm:text-5xl lg:text-6xl text-[#333] uppercase leading-tight">
+              Your Outdated Website Is <span className="text-[#f4a31d]">Costing You Leads</span> Daily.
+            </h1>
+
+            <p className="font-rajdhani font-semibold text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl">
+              We rebuild manufacturing and industrial websites from the ground up — faster, more credible, fully SEO-optimised, and designed to convert buyers — without disrupting your existing business or losing your current search rankings.
+            </p>
+
+            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <Link href="/contact">
+                <Button className="w-full sm:w-auto bg-[#f4a31d] hover:bg-[#d98d12] text-white font-rajdhani font-bold text-lg h-14 px-8 rounded-full uppercase shadow-lg transition-transform hover:scale-105">
+                  Audit My Current Site
+                  <ArrowRight className="ml-2 size-5" />
+                </Button>
+              </Link>
+              <Link href="/our-work">
+                <Button variant="outline" className="w-full sm:w-auto border-2 border-[#333] text-[#333] hover:bg-[#333] hover:text-white font-rajdhani font-bold text-lg h-14 px-8 rounded-full uppercase">
+                  See Redesigns
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="lg:col-span-5 space-y-4">
+            {STATS.map((stat, idx) => (
+              <div key={idx} className="bg-[#333] text-white p-6 rounded-2xl border-l-8 border-[#f4a31d] flex items-center justify-between shadow-xl">
+                <div>
+                  <div className="font-days-one text-4xl sm:text-5xl text-[#f4a31d]">{stat.value}</div>
+                  <div className="font-rajdhani font-medium text-lg uppercase tracking-wide text-gray-200 mt-1">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* Marquee Banner */}
+      <section className="bg-[#333] text-white py-4 border-y-4 border-[#f4a31d] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-4 font-rajdhani font-semibold text-sm sm:text-base uppercase tracking-wider text-gray-200">
+          <span>Engineering Firm Web Design</span>
+          <span className="hidden md:inline text-[#f4a31d]">•</span>
+          <span>RFQ Form Design</span>
+          <span className="hidden md:inline text-[#f4a31d]">•</span>
+          <span>Web Design for Manufacturers</span>
+          <span className="hidden md:inline text-[#f4a31d]">•</span>
+          <span>Industrial SEO Agency India</span>
+        </div>
+      </section>
+
+      {/* Signs Section */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-12">
+        <div className="max-w-3xl space-y-4">
+          <span className="font-rajdhani font-semibold text-xl text-[#f4a31d] uppercase tracking-wide">
+            Signs You Need a Redesign
           </span>
-          <span className="leading-[56.6px] text-[#f4a31d]">Costing You Leads</span>
-        </p>
-        <p className="leading-[56.6px]">Daily.</p>
-      </div>
-      <div className="absolute h-[69px] left-[229px] top-[349px] w-[0px]" data-node-id="563:6">
-        <div className="absolute inset-[0_-1.5px]">
-          <Image alt="" className="block max-w-none size-full" src={imgVector21} fill sizes="100vw" />
+          <h2 className="font-days-one text-3xl sm:text-4xl text-[#333] uppercase leading-tight">
+            Is Your Website <span className="text-[#f4a31d]">Working Against You?</span>
+          </h2>
         </div>
-      </div>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(10%+37px)] not-italic text-[#f4a31d] text-[20px] top-[112px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="563:7">
-        Website Redesign
-      </p>
-      <div className="absolute bg-[#333] h-[142px] left-[calc(60%+16px)] top-[132px] w-[523px]" data-node-id="563:8" />
-      <div className="absolute bg-[#333] h-[142px] left-[calc(60%+16px)] top-[284px] w-[523px]" data-node-id="563:9" />
-      <div className="absolute bg-[#333] h-[142px] left-[calc(60%+16px)] top-[436px] w-[523px]" data-node-id="563:10" />
-      <div className="absolute bg-[#f4a31d] h-[142px] left-[calc(60%+16px)] top-[132px] w-[10px]" data-node-id="563:11" />
-      <div className="absolute bg-[#f4a31d] h-[142px] left-[calc(60%+16px)] top-[284px] w-[10px]" data-node-id="563:12" />
-      <div className="absolute bg-[#f4a31d] h-[142px] left-[calc(60%+16px)] top-[436px] w-[10px]" data-node-id="563:13" />
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(70%-141px)] not-italic text-[20px] text-white top-[223px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="563:14">
-        GOOGLE BEST PRACTICES SCORE
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(70%-141px)] not-italic text-[20px] text-white top-[375px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="563:15">
-        SEO Rankings Lost
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(70%-141px)] not-italic text-[20px] text-white top-[527px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="563:16">
-        Avg. Redesign Timeline
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[72.6px] left-[calc(70%-140px)] not-italic text-[#f4a31d] text-[64.976px] top-[148px] tracking-[-1.2995px] uppercase whitespace-nowrap" data-node-id="563:17">
-        90+
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[72.6px] left-[calc(70%-140px)] not-italic text-[#f4a31d] text-[64.976px] top-[300px] tracking-[-1.2995px] uppercase whitespace-nowrap" data-node-id="563:18">
-        0%
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[72.6px] left-[calc(70%-140px)] not-italic text-[#f4a31d] text-[64.976px] top-[452px] tracking-[-1.2995px] uppercase whitespace-nowrap" data-node-id="563:19">
-        6-8wk
-      </p>
-      <div className="absolute contents left-[229px] top-[462px]" data-node-id="563:21">
-        <OutlineCtaLink href="/our-work" ariaLabel="See Redesigns" className="left-[calc(20%+173px)] top-[462px]">
-          See Redesigns
-        </OutlineCtaLink>
-        <div className="absolute bg-[#f4a31d] h-[88px] left-[229px] rounded-[64px] top-[462px] w-[304px]" data-node-id="563:24" />
-        <Link href="/contact" aria-label="Audit My Current Site" className="absolute border border-solid border-white h-[74px] left-[236px] rounded-[52px] top-[469px] w-[290px]" data-node-id="563:25" />
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(10%+188.5px)] not-italic text-[23px] text-center text-white top-[491px] tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="563:26">
-          Audit My Current Site
-        </p>
-      </div>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(10%+25px)] not-italic text-[#f4a31d] text-[20px] top-[896px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="563:27">
-        Signs You Need a Redesign
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[0px] left-[calc(30%-359px)] not-italic text-[#333] text-[50px] top-[938px] tracking-[-1px] uppercase w-[795px]" data-node-id="563:28">
-        <span className="leading-[56.6px]">{`Is Your Website `}</span>
-        <span className="leading-[56.6px] text-[#f4a31d]">Working Against You?</span>
-      </p>
-      <div className="absolute bg-[#f5f5f5] h-[107px] left-[219px] top-[1104px] w-[732px]" data-node-id="563:29" />
-      <div className="absolute bg-[#f5f5f5] h-[107px] left-[219px] top-[1245px] w-[732px]" data-node-id="563:193" />
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(30%-326px)] not-italic text-[#242832] text-[25px] top-[1165px] tracking-[-0.5px] uppercase w-[672px]" data-node-id="563:37">
-        Product Category Architecture
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(30%-326px)] not-italic text-[#242832] text-[25px] top-[1306px] tracking-[-0.5px] uppercase w-[672px]" data-node-id="563:194">
-        Product Category Architecture
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(50%-52px)] not-italic text-[#f4a31d] text-[52px] top-[1106px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="563:43">
-        +
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(50%-52px)] not-italic text-[#f4a31d] text-[52px] top-[1247px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="563:195">
-        +
-      </p>
-      <div className="absolute bg-[#f5f5f5] h-[121px] left-[219px] top-[1104px] w-[732px]" data-node-id="563:183" />
-      <div className="absolute bg-[#f5f5f5] h-[121px] left-[219px] top-[1245px] w-[732px]" data-node-id="563:196" />
-      <div className="absolute bg-[#f5f5f5] h-[121px] left-[calc(40%+203px)] top-[1104px] w-[732px]" data-node-id="563:184" />
-      <div className="absolute bg-[#f5f5f5] h-[121px] left-[calc(40%+203px)] top-[1245px] w-[732px]" data-node-id="563:197" />
-      <div className="absolute bg-[#f4a31d] h-[3px] left-[219px] top-[1104px] w-[732px]" data-node-id="563:185" />
-      <div className="absolute bg-[#f4a31d] h-[3px] left-[calc(40%+203px)] top-[1245px] w-[732px]" data-node-id="563:198" />
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(30%-326px)] not-italic text-[#242832] text-[25px] top-[1169px] tracking-[-0.5px] uppercase w-[672px]" data-node-id="563:186">
-        It Was Built Before 2024
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(30%-326px)] not-italic text-[#242832] text-[25px] top-[1310px] tracking-[-0.5px] uppercase w-[491px]" data-node-id="563:199">{`You Can't Update It Yourself`}</p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(70%-342px)] not-italic text-[#242832] text-[25px] top-[1169px] tracking-[-0.5px] uppercase w-[566px]" data-node-id="563:187">
-        Overseas Buyers Leave in Seconds
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(70%-342px)] not-italic text-[#242832] text-[25px] top-[1310px] tracking-[-0.5px] uppercase w-[643px]" data-node-id="563:200">
-        Not Ranking for Industrial Keywords?
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(10%+61px)] not-italic text-[#f4a31d] text-[20px] top-[1128px] tracking-[-0.4px] whitespace-nowrap" data-node-id="563:188">
-        Check 01
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(10%+61px)] not-italic text-[#f4a31d] text-[20px] top-[1269px] tracking-[-0.4px] whitespace-nowrap" data-node-id="563:201">
-        Check 03
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(50%+45px)] not-italic text-[#f4a31d] text-[20px] top-[1128px] tracking-[-0.4px] whitespace-nowrap" data-node-id="563:189">
-        Check 02
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(50%+45px)] not-italic text-[#f4a31d] text-[20px] top-[1269px] tracking-[-0.4px] whitespace-nowrap" data-node-id="563:202">
-        Check 04
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(50%-52px)] not-italic text-[#f4a31d] text-[52px] top-[1132px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="563:190">
-        +
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(50%-52px)] not-italic text-[#f4a31d] text-[52px] top-[1273px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="563:203">
-        +
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(90%-57px)] not-italic text-[#f4a31d] text-[52px] top-[1132px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="563:191">
-        +
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(90%-57px)] not-italic text-[#f4a31d] text-[52px] top-[1273px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="563:204">
-        +
-      </p>
-      <div className="-translate-x-1/2 absolute bg-[#333] h-[106px] left-1/2 top-[687px] w-[1920px]" data-node-id="563:58" />
-      <div className="-translate-x-1/2 absolute flex h-[5px] items-center justify-center left-1/2 top-[682px] w-[1920px]" data-node-id="563:59">
-        <div className="-scale-y-100 flex-none">
-          <div className="bg-[#f4a31d] h-[5px] relative w-[1920px]" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {SIGNS.map((sign, idx) => (
+            <Card key={idx} className="bg-[#f5f5f5] rounded-3xl p-6 border-t-4 border-[#f4a31d] shadow-sm flex items-center gap-4">
+              <CheckCircle2 className="size-6 text-[#f4a31d] shrink-0" />
+              <CardTitle className="font-days-one text-xl text-[#242832] uppercase leading-snug">
+                {sign}
+              </CardTitle>
+            </Card>
+          ))}
         </div>
-      </div>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(10%-88.24px)] not-italic text-[24.993px] text-white top-[721.34px] tracking-[-0.4999px] uppercase whitespace-nowrap" data-node-id="563:60">
-        Engineering Firm Web Design
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(100%-51.24px)] not-italic text-[24.993px] text-white top-[721.34px] tracking-[-0.4999px] uppercase whitespace-nowrap" data-node-id="563:61">
-        RFQ FORM DESIGN
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(30%-51.73px)] not-italic text-[24.993px] text-white top-[721.34px] tracking-[-0.4999px] uppercase whitespace-nowrap" data-node-id="563:62">
-        Web Design for Manufacturers
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(60%-173px)] not-italic text-[24.993px] text-white top-[721.34px] tracking-[-0.4999px] uppercase whitespace-nowrap" data-node-id="563:63">
-        Industrial SEO Agency India
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(90%-341px)] not-italic text-[24.993px] text-white top-[721.34px] tracking-[-0.4999px] uppercase whitespace-nowrap" data-node-id="563:64">{`B2B Website Design & Development`}</p>
-      <div className="absolute inset-[23.29%_95.42%_74.77%_1.51%]" data-node-id="563:65">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup266} fill sizes="100vw" />
-      </div>
-      <div className="absolute inset-[23.39%_73.59%_74.84%_23.28%]" data-node-id="563:74">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup267} fill sizes="100vw" />
-      </div>
-      <div className="absolute inset-[23.24%_49.9%_74.75%_46.93%]" data-node-id="563:85" data-name="Outline">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgOutline} fill sizes="100vw" />
-      </div>
-      <div className="absolute inset-[23.21%_28.65%_74.52%_68.39%]" data-node-id="563:87">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup268} fill sizes="100vw" />
-      </div>
-      <div className="absolute inset-[23.28%_3.36%_74.84%_93.65%]" data-node-id="563:89" data-name="Group">
-        <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup} fill sizes="100vw" />
-      </div>
-      <div className="absolute contents left-[calc(80%-3px)] top-[887px]" data-node-id="563:100">
-        <div className="absolute left-[calc(80%-3px)] size-[170px] top-[887px]" data-node-id="563:101">
-          <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
-        </div>
-        <div className="absolute left-[calc(80%+2px)] size-[160px] top-[892px]" data-node-id="563:102">
-          <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgEllipse21} fill sizes="100vw" />
-        </div>
-        <div className="absolute inset-[30.95%_12.22%_68.51%_80.75%]" data-node-id="563:103" data-name="Group">
-          <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup1} fill sizes="100vw" />
-        </div>
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-semibold leading-[16.027px] left-[calc(90%-110px)] not-italic text-[19.726px] text-center text-white top-[966.84px] tracking-[-0.3945px] uppercase w-[156px]" data-node-id="563:114">
-          (Shopify division of digital kangaroos)
-        </p>
-      </div>
-      <p className="[word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(10%+25px)] not-italic text-[#f4a31d] text-[20px] top-[1540px] tracking-[-0.4px] uppercase whitespace-nowrap" data-node-id="568:205">
-        Why Your Catalogue Matters
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[0px] left-[calc(50%-743px)] not-italic text-[#333] text-[50px] top-[1582px] tracking-[-1px] uppercase w-[1225px]" data-node-id="568:206">
-        <span className="leading-[56.6px]">
-          Your Products Are Your
-          <br aria-hidden />
-        </span>
-        <span className="leading-[56.6px] text-[#f4a31d]">Best Sales Team</span>
-        <span className="leading-[56.6px]">. Are They Working?</span>
-      </p>
-      <div className="absolute bg-white h-[68px] left-[219px] top-[1748px] w-[732px]" data-node-id="568:207" />
-      <div className="absolute bg-white h-[68px] left-[219px] top-[1836px] w-[732px]" data-node-id="568:208" />
-      <div className="absolute bg-white h-[68px] left-[calc(40%+203px)] top-[1748px] w-[732px]" data-node-id="568:210" />
-      <div className="absolute bg-white h-[68px] left-[calc(40%+203px)] top-[1836px] w-[732px]" data-node-id="568:211" />
-      <div className="absolute bg-[#f4a31d] h-[3px] left-[calc(40%+203px)] top-[1748px] w-[732px]" data-node-id="568:213" />
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(30%-326px)] not-italic text-[#242832] text-[25px] top-[1768px] tracking-[-0.5px] uppercase w-[672px]" data-node-id="568:215">
-        Full Website Audit First
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(30%-326px)] not-italic text-[#242832] text-[25px] top-[1856px] tracking-[-0.5px] uppercase w-[672px]" data-node-id="568:216">
-        Parallel Development
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(70%-342px)] not-italic text-[#242832] text-[25px] top-[1768px] tracking-[-0.5px] uppercase w-[574px]" data-node-id="568:218">
-        SEO Migration Guarantee
-      </p>
-      <p className="[word-break:break-word] absolute font-days-one leading-[30px] left-[calc(70%-342px)] not-italic text-[#242832] text-[25px] top-[1856px] tracking-[-0.5px] uppercase w-[669px]" data-node-id="568:219">{`Content Audit & Rewrite`}</p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(50%-52px)] not-italic text-[#f4a31d] text-[52px] top-[1750px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="568:221">
-        +
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(50%-52px)] not-italic text-[#f4a31d] text-[52px] top-[1838px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="568:222">
-        +
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(90%-57px)] not-italic text-[#f4a31d] text-[52px] top-[1750px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="568:224">
-        +
-      </p>
-      <p className="[word-break:break-word] absolute font-rajdhani font-medium leading-[normal] left-[calc(90%-57px)] not-italic text-[#f4a31d] text-[52px] top-[1838px] tracking-[-1.04px] uppercase whitespace-nowrap" data-node-id="568:225">
-        +
-      </p>
-      <div className="absolute contents left-[calc(80%-3px)] top-[1531px]" data-node-id="568:263">
-        <div className="absolute left-[calc(80%-3px)] size-[170px] top-[1531px]" data-node-id="568:264">
-          <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
-        </div>
-        <div className="absolute left-[calc(80%+2.38px)] size-[159.241px] top-[1536.38px]" data-node-id="568:265">
-          <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgEllipse22} fill sizes="100vw" />
-        </div>
-        <div className="absolute inset-[51.48%_14.26%_46.63%_82.83%]" data-node-id="568:266" data-name="Group">
-          <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup2} fill sizes="100vw" />
-        </div>
-        <div className="absolute contents left-[calc(80%+27px)] top-[1626.66px]" data-node-id="568:271">
-          <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(80%+82.5px)] not-italic text-[17.093px] text-center text-white top-[1626.66px] tracking-[-0.3419px] uppercase whitespace-nowrap" data-node-id="568:272">
-            GOOGLE RATING
-          </p>
-          <p className="[word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(80%+39px)] not-italic text-[13.397px] text-white top-[1647.04px] tracking-[-0.2679px] uppercase whitespace-nowrap" data-node-id="568:273">
-            4.7
-          </p>
-          <div className="absolute h-[12.939px] left-[calc(80%+58px)] top-[1647.21px] w-[66.372px]" data-node-id="568:274">
-            <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgGroup300} fill sizes="100vw" />
+      </section>
+
+      {/* Process/Features Section */}
+      <section className="bg-[#f5f5f5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 w-full border-y border-gray-200">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="max-w-3xl space-y-4">
+            <span className="font-rajdhani font-semibold text-xl text-[#f4a31d] uppercase tracking-wide">
+              Why Your Catalogue Matters
+            </span>
+            <h2 className="font-days-one text-3xl sm:text-4xl text-[#333] uppercase leading-tight">
+              Your Products Are Your <span className="text-[#f4a31d]">Best Sales Team</span>. Are They Working?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {FEATURES.map((feat, idx) => (
+              <Card key={idx} className="bg-white rounded-3xl p-6 border-t-4 border-[#f4a31d] shadow-sm flex items-center gap-4">
+                <CheckCircle2 className="size-6 text-[#f4a31d] shrink-0" />
+                <CardTitle className="font-days-one text-xl text-[#242832] uppercase leading-snug">
+                  {feat}
+                </CardTitle>
+              </Card>
+            ))}
           </div>
         </div>
-      </div>
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-[calc(50%+0.5px)] not-italic text-[#535353] text-[20px] text-center top-[2237px] tracking-[-0.4px] uppercase w-[995px]" data-node-id="568:283">{`We'll audit your current website and tell you precisely what's holding it back, what it's costing you in lost leads, and what a redesign would achieve. Free, detailed, in 48 hours.`}</p>
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-days-one leading-[72.6px] left-[calc(50%+0.5px)] not-italic text-[#242832] text-[60px] text-center top-[2077px] tracking-[-1.2px] w-[1127px]" data-node-id="568:284">
-        Find Out Exactly What Your Website Is Costing You.
-      </p>
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-semibold leading-[normal] left-1/2 not-italic text-[#535353] text-[17px] text-center top-[2444px] tracking-[-0.34px] uppercase whitespace-nowrap" data-node-id="568:285">
-        Free · 48hr Delivery · No Obligation
-      </p>
-      <div className="absolute bg-[#f4a31d] h-[88px] left-[calc(40%+6px)] rounded-[64px] top-[2344px] w-[372px]" data-node-id="568:286" />
-      <Link href="/contact" aria-label="Get Free Website Audit" className="absolute border border-solid border-white h-[74px] left-[calc(40%+16px)] rounded-[52px] top-[2351px] w-[352px]" data-node-id="568:287" />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-rajdhani font-bold leading-[normal] left-[calc(50%-0.5px)] not-italic text-[23px] text-center text-white top-[2373px] tracking-[-0.46px] uppercase whitespace-nowrap" data-node-id="568:288">
-        Get Free Website Audit
-      </p>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center space-y-8">
+        <h2 className="font-days-one text-3xl sm:text-5xl text-[#242832] uppercase leading-tight">
+          Find Out Exactly What Your Website Is Costing You.
+        </h2>
+        <p className="font-rajdhani font-semibold text-xl text-[#535353] max-w-2xl mx-auto">
+          We'll audit your current website and tell you precisely what's holding it back, what it's costing you in lost leads, and what a redesign would achieve. Free, detailed, in 48 hours.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            href="/contact"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#f4a31d] hover:bg-[#d98d12] text-white font-rajdhani font-bold text-lg h-14 px-8 rounded-full uppercase shadow-lg transition-transform hover:scale-105"
+          >
+            <FileSearch className="size-5" />
+            Get Free Website Audit
+          </Link>
+
+          <Link
+            href="tel:+919814820845"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border-2 border-[#333] text-[#333] hover:bg-[#333] hover:text-white font-rajdhani font-bold text-lg h-14 px-8 rounded-full uppercase transition-colors"
+          >
+            <Phone className="size-5" />
+            Call Us Now
+          </Link>
+        </div>
+
+        <p className="font-rajdhani font-semibold text-sm text-[#535353] uppercase tracking-wider">
+          Free · 48hr Delivery · No Obligation
+        </p>
+      </section>
+
       <PixelSiteFooter />
-      <PixelHeader activeHref="/services" />
-<div className="absolute contents left-[calc(80%+63px)] top-[110px]" data-node-id="563:55">
-        <div className="absolute left-[calc(80%+63px)] size-[170px] top-[110px] z-[15]" data-node-id="563:56">
-          <Image alt="" className="absolute block inset-[0px] max-w-none size-full" src={imgEllipse20} fill sizes="100vw" />
-        </div>
-        <div className="absolute left-[calc(80%+68px)] size-[159px] top-[116px] z-[15]" data-node-id="563:57" data-name="sadsaas 1">
-          <Image alt="" className="absolute inset-[0px] max-w-none object-cover pointer-events-none size-full" src={imgSadsaas1} fill sizes="100vw" />
-        </div>
-      </div>
     </div>
   );
 }
