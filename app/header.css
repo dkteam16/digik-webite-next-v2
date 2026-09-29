@@ -1,0 +1,28 @@
+ .header {width: 100%;z-index: 50;position: relative;}
+.headerHome {position: absolute;top: 0;left: 0;background: rgba(0, 0, 0, 0.3);backdrop-filter: blur(4px);}
+.headerSolid {position: relative;background: #2b2b2b;}
+.inner {max-width: 1400px;margin: 0 auto;padding: 20px 40px;display: grid;grid-template-columns: 1fr auto 1fr;align-items: center;}
+.nav {display: none;gap: 32px;}
+.navLeft {justify-content: flex-start;}
+.navRight {justify-content: flex-end;}
+.navLink {font-size: 20px;font-weight: 600;letter-spacing: 0.05em;color: #ffffff;text-decoration: none;transition: opacity 0.2s ease;}
+.navLink:hover {opacity: 0.7;}
+.logoWrap {justify-self: center;}  
+/* Mega menu */ 
+ .megaMenu {display: none;position: absolute;left: 0;top: 100%;width: 100%;background: #212426;color: #ffffff;box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);opacity: 0;visibility: hidden;transform: translateY(-8px);transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;}
+
+.megaMenuOpen {opacity: 1;visibility: visible;transform: translateY(0);}
+.megaMenuInner {max-width: 1400px;margin: 0 auto;padding: 32px 40px;display: grid;grid-template-columns: 350px 1fr;gap: 96px;}
+.itemList {list-style: none;margin: 0;padding: 0;}
+.itemList li {border-bottom: 1px solid rgba(255, 255, 255, 0.1);}
+.itemList li:last-child {border-bottom: none;}
+.itemLink {display: block;padding: 20px 0;font-size: 15px;color: #ffffff;text-decoration: none;transition: color 0.2s ease;}
+.itemLinkActive {color: #ff3d9a;}
+.detail {padding-top: 8px;}
+.detailTitle {font-size: 36px;font-weight: 500;line-height: 1.2;margin: 0;}
+.detailDesc {margin-top: 32px;max-width: 1000px;font-size: 15px;line-height: 1.7;color: rgba(255, 255, 255, 0.9);}
+.ctaLink {margin-top: 40px;display: inline-flex;align-items: center;gap: 12px;font-size: 20px;font-weight: 500;color: #ffffff;text-decoration: none;}
+.ctaIcon {display: flex;align-items: center;justify-content: center;width: 40px;height: 40px;border-radius: 50%;background: #ff3d9a;}
+
+@media (min-width: 768px) {.nav {display: flex;}}
+@media (min-width: 768px) {.megaMenu {display: block;}}  
