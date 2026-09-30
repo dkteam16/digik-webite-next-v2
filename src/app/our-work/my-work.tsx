@@ -108,8 +108,10 @@ interface CaseStudy {
   title: string;
   short_description: string;
   slug: string;
-  image: string;
-  tags: string[];
+  image?: string;
+  listing_image?: string;
+  tags?: string[];
+  highlights?: string[];
 }
 
 export default function WorkPage() {
