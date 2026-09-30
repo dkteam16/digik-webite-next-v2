@@ -1,17 +1,21 @@
-import type { Metadata } from "next";
-import { FigmaScaleFrame } from "@/components/figma-scale-frame";
-import { AboutPage } from "@/components/pages/about";
+import Startstay from "@/app/about/start-stay";
+import Howget from "@/app/about/how-got";
+import Beleive from "@/app/about/beleive-exit";
+import Work from "@/app/about/work-purpose";
+import Principles from "@/app/about/principles";
+import People from "@/app/about/people-behind";
+import Something from "@/app/about/something"
 
-export const metadata: Metadata = {
-  "title": "About Us",
-  "description": "We're a specialist web and SEO agency serving one audience exceptionally well: manufacturers, exporters, and B2B industrial companies."
-};
-
-
-export default function About() {
+export default function Aboutus() {
   return (
-    <FigmaScaleFrame width={1920} height={6875}>
-      <AboutPage />
-    </FigmaScaleFrame>
+    <div className="about-us">
+        <Startstay />
+        <Howget /> 
+        <Beleive />  
+        <Work />
+        <Principles />
+        <People />
+        <Something />
+    </div>
   );
 }

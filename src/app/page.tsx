@@ -1,17 +1,34 @@
-import type { Metadata } from "next";
-import { FigmaScaleFrame } from "@/components/figma-scale-frame";
-import { HomePage } from "@/components/pages/homepage";
-
-export const metadata: Metadata = {
-  "title": "B2B Web Design Agency for Manufacturers & Exporters",
-  "description": "High-performance websites and SEO strategies for manufacturers, exporters, and B2B industrial companies — built to turn buyers into RFQs."
-};
+import Image from "next/image";
+import MainHero from "./homepage/mainhero";
+import Yourfactory from "./homepage/your-factory"
+import Ourlatest from "./homepage/ourlatest";
+import Build from "./homepage/build-manu"
+import WebSeo from "./homepage/web-seo"
+import Client from "./homepage/client-logo"
+import Faq from "./homepage/faq"
+import BrifRank from "./homepage/brif-rank"
+import GeneralAgency from "./homepage/general-agency"
+import Kangaroo from "./homepage/kangaro"
+import Stalk from "./homepage/stalkus"
+import Testimonials from "./homepage/testimonial"
 
 
 export default function Home() {
   return (
-    <FigmaScaleFrame width={1920} height={12224}>
-      <HomePage />
-    </FigmaScaleFrame>
+    <div className="main-page">
+         <MainHero />
+         <Yourfactory />
+         <Ourlatest />
+         <Build />
+         <WebSeo />
+         <Client />
+         <Faq />
+         <BrifRank />
+         <GeneralAgency />
+         <Testimonials />
+         <Kangaroo />
+         <Stalk />
+         
+    </div>
   );
 }
