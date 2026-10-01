@@ -26,7 +26,7 @@ export default function loacl() {
             description="CNC machine manufacturers, precision component makers, and tooling exporters sell to buyers who make high-stakes, long-term purchasing decisions. Your website needs to communicate technical excellence, not just look presentable."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "View Examples", link: "/contact-us" },
+                { text: "View Examples", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -60,9 +60,9 @@ export default function loacl() {
                 title="Let Your Website Work as Hard as Your <span>Machines Do</span>"
                 description="Free audit for machine tool manufacturers and precision engineering companies across India."
                 buttonText="Get Free Audit"
-                buttonLink="/contact" 
+                buttonLink="/contact-us" 
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="https://wa.me/919814820845"
                 footerText=" "
                 />
          </div>        

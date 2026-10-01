@@ -20,7 +20,7 @@ export default function Industrial() {
       title="Ready for a Website That Actually Generates RFQs?"
       description="Get a free audit of your current website. We'll show you exactly what's failing and what a proper industrial website would look like for your business."
       buttonText="Request Free Website Audit"
-      buttonLink="/contact"
+      buttonLink="/contact-us"
       footerText="Free · 48-Hour Delivery · No Obligation"
     />
     </div>

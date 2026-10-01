@@ -67,7 +67,7 @@ export default function BuildManu() {
       </Link>
      
                           {/* दूसरा बटन (White -> Black on Hover) */}
-                          <Link href="/contact-us" className="btn-group-link">
+                          <Link href="/our-work" className="btn-group-link">
         {/* मुख्य बटन का कंटेनर */}
         <div className="btn-main-container">
           

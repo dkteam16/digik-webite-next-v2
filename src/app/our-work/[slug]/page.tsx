@@ -231,7 +231,7 @@ export default function CaseStudyDetail() {
               <div className="cs-card cs-cta">
                 <p className="cs-cta-heading">{cta_heading}</p>
 
-                <Link className="cs-btn" href={cta_url || "/contact"}>
+                <Link className="cs-btn" href={cta_url || "/contact-us"}>
                   {cta_button || "Get Free Audit"}
                 </Link>
               </div>
@@ -259,9 +259,9 @@ export default function CaseStudyDetail() {
           title="Ready to Win More Logistics Contracts Through Your Website?"
           description="Free audit for industrial logistics and supply chain companies across India."
           buttonText="Get Free Audit"
-          buttonLink="/contact"
+          buttonLink="/contact-us"
           buttonTextSecond="WhatsApp Us"
-          buttonLinkSecond="/contact"
+          buttonLinkSecond="https://wa.me/919876543210"
           footerText=" "
         />
       </div></div>

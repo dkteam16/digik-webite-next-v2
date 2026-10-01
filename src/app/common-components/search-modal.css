@@ -1,0 +1,176 @@
+/* Full-screen dim overlay */
+.sm-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s;
+}
+.sm-overlay.sm-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Panel jo upar se neeche slide hota hai */
+.sm-panel {
+  background: #fff;
+  max-width: 1100px;
+  margin:30px auto 0;
+  border-radius: 0 0 ;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.nav button{font-family: Rajdhani, sans-serif !important}
+.sm-panel label,.sm-panel input::placeholder,.sm-panel button{font-family: Rajdhani, sans-serif !important;font-weight:600; }
+.sm-open .sm-panel {
+  transform: translateY(0);
+}
+
+/* Cream search bar */
+.sm-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 0;   
+}
+.sm-bar-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.sm-bar-field label {
+  font-size: 11px;
+  color: #666;
+}
+.sm-bar-field input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 17px;
+  padding: 2px 0;
+  color: #111;
+}
+.sm-icon-btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 6px 10px;
+  color: #333;
+}
+.sm-close {
+  border-left: 1px solid #d9c9ae;
+  font-size: 14px;
+}
+
+/* Results area */
+.sm-results {
+  padding: 8px 24px 0;
+}
+.sm-columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 16px 0 20px;
+}
+.sm-heading {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #444;
+  padding-bottom: 10px;
+  margin: 0 0 6px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.sm-columns ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sm-col-left li a {
+  display: block;
+  padding: 9px 0;
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
+}
+.sm-col-left li a:hover {
+  color: #f4a31d;
+}
+
+/* Right column items (chhota text ke saath) */
+.sm-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+  color: #222;
+}
+.sm-item:hover .sm-item-title {
+  color: #f4a31d;
+}
+.sm-item-group {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #f4a31d;
+}
+.sm-item-title {
+  font-size: 15px;
+}
+.sm-item-text {
+  font-size: 13px;
+  color: #777;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sm-empty {
+  padding: 28px 0;
+  color: #666;
+  font-size: 15px;
+}
+
+/* Bottom "Search for ..." row */
+.sm-footer {
+  width: calc(100% + 48px);
+  margin: 0 -24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+  background: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+}
+.sm-footer:hover {
+  background: #faf6ee;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sm-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .sm-panel {
+    border-radius: 0;
+  }
+  .sm-bar {
+    border-radius: 0;
+  }
+}

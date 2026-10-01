@@ -26,7 +26,7 @@ export default function loacl() {
             description="Whether you provide 3PL warehousing, industrial freight, CFS services, or supply chain solutions — your corporate clients search for logistics partners online. If you're not on page 1, you're not in the conversation."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Examples", link: "/contact-us" },
+                { text: "See Examples", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -61,9 +61,9 @@ export default function loacl() {
                 title="Ready to Win More Logistics Contracts Through Your Website?"
                 description="Free audit for industrial logistics and supply chain companies across India."
                 buttonText="Get Free Audit"
-                buttonLink="/contact" 
+                buttonLink="/contact-us" 
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="https://wa.me/919814820845"
                 footerText=" "
                 />
          </div>          

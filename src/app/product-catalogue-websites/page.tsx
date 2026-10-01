@@ -18,7 +18,7 @@ export default function loacl() {
             description="We build structured, searchable product catalogue websites for manufacturers and exporters — so buyers can find the exact product they need, read the technical specs, and submit an RFQ in under 3 minutes."
             buttons={[
                 { text: "Discuss Your Catalogue", link: "/contact-us" },
-                { text: "See Examples", link: "/contact-us" },
+                { text: "See Examples", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -45,7 +45,7 @@ export default function loacl() {
                 title="Turn Your Product List Into a Lead Generation Machine."
                 description="A properly built product catalogue website does what your sales team does — but 24 hours a day, in every time zone, for every buyer who finds you on Google."
                 buttonText="Discuss Your Catalogue Project"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 footerText="Free Consultation · No Obligation"
                 />
          </div>

@@ -23,7 +23,7 @@ export default function loacl() {
             description="You manufacture precision auto parts. Your buyers — OEMs, tier-1 suppliers, international importers — evaluate you online before they call. Does your website make you look like the supplier they want to work with for the next 10 years?"
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See What We Build ", link: "/contact-us" },
+                { text: "See What We Build ", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -54,9 +54,9 @@ export default function loacl() {
                 title="Is Your Website Winning Auto Buyers or Losing Them?"
                 description="Get a free audit of your current website and SEO. We'll show you exactly what's costing you RFQs."
                 buttonText="Get Free Audit Now"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"  
+                buttonLinkSecond="https://wa.me/919814820845"  
                 />
          </div>   
 
@@ -84,7 +84,7 @@ export default function loacl() {
                 title="Let's Put Ludhiana's Cycle Cluster on the Global Map"
                 description="Free website audit for cycle and sports equipment manufacturers. No commitment, just clarity."
                 buttonText="Get Free Audit"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 buttonTextSecond="all Us Now"
                 buttonLinkSecond="/contact"
                 footerText=" "

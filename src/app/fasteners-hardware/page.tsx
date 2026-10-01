@@ -27,7 +27,7 @@ export default function loacl() {
             description="India's fastener industry exports to 80+ countries. But most manufacturers win these orders through personal relationships and trade fairs — a model that breaks down the moment a new international buyer searches for you on Google and finds nothing."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Industry Examples", link: "/contact-us" },
+                { text: "See Industry Examples", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -68,9 +68,9 @@ export default function loacl() {
                 title="Ready to Replace IndiaMart with <span >Your Own Lead Machine?</span>"
                 description="Free website and SEO audit for fastener and hardware manufacturers."
                 buttonText="Get Free Website Audit"
-                buttonLink="/contact" 
+                buttonLink="/contact-us" 
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="https://wa.me/919814820845"
                 footerText=" "
                 />
          </div>    

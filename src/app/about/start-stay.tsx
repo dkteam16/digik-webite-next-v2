@@ -16,7 +16,7 @@ export default function Startstay() {
              <h1>We Started Small. We Stayed <span>Focused</span>.</h1>
              <p>Our journey began as a humble web development agency with a vision to create captivating online experiences. Fuelled by innovation and an unwavering commitment to excellence, we evolved into something more deliberate — a specialist web and SEO agency that serves one audience, and serves them exceptionally well: manufacturers, exporters, and B2B industrial companies.</p>
                <div className="flex flex-wrap gap-4 pt-4 items-center buil-manubtn">
-                  <Link href="/contact-us" className="btn-group-link">
+                  <Link href="/our-work" className="btn-group-link">
                     <div className="btn-main-container">    
                       <div className="btn-inner-border">
                         <span className="btn-arrow-left font-bold">

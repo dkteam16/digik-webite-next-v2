@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import SearchModal from "@/app/common-components/SearchModal";
 interface MobileSubItem {
   name: string;
   slug: string;
@@ -50,9 +51,9 @@ const menuGroups: MobileMenuGroup[] = [
   { label: "ABOUT", href: "/about", items: aboutItems },
   { label: "SERVICES", href: "/services", items: servicesItems },
   { label: "INDUSTRIES", href: "/industries", items: industriesItems },
-  { label: "CONTACT", href: "/contact", items: [] },
+  { label: "CONTACT", href: "/contact-us", items: [] },
   { label: "WORK", href: "/work", items: [] },
-  { label: "CAREERS", href: "/careers", items: [] },
+  { label: "CAREERS", href: "/career", items: [] },
   { label: "BLOG", href: "/blog", items: [] },
   { label: "SEARCH", href: "/search", items: [] },
 ];
@@ -63,14 +64,18 @@ export default function MobileHeader() {
 
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   useEffect(() => {
     setDrawerOpen(false);
     setOpenGroup(null);
   }, [pathname]);
 
+  // Sirf drawer khula ho tab scroll lock. (Drawer band hote hi search modal
+  // khulta hai, to yahan overflow "" set nahi karna warna modal ka lock hat jata hai)
   useEffect(() => {
-    document.body.style.overflow = drawerOpen ? "hidden" : "";
+    if (!drawerOpen) return;
+    document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "";
     };
@@ -81,6 +86,7 @@ export default function MobileHeader() {
   };
 
   return (
+    <>
     <div className={`mobileHeader ${isHome ? "mobileHeaderHome" : "mobileHeaderSolid"}`}>
       <div className="mobileBar">
         {/* Hamburger */}
@@ -195,6 +201,17 @@ export default function MobileHeader() {
                     ))}
                   </div>
                 </>
+              ) : group.label === "SEARCH" ? (
+                <button
+                  type="button"
+                  className="mobileNavLink"
+                  onClick={() => {
+                    setDrawerOpen(false);
+                    setSearchOpen(true);
+                  }}
+                >
+                  {group.label}
+                </button>
               ) : (
                 <Link
                   href={group.href}
@@ -209,5 +226,8 @@ export default function MobileHeader() {
         </nav>
       </div>
     </div>
+
+    <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+    </>
   );
-}
+}     

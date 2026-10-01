@@ -18,7 +18,7 @@ export default function loacl() {
             description="Custom iOS and Android applications for manufacturing and B2B industrial companies — from dealer portals and order management systems to customer-facing product catalogues and field sales apps."
             buttons={[
                 { text: "Discuss Your App", link: "/contact-us" },
-                { text: "See Our Work", link: "/contact-us" },
+                { text: "See Our Work", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -45,7 +45,7 @@ export default function loacl() {
                 title="Build the App Your Dealers and Buyers Have Been Asking For."
                 description="Most industrial companies are still running their dealer and customer interactions over WhatsApp and phone calls. A properly built app changes that — and gives you a competitive advantage your competitors don't have."
                 buttonText="Discuss Your App Project"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 footerText="Free Consultation · No Obligation"
                 />
          </div>

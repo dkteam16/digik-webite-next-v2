@@ -1,6 +1,7 @@
+ 
 "use client";
 
-import { FormEvent, useState } from "react"; 
+import { FormEvent, useState } from "react";
 
 type FormData = {
   fullName: string;
@@ -42,6 +43,8 @@ export default function ContactForm() {
       ...prev,
       [name]: "",
     }));
+
+    setSubmitted(false);
   };
 
   const validateForm = () => {
@@ -53,34 +56,40 @@ export default function ContactForm() {
     const mobile = formData.mobileNumber.trim();
     const message = formData.message.trim();
 
+    // Full Name
     if (!name) {
       newErrors.fullName = "Full name is required.";
     } else if (name.length < 2) {
       newErrors.fullName = "Please enter a valid name.";
     }
 
+    // Company Name
     if (!company) {
       newErrors.companyName = "Company name is required.";
     } else if (company.length < 2) {
       newErrors.companyName = "Please enter a valid company name.";
     }
 
+    // Email
     if (!email) {
       newErrors.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "Please enter a valid email address.";
     }
 
+    // Mobile Number
     if (!mobile) {
       newErrors.mobileNumber = "Mobile number is required.";
     } else if (!/^[+]?[0-9\s()-]{7,15}$/.test(mobile)) {
       newErrors.mobileNumber = "Please enter a valid mobile number.";
     }
 
+    // Industry
     if (!formData.industry) {
       newErrors.industry = "Please select your industry.";
     }
 
+    // Message
     if (!message) {
       newErrors.message = "Message is required.";
     } else if (message.length < 10) {
@@ -94,20 +103,29 @@ export default function ContactForm() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setSubmitted(false);
 
+    // Validation
     if (!validateForm()) {
       return;
     }
 
+    // Form data console me check karne ke liye
     console.log("Form submitted:", formData);
+
+    // Success message
     setSubmitted(true);
+
+    // 1 second ke baad page refresh
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (
     <section className="contact-msg-section">
       <div className="contact-msg-wrapper">
- 
 
         <h2 className="contact-msg-title">
           SEND US A MESSAGE
@@ -118,9 +136,11 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           noValidate
         >
+
           {/* Name + Company */}
           <div className="contact-msg-row">
 
+            {/* Full Name */}
             <div className="contact-msg-field">
               <input
                 type="text"
@@ -142,6 +162,7 @@ export default function ContactForm() {
               )}
             </div>
 
+            {/* Company Name */}
             <div className="contact-msg-field">
               <input
                 type="text"
@@ -168,6 +189,7 @@ export default function ContactForm() {
           {/* Email + Mobile */}
           <div className="contact-msg-row">
 
+            {/* Email */}
             <div className="contact-msg-field">
               <input
                 type="email"
@@ -189,6 +211,7 @@ export default function ContactForm() {
               )}
             </div>
 
+            {/* Mobile Number */}
             <div className="contact-msg-field">
               <input
                 type="tel"
@@ -263,21 +286,24 @@ export default function ContactForm() {
             )}
           </div>
 
-          {/* Success */}
+          {/* Success Message */}
           {submitted && (
             <div className="contact-msg-success">
               ✓ Your message has been submitted successfully.
             </div>
           )}
 
+          {/* Submit Button */}
           <button
             type="submit"
             className="contact-msg-button"
           >
             SEND MESSAGE
           </button>
+
         </form>
       </div>
     </section>
   );
 }
+ 

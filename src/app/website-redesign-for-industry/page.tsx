@@ -20,7 +20,7 @@ export default function loacl() {
             description="We rebuild manufacturing and industrial websites from the ground up — faster, more credible, fully SEO-optimised, and designed to convert buyers — without disrupting your existing business or losing your current search rankings."
             buttons={[
                 { text: "Audit My Current Site", link: "/contact-us" },
-                { text: "See Redesigns", link: "/contact-us" },
+                { text: "See Redesigns", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -47,7 +47,7 @@ export default function loacl() {
                 title="Find Out Exactly What Your Website Is Costing You."
                 description="We'll audit your current website and tell you precisely what's holding it back, what it's costing you in lost leads, and what a redesign would achieve. Free, detailed, in 48 hours."
                 buttonText="Get Free Website Audit"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 footerText="Free · 48hr Delivery · No Obligation"
                 />
          </div>  

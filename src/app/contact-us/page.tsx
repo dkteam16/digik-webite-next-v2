@@ -8,7 +8,7 @@ export default function loacl() {
   return (
     <div className="contact-us ">    
       <First />
-       <div className="contact-form">
+       <div className="contact-form  bg-white"> 
           <div className="contact-form-inner">
               <Contactleft />
               <Contactright />   

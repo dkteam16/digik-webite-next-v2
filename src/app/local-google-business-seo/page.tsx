@@ -18,7 +18,7 @@ export default function loacl() {
             description="We build SEO strategies for manufacturers and B2B industrial companies that rank on Google for the terms your buyers actually search — generating consistent, qualified inbound enquiries every month."
             buttons={[
                 { text: "get a free SEO audit", link: "/contact-us" },
-                { text: "see case Studies", link: "/contact-us" },
+                { text: "see case Studies", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -37,7 +37,7 @@ export default function loacl() {
       title="Stop Paying for Leads. Start Owning Them."
       description="IndiaMart leads stop the moment you stop paying. SEO-driven leads keep coming — and compound every month. Get your free SEO audit and see what's possible for your business."
       buttonText="Request Free SEO Audit"
-      buttonLink="/contact"
+      buttonLink="/contact-us"
       footerText="Free · Detailed · 48hr Delivery"
     />
     </div>

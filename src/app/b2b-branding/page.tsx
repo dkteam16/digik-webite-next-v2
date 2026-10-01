@@ -18,7 +18,7 @@ export default function loacl() {
             description="We create brand identities for manufacturers, exporters, and B2B industrial companies that communicate capability, credibility, and seriousness — to buyers, partners, and procurement teams who make decisions based on trust."
             buttons={[
                 { text: "Discuss Your Branding", link: "/contact-us" },
-                { text: "See Brand Work", link: "/contact-us" },
+                { text: "See Brand Work", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -45,7 +45,7 @@ export default function loacl() {
                 title="Your Brand Is the First Thing a Buyer Judges You By."
                 description="A credible, professional brand identity isn't a luxury for industrial companies — it's a prerequisite for being taken seriously by international buyers. Let's build yours properly."
                 buttonText="Discuss Your Branding Project"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 footerText="Free Consultation · No Obligation"
                 />
          </div>

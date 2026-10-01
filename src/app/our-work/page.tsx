@@ -23,9 +23,9 @@ export default function loacl() {
                         title="Ready To Be Next?"
                         description="If you're a manufacturer, exporter, or B2B industrial company — we should talk."
                         buttonText="Get Free Audit"
-                        buttonLink="/contact" 
+                        buttonLink="/contact-us" 
                         buttonTextSecond="WhatsApp Us"
-                        buttonLinkSecond="/contact"
+                        buttonLinkSecond="https://wa.me/919814820845"
                         footerText=" "
                         />
                  </div>    

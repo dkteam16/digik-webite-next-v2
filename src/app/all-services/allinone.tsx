@@ -35,7 +35,7 @@ export default function Allinone() {
                       <div className="btn-bg-fill"></div>
                     </div>
                   </Link>
-                  <Link href="/contact-us" className="btn-group-link">
+                  <Link href="/our-work" className="btn-group-link">
                     {/* मुख्य बटन का कंटेनर */}
                     <div className="btn-main-container">
                       

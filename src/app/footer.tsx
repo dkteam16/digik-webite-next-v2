@@ -46,14 +46,14 @@ export default function  Footer() {
         {/* COLUMN 3: QUICK LINKS */}
         <div className="dk-footer-col dk-col-links  desktop-view">
           <ul className="dk-links-list">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#industries">INDUSTRIES</a></li>
-            <li><a href="#work">WORK</a></li>
-            <li><a href="#careers">CAREERS</a></li>
-            <li><a href="#blog">BLOG</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/all-services">SERVICES</a></li>
+            <li><a href="/industrial-website-desgin">INDUSTRIES</a></li>
+            <li><a href="/our-work">WORK</a></li>
+            <li><a href="/career">CAREERS</a></li>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/contact-us">CONTACT</a></li>
             <li><a href="#faqs">FAQS</a></li>
             <li><a href="#press">PRESS RELEASE</a></li>
             <li><a href="#privacy">PRIVACY POLICY</a></li>
@@ -141,8 +141,8 @@ export default function  Footer() {
             <a href="#" className="dk-orange-link">DK COMPANY PROJECTS</a>
             <div className="dk-bottom-links">
             
-            <a href="#">CART POTATO</a>
-            <a href="#">DK SCHOOL</a>
+            <a href="https://cartpotato.com/">CART POTATO</a>
+            <a href="https://school.digitalkangaroos.com/">DK SCHOOL</a>
             </div>
         </div>
       </div>

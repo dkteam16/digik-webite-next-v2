@@ -65,7 +65,7 @@ export default function loacl() {
                 title="Let's Put Ludhiana's Cycle Cluster on the Global Map"
                 description="Free website audit for cycle and sports equipment manufacturers. No commitment, just clarity."
                 buttonText="Get Free Website Audit"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 buttonTextSecond="all Us Now"
                 buttonLinkSecond="/contact"
                 footerText="Free Consultation · Pan-India Available"

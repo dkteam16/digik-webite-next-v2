@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -5,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import "./globals.css";
+import SearchModal from "@/app/common-components/SearchModal";
 
 // CSS ab global file (e.g. globals.css) me hai, isliye yahan koi import nahi chahiye
 
@@ -153,16 +155,15 @@ const menus = {
 
 const leftLinks: NavLink[] = [
   { label: "ABOUT", href: "/about", menuKey: "about" },
-  { label: "SERVICES", href: "/services", menuKey: "services" },
-  { label: "INDUSTRIES", href: "/industries", menuKey: "industries" },
-  { label: "CONTACT", href: "/contact" },
+  { label: "SERVICES", href: "/all-services", menuKey: "services" },
+  { label: "INDUSTRIES", href: "/industrial-website-desgin", menuKey: "industries" },
+  { label: "CONTACT", href: "/contact-us" },
 ];
 
 const rightLinks: NavLink[] = [
-  { label: "WORK", href: "/work" },
-  { label: "CAREERS", href: "/careers" },
+  { label: "WORK", href: "/our-work" },
+  { label: "CAREERS", href: "/career" },
   { label: "BLOG", href: "/blog" },
-  { label: "SEARCH", href: "/search" },
 ];
 
 export default function Header() {
@@ -171,6 +172,7 @@ export default function Header() {
 
   const [openMenu, setOpenMenu] = useState<keyof typeof menus | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   useEffect(() => {
     setOpenMenu(null);
@@ -187,6 +189,7 @@ export default function Header() {
     : null;
 
   return (
+    <>
     <header
       onMouseLeave={() => setOpenMenu(null)}
       className={`header ${isHome ? "headerHome" : "headerSolid"}`}
@@ -235,6 +238,19 @@ export default function Header() {
               {l.label}
             </Link>
           ))}
+
+          {/* SEARCH: link nahi, button — click par modal khulta hai */}
+          <button
+            type="button"
+            className="navLink navSearchBtn"
+            onMouseEnter={() => setOpenMenu(null)}
+            onClick={() => {
+              setOpenMenu(null);
+              setSearchOpen(true);
+            }}
+          >
+            SEARCH
+          </button>
         </nav>
       </div>
 
@@ -289,5 +305,9 @@ export default function Header() {
         )}
       </div>
     </header>
+
+    {/* Header ke bahar: backdrop-filter ke andar fixed position toot jati hai */}
+    <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+    </>
   );
 }

@@ -26,7 +26,7 @@ export default function loacl() {
             description="Chemical and pharma buyers don't just evaluate price — they evaluate your documentation, certifications, regulatory compliance, and quality systems before they even send an inquiry. Your website needs to demonstrate all of this clearly and credibly."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Industry Examples", link: "/contact-us" },
+                { text: "See Industry Examples", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -60,9 +60,9 @@ export default function loacl() {
                 title="Is Your Chemical or Pharma Website Winning International Buyers?"
                 description="Free website audit for chemical manufacturers and pharmaceutical exporters across India."
                 buttonText="Get Free Audit"
-                buttonLink="/contact" 
+                buttonLink="/contact-us" 
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="https://wa.me/919814820845"
                 footerText=" "
                 />
          </div>      

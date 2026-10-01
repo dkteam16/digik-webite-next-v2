@@ -26,7 +26,7 @@ export default function loacl() {
             description="Whether you manufacture FIBC jumbo bags, corrugated boxes, plastic containers, or flexible packaging — your buyers compare multiple suppliers online simultaneously. Your website is your sales pitch running 24/7."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "View Examples", link: "/contact-us" },
+                { text: "View Examples", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -63,9 +63,9 @@ export default function loacl() {
                 title="Get a Packaging Website That <span>Generates Real RFQs</span>"
                 description="Free website audit for chemical manufacturers and pharmaceutical exporters across India."
                 buttonText="Get Free Audit"
-                buttonLink="/contact" 
+                buttonLink="/contact-us" 
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="https://wa.me/919814820845"
                 footerText=" "
                 />
          </div>        

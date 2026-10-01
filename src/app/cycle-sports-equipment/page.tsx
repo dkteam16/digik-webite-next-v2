@@ -25,7 +25,7 @@ export default function loacl() {
             description="Ludhiana manufactures 70% of India's cycles and cycle parts — yet most manufacturers in the cluster are invisible online to the global buyers who want to source from them. We fix that."
             buttons={[
                 { text: "Get Free Audit ", link: "/contact-us" },
-                { text: "View Our Work", link: "/contact-us" },
+                { text: "View Our Work", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -60,7 +60,7 @@ export default function loacl() {
                 title="Is Your Website Winning Auto Buyers or Losing Them?"
                 description="Get a free audit of your current website and SEO. We'll show you exactly what's costing you RFQs."
                 buttonText="Get Free Audit Now"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 buttonTextSecond="WhatsApp Us"
                 buttonLinkSecond="/contact"  
                 />
@@ -90,7 +90,7 @@ export default function loacl() {
                 title="Let's Put Ludhiana's Cycle Cluster on the Global Map"
                 description="Free website audit for cycle and sports equipment manufacturers. No commitment, just clarity."
                 buttonText="Get Free Audit"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 buttonTextSecond="all Us Now"
                 buttonLinkSecond="/contact"
                 footerText=" "

@@ -18,7 +18,7 @@ export default function loacl() {
             description="We rank Indian manufacturers and exporters on Google in international markets — putting your company in front of procurement managers and sourcing engineers who are actively searching for what you make."
             buttons={[
                 { text: "Get Export SEO Audit", link: "/contact-us" },
-                { text: "see Results", link: "/contact-us" },
+                { text: "see Results", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -45,7 +45,7 @@ export default function loacl() {
                 title="Start Getting International RFQs Through Your Own Website."
                 description="Stop depending on trade fairs and buying agents. Get a free export SEO audit and see how many international buyers are searching for what you make right now."
                 buttonText="Get Free Export SEO Audit"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 footerText="Free · 48hr Delivery · No Obligation"
                 />
          </div>

@@ -18,7 +18,7 @@ export default function loacl() {
             description="Professional factory photography, product shoots, and brand videos for manufacturing and industrial companies — the visual content that makes international buyers trust what they see on your website before they ever visit in person. Discuss a Shoot"
             buttons={[
                 { text: "Discuss a Shoot", link: "/contact-us" },
-                { text: "See Our Work", link: "/contact-us" },
+                { text: "See Our Work", link: "/our-work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -45,7 +45,7 @@ export default function loacl() {
                 title="Show Your Buyers What You're Really Capable Of."
                 description="One day of professional photography produces visual content that works for your business for years. It's the highest ROI content investment most manufacturing companies never make — until they see what it does for their enquiry rate."
                 buttonText="Book a Factory Shoot"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 footerText="Free Consultation · Pan-India Available"
                 />
          </div>

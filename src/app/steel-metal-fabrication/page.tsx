@@ -27,7 +27,7 @@ export default function loacl() {
             description="Structural steel, rolling mills, fabrication shops, forging units — your buyers are engineers and procurement heads who do deep online research before shortlisting suppliers. Your website needs to speak their language."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Examples", link: "/contact-us" },
+                { text: "See Examples", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -60,9 +60,9 @@ export default function loacl() {
                 title="Ready to Replace IndiaMart with <span>Your Own Lead Machine?</span>"
                 description="Free website and SEO audit for fastener and hardware manufacturers."
                 buttonText="Get Free Website Audit"
-                buttonLink="/contact" 
+                buttonLink="/contact-us" 
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="https://wa.me/919814820845"
                 footerText=" "
                 />
          </div>    

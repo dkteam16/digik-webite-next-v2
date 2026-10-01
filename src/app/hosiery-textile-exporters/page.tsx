@@ -25,7 +25,7 @@ export default function loacl() {
             description="Hosiery and textile exporters in Ludhiana, Tirupur, and across India are losing export orders to competitors who look more professional online — not because they produce better quality, but because their website says so."
             buttons={[
                 { text: "Get Free Audit ", link: "/contact-us" },
-                { text: "See What We Build", link: "/contact-us" },
+                { text: "See What We Build", link: "/our-work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -61,9 +61,9 @@ export default function loacl() {
                 title="Let Your Website Do the Export Sales Work"
                 description="Free audit for hosiery and textile exporters. We'll show you what your competitors' websites are doing that yours isn't."
                 buttonText="Get Free Website Audit"
-                buttonLink="/contact"
+                buttonLink="/contact-us"
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="https://wa.me/919814820845"
                 footerText=" "
                 />
          </div>    
