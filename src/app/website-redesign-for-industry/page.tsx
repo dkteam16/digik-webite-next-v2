@@ -6,6 +6,12 @@ import Againt from "@/app/website-redesign-for-industry/againt-you"
 import Best from "@/app/website-redesign-for-industry/bestsale" 
  
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website Redesign for Industrial Companies",
+  description: "Is an outdated website costing you leads? We audit your current site and redesign it to rank higher, load faster and generate more RFQs. Get a free audit.",
+};
 
 
 
@@ -20,7 +26,7 @@ export default function loacl() {
             description="We rebuild manufacturing and industrial websites from the ground up — faster, more credible, fully SEO-optimised, and designed to convert buyers — without disrupting your existing business or losing your current search rankings."
             buttons={[
                 { text: "Audit My Current Site", link: "/contact-us" },
-                { text: "See Redesigns", link: "/our-work" },
+                { text: "See Redesigns", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

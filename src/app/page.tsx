@@ -11,6 +11,12 @@ import GeneralAgency from "./homepage/general-agency"
 import Kangaroo from "./homepage/kangaro"
 import Stalk from "./homepage/stalkus"
 import Testimonials from "./homepage/testimonial"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Digital Kangaroos | Web Development & Software Company",
+  description: "Elevate your online presence with Digital Kangaroos, a leading website development and software company. We specialize in crafting digital solutions that empower your business to thrive in the digital landscape.",
+};
 
 
 export default function Home() {

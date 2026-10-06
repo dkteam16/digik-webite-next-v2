@@ -51,7 +51,7 @@
 //         {worksData.map((work) => (
 //          <Link
 //               key={work.id}
-//               href={`/our-work/${work.slug}`}
+//               href={`/work/${work.slug}`}
 //               className="workCard"
 //             >
 //             <div className="workImageThumb">
@@ -150,7 +150,7 @@ export default function WorkPage() {
           {caseStudies.map((work) => (
             <Link
               key={work.id}
-              href={`/our-work/${work.slug}`}
+              href={`/work/${work.slug}`}
               className="workCard"
             >
               <div className="workImageThumb">

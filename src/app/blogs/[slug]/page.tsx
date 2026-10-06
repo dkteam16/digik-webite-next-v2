@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Contact from "@/app/blog/[slug]/blog-contact";
+import Contact from "@/app/blogs/[slug]/blog-contact";
 
 const API_BASE = "https://www.dkteam.in/dk-admin/api/posts";
 
@@ -150,7 +150,7 @@ export default async function SingleBlogPage({
           )}
 
           <div className="single-blog-back">
-            <Link href="/blog">← Back to Blogs</Link>
+            <Link href="/blogs">← Back to Blogs</Link>
           </div>
         </article>
 
@@ -159,7 +159,7 @@ export default async function SingleBlogPage({
           {latestBlogs.map((item) => (
             <Link
               key={item.id}
-              href={`/blog/${item.slug}`}
+              href={`/blogs/${item.slug}`}
               className="side-card"
             >
               <div className="side-card-image">

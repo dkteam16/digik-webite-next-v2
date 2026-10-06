@@ -1,7 +1,13 @@
-import First from "../career/first" 
-import Three from "../career/six-tings" 
-import Form from "../career/career-contact" 
+import First from "./first" 
+import Three from "./six-tings" 
+import Form from "./career-contact" 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Careers",
+  description: "careers",
+};
  
  
 export default function loacl() {

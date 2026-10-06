@@ -6,6 +6,12 @@ import FiveStage from "@/app/industrial-website-desgin/five-stage"
 import SectorDesign from "@/app/industrial-website-desgin/sector-design"
 
 import CommonCTA from "../common-components/last-second"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Industrial Website Design That Wins Orders",
+  description: "High-performance websites for manufacturers, exporters and B2B industrial companies, designed to turn visitors into RFQs. Request a free website audit.",
+};
 
 export default function Industrial() {
   return (

@@ -5,6 +5,12 @@ import Allinonemarque from "@/app/industrial-website-desgin/allinonemarque"
 import Bestsale from "@/app/b2b-branding/best-sale" 
  
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "B2B Branding for Industrial Companies",
+  description: "Brand identity built for industrial companies: logos, messaging and visual systems that build trust with serious B2B buyers. Discuss your branding with us.",
+};
 
 
 
@@ -18,7 +24,7 @@ export default function loacl() {
             description="We create brand identities for manufacturers, exporters, and B2B industrial companies that communicate capability, credibility, and seriousness — to buyers, partners, and procurement teams who make decisions based on trust."
             buttons={[
                 { text: "Discuss Your Branding", link: "/contact-us" },
-                { text: "See Brand Work", link: "/our-work" },
+                { text: "See Brand Work", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

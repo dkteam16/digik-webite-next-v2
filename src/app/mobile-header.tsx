@@ -21,7 +21,7 @@ const aboutItems: MobileSubItem[] = [
   { name: "All services", slug: "all-services" },
   { name: "Auto Parts Engineering", slug: "auto-parts-engineering" },
   { name: "B2B Branding", slug: "b2b-branding" },
-  { name: "Career", slug: "career" },
+  { name: "Career", slug: "careers" },
   { name: "Steel Metal Fabrication", slug: "steel-metal-fabrication" },
   { name: "Website Redesign For Industry", slug: "website-redesign-for-industry" },
 ];
@@ -29,7 +29,7 @@ const aboutItems: MobileSubItem[] = [
 const servicesItems: MobileSubItem[] = [
   { name: "Chemical Pharmaceutical Manufacturers", slug: "chemical-pharmaceutical-manufacturers" },
   { name: "Common Components", slug: "common-components" },
-  { name: "Corporate Photography Videography", slug: "corporate-photography-videography" },
+  { name: "Corporate Photography Videography", slug: "corporate-photography-videography-services" },
   { name: "Cycle Sports Equipment", slug: "cycle-sports-equipment" },
   { name: "Export International Seo", slug: "export-international-seo" },
   { name: "Fasteners Hardware", slug: "fasteners-hardware" },
@@ -41,20 +41,20 @@ const industriesItems: MobileSubItem[] = [
   { name: "Local Google Business Seo", slug: "local-google-business-seo" },
   { name: "Logistics Industrial", slug: "logistics-industrial" },
   { name: "Machine Tools Precision", slug: "machine-tools-precision" },
-  { name: "Mobile Apps Development", slug: "mobile-apps-development" },
-  { name: "Our Work", slug: "our-work" },
+  { name: "Mobile Apps Development", slug: "mobile-app-development" },
+  { name: "Our Work", slug: "work" },
   { name: "Packaging Plastics", slug: "packaging-plastics" },
   { name: "Product Catalogue Websites", slug: "product-catalogue-websites" },
 ];
 
 const menuGroups: MobileMenuGroup[] = [
-  { label: "ABOUT", href: "/about", items: aboutItems },
+  { label: "ABOUT", href: "/about-us", items: aboutItems },
   { label: "SERVICES", href: "/services", items: servicesItems },
   { label: "INDUSTRIES", href: "/industries", items: industriesItems },
   { label: "CONTACT", href: "/contact-us", items: [] },
   { label: "WORK", href: "/work", items: [] },
-  { label: "CAREERS", href: "/career", items: [] },
-  { label: "BLOG", href: "/blog", items: [] },
+  { label: "CAREERS", href: "/careers", items: [] },
+  { label: "BLOG", href: "/blogs", items: [] },
   { label: "SEARCH", href: "/search", items: [] },
 ];
 
@@ -129,7 +129,7 @@ export default function MobileHeader() {
                          />
           </a>
 
-          <Link href="/contact" className="mobileIconBtn" aria-label="Enquiry">
+          <Link href="/contact-us" className="mobileIconBtn" aria-label="Enquiry">
             <Image
                             src="/note.png"
                             alt="Digital Kangaroos"

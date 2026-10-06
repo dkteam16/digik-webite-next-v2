@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PeopleMobile from "@/app/about/people-behind-mobile"  
+import PeopleMobile from "@/app/about-us/people-behind-mobile"  
 
 export default function PeopleBehind() {
   return ( 

@@ -10,6 +10,12 @@ import Export from "@/app/hosiery-textile-exporters/export-web"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Hosiery & Textile Exporters",
+  description: "Show overseas buyers your knitwear quality online. Web design and SEO for hosiery, knitwear and textile exporters. Get a free website audit.",
+};
 
 
 
@@ -25,7 +31,7 @@ export default function loacl() {
             description="Hosiery and textile exporters in Ludhiana, Tirupur, and across India are losing export orders to competitors who look more professional online — not because they produce better quality, but because their website says so."
             buttons={[
                 { text: "Get Free Audit ", link: "/contact-us" },
-                { text: "See What We Build", link: "/our-work" },
+                { text: "See What We Build", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

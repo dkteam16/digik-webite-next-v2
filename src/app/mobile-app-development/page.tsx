@@ -2,9 +2,15 @@
 import Allinone from "../common-components/allinone"
 import CommonCTA from "../common-components/last-second"
 import Allinonemarque from "@/app/industrial-website-desgin/allinonemarque"
-import Mobilespp from "@/app/mobile-apps-development/mobile-app" 
+import Mobilespp from "@/app/mobile-app-development/mobile-app" 
  
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "App Development Company Ludhiana | Punjab",
+  description: "At Digital Kangaroos, we offer Mobile App Development services in Ludhiana that cater to diverse industries and business goals.",
+};
 
 
 
@@ -18,7 +24,7 @@ export default function loacl() {
             description="Custom iOS and Android applications for manufacturing and B2B industrial companies — from dealer portals and order management systems to customer-facing product catalogues and field sales apps."
             buttons={[
                 { text: "Discuss Your App", link: "/contact-us" },
-                { text: "See Our Work", link: "/our-work" },
+                { text: "See Our Work", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

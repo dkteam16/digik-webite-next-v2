@@ -5,6 +5,12 @@ import Allinonemarque from "@/app/industrial-website-desgin/allinonemarque"
 import DifferExper from "@/app/local-google-business-seo/differ-exper"
 import SEOProgram from "@/app/local-google-business-seo/seo-program"
 import Induskey from "@/app/local-google-business-seo/indus-key"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Industrial SEO Services in India",
+  description: "SEO that gets your factory found on Google. Technical SEO, local SEO and Google Business Profile optimisation for manufacturers. Request a free SEO audit.",
+};
 
 
 
@@ -18,7 +24,7 @@ export default function loacl() {
             description="We build SEO strategies for manufacturers and B2B industrial companies that rank on Google for the terms your buyers actually search — generating consistent, qualified inbound enquiries every month."
             buttons={[
                 { text: "get a free SEO audit", link: "/contact-us" },
-                { text: "see case Studies", link: "/our-work" },
+                { text: "see case Studies", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

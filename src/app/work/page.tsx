@@ -1,8 +1,14 @@
-import First from "../our-work/our-work" 
+import First from "../work/our-work" 
 import Allinonemarque from "@/app/industrial-website-desgin/allinonemarque"
-import Mywork  from "@/app/our-work/my-work"
+import Mywork  from "@/app/work/my-work"
 import Image from "next/image";
 import CommonCTA from "../common-components/last-industries"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Portfolio of Successful Projects | Digital Kangaroos",
+  description: "Explore our diverse portfolio of successful projects, showcasing our expertise in web development, mobile app development, SEO, and more at Digital Kangaroos.",
+};
 export default function loacl() {
   return (
     <div className="our-work all-indus-pagemian">    

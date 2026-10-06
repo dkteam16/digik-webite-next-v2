@@ -11,6 +11,12 @@ import PLusminus from "@/app/chemical-pharmaceutical-manufacturers/plus-minus"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Chemical & Pharma Manufacturers",
+  description: "Compliance-ready websites and SEO for chemical manufacturers and pharmaceutical exporters who want to win international buyers. Get a free audit.",
+};
 
 
 
@@ -26,7 +32,7 @@ export default function loacl() {
             description="Chemical and pharma buyers don't just evaluate price — they evaluate your documentation, certifications, regulatory compliance, and quality systems before they even send an inquiry. Your website needs to demonstrate all of this clearly and credibly."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Industry Examples", link: "/our-work" },
+                { text: "See Industry Examples", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

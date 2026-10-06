@@ -5,6 +5,12 @@ import Allinonemarque from "@/app/industrial-website-desgin/allinonemarque"
 import Indian from "@/app/export-international-seo/indian-supply"
  
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "International SEO for Exporters",
+  description: "Get found by buyers in the UK, USA and Europe. Export-focused SEO for Indian manufacturers who want international orders. Get a free export SEO audit.",
+};
 
 
 
@@ -18,7 +24,7 @@ export default function loacl() {
             description="We rank Indian manufacturers and exporters on Google in international markets — putting your company in front of procurement managers and sourcing engineers who are actively searching for what you make."
             buttons={[
                 { text: "Get Export SEO Audit", link: "/contact-us" },
-                { text: "see Results", link: "/our-work" },
+                { text: "see Results", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

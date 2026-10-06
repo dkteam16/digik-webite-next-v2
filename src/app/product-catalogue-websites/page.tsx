@@ -5,6 +5,12 @@ import Allinonemarque from "@/app/industrial-website-desgin/allinonemarque"
 import Bestsale from "@/app/product-catalogue-websites/best-sale"
  
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Product Catalogue Websites for Manufacturers",
+  description: "Searchable product catalogues for manufacturers and exporters that make it easy for buyers to find products and send RFQs. Discuss your catalogue with us.",
+};
 
 
 
@@ -18,7 +24,7 @@ export default function loacl() {
             description="We build structured, searchable product catalogue websites for manufacturers and exporters — so buyers can find the exact product they need, read the technical specs, and submit an RFQ in under 3 minutes."
             buttons={[
                 { text: "Discuss Your Catalogue", link: "/contact-us" },
-                { text: "See Examples", link: "/our-work" },
+                { text: "See Examples", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

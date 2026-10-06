@@ -10,6 +10,12 @@ import Buildwebsite from "@/app/all-industries-page/build-website"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Industries We Serve | B2B Web Design & SEO",
+  description: "We build websites and SEO strategies for auto parts, chemicals, textiles, steel, packaging, logistics and more. See the industries we serve and get a free website audit.",
+};
 
 
 
@@ -67,7 +73,7 @@ export default function loacl() {
                 buttonText="Get Free Website Audit"
                 buttonLink="/contact-us"
                 buttonTextSecond="all Us Now"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="/contact-us"
                 footerText="Free Consultation · Pan-India Available"
                 />
          </div>  

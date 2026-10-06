@@ -11,6 +11,12 @@ import PLusminus from "@/app/packaging-plastics/six-things"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Packaging & Plastics Manufacturers",
+  description: "Packaging buyers choose suppliers in minutes online. Web design and SEO for packaging and plastics manufacturers. Get a free website audit.",
+};
 
 
 
@@ -26,7 +32,7 @@ export default function loacl() {
             description="Whether you manufacture FIBC jumbo bags, corrugated boxes, plastic containers, or flexible packaging — your buyers compare multiple suppliers online simultaneously. Your website is your sales pitch running 24/7."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "View Examples", link: "/our-work" },
+                { text: "View Examples", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

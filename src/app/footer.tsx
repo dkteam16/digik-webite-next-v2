@@ -1,8 +1,10 @@
 "use client";
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function  Footer() {
+export default function Footer() {
+  const [linksOpen, setLinksOpen] = useState(false);
+
   return (
     <footer className="dk-footer">
       <div className="dk-footer-container">
@@ -44,22 +46,50 @@ export default function  Footer() {
         </div>
 
         {/* COLUMN 3: QUICK LINKS */}
-        <div className="dk-footer-col dk-col-links  desktop-view">
-          <ul className="dk-links-list">
+        {/* COLUMN 3: QUICK LINKS */}
+        <div className={`dk-footer-col dk-col-links ${linksOpen ? "is-open" : ""}`}>
+          <button
+            type="button"
+            className="dk-links-toggle"
+            onClick={() => setLinksOpen(!linksOpen)}
+            aria-expanded={linksOpen}
+            aria-controls="dk-links-list"
+          >
+            <span>MORE INFO</span>
+            <span className="dk-links-icon">{linksOpen ? "−" : "+"}</span>
+          </button>
+
+          <ul id="dk-links-list" className="dk-links-list">
             <li><a href="/">HOME</a></li>
-            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/about-us">ABOUT</a></li>
             <li><a href="/all-services">SERVICES</a></li>
             <li><a href="/industrial-website-desgin">INDUSTRIES</a></li>
-            <li><a href="/our-work">WORK</a></li>
-            <li><a href="/career">CAREERS</a></li>
-            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/work">WORK</a></li>
+            <li><a href="/careers">CAREERS</a></li>
+            <li><a href="/blogs">BLOG</a></li>
             <li><a href="/contact-us">CONTACT</a></li>
             <li><a href="#faqs">FAQS</a></li>
             <li><a href="#press">PRESS RELEASE</a></li>
             <li><a href="#privacy">PRIVACY POLICY</a></li>
             <li><a href="#terms">TERMS & CONDITIONS</a></li>
           </ul>
-        </div>
+</div>
+        {/* <div className="dk-footer-col dk-col-links  desktop-view">
+          <ul className="dk-links-list">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/about-us">ABOUT</a></li>
+            <li><a href="/all-services">SERVICES</a></li>
+            <li><a href="/industrial-website-desgin">INDUSTRIES</a></li>
+            <li><a href="/work">WORK</a></li>
+            <li><a href="/careers">CAREERS</a></li>
+            <li><a href="/blogs">BLOG</a></li>
+            <li><a href="/contact-us">CONTACT</a></li>
+            <li><a href="#faqs">FAQS</a></li>
+            <li><a href="#press">PRESS RELEASE</a></li>
+            <li><a href="#privacy">PRIVACY POLICY</a></li>
+            <li><a href="#terms">TERMS & CONDITIONS</a></li>
+          </ul>
+        </div> */}
 
         {/* COLUMN 4: SOCIALS & NEWSLETTER */}
         <div className="dk-footer-col dk-col-newsletter">

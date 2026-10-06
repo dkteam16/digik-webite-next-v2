@@ -51,7 +51,7 @@ const about: MenuItem[] = [
   },
   {
     name: "Career",
-    slug: "career",
+    slug: "careers",
     desc: "Hear directly from clients about their experience working with our team.",
   },
   {
@@ -79,7 +79,7 @@ const services: MenuItem[] = [
   },
   {
     name: "Corporate Photography Videography",
-    slug: "corporate-photography-videography",
+    slug: "corporate-photography-videography-services",
     desc: "Complete online store solutions with secure payments, inventory management and a checkout that converts.",
   },
   {
@@ -122,12 +122,12 @@ const industries: MenuItem[] = [
   },
   {
     name: "Machine Tools Precision",
-    slug: "machine-tools-precision",
+    slug: "machine-tools-precision",  
     desc: "Online stores and retail platforms designed to convert visitors into loyal, repeat customers.",
   },
   {
     name: "Mobile Apps Development",
-    slug: "mobile-apps-development",
+    slug: "mobile-app-development",
     desc: "Learning management systems and school/college websites that make education more accessible.",
   },
   {
@@ -148,22 +148,22 @@ const industries: MenuItem[] = [
 ];
 
 const menus = {
-  about: { label: "ABOUT", href: "/about", items: about },
+  about: { label: "ABOUT", href: "/about-us", items: about },
   services: { label: "SERVICES", href: "/services", items: services },
   industries: { label: "INDUSTRIES", href: "/industries", items: industries },
 } satisfies Record<string, MenuData>;
 
 const leftLinks: NavLink[] = [
-  { label: "ABOUT", href: "/about", menuKey: "about" },
+  { label: "ABOUT", href: "/about-us", menuKey: "about" },
   { label: "SERVICES", href: "/all-services", menuKey: "services" },
   { label: "INDUSTRIES", href: "/industrial-website-desgin", menuKey: "industries" },
   { label: "CONTACT", href: "/contact-us" },
 ];
 
 const rightLinks: NavLink[] = [
-  { label: "WORK", href: "/our-work" },
-  { label: "CAREERS", href: "/career" },
-  { label: "BLOG", href: "/blog" },
+  { label: "WORK", href: "/work" },
+  { label: "CAREERS", href: "/careers" },
+  { label: "BLOG", href: "/blogs" },
 ];
 
 export default function Header() {
@@ -280,7 +280,7 @@ export default function Header() {
               <p className="detailDesc">{current.desc}</p>
 
               <Link
-                href="/contact"
+                href="/contact-us"
                 onClick={() => setOpenMenu(null)}
                 className="ctaLink"
               >

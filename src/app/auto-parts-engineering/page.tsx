@@ -9,6 +9,12 @@ import Cycle from "@/app/auto-parts-engineering/cycle-buy"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Auto Parts Manufacturers",
+  description: "Websites built to win OEM contracts and export orders for auto component and engineering manufacturers. Get a free website and SEO audit.",
+};
 
 
 
@@ -23,7 +29,7 @@ export default function loacl() {
             description="You manufacture precision auto parts. Your buyers — OEMs, tier-1 suppliers, international importers — evaluate you online before they call. Does your website make you look like the supplier they want to work with for the next 10 years?"
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See What We Build ", link: "/our-work" },
+                { text: "See What We Build ", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -86,7 +92,7 @@ export default function loacl() {
                 buttonText="Get Free Audit"
                 buttonLink="/contact-us"
                 buttonTextSecond="all Us Now"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="/contact-us"
                 footerText=" "
                 />
          </div>    

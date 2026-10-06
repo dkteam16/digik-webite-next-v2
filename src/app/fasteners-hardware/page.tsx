@@ -12,6 +12,12 @@ import Export from "@/app/hosiery-textile-exporters/export-web"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Fasteners & Hardware Manufacturers",
+  description: "A world-class website wins fastener and industrial hardware orders faster. Web design and SEO for nut-bolt and hardware manufacturers. Get a free audit.",
+};
 
 
 
@@ -27,7 +33,7 @@ export default function loacl() {
             description="India's fastener industry exports to 80+ countries. But most manufacturers win these orders through personal relationships and trade fairs — a model that breaks down the moment a new international buyer searches for you on Google and finds nothing."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Industry Examples", link: "/our-work" },
+                { text: "See Industry Examples", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

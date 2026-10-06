@@ -11,6 +11,12 @@ import Sixthings from "@/app/machine-tools-precision/six-things"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Machine Tools & Precision Engineering",
+  description: "Your engineering precision deserves a technically sharp website. Web design and SEO for machine tool and precision engineering companies. Get a free audit.",
+};
 
 
 
@@ -26,7 +32,7 @@ export default function loacl() {
             description="CNC machine manufacturers, precision component makers, and tooling exporters sell to buyers who make high-stakes, long-term purchasing decisions. Your website needs to communicate technical excellence, not just look presentable."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "View Examples", link: "/our-work" },
+                { text: "View Examples", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

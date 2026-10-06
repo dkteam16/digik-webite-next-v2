@@ -287,7 +287,7 @@ export default function BlogPage() {
 
               <Link
                 key={blog.id}
-                href={`/blog/${blog.slug}`}
+                href={`/blogs/${blog.slug}`}
                 className="blog-card"
               >
 

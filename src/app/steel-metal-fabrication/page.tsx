@@ -12,6 +12,12 @@ import Export from "@/app/hosiery-textile-exporters/export-web"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Steel & Metal Fabrication Companies",
+  description: "Industrial-strength websites for steel and metal fabricators that win serious buyers. Web design and SEO built for fabrication. Get a free audit.",
+};
 
 
 
@@ -27,7 +33,7 @@ export default function loacl() {
             description="Structural steel, rolling mills, fabrication shops, forging units — your buyers are engineers and procurement heads who do deep online research before shortlisting suppliers. Your website needs to speak their language."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Examples", link: "/our-work" },
+                { text: "See Examples", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

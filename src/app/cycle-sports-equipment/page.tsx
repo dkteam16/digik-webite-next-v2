@@ -10,6 +10,12 @@ import Cycle from "@/app/cycle-sports-equipment/cycle"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Cycle Parts & Sports Equipment",
+  description: "Give the Ludhiana cycle cluster a world-class digital presence. Websites and SEO for cycle parts and sports equipment manufacturers. Get a free audit.",
+};
 
 
 
@@ -25,7 +31,7 @@ export default function loacl() {
             description="Ludhiana manufactures 70% of India's cycles and cycle parts — yet most manufacturers in the cluster are invisible online to the global buyers who want to source from them. We fix that."
             buttons={[
                 { text: "Get Free Audit ", link: "/contact-us" },
-                { text: "View Our Work", link: "/our-work" },
+                { text: "View Our Work", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"
@@ -62,7 +68,7 @@ export default function loacl() {
                 buttonText="Get Free Audit Now"
                 buttonLink="/contact-us"
                 buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact"  
+                buttonLinkSecond="/contact-us"  
                 />
          </div>    */}
 
@@ -92,7 +98,7 @@ export default function loacl() {
                 buttonText="Get Free Audit"
                 buttonLink="/contact-us"
                 buttonTextSecond="all Us Now"
-                buttonLinkSecond="/contact"
+                buttonLinkSecond="/contact-us"
                 footerText=" "
                 />
          </div>    

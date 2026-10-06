@@ -2,9 +2,15 @@
 import Allinone from "../common-components/allinone"
 import CommonCTA from "../common-components/last-second"
 import Allinonemarque from "@/app/industrial-website-desgin/allinonemarque"
-import Doit from "@/app/corporate-photography-videography/do-it" 
+import Doit from "@/app/corporate-photography-videography-services/do-it" 
  
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Corporate photography videography services",
+  description: "",
+};
 
 
 
@@ -18,7 +24,7 @@ export default function loacl() {
             description="Professional factory photography, product shoots, and brand videos for manufacturing and industrial companies — the visual content that makes international buyers trust what they see on your website before they ever visit in person. Discuss a Shoot"
             buttons={[
                 { text: "Discuss a Shoot", link: "/contact-us" },
-                { text: "See Our Work", link: "/our-work" },
+                { text: "See Our Work", link: "/work" },
             ]}
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

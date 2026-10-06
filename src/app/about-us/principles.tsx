@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PrincipleMobile from "@/app/about/principles-moble" 
+import PrincipleMobile from "@/app/about-us/principles-moble" 
 
 
 export default function Principles() {

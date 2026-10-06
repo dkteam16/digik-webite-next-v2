@@ -379,7 +379,7 @@ export default function CaseStudyDetail() {
 
               <Link
                 className="cs-btn"
-                href={cta_url || "/contact"}
+                href={cta_url || "/contact-us"}
               >
                 {cta_button || "Get Free Audit"}
               </Link>

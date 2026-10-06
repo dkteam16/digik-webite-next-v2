@@ -11,6 +11,12 @@ import Sixthings from "@/app/logistics-industrial/six-things"
    
 
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website & SEO for Logistics & Industrial Suppliers",
+  description: "Industrial logistics companies that rank on Google win contracts before competitors quote. Web design and SEO for logistics and suppliers. Get a free audit.",
+};
 
 
 
@@ -26,7 +32,7 @@ export default function loacl() {
             description="Whether you provide 3PL warehousing, industrial freight, CFS services, or supply chain solutions — your corporate clients search for logistics partners online. If you're not on page 1, you're not in the conversation."
             buttons={[
                 { text: "Get Free Website Audit", link: "/contact-us" },
-                { text: "See Examples", link: "/our-work" },
+                { text: "See Examples", link: "/work" },
             ]} 
             backgroundImage="/about/startback.webp"
             rightImage="/about/iso.png"

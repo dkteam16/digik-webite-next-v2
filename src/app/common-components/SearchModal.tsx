@@ -14,10 +14,10 @@ type SearchItem = {
 
 /* ---------- Site ka static search index (apne hisaab se edit karo) ---------- */
 const STATIC_ITEMS: SearchItem[] = [
-  { group: "Pages", title: "About Us", text: "Who we are and how we work with industrial companies.", href: "/about" },
-  { group: "Pages", title: "Our Work", text: "Case studies of manufacturers and exporters we helped rank.", href: "/our-work" },
-  { group: "Pages", title: "Blog", text: "Insights on B2B SEO, websites and industrial marketing.", href: "/blog" },
-  { group: "Pages", title: "Career", text: "Join our team.", href: "/career" },
+  { group: "Pages", title: "About Us", text: "Who we are and how we work with industrial companies.", href: "/about-us" },
+  { group: "Pages", title: "Our Work", text: "Case studies of manufacturers and exporters we helped rank.", href: "/work" },
+  { group: "Pages", title: "Blog", text: "Insights on B2B SEO, websites and industrial marketing.", href: "/blogs" },
+  { group: "Pages", title: "Career", text: "Join our team.", href: "/careers" },
   { group: "Pages", title: "Contact Us", text: "Get a free audit or talk to our team.", href: "/contact-us" },
   { group: "Pages", title: "All Services", text: "Everything we offer for B2B industrial brands.", href: "/all-services" },
   { group: "Pages", title: "All Industries", text: "Industries we specialise in.", href: "/all-industries-page" },
@@ -28,8 +28,8 @@ const STATIC_ITEMS: SearchItem[] = [
   { group: "Services", title: "Export & International SEO", text: "Get found by global buyers and OEMs.", href: "/export-international-seo" },
   { group: "Services", title: "B2B Branding", text: "Brand identity and positioning for B2B companies.", href: "/b2b-branding" },
   { group: "Services", title: "Product Catalogue Websites", text: "Catalogue websites that generate enquiries.", href: "/product-catalogue-websites" },
-  { group: "Services", title: "Mobile App Development", text: "Mobile apps for industrial businesses.", href: "/mobile-apps-development" },
-  { group: "Services", title: "Corporate Photography & Videography", text: "Factory shoots, product photos and corporate films.", href: "/corporate-photography-videography" },
+  { group: "Services", title: "Mobile App Development", text: "Mobile apps for industrial businesses.", href: "/mobile-app-development" },
+  { group: "Services", title: "Corporate Photography & Videography", text: "Factory shoots, product photos and corporate films.", href: "/corporate-photography-videography-services" },
 
   { group: "Industries", title: "Steel & Metal Fabrication", text: "Websites and SEO for steel and metal companies.", href: "/steel-metal-fabrication" },
   { group: "Industries", title: "Auto Parts & Engineering", text: "Digital growth for auto component makers.", href: "/auto-parts-engineering" },
@@ -108,7 +108,7 @@ export default function SearchModal({ open, onClose }: Props) {
             group: "Case studies" as const,
             title: c.title,
             text: c.short_description || c.category || "",
-            href: `/our-work/${c.slug}`,
+            href: `/work/${c.slug}`,
           }))
         );
       })
