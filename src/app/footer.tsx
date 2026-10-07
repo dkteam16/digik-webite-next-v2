@@ -63,14 +63,14 @@ export default function Footer() {
             <li><a href="/">HOME</a></li>
             <li><a href="/about-us">ABOUT</a></li>
             <li><a href="/all-services">SERVICES</a></li>
-            <li><a href="/industrial-website-desgin">INDUSTRIES</a></li>
+            <li><a href="/all-industries-page">INDUSTRIES</a></li>
             <li><a href="/work">WORK</a></li>
             <li><a href="/careers">CAREERS</a></li>
             <li><a href="/blogs">BLOG</a></li>
             <li><a href="/contact-us">CONTACT</a></li>
-            <li><a href="#faqs">FAQS</a></li>
-            <li><a href="#press">PRESS RELEASE</a></li>
-            <li><a href="#privacy">PRIVACY POLICY</a></li>
+            <li><a href="/faq">FAQS</a></li>
+            {/* <li><a href="#press">PRESS RELEASE</a></li> */}
+            <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
             <li><a href="#terms">TERMS & CONDITIONS</a></li>
           </ul>
 </div>
@@ -97,7 +97,7 @@ export default function Footer() {
           
           {/* Social Icons Wrapper */}
           <div className="dk-social-icons">
-            <a href="#" className="">
+            <a href="https://www.facebook.com/digitalkangaroos" className="">
                  <Image
                        src="/face.png"
                        alt="logo logo"
@@ -108,7 +108,7 @@ export default function Footer() {
                        priority
                        />
             </a>
-            <a href="#" className="">
+            <a href="https://www.linkedin.com/company/digital-kangaroos/posts/" className="">
                  <Image
                        src="/link.png"
                        alt="logo logo"
@@ -119,7 +119,7 @@ export default function Footer() {
                        priority
                        />
             </a>
-            <a href="#" className="">
+            <a href="https://www.instagram.com/digitalkangaroos/" className="">
                  <Image
                        src="/insta.png"
                        alt="logo logo"
@@ -130,7 +130,7 @@ export default function Footer() {
                        priority
                        />
             </a>
-            <a href="#" className="">
+            <a href="https://api.whatsapp.com/send/?phone=919814820845&text&type=phone_number&app_absent=0" className="">
                  <Image
                        src="/whatsp.png"
                        alt="logo logo"
@@ -141,7 +141,7 @@ export default function Footer() {
                        priority
                        />
             </a>
-            <a href="#" className="">  
+            <a href="http://youtube.com/@digitalkangaroos" className="">  
                  <Image
                        src="/youtube.png"
                        alt="logo logo"
@@ -172,10 +172,10 @@ export default function Footer() {
             <div className="dk-bottom-links">
             
             <a href="https://cartpotato.com/">CART POTATO</a>
-            <a href="https://school.digitalkangaroos.com/">DK SCHOOL</a>
+            <a href="/">Digital Kangaroos</a>
             </div>
         </div>
-      </div>
+      </div>  
     </footer>
   );
 }

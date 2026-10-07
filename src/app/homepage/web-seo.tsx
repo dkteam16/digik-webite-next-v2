@@ -98,7 +98,7 @@ const ServicesSection = () => {
                   {service.tags.map((tag, index) => (
                     <span 
                       key={index} 
-                      className="   text-[#F4A31D] bg-[#F4A31D17] px-2 py-1 rounded capitalize font-[600] tracking-tighter shadow-sm"
+                      className="   text-[#F4A31D]  rounded capitalize font-[600] tracking-tighter"
                     >
                       {tag}
                     </span>
@@ -116,7 +116,7 @@ const ServicesSection = () => {
 
 
       <div className='text-center button-ourlatest'>
-       <Link href="/contact-us" className="btn-group-link">
+       <Link href="/all-services" className="btn-group-link">
         {/* मुख्य बटन का कंटेनर */}
         <div className="btn-main-container">
           

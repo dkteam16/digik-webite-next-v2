@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -7,8 +6,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import "./globals.css";
 import SearchModal from "@/app/common-components/SearchModal";
-
-// CSS ab global file (e.g. globals.css) me hai, isliye yahan koi import nahi chahiye
 
 interface MenuItem {
   name: string;
@@ -28,135 +25,115 @@ interface NavLink {
   menuKey?: keyof typeof menus;
 }
 
-const about: MenuItem[] = [
+// About: abhi khali. Jab submenu dalna ho tab yahan items add kar dena,
+// hover menu apne aap kaam karne lagega.
+const about: MenuItem[] = [];
+
+const services: MenuItem[] = [
   {
-    name: "All Industries",
-    slug: "all-industries-page",
-    desc: "Learn how Digital Kangaroos started and the journey that shaped who we are today.",
+    name: "Industrial Website Design",
+    slug: "industrial-website-desgin",
+    desc: "Fast, secure and conversion-focused websites built specifically for industrial and manufacturing businesses.",
   },
   {
-    name: "All services",
-    slug: "all-services",
-    desc: "Meet the designers, developers and strategists behind every project we deliver.",
+    name: "Local & Google Business SEO",
+    slug: "local-google-business-seo",
+    desc: "Rank higher in local searches and Google Maps so nearby buyers find your business first.",
   },
   {
-    name: "Auto Parts Engineering",
-    slug: "auto-parts-engineering",
-    desc: "Discover what drives us and where we're headed as a digital partner for brands.",
+    name: "Export & International SEO",
+    slug: "export-international-seo",
+    desc: "Reach global buyers with international SEO, multilingual content and export-focused search strategy.",
   },
   {
-    name: "B2B Branding",
-    slug: "b2b-branding",
-    desc: "See what sets our process, people and results apart from other agencies.",
-  },
-  {
-    name: "Career",
-    slug: "careers",
-    desc: "Hear directly from clients about their experience working with our team.",
-  },
-  {
-    name: "Steel Metal Fabrication",
-    slug: "steel-metal-fabrication",
-    desc: "Hear directly from clients about their experience working with our team.",
+    name: "Product Catalogue Websites",
+    slug: "product-catalogue-websites",
+    desc: "Showcase your full product range with searchable, easy-to-manage digital catalogues and enquiry forms.",
   },
   {
     name: "Website Redesign For Industry",
     slug: "website-redesign-for-industry",
-    desc: "Hear directly from clients about their experience working with our team.",
-  },
-];
-
-const services: MenuItem[] = [
-  {
-    name: "Chemical Pharmaceutical Manufacturers",
-    slug: "chemical-pharmaceutical-manufacturers",
-    desc: "Are you looking to establish a robust online presence that resonates with your target audience? We build fast, secure and scalable websites tailored to your unique needs.",
+    desc: "Modernise your outdated website with a fresh design, better speed and a stronger user experience.",
   },
   {
-    name: "Common Components",
-    slug: "common-components",
-    desc: "From idea to launch, we design and build smooth Android and iOS apps that your users will love to use.",
+    name: "B2B Branding",
+    slug: "b2b-branding",
+    desc: "Build a credible, consistent brand identity that earns trust with business buyers and partners.",
   },
   {
-    name: "Corporate Photography Videography",
+    name: "Mobile Apps Development",
+    slug: "mobile-app-development",
+    desc: "From idea to launch, we design and build smooth Android and iOS apps your users will love.",
+  },
+  {
+    name: "Corporate Photography & Videography",
     slug: "corporate-photography-videography-services",
-    desc: "Complete online store solutions with secure payments, inventory management and a checkout that converts.",
-  },
-  {
-    name: "Cycle Sports Equipment",
-    slug: "cycle-sports-equipment",
-    desc: "Custom Shopify themes, app integrations and store optimization to help your brand sell more.",
-  },
-  {
-    name: "Export International Seo",
-    slug: "export-international-seo",
-    desc: "Custom software built around your business processes, from internal tools to full enterprise platforms.",
-  },
-  {
-    name: "Fasteners Hardware",
-    slug: "fasteners-hardware",
-    desc: "Data-driven campaigns across social media, ads and email that bring the right audience to your brand.",
-  },
-  {
-    name: "Hosiery Textile Exporters",
-    slug: "hosiery-textile-exporters",
     desc: "Professional photo and video production that tells your brand story with a polished, corporate look.",
-  },
-  {
-    name: "Industrial Website Desgin",
-    slug: "industrial-website-desgin",
-    desc: "Improve your search rankings cand organic traffic with technical SEO, content strategy and link building.",
   },
 ];
 
 const industries: MenuItem[] = [
   {
-    name: "Local Google Business Seo",
-    slug: "local-google-business-seo",
-    desc: "We build secure, compliant digital solutions for hospitals, clinics and healthcare providers that improve patient experience.",
+    name: "Auto Parts & Engineering",
+    slug: "auto-parts-engineering",
+    desc: "Digital solutions for auto parts makers and engineering firms to showcase precision and win OEM buyers.",
   },
   {
-    name: "Logistics Industrial",
-    slug: "logistics-industrial",
-    desc: "Property listing platforms, virtual tours and lead-generation websites built for real estate agencies and builders.",
+    name: "Cycle & Sports Equipment",
+    slug: "cycle-sports-equipment",
+    desc: "Websites and marketing that help cycle and sports equipment brands reach dealers and customers worldwide.",
   },
   {
-    name: "Machine Tools Precision",
-    slug: "machine-tools-precision",  
-    desc: "Online stores and retail platforms designed to convert visitors into loyal, repeat customers.",
+    name: "Hosiery & Textile Exporters",
+    slug: "hosiery-textile-exporters",
+    desc: "Export-ready websites and SEO for hosiery and textile manufacturers looking for international buyers.",
   },
   {
-    name: "Mobile Apps Development",
-    slug: "mobile-app-development",
-    desc: "Learning management systems and school/college websites that make education more accessible.",
+    name: "Fasteners & Hardware",
+    slug: "fasteners-hardware",
+    desc: "Catalogue-driven websites that make it easy for buyers to browse, compare and enquire about hardware.",
   },
   {
-    name: "Our Work",
-    slug: "our-work",
-    desc: "Secure, scalable fintech solutions that meet compliance needs while keeping the user experience simple.",
+    name: "Steel & Metal Fabrication",
+    slug: "steel-metal-fabrication",
+    desc: "Strong online presence for fabricators, highlighting capabilities, certifications and past projects.",
   },
   {
-    name: "Packaging Plastics",
+    name: "Chemical & Pharmaceutical Manufacturers",
+    slug: "chemical-pharmaceutical-manufacturers",
+    desc: "Compliant, trustworthy digital presence for chemical and pharma manufacturers and exporters.",
+  },
+  {
+    name: "Packaging & Plastics",
     slug: "packaging-plastics",
-    desc: "Booking platforms and hospitality websites that make planning and reserving effortless for your guests.",
+    desc: "Showcase packaging and plastic products with clear specs, galleries and quick quote requests.",
   },
   {
-    name: "Product Catalogue Websites",
-    slug: "product-catalogue-websites",
-    desc: "Tracking, fleet management and logistics platforms built to streamline your operations end to end.",
+    name: "Machine Tools & Precision",
+    slug: "machine-tools-precision",
+    desc: "Technical, detail-rich websites that present machine tools and precision components professionally.",
+  },
+  {
+    name: "Logistics & Industrial",
+    slug: "logistics-industrial",
+    desc: "Platforms and websites that streamline operations and build trust for logistics and industrial companies.",
   },
 ];
 
 const menus = {
   about: { label: "ABOUT", href: "/about-us", items: about },
-  services: { label: "SERVICES", href: "/services", items: services },
-  industries: { label: "INDUSTRIES", href: "/industries", items: industries },
+  services: { label: "SERVICES", href: "/all-services", items: services },
+  industries: {
+    label: "INDUSTRIES",
+    href: "/all-industries-page",
+    items: industries,
+  },
 } satisfies Record<string, MenuData>;
 
 const leftLinks: NavLink[] = [
   { label: "ABOUT", href: "/about-us", menuKey: "about" },
   { label: "SERVICES", href: "/all-services", menuKey: "services" },
-  { label: "INDUSTRIES", href: "/industrial-website-desgin", menuKey: "industries" },
+  { label: "INDUSTRIES", href: "/all-industries-page", menuKey: "industries" },
   { label: "CONTACT", href: "/contact-us" },
 ];
 
@@ -179,6 +156,11 @@ export default function Header() {
   }, [pathname]);
 
   const handleMenuEnter = (key: keyof typeof menus) => {
+    // Items khali hain (jaise About) to mega menu nahi khulega
+    if (menus[key].items.length === 0) {
+      setOpenMenu(null);
+      return;
+    }
     setOpenMenu(key);
     setActiveIndex(0);
   };
@@ -190,124 +172,124 @@ export default function Header() {
 
   return (
     <>
-    <header
-      onMouseLeave={() => setOpenMenu(null)}
-      className={`header ${isHome ? "headerHome" : "headerSolid"}`}
-    >
-      <div className="inner">
-        {/* Left nav */}
-        <nav className="nav navLeft">
-          {leftLinks.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="navLink"
-              onMouseEnter={() =>
-                l.menuKey ? handleMenuEnter(l.menuKey) : setOpenMenu(null)
-              }
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+      <header
+        onMouseLeave={() => setOpenMenu(null)}
+        className={`header ${isHome ? "headerHome" : "headerSolid"}`}
+      >
+        <div className="inner">
+          {/* Left nav */}
+          <nav className="nav navLeft">
+            {leftLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="navLink"
+                onMouseEnter={() =>
+                  l.menuKey ? handleMenuEnter(l.menuKey) : setOpenMenu(null)
+                }
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
 
-        {/* Center logo: home par nahi dikhega */}
-        <div className="logoWrap">
-          {!isHome && (
-            <Link href="/">
-              <Image
-                src="/homelogo.png"
-                alt="Digital Kangaroos"
-                width={208}
-                height={36}
-                priority
-              />
-            </Link>
-          )}
+          {/* Center logo: home par nahi dikhega */}
+          <div className="logoWrap">
+            {!isHome && (
+              <Link href="/">
+                <Image
+                  src="/homelogo.png"
+                  alt="Digital Kangaroos"
+                  width={208}
+                  height={36}
+                  priority
+                />
+              </Link>
+            )}
+          </div>
+
+          {/* Right nav */}
+          <nav className="nav navRight">
+            {rightLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="navLink"
+                onMouseEnter={() => setOpenMenu(null)}
+              >
+                {l.label}
+              </Link>
+            ))}
+
+            {/* SEARCH: link nahi, button — click par modal khulta hai */}
+            <button
+              type="button"
+              className="navLink navSearchBtn"
+              onMouseEnter={() => setOpenMenu(null)}
+              onClick={() => {
+                setOpenMenu(null);
+                setSearchOpen(true);
+              }}
+            >
+              SEARCH
+            </button>
+          </nav>
         </div>
 
-        {/* Right nav */}
-        <nav className="nav navRight">
-          {rightLinks.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="navLink"
-              onMouseEnter={() => setOpenMenu(null)}
-            >
-              {l.label}
-            </Link>
-          ))}
+        {/* Mega menu */}
+        <div className={`megaMenu ${activeMenu ? "megaMenuOpen" : ""}`}>
+          {activeMenu && current && (
+            <div className="megaMenuInner">
+              {/* Left: items list */}
+              <ul className="itemList">
+                {activeMenu.items.map((item, i) => (
+                  <li key={item.slug} onMouseEnter={() => setActiveIndex(i)}>
+                    <Link
+                      href={`/${item.slug}`}
+                      onClick={() => setOpenMenu(null)}
+                      className={`itemLink ${
+                        activeIndex === i ? "itemLinkActive" : ""
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-          {/* SEARCH: link nahi, button — click par modal khulta hai */}
-          <button
-            type="button"
-            className="navLink navSearchBtn"
-            onMouseEnter={() => setOpenMenu(null)}
-            onClick={() => {
-              setOpenMenu(null);
-              setSearchOpen(true);
-            }}
-          >
-            SEARCH
-          </button>
-        </nav>
-      </div>
+              {/* Right: description */}
+              <div className="detail">
+                <p className="detailDesc">{current.desc}</p>
 
-      {/* Mega menu */}
-      <div className={`megaMenu ${activeMenu ? "megaMenuOpen" : ""}`}>
-        {activeMenu && current && (
-          <div className="megaMenuInner">
-            {/* Left: items list */}
-            <ul className="itemList">
-              {activeMenu.items.map((item, i) => (
-                <li key={item.slug} onMouseEnter={() => setActiveIndex(i)}>
-                  <Link
-                    href={`/${item.slug}`}
-                    onClick={() => setOpenMenu(null)}
-                    className={`itemLink ${
-                      activeIndex === i ? "itemLinkActive" : ""
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Right: description (heading removed) */}
-            <div className="detail">
-              <p className="detailDesc">{current.desc}</p>
-
-              <Link
-                href="/contact-us"
-                onClick={() => setOpenMenu(null)}
-                className="ctaLink"
-              >
-                Have a project? Let’s talk
-                <span className="ctaIcon">
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </span>
-              </Link>
+                <Link
+                  href="/contact-us"
+                  onClick={() => setOpenMenu(null)}
+                  className="ctaLink"
+                >
+                  Have a project? Let’s talk
+                  <span className="ctaIcon">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </Link>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-    </header>
+          )}
+        </div>
+      </header>
 
-    {/* Header ke bahar: backdrop-filter ke andar fixed position toot jati hai */}
-    <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+      {/* Header ke bahar: backdrop-filter ke andar fixed position toot jati hai */}
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 }
