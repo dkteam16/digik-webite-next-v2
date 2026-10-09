@@ -56,7 +56,7 @@ const sections: PolicySection[] = [
     paragraphs: [
       "Please contact us if you have any questions or concerns about this Privacy Policy.",
     ],
-  },
+  }, 
 ];
 
 const PrivacyPolicy: React.FC = () => {

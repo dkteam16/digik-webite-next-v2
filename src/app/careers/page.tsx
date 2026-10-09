@@ -15,7 +15,7 @@ export default function loacl() {
     <div className="career all-indus-pagemian">    
       <First />
       <div className="relative   carere-second"> 
-             <Image
+             <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                            src="/cartshop.png"
                            alt="logo"
                            width={0}
@@ -23,7 +23,7 @@ export default function loacl() {
                            sizes="100vw"
                            className="leftcarere"
                            priority
-                         />
+                         /></a>
             <Three />
             <Image
                           src="/google.png"

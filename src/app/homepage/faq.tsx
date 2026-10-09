@@ -54,7 +54,7 @@ export default function IndustryAccordion() {
         <h2 className="    uppercase">
           We Speak <span className="text-[#f5a623]">Industrial</span>.<br></br> Your Sector, Our Expertise.
         </h2>
-        <p>We don't build websites for everyone. We specialise in manufacturers, exporters, and B2B industrial companies — which means we already understand your buyers, your process, and your terminology.</p>
+        <p>We don't build websites for everyone. We specialise in manufacturers, exporters, and B2B companies — which means we already understand your buyers, your process, and your terminology.</p>
       </div>
 
       {/* Accordion List */}
@@ -99,7 +99,7 @@ export default function IndustryAccordion() {
       </div>
 
        <div className='text-center button-ourlatest'>
-     <Link href="/contact-us" className="btn-group-link">
+     <Link href="/all-industries-page" className="btn-group-link">
         {/* मुख्य बटन का कंटेनर */}
         <div className="btn-main-container">
           

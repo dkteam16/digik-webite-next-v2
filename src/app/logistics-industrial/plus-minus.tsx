@@ -54,7 +54,7 @@ export default function beleive() {
                 <p>What We Build</p>
                 <h2>B2B Digital Presence for Industrial Logistics & Supply Chain Companies</h2>
               </div>
-                 <Image
+                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                                src="/cartshop.png"
                                alt="logo"
                                width={0}
@@ -62,7 +62,7 @@ export default function beleive() {
                                sizes="100vw"
                                className="w-full h-auto iso"
                                priority
-                             />
+                             /></a>
           </div>
 
           <div className="mv-container">

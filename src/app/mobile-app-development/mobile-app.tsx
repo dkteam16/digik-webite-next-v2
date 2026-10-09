@@ -53,7 +53,7 @@ export default function beleive() {
                   <h2>Your Products Are Your <span className='text-[#F4A31D]'>Mobile Applications for</span> Every Industrial Use Case</h2>
                   {/* <p className='text-[#333333]'>Every day, procurement managers in the UK, USA, Germany, and Australia search Google for Indian manufacturers. The question is whether they find you or your competitor.</p> */}
                </div>
-                 <Image
+                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                                     src="/cartshop.png"
                                     alt="logo"
                                     width={0}
@@ -61,7 +61,7 @@ export default function beleive() {
                                     sizes="100vw"
                                     className="w-full h-auto iso"
                                     priority
-                                  />
+                                  /></a>
           </div>
 
 

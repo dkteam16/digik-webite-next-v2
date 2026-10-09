@@ -24,7 +24,7 @@ export default function SectorDesign() {
                 How Fastener Buyers Search — and How We Get You Found
                 </h2>
             </div>
-           <Image
+           <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                             src="/cartshop.png"
                             alt="logo"
                             width={0}
@@ -32,7 +32,7 @@ export default function SectorDesign() {
                             sizes="100vw"
                             className="w-full h-auto iso"
                             priority
-                          />
+                          /></a>
         </div>
         <ul>
           {stages.map((stage) => (

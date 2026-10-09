@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./header";
 import Footer from "./footer";
 import MobileHeader from "./mobile-header";
+import FloatingContact from "./floating-contact";
 
 
 const geistSans = Geist({
@@ -41,6 +42,7 @@ export default function RootLayout({
        <MobileHeader /> 
         {children} 
        <Footer/>
+       <FloatingContact />
             
       </body>
     </html>

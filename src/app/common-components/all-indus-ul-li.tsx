@@ -31,7 +31,7 @@ export default function Indusgrow({
                 dangerouslySetInnerHTML={{ __html: description }}
               />
           </div>
-           <Image
+           <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                  src="/cartshop.png"
                  alt="logo"
                  width={0}
@@ -39,7 +39,7 @@ export default function Indusgrow({
                  sizes="100vw"
                  className="w-full h-auto iso"
                  priority
-               />
+               /></a>
         </div>
 
         <div className="indusgrow-list">

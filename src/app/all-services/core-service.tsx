@@ -87,7 +87,7 @@ const ServicesSection = () => {
       {/* --- Services Grid Mapping --- */}
       <div className='desktop-view'>
           <div className="grid web-seo-bottom grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-             <Image
+             <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                 src="/cartshop.png"
                 alt="logo"
                 width={0}
@@ -95,7 +95,7 @@ const ServicesSection = () => {
                 sizes="100vw"
                 className="core-servicegrid absolute"  
                 priority
-                />
+                /></a>
             {servicesData.map((service) => (
               <div 
                 key={service.id}  

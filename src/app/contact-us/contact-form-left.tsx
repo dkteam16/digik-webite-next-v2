@@ -16,8 +16,8 @@ const contactData = [
   {
     icon: "/conact3.png",
     title: "TALK TO US",
-    phone: "09814820845",
-    email: "hello@digitalkangaroos.com",
+    phone: "+91 98148-20845 ( CALL / WHATSAPP ) ",
+    email: "info@digitalkangaroos.com",
   },
 ];
 
@@ -51,11 +51,11 @@ export default function Local() {
               )}
 
               {item.phone && (
-                <div> <a
-                  href={`tel:${item.phone}`}
+                <div> 
+                  <a 
                   className="contact-phone text-[#333333]"
                 >
-                  {item.phone}
+                  {item.phone} 
                 </a> </div> 
               )}
              

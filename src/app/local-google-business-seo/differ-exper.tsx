@@ -30,7 +30,7 @@ export default function beleive() {
                   <h2>B2B SEO Is Not Consumer SEO. It Needs   <span className='text-[#F4A31D]'>Different Expertise.</span></h2>
                   <p className='text-[#333333]'>The way a procurement engineer searches Google is fundamentally different from a consumer purchase. Our SEO is built around that reality.</p>
                </div>
-                 <Image
+                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                     src="/cartshop.png"
                     alt="logo"
                     width={0}
@@ -38,7 +38,7 @@ export default function beleive() {
                     sizes="100vw"
                     className="w-full h-auto iso"
                     priority
-                  />
+                  /></a>
           </div>
 
 

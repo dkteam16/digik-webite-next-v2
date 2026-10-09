@@ -28,7 +28,7 @@ export default function BuildManu() {
 
           <p className="text-gray-600   leading-relaxed font-semibold top-text-build   ">
             WE BUILD HIGH-PERFORMANCE WEBSITES AND SEO STRATEGIES EXCLUSIVELY FOR 
-            MANUFACTURERS, EXPORTERS, AND B2B INDUSTRIAL COMPANIES — SO YOUR NEXT 
+            MANUFACTURERS, EXPORTERS, AND B2B COMPANIES — SO YOUR NEXT 
             CUSTOMER FINDS YOU, TRUSTS YOU, AND SENDS YOU THE RFQ.
           </p>
 
@@ -164,7 +164,7 @@ export default function BuildManu() {
 
       {/* --- Bottom Right Badge --- */}
       <div className="absolute  built-botm-img  ">
-        <img src="/cartshop.png" alt="Digital Kangaroos" className="w-full h-auto animate-spin-slow" />
+        <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><img src="/cartshop.png" alt="Digital Kangaroos" className="w-full h-auto animate-spin-slow" /></a>
       </div>
 
     </section>

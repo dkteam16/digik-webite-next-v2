@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState } from 'react';
-
+import Link from "next/link";
 export default function Footer() {
   const [linksOpen, setLinksOpen] = useState(false);
 
@@ -12,15 +12,17 @@ export default function Footer() {
         {/* COLUMN 1: LOGO & TAGLINE */}
         <div className="dk-footer-col dk-col-logo">
           <div className="dk-logo-box">
-             <Image
-                       src="/homelogo.png"
-                       alt="logo logo"
-                       width={0}
-                       height={0}
-                       sizes="100vw"
-                       className="imagee-stlak"  
-                       priority
-                       />
+            <Link href="/">
+              <Image
+                src="/homelogo.png"
+                alt="logo logo"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="imagee-stlak"
+                priority
+              />
+            </Link>
           </div>
           <p className="dk-logo-sub">Web Development & Software Company</p>
         </div>
@@ -30,6 +32,7 @@ export default function Footer() {
           <div className="dk-contact-item">
             
             <p><span className="dk-label-orange">INDIA:</span> SCO-4, 1ST FLOOR, OMAXE ROYAL RESIDENCY, LUDHIANA, 142022.</p>
+            <p><u><a href="https://maps.app.goo.gl/tSENydQRWLV5wHse6" target="blank">View on Google Maps</a></u></p>
           </div>
           <div className="dk-contact-item">
             
@@ -37,11 +40,11 @@ export default function Footer() {
           </div>
           <div className="dk-contact-item">
             <span className="dk-label-orange">PHONE:</span>
-            <p className="dk-phone-num">+91 9814820845</p>
+            <p className="dk-phone-num"><a href="tel:+919814820845">+91 9814820845</a></p>
           </div>
           <div className="dk-contact-item">
             <span className="dk-label-orange">EMAIL:</span>
-            <p>INFO@DIGITALKANGAROOS.COM</p>
+            <p><a href="mailto:info@digitalkangaroos.com">INFO@DIGITALKANGAROOS.COM</a></p>  
           </div>
         </div>
 
@@ -60,36 +63,20 @@ export default function Footer() {
           </button>
 
           <ul id="dk-links-list" className="dk-links-list">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/about-us">ABOUT</a></li>
-            <li><a href="/all-services">SERVICES</a></li>
-            <li><a href="/all-industries-page">INDUSTRIES</a></li>
-            <li><a href="/work">WORK</a></li>
-            <li><a href="/careers">CAREERS</a></li>
-            <li><a href="/blogs">BLOG</a></li>
-            <li><a href="/contact-us">CONTACT</a></li>
-            <li><a href="/faq">FAQS</a></li>
-            {/* <li><a href="#press">PRESS RELEASE</a></li> */}
-            <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
-            <li><a href="#terms">TERMS & CONDITIONS</a></li>
+            <li><Link href="/">HOME</Link></li>
+            <li><Link href="/about-us">ABOUT</Link></li>
+            <li><Link href="/all-services">SERVICES</Link></li>
+            <li><Link href="/all-industries-page">INDUSTRIES</Link></li>
+            <li><Link href="/work">WORK</Link></li>
+            <li><Link href="/careers">CAREERS</Link></li>
+            <li><Link href="/blogs">BLOG</Link></li>
+            <li><Link href="/contact-us">CONTACT</Link></li>
+            <li><Link href="/faq">FAQS</Link></li>
+            <li><Link href="/privacy-policy">PRIVACY POLICY</Link></li>
+            <li><Link href="/terms-conditions">TERMS &amp; CONDITIONS</Link></li>
           </ul>
 </div>
-        {/* <div className="dk-footer-col dk-col-links  desktop-view">
-          <ul className="dk-links-list">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/about-us">ABOUT</a></li>
-            <li><a href="/all-services">SERVICES</a></li>
-            <li><a href="/industrial-website-desgin">INDUSTRIES</a></li>
-            <li><a href="/work">WORK</a></li>
-            <li><a href="/careers">CAREERS</a></li>
-            <li><a href="/blogs">BLOG</a></li>
-            <li><a href="/contact-us">CONTACT</a></li>
-            <li><a href="#faqs">FAQS</a></li>
-            <li><a href="#press">PRESS RELEASE</a></li>
-            <li><a href="#privacy">PRIVACY POLICY</a></li>
-            <li><a href="#terms">TERMS & CONDITIONS</a></li>
-          </ul>
-        </div> */}
+       
 
         {/* COLUMN 4: SOCIALS & NEWSLETTER */}
         <div className="dk-footer-col dk-col-newsletter">
@@ -172,7 +159,7 @@ export default function Footer() {
             <div className="dk-bottom-links">
             
             <a href="https://cartpotato.com/">CART POTATO</a>
-            <a href="/">Digital Kangaroos</a>
+            <Link href="/">Digital Kangaroos</Link>
             </div>
         </div>
       </div>  

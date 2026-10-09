@@ -44,7 +44,7 @@ export default function beleive() {
                   <h2>We Build Textile Export Websites That Tick Every Box</h2>
                   <p className='text-[#333333]'>From the product catalogue to the enquiry form, every element of your website is designed to make an overseas buyer feel confident placing an order with you.</p>
                </div>
-                 <Image
+                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                                     src="/cartshop.png"
                                     alt="logo"
                                     width={0}
@@ -52,7 +52,7 @@ export default function beleive() {
                                     sizes="100vw"
                                     className="w-full h-auto iso"
                                     priority
-                                  />
+                                  /></a>
           </div>
 
 

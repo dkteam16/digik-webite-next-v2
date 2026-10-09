@@ -45,41 +45,6 @@ export default function loacl() {
            <Global /> 
            <PlusMinus />
            <Cycle />
-
-
-
-            {/* <div className="keyword-nma">
-                <Image
-                 src="/cartshop.png"
-                 alt="logo"
-                 width={0}
-                 height={0}
-                 sizes="100vw"
-                 className="w-full h-auto iso"
-                 priority
-               />
-                <Keywords /></div> */}
-
-       {/* <div className="b2b-branding-inere  allindus-btn">
-            
-                    <CommonCTA
-                title="Is Your Website Winning Auto Buyers or Losing Them?"
-                description="Get a free audit of your current website and SEO. We'll show you exactly what's costing you RFQs."
-                buttonText="Get Free Audit Now"
-                buttonLink="/contact-us"
-                buttonTextSecond="WhatsApp Us"
-                buttonLinkSecond="/contact-us"  
-                />
-         </div>    */}
-
-      
-
-{/* 
-      <div  className="cycle-buy">  <Cycle /></div>
- */}
-
-
-
         
       
      <div className="b2b-branding-inere allindus-btn">
@@ -97,8 +62,8 @@ export default function loacl() {
                 description="Free website audit for cycle and sports equipment manufacturers. No commitment, just clarity."
                 buttonText="Get Free Audit"
                 buttonLink="/contact-us"
-                buttonTextSecond="all Us Now"
-                buttonLinkSecond="/contact-us"
+                buttonTextSecond="Call Us Now"
+                buttonLinkSecond="tel:+919814820845"
                 footerText=" "
                 />
          </div>    

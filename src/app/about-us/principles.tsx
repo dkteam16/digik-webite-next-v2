@@ -13,7 +13,7 @@ export default function Principles() {
                     <h2  className="text-[#242832]">The Principles <span  className="text-[#F4A31D]">We Work By</span>  </h2>
                     <p className="text-[#535353]">These are not aspirational wall-posters. They are the actual principles that govern every decision we make, every project we take on, and every recommendation we give a client.</p>
                 </div>
-                <Image
+                <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                           src="/cartshop.png"
                           alt="logo logo"
                           width={0}
@@ -21,7 +21,7 @@ export default function Principles() {
                           sizes="100vw"
                           className="iso"  
                           priority
-                          />
+                          /></a>
             </div>
             {/* ----- */}
             <div  className="desktop-view">

@@ -50,7 +50,7 @@ export default function beleive() {
     <section className="scopy-one-agency">
        <div className='mv-section-iner'> 
           <div className='mv-section-tops'>
-                <Image
+                <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                                src="/cartshop.png"
                                alt="logo"
                                width={0}
@@ -58,7 +58,7 @@ export default function beleive() {
                                sizes="100vw"
                                className="w-full h-auto iso"
                                priority
-                             />
+                             /></a>
                 <p>The Core Problem</p>
                 <h2>Your Product Range Is Huge. Your Website Shows Almost None of It.</h2>
 

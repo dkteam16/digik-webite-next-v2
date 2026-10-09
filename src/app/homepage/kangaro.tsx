@@ -9,7 +9,7 @@ export default function Kangaroo() {
            <div className='kangarooleft'>
                <div className='kangarooleft-in'>
                  <h2 className='uppercase'><span className='text-[#f5a623]'>Ready To Be Found</span> By The Buyers Who Matter?</h2>
-                 <p className='uppercase'>Let's build a website and SEO strategy that works as hard as your factory does.  </p>
+                 <p className='uppercase'>Let's build a website and SEO strategy that works as hard as your factory does. Get your free audit today — we'll show you exactly what's holding your current site back and what we'd do differently.</p>
                   <div className='text-left kangaroobutton-ourlatest'>
                            <Link href="/contact-us" className="btn-group-link">
         {/* मुख्य बटन का कंटेनर */}

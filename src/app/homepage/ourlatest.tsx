@@ -1,8 +1,8 @@
 import Link from 'next/link'; 
 const slides = [
-  { id: 1, title: 'AVON STEEL', tags: ['WEBSITE', 'PHOTOGRAPHY', 'VIDEOGRAPHY'], image: '/avon.png' },
-  { id: 2, title: 'Q&Q SOLUTIONS', tags: ['WEBSITE', 'SEO'], image: '/qq.png' },
-  { id: 3, title: 'RIGHT HORIZONS', tags: ['BRANDING', 'WEBSITE'], image: 'right.png' },
+  { id: 1, title: 'AVON STEEL', tags: ['WEBSITE', 'PHOTOGRAPHY', 'VIDEOGRAPHY'], image: '/homeavon.png' },
+  { id: 2, title: 'Q&Q SOLUTIONS', tags: ['WEBSITE', 'SEO'], image: '/homeqqs.png' },
+  { id: 3, title: 'RIGHT HORIZONS', tags: ['BRANDING', 'WEBSITE'], image: 'homeoctave.png' },
 ];
 
 

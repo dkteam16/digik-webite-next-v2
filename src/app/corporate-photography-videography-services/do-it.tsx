@@ -53,7 +53,7 @@ export default function beleive() {
                   <h2>An Overseas Buyer Can't Visit Your Factory. Your Photos <span className='text-[#F4A31D]'>Do It for Them.</span> </h2>
                   <p className='text-[#333333]'>When a procurement manager in Germany evaluates Indian suppliers, they cannot fly to every factory. Your photography & Videography is their factory visit. Stock photos & Videos destroy trust. Professional photography & Videography builds it.</p>
                </div>
-                 <Image
+                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                                     src="/cartshop.png"
                                     alt="logo"
                                     width={0}
@@ -61,7 +61,7 @@ export default function beleive() {
                                     sizes="100vw"
                                     className="w-full h-auto iso"
                                     priority
-                                  />
+                                  /></a>
           </div>
 
 

@@ -40,7 +40,7 @@ export default function beleive() {
                   <h2>Your Factory Is World-Class.   <span className='text-[#F4A31D]'>Your Website Is Not.</span></h2>
                   <p className='text-[#333333]'>Most manufacturing websites in India are outdated, slow, and fail to communicate what the company is actually capable of. International buyers move on in seconds.</p>
                </div>
-                 <Image
+                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                     src="/cartshop.png"
                     alt="logo"
                     width={0}
@@ -48,7 +48,7 @@ export default function beleive() {
                     sizes="100vw"
                     className="w-full h-auto iso"
                     priority
-                  />
+                  /></a>
           </div>
 
 

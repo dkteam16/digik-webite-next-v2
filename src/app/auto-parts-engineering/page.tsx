@@ -43,7 +43,7 @@ export default function loacl() {
            <Allinonemarque />  
            <Autocomp /> 
             <div className="keyword-nma">
-                <Image
+                <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                  src="/cartshop.png"
                  alt="logo"
                  width={0}
@@ -51,7 +51,7 @@ export default function loacl() {
                  sizes="100vw"
                  className="w-full h-auto iso"
                  priority
-               />
+               /></a>
                 <Keywords /></div>
 
        <div className="b2b-branding-inere  allindus-btn">

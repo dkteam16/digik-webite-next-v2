@@ -8,11 +8,11 @@ const problems = [
     description:
       `If your manufacturing company doesn't rank on Google for the terms your ideal buyers are searching — "casting supplier India," "precision machined parts manufacturer"  those buyers go to your competitors. They never know you exist.`,
   },
-  {
+  { 
     number: "02",
     title: "YOUR WEBSITE DOESN'T BUILD TRUST",
     description:
-      `A buyer from Germany or the UK visits your site and sees a 2012-era layout with stock photos and no certifications displayed. They move on. Your factory may be outstanding — your website is losing you business.`,
+      `A buyer from Germany or the UK visits your site and sees a 2012-era layout with stock photos and no certifications displayed. They move on. Your business may be outstanding — your website is losing you business.`,
   },
   {
     number: "03",
@@ -68,7 +68,7 @@ const Yourfactory = () => {
 
                 <h2 className="problem-title">
 
-                    YOUR FACTORY IS
+                    YOUR BUSINESS IS
                     <br />
 
                     WORLD-CLASS.
@@ -83,7 +83,7 @@ const Yourfactory = () => {
 
                 <p className="problem-text">
 
-                    Most manufacturing companies in India have outdated,
+                    Most B2B businesses in India have outdated,
                     slow, or generic websites that fail to communicate
                     their true capability to international buyers.
                     We fix that.

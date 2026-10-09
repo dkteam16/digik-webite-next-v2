@@ -10,7 +10,7 @@ const problems = [
   {
     number: "02",
     title: "YOUR WEBSITE DOESN'T BUILD TRUST",
-    description: "An outdated design or slow interface signals poor credibility, causing potential high-ticket clients to leave before contacting you."
+    description: "A buyer from Germany or the UK visits your site and sees a 2012-era layout with stock photos and no certifications displayed. They move on. Your business may be outstanding — your website is losing you business."
   },
   {
     number: "03",

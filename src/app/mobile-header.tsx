@@ -17,25 +17,37 @@ interface MobileMenuGroup {
   items: MobileSubItem[];
 }
 
-// About: abhi khali. Khali hone par ye normal link ban jata hai (/about-us).
-// Jab submenu dalna ho tab yahan items add kar dena, accordion apne aap chalne lagega.
-const aboutItems: MobileSubItem[] = [];
+/* =========================
+   ABOUT
+========================= */
+const aboutItems: MobileSubItem[] = [
+  { name: "Blog", slug: "blogs" },
+  { name: "Company", slug: "about-us" },
+  { name: "Media", slug: "media" },
+];
 
+/* =========================
+   SERVICES
+========================= */
 const servicesItems: MobileSubItem[] = [
-  { name: "Industrial Website Design", slug: "industrial-website-desgin" },
-  { name: "Local & Google Business SEO", slug: "local-google-business-seo" },
-  { name: "Export & International SEO", slug: "export-international-seo" },
-  { name: "Product Catalogue Websites", slug: "product-catalogue-websites" },
-  { name: "Website Redesign For Industry", slug: "website-redesign-for-industry" },
+  { name: "All Services", slug: "all-services" },
   { name: "B2B Branding", slug: "b2b-branding" },
-  { name: "Mobile Apps Development", slug: "mobile-app-development" },
   {
     name: "Corporate Photography & Videography",
     slug: "corporate-photography-videography-services",
   },
+  { name: "Export & International SEO", slug: "export-international-seo" },
+  { name: "Industrial Website Design", slug: "industrial-website-desgin" },
+  { name: "Local & Google Business SEO", slug: "local-google-business-seo" },
+  { name: "Product Catalogue Websites", slug: "product-catalogue-websites" },
+  { name: "Website Redesign For Industry", slug: "website-redesign-for-industry" },
 ];
 
+/* =========================
+   INDUSTRIES
+========================= */
 const industriesItems: MobileSubItem[] = [
+  { name: "All Industries", slug: "all-industries-page" },
   { name: "Auto Parts & Engineering", slug: "auto-parts-engineering" },
   { name: "Cycle & Sports Equipment", slug: "cycle-sports-equipment" },
   { name: "Hosiery & Textile Exporters", slug: "hosiery-textile-exporters" },
@@ -50,14 +62,14 @@ const industriesItems: MobileSubItem[] = [
   { name: "Logistics & Industrial", slug: "logistics-industrial" },
 ];
 
+/* Desktop jaisa order: About, Services, Industries, Work, Careers, Contact, Search */
 const menuGroups: MobileMenuGroup[] = [
-  { label: "ABOUT", href: "/about-us", items: aboutItems },
-  { label: "SERVICES", href: "/all-services", items: servicesItems },
-  { label: "INDUSTRIES", href: "/all-industries-page", items: industriesItems },
-  { label: "CONTACT", href: "/contact-us", items: [] },
+  { label: "ABOUT", href: "#", items: aboutItems },
+  { label: "SERVICES", href: "#", items: servicesItems },
+  { label: "INDUSTRIES", href: "#", items: industriesItems },
   { label: "WORK", href: "/work", items: [] },
   { label: "CAREERS", href: "/careers", items: [] },
-  { label: "BLOG", href: "/blogs", items: [] },
+  { label: "CONTACT", href: "/contact-us", items: [] },
   { label: "SEARCH", href: "/search", items: [] },
 ];
 
@@ -263,5 +275,5 @@ export default function MobileHeader() {
 
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
-  );
-}
+  );         
+}      

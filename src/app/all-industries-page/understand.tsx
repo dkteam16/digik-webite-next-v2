@@ -53,7 +53,7 @@ export default function beleive() {
                   <h2>We Understand How Industrial Buyers Think</h2>
                   <p className='text-[#333333]'>Most web agencies build websites that look good in a portfolio. We build websites that generate RFQs, rank on Google for buyer search terms, and make overseas buyers trust you before they even send an email.</p>
                </div>
-                 <Image
+                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
                                     src="/cartshop.png"
                                     alt="logo"
                                     width={0}
@@ -61,7 +61,7 @@ export default function beleive() {
                                     sizes="100vw"
                                     className="w-full h-auto iso"
                                     priority
-                                  />
+                                  /></a>
           </div>
 
 
