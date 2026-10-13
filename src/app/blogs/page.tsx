@@ -3,168 +3,57 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const API_BASE =
-  "https://www.dkteam.in/dk-admin/api/posts";
-
-interface Blog {
-  id: number;
-  title: string;
-  slug: string;
-  excerpt?: string;
-  content?: string;
-  featured_image?: string;
-  published_at?: string;
-  reading_time?: string;
-  views_count?: number;
-
-  category?: {
-    name: string;
-    slug: string;
-  };
-}
-
-interface ApiResponse {
-  success: boolean;
-
-  data: Blog[];
-
-  meta?: {
-    current_page: number;
-    last_page: number;
-    per_page: number;
-    total: number;
-  };
-}
+import { Blog, formatWPPost, WPPost, WP_API_BASE } from "@/lib/wordpress";
 
 export default function BlogPage() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
-
-  const [loading, setLoading] =
-    useState(true);
-
-  const [error, setError] =
-    useState("");
-
-  const [page, setPage] =
-    useState(1);
-
-  const [lastPage, setLastPage] =
-    useState(1);
-
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [page, setPage] = useState(1);
+  const [lastPage, setLastPage] = useState(1);
 
   /* =========================================
-     FETCH BLOGS
+     FETCH BLOGS FROM WORDPRESS REST API
   ========================================= */
-
   useEffect(() => {
-
-    const controller =
-      new AbortController();
+    const controller = new AbortController();
 
     const fetchBlogs = async () => {
-
       try {
-
         setLoading(true);
         setError("");
 
-        /*
-          IMPORTANT:
+        const url = `${WP_API_BASE}/posts?_embed&per_page=12&page=${page}&status=publish`;
 
-          category=technology REMOVE kiya hai.
-
-          Ab API all posts return karegi.
-        */
-
-        const url =
-          `${API_BASE}?per_page=12&sort_by=views_count&page=${page}`;
-
-        console.log(
-          "BLOG API:",
-          url
-        );
-
-
-        const response =
-          await fetch(url, {
-            signal:
-              controller.signal,
-          });
-
+        const response = await fetch(url, {
+          signal: controller.signal,
+        });
 
         if (!response.ok) {
-
-          throw new Error(
-            `API Error: ${response.status}`
-          );
-
+          throw new Error(`WordPress API Error: ${response.status}`);
         }
 
+        const totalPages =
+          Number(response.headers.get("x-wp-totalpages")) || 1;
+        const json: WPPost[] = await response.json();
 
-        const json: ApiResponse =
-          await response.json();
-
-
-        console.log(
-          "BLOG RESPONSE:",
-          json
-        );
-
-
-        if (!json.success) {
-
-          throw new Error(
-            "Blog API failed"
-          );
-
-        }
-
-
-        setBlogs(
-          json.data || []
-        );
-
-
-        setLastPage(
-          json.meta?.last_page || 1
-        );
-
-
+        setBlogs(json.map(formatWPPost));
+        setLastPage(totalPages);
       } catch (err: any) {
-
-        if (
-          err.name !==
-          "AbortError"
-        ) {
-
-          console.error(
-            "BLOG ERROR:",
-            err
-          );
-
-          setError(
-            err.message ||
-            "Something went wrong"
-          );
-
+        if (err.name !== "AbortError") {
+          console.error("BLOG ERROR:", err);
+          setError(err.message || "Failed to load blogs");
         }
-
       } finally {
-
         setLoading(false);
-
       }
-
     };
 
-
     fetchBlogs();
-
 
     return () => {
       controller.abort();
     };
-
   }, [page]);
 
 
@@ -222,7 +111,7 @@ export default function BlogPage() {
             BLOGS
           </h1>
 
-          <div className="blog-loading">
+          <div className="blog-loading text-black">
             Loading blogs...
           </div>
 

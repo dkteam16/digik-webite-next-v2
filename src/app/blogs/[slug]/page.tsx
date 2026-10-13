@@ -2,58 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Contact from "@/app/blogs/[slug]/blog-contact";
-
-const API_BASE = "https://www.dkteam.in/dk-admin/api/posts";
-
-interface Blog {
-  id: number;
-  title: string;
-  slug: string;
-  excerpt?: string;
-  content?: string;
-  featured_image?: string;
-  published_at?: string;
-  reading_time?: string;
-  views_count?: number;
-  category?: { name: string; slug: string };
-  author?: { name: string };
-}
-
-async function getBlog(slug: string): Promise<Blog | null> {
-  try {
-    const res = await fetch(`${API_BASE}/${slug}`, {
-      next: { revalidate: 60 },
-    });
-    if (!res.ok) return null;
-
-    const json = await res.json();
-    if (!json.success) return null;
-
-    return Array.isArray(json.data) ? json.data[0] ?? null : json.data;
-  } catch (err) {
-    console.error("Blog fetch error:", err);
-    return null;
-  }
-}
-
-/* Latest uploaded blogs (sidebar) */
-async function getLatestBlogs(currentSlug: string): Promise<Blog[]> {
-  try {
-    const res = await fetch(
-      `${API_BASE}?per_page=6&sort_by=published_at&order=desc`,
-      { next: { revalidate: 60 } }
-    );
-    if (!res.ok) return [];
-
-    const json = await res.json();
-    const list: Blog[] = Array.isArray(json.data) ? json.data : [];
-
-    return list.filter((b) => b.slug !== currentSlug).slice(0, 5);
-  } catch (err) {
-    console.error("Latest blogs error:", err);
-    return [];
-  }
-}
+import { getWPPostBySlug, getLatestWPPosts } from "@/lib/wordpress";
 
 function formatDate(date?: string) {
   if (!date) return "";
@@ -72,7 +21,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const blog = await getBlog(slug);
+  const blog = await getWPPostBySlug(slug);
 
   if (!blog) return { title: "Blog not found" };
 
@@ -95,8 +44,8 @@ export default async function SingleBlogPage({
   const { slug } = await params;
 
   const [blog, latestBlogs] = await Promise.all([
-    getBlog(slug),
-    getLatestBlogs(slug),
+    getWPPostBySlug(slug),
+    getLatestWPPosts(slug, 3),
   ]);
 
   if (!blog) notFound();
