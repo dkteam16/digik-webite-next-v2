@@ -151,7 +151,7 @@ export default function CaseStudyDetail() {
 
           <div className="avs-iso-badge">
             <Image
-              src="/iso-badge.png"
+              src="/iso.png"
               alt="ISO 9001:2015 Certified Company"
               width={170}
               height={170}

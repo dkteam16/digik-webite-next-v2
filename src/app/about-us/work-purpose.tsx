@@ -50,7 +50,7 @@ export default function WorkPurpose() {
   };
  
   return (
-    <div className='work-purpose-main bg-black'>
+    <div className='work-purpose-main bg-[#333333]'>
       <section className="mv-section-work ">
         <div className='mv-section-iner'>
           <div className='wor-purpose'>
