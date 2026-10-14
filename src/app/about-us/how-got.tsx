@@ -38,7 +38,7 @@ const timelineStages = [
 
 export default function HowWeGotHere() {
   // Id number 4 ko screenshot ke according starting me default active set kiya hai
-  const [activeStageId, setActiveStageId] = useState<number | null>(4);
+  const [activeStageId, setActiveStageId] = useState<number | null>(1);
 
   const toggleTimelineCard = (id: number) => {
     setActiveStageId(activeStageId === id ? null : id);

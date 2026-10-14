@@ -24,6 +24,8 @@ export default function ContactForm() {
 
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -96,29 +98,47 @@ export default function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    setServerError("");
 
     if (!validateForm()) {
       return;
     }
 
     const data = {
+      formType: "blog",
       ...formData,
       phone: `+91${formData.phone}`,
     };
 
-    console.log("FORM DATA:", data);
+    setLoading(true);
 
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    setFormData({
-      name: "",
-      company: "",
-      phone: "",
-      email: "",
-      projectDetails: "",
-    });
+      if (!res.ok) throw new Error();
+
+      setSubmitted(true);
+
+      setFormData({
+        name: "",
+        company: "",
+        phone: "",
+        email: "",
+        projectDetails: "",
+      });
+    } catch {
+      setSubmitted(false);
+      setServerError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -220,9 +240,13 @@ export default function ContactForm() {
         </div>
 
         {/* Submit */}
-        <button type="submit" className="connect-btn">
-          LET’S CONNECT
+        <button type="submit" className="connect-btn" disabled={loading}>
+          {loading ? "SENDING..." : "LET’S CONNECT"}
         </button>
+
+        {serverError && (
+          <span className="error-message">{serverError}</span>
+        )}
 
         {/* Success */}
         {submitted && (

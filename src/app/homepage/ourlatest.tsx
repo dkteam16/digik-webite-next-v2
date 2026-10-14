@@ -17,9 +17,9 @@ const slides = [
   },
   {
     id: 3,
-    title: 'RIGHT HORIZONS',
+    title: 'OCTAVE METTLE',
     tags: ['BRANDING', 'WEBSITE'],
-    image: '/homeoctave.png',
+    image: '/homeoctave.png',  
     link: '/our-work/right-horizons',
   },
 ];
@@ -56,13 +56,13 @@ const Ourlatest = () => {
     className="block w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
   />
 
-  <div className="ourlater-span absolute inset-0 flex justify-end bg-black/10 gap-2 pt-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+  <div className="ourlater-span mx-2 absolute inset-0 flex justify-end bg-black/10 gap-2 pt-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
     {item.tags.map((tag, tagIndex) => (
       <span
         key={tagIndex}
         className="bg-[#f39c12] text-white font-bold h-fit"
       >
-        {tag}
+        {tag}    
       </span>
     ))}
   </div>

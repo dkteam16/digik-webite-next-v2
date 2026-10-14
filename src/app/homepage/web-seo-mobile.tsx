@@ -49,7 +49,7 @@ const servicesData = [
 
 const ServicesSection = () => {
   // Mobile par active accordion track karne ke liye state
-  const [openServiceId, setOpenServiceId] = useState<number | null>(null);
+  const [openServiceId, setOpenServiceId] = useState<number | null>(1);
 
   const toggleService = (id: number) => {
     setOpenServiceId(openServiceId === id ? null : id);

@@ -25,7 +25,7 @@ const problems = [
 ];
 
 export default function MobileProblemAccordion() {
-  const [openCardIndex, setOpenCardIndex] = useState<number | null>(null);
+  const [openCardIndex, setOpenCardIndex] = useState<number | null>(0);
 
   const toggleCard = (index: number) => {
     setOpenCardIndex(openCardIndex === index ? null : index);

@@ -36,7 +36,7 @@ const stages = [
 
 export default function HowWeWork() {
   // Active accordion section track karne ke liye dynamic hook state
-  const [openStageId, setOpenStageId] = useState<number | null>(null);
+  const [openStageId, setOpenStageId] = useState<number | null>(1);
 
   const toggleStage = (id: number) => {
     setOpenStageId(openStageId === id ? null : id);

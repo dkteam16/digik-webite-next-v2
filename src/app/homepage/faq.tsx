@@ -37,7 +37,7 @@ const sectors = [
 
 export default function IndustryAccordion() {
   // activeId यह ट्रैक करेगा कि कौन सा बॉक्स खुला है
-  const [activeId, setActiveId] = useState<number | null>(null);
+  const [activeId, setActiveId] = useState<number | null>(1);
 
   const toggleAccordion = (id: number) => {
     // अगर वही बॉक्स दोबारा क्लिक हो तो बंद कर दो (null), वरना नया खोलो

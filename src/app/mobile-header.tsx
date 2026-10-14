@@ -21,16 +21,17 @@ interface MobileMenuGroup {
    ABOUT
 ========================= */
 const aboutItems: MobileSubItem[] = [
-  { name: "Blog", slug: "blogs" },
+
   { name: "Company", slug: "about-us" },
   { name: "Media", slug: "media" },
+    { name: "Blog", slug: "blogs" },
 ];
 
 /* =========================
    SERVICES
 ========================= */
 const servicesItems: MobileSubItem[] = [
-  { name: "All Services", slug: "all-services" },
+  
   { name: "B2B Branding", slug: "b2b-branding" },
   {
     name: "Corporate Photography & Videography",
@@ -41,25 +42,28 @@ const servicesItems: MobileSubItem[] = [
   { name: "Local & Google Business SEO", slug: "local-google-business-seo" },
   { name: "Product Catalogue Websites", slug: "product-catalogue-websites" },
   { name: "Website Redesign For Industry", slug: "website-redesign-for-industry" },
+  { name: "All Services", slug: "all-services" },
 ];
 
 /* =========================
    INDUSTRIES
 ========================= */
 const industriesItems: MobileSubItem[] = [
-  { name: "All Industries", slug: "all-industries-page" },
+  
   { name: "Auto Parts & Engineering", slug: "auto-parts-engineering" },
-  { name: "Cycle & Sports Equipment", slug: "cycle-sports-equipment" },
-  { name: "Hosiery & Textile Exporters", slug: "hosiery-textile-exporters" },
-  { name: "Fasteners & Hardware", slug: "fasteners-hardware" },
-  { name: "Steel & Metal Fabrication", slug: "steel-metal-fabrication" },
-  {
+    {
     name: "Chemical & Pharmaceutical Manufacturers",
     slug: "chemical-pharmaceutical-manufacturers",
   },
-  { name: "Packaging & Plastics", slug: "packaging-plastics" },
-  { name: "Machine Tools & Precision", slug: "machine-tools-precision" },
+  { name: "Cycle & Sports Equipment", slug: "cycle-sports-equipment" },
+   { name: "Fasteners & Hardware", slug: "fasteners-hardware" },
+  { name: "Hosiery & Textile Exporters", slug: "hosiery-textile-exporters" },
   { name: "Logistics & Industrial", slug: "logistics-industrial" },
+  { name: "Machine Tools & Precision", slug: "machine-tools-precision" },
+  { name: "Packaging & Plastics", slug: "packaging-plastics" },
+  { name: "Steel & Metal Fabrication", slug: "steel-metal-fabrication" },
+  
+  { name: "All Industries", slug: "all-industries-page" },
 ];
 
 /* Desktop jaisa order: About, Services, Industries, Work, Careers, Contact, Search */

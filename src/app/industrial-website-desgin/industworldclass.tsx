@@ -26,7 +26,7 @@ const missionVisionData = [
 ];
 
 export default function beleive() {
-  const [activeCardId, setActiveCardId] = useState<number | null>(null);
+  const [activeCardId, setActiveCardId] = useState<number | null>(1);
 
   const toggleCard = (id: number) => {
     setActiveCardId(activeCardId === id ? null : id);

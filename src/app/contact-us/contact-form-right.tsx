@@ -28,6 +28,8 @@ export default function ContactForm() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -111,26 +113,39 @@ export default function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setSubmitted(false);
+    setServerError("");
 
     // Validation
     if (!validateForm()) {
       return;
     }
 
-    // Form data console me check karne ke liye
-    console.log("Form submitted:", formData);
+    setLoading(true);
 
-    // Success message
-    setSubmitted(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "contact", ...formData }),
+      });
 
-    // 1 second ke baad page refresh
-    setTimeout(() => {
-      window.location.reload();
-    }, 1000);
+      if (!res.ok) throw new Error();
+
+      setSubmitted(true);
+
+      // 1 second ke baad page refresh
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    } catch {
+      setServerError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -290,8 +305,12 @@ export default function ContactForm() {
             )}
 
             {/* Submit Button */}
-            <button type="submit" className="contact-msg-button">
-              SEND MESSAGE
+            {serverError && (
+              <div className="contact-msg-error">{serverError}</div>
+            )}
+
+            <button type="submit" className="contact-msg-button" disabled={loading}>
+              {loading ? "SENDING..." : "SEND MESSAGE"}
             </button>
           </form>
       </div>

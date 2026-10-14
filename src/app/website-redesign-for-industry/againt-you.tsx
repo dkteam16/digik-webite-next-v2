@@ -29,7 +29,7 @@ const missionVisionData = [
 
 export default function beleive() {
   // ✅ Ab activeCardId number-id ke bajaye index track karega
-  const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
+  const [activeCardIndex, setActiveCardIndex] = useState<number | null>(0);
 
   const toggleCard = (index: number) => {
     setActiveCardIndex(activeCardIndex === index ? null : index);

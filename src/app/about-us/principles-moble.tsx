@@ -36,7 +36,7 @@ const servicesData = [
 
 const ServicesSection = () => {
   // Mobile par active accordion track karne ke liye state
-  const [openServiceId, setOpenServiceId] = useState<number | null>(null);
+  const [openServiceId, setOpenServiceId] = useState<number | null>(1);
 
   const toggleService = (id: number) => {
     setOpenServiceId(openServiceId === id ? null : id);
@@ -68,9 +68,7 @@ const ServicesSection = () => {
               <div className="ms-card-drawer">
                 <div className="ms-drawer-inner">
                   {/* Service Icon */}
-                  <div className="w-12 h-12 mb-4 flex items-center justify-center bg-white rounded-xl p-2 shadow-sm">
-                    <img src={service.img} alt={service.title} className="w-full h-full object-contain" />
-                  </div>
+                
 
                   {/* Description */}
                   <p className="ms-card-description">{service.description}</p>

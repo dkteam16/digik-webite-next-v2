@@ -42,7 +42,7 @@ const missionVisionData = [
 ];
 
 export default function WorkPurpose() {
-  const [activeCardId, setActiveCardId] = useState<number | null>(null);
+  const [activeCardId, setActiveCardId] = useState<number | null>(1);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const toggleCard = (id: number) => {

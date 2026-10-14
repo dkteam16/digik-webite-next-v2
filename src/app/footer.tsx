@@ -4,6 +4,25 @@ import React, { useState } from 'react';
 import Link from "next/link";
 export default function Footer() {
   const [linksOpen, setLinksOpen] = useState(false);
+  const [nlEmail, setNlEmail] = useState("");
+  const [nlStatus, setNlStatus] = useState<"" | "sending" | "success" | "error">("");
+
+  const handleNewsletter = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setNlStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "newsletter", email: nlEmail }),
+      });
+      if (!res.ok) throw new Error();
+      setNlStatus("success");
+      setNlEmail("");
+    } catch {
+      setNlStatus("error");
+    }
+  };
 
   return (
     <footer className="dk-footer">
@@ -63,7 +82,7 @@ export default function Footer() {
           </button>
 
           <ul id="dk-links-list" className="dk-links-list">
-            <li><Link href="/">HOME</Link></li>
+            {/* <li><Link href="/">HOME</Link></li> */}
             <li><Link href="/about-us">ABOUT</Link></li>
             <li><Link href="/all-services">SERVICES</Link></li>
             <li><Link href="/all-industries-page">INDUSTRIES</Link></li>
@@ -144,10 +163,21 @@ export default function Footer() {
           <p className="dk-newsletter-text">SIGN UP FOR THE DIGITAL KANGAROOS NEWSLETTER</p>
           
           {/* Newsletter Form */}
-          <form className="dk-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="EMAIL ADDRESS" className="dk-input" required />
-            <button type="submit" className="dk-submit-btn">SUBMIT</button>
+          <form className="dk-form" onSubmit={handleNewsletter}>
+            <input
+              type="email"
+              placeholder="EMAIL ADDRESS"
+              className="dk-input"
+              value={nlEmail}
+              onChange={(e) => setNlEmail(e.target.value)}
+              required
+            />
+            <button type="submit" className="dk-submit-btn" disabled={nlStatus === "sending"}>
+              {nlStatus === "sending" ? "SENDING..." : "SUBMIT"}
+            </button>
           </form>
+          {nlStatus === "success" && <p style={{ color: "lightgreen" }}>Thank you for subscribing!</p>}
+          {nlStatus === "error" && <p style={{ color: "salmon" }}>Something went wrong. Please try again.</p>}
         </div>
       </div>
 
@@ -160,7 +190,7 @@ export default function Footer() {
             
             <a href="https://cartpotato.com/">CART POTATO</a>
             <Link href="/">Digital Kangaroos</Link>
-            </div>
+            </div>    
         </div>
       </div>  
     </footer>

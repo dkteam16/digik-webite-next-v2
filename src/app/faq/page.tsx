@@ -260,7 +260,7 @@ type Props = {
 
 export default function FaqAccordion({ items = FAQS, allowMultiple = false }: Props) {
   const uid = useId();
-  const [open, setOpen] = useState<Set<number>>(new Set());
+  const [open, setOpen] = useState<Set<number>>(new Set([0]));
 
   const toggle = (i: number) => {
     setOpen((prev) => {

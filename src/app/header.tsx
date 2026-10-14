@@ -30,11 +30,7 @@ interface NavLink {
 ========================= */
 
 const about: MenuItem[] = [
-  {
-    name: "Blog",
-    slug: "blogs",
-    desc: "Insights on conversion-driven websites, CRO, SEO, AI-ready digital experiences, and growth for modern B2B businesses.  ",
-  },
+
   {
     name: "Company",
     slug: "about-us",
@@ -44,6 +40,10 @@ const about: MenuItem[] = [
     name: "Media",
     slug: "media",  
     desc: "Our latest media features, insights, achievements, and perspectives on building high-performing, conversion-driven digital experiences.",
+  },  {
+    name: "Blog",
+    slug: "blogs",
+    desc: "Insights on conversion-driven websites, CRO, SEO, AI-ready digital experiences, and growth for modern B2B businesses.  ",
   },
 ];
 
@@ -52,11 +52,7 @@ const about: MenuItem[] = [
 ========================= */
 
 const services: MenuItem[] = [
-  {
-    name: "All Services",
-    slug: "all-services",
-    desc: "Explore our conversion-driven website, SEO, branding, content, and digital solutions built to help B2B businesses grow.",
-  },
+  
   {
     name: "B2B Branding",
     slug: "b2b-branding",
@@ -91,7 +87,11 @@ const services: MenuItem[] = [
     name: "Website Redesign For Industry",
     slug: "website-redesign-for-industry",
     desc: "Transform an outdated industrial website into a modern, conversion-driven digital experience built for growth.",
-  },
+  },{
+    name: "All Services",
+    slug: "all-services",
+    desc: "Explore our conversion-driven website, SEO, branding, content, and digital solutions built to help B2B businesses grow.",
+  }
 ];
 
 /* =========================
@@ -99,20 +99,24 @@ const services: MenuItem[] = [
 ========================= */
 
 const industries: MenuItem[] = [
-  {
-    name: "All Industries",
-    slug: "all-industries-page",
-    desc: "Explore our specialised digital solutions for manufacturers, exporters, and B2B businesses across diverse industrial sectors.",
-  },
+  
   {
     name: "Auto Parts & Engineering",
     slug: "auto-parts-engineering",
     desc: "Conversion-driven websites and SEO built to showcase engineering capabilities and generate qualified B2B enquiries.",
+  }, {
+    name: "Chemical & Pharmaceutical Manufacturers",
+    slug: "chemical-pharmaceutical-manufacturers",
+    desc: "Credible, SEO-ready websites that communicate complex product offerings clearly and build trust with B2B buyers.",
   },
   {
     name: "Cycle & Sports Equipment",
     slug: "cycle-sports-equipment",
     desc: "Digital experiences that showcase your products, strengthen your brand, and connect you with buyers worldwide.",
+  },{
+    name: "Fasteners & Hardware",
+    slug: "fasteners-hardware",
+    desc: "High-performing websites designed to present your product range clearly and turn industrial searches into enquiries.",
   },
   {
     name: "Hosiery & Textile Exporters",
@@ -120,34 +124,30 @@ const industries: MenuItem[] = [
     desc: "Export-focused websites and SEO that help textile businesses get discovered by international buyers and generate enquiries.",
   },
   {
-    name: "Fasteners & Hardware",
-    slug: "fasteners-hardware",
-    desc: "High-performing websites designed to present your product range clearly and turn industrial searches into enquiries.",
+    name: "Logistics & Industrial",
+    slug: "logistics-industrial",
+    desc: "Strategic websites and SEO designed to build credibility, improve visibility, and generate B2B business enquiries.",
+  },
+   {
+    name: "Machine Tools & Precision",
+    slug: "machine-tools-precision",
+    desc: "Precision-focused digital experiences that showcase your technology, capabilities, and manufacturing expertise.",
+  },{
+    name: "Packaging & Plastics",
+    slug: "packaging-plastics",
+    desc: "Conversion-driven websites that present your capabilities and product range while helping you attract qualified enquiries.",
   },
   {
     name: "Steel & Metal Fabrication",
     slug: "steel-metal-fabrication",
     desc: "Conversion-focused digital solutions that showcase your capabilities, projects, and expertise to serious buyers.",
   },
-  {
-    name: "Chemical & Pharmaceutical Manufacturers",
-    slug: "chemical-pharmaceutical-manufacturers",
-    desc: "Credible, SEO-ready websites that communicate complex product offerings clearly and build trust with B2B buyers.",
-  },
-  {
-    name: "Packaging & Plastics",
-    slug: "packaging-plastics",
-    desc: "Conversion-driven websites that present your capabilities and product range while helping you attract qualified enquiries.",
-  },
-  {
-    name: "Machine Tools & Precision",
-    slug: "machine-tools-precision",
-    desc: "Precision-focused digital experiences that showcase your technology, capabilities, and manufacturing expertise.",
-  },
-  {
-    name: "Logistics & Industrial",
-    slug: "logistics-industrial",
-    desc: "Strategic websites and SEO designed to build credibility, improve visibility, and generate B2B business enquiries.",
+ 
+  
+ {
+    name: "All Industries",
+    slug: "all-industries-page",
+    desc: "Explore our specialised digital solutions for manufacturers, exporters, and B2B businesses across diverse industrial sectors.",
   },
 ];
 
