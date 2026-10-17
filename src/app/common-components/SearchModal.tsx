@@ -42,7 +42,7 @@ const STATIC_ITEMS: SearchItem[] = [
   { group: "Industries", title: "Packaging & Plastics", text: "Lead generation for packaging manufacturers.", href: "/packaging-plastics" },
 ];
 
-const API_URL = "https://www.dkteam.in/dk-admin/api/case-studies";
+import { getWPWorkPosts } from "@/lib/wordpress";
 
 /* Matching text ko bold karta hai */
 function Highlight({ text, query }: { text: string; query: string }) {
@@ -89,26 +89,18 @@ export default function SearchModal({ open, onClose }: Props) {
     };
   }, [open, onClose]);
 
-  // Case studies API se (sirf ek baar, pehli baar khulne par)
+  // Case studies WordPress API se (sirf ek baar, pehli baar khulne par)
   useEffect(() => {
     if (!open || caseStudies.length > 0) return;
 
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((json) => {
-        const list: {
-          title: string;
-          slug: string;
-          category?: string;
-          short_description?: string;
-        }[] = json?.data ?? [];
-
+    getWPWorkPosts(1, 50)
+      .then((res) => {
         setCaseStudies(
-          list.map((c) => ({
+          res.blogs.map((b) => ({
             group: "Case studies" as const,
-            title: c.title,
-            text: c.short_description || c.category || "",
-            href: `/work/${c.slug}`,
+            title: b.title,
+            text: b.excerpt || "",
+            href: `/work/${b.slug}`,
           }))
         );
       })
