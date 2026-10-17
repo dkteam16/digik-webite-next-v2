@@ -122,7 +122,10 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const resData = await res.json().catch(() => null);
+        throw new Error(resData?.error || resData?.message || "Failed to send");
+      }
 
       setSubmitted(true);
 
@@ -133,9 +136,9 @@ export default function ContactForm() {
         email: "",
         projectDetails: "",
       });
-    } catch {
+    } catch (err: any) {
       setSubmitted(false);
-      setServerError("Something went wrong. Please try again.");
+      setServerError(err?.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }

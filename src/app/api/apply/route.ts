@@ -46,6 +46,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("apply mail error:", err);
-    return NextResponse.json({ message: "Failed to send application." }, { status: 500 });
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    return NextResponse.json(
+      {
+        message: "Failed to send application.",
+        error: errorMessage,
+      },
+      { status: 500 }
+    );
   }
 }

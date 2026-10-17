@@ -133,7 +133,10 @@ export default function ContactForm() {
         body: JSON.stringify({ formType: "contact", ...formData }),
       });
 
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || data?.message || "Failed to send");
+      }
 
       setSubmitted(true);
 
@@ -141,8 +144,8 @@ export default function ContactForm() {
       setTimeout(() => {
         window.location.reload();
       }, 1000);
-    } catch {
-      setServerError("Something went wrong. Please try again.");
+    } catch (err: any) {
+      setServerError(err?.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }

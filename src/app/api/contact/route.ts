@@ -12,12 +12,24 @@ const SUBJECTS: Record<string, string> = {
   blog: "New Blog Page Enquiry",
 };
 
-// Test: browser me http://localhost:3000/api/contact kholo (sirf development me chalega)
-export async function GET() {
-  if (process.env.NODE_ENV === "production") {
-    return NextResponse.json({ message: "Not found" }, { status: 404 });
+// Test / Diagnostics: browser me /api/contact?check=status kholo
+export async function GET(req: Request) {
+  const url = new URL(req.url);
+  const isStatusCheck =
+    url.searchParams.get("check") === "status" ||
+    url.searchParams.get("debug") === "1" ||
+    process.env.NODE_ENV !== "production";
+
+  if (!isStatusCheck) {
+    return NextResponse.json({
+      status: "Contact API active",
+      method: "POST required",
+      diagnostics: "Visit /api/contact?check=status to test mail configuration",
+    });
   }
-  return NextResponse.json(await getMailerStatus());
+
+  const status = await getMailerStatus();
+  return NextResponse.json(status);
 }
 
 export async function POST(req: Request) {
@@ -52,12 +64,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("contact mail error:", err);
+    const errorMessage = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
       {
         message: "Failed to send",
-        ...(process.env.NODE_ENV !== "production" && {
-          debug: err instanceof Error ? err.message : String(err),
-        }),
+        error: errorMessage,
       },
       { status: 500 }
     );
