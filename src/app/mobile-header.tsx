@@ -126,49 +126,19 @@ export default function MobileHeader() {
 
           {/* Right icons */}
           <div className="mobileIcons">
-            <a
-              href="tel:+10000000000"
-              className="mobileIconBtn"
-              aria-label="Call"
-            >
-              <Image
-                src="/calling.png"
-                alt="Call"
-                width={208}
-                height={36}
-                priority
-              />
-            </a>
-
-            <a
-              href="https://wa.me/10000000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mobileIconBtn mobileIconWhatsapp"
-              aria-label="WhatsApp"
-            >
-              <Image
-                src="/whatsapp.png"
-                alt="WhatsApp"
-                width={208}
-                height={36}
-                priority
-              />
-            </a>
-
-            <Link
-              href="/contact-us"
-              className="mobileIconBtn"
-              aria-label="Enquiry"
-            >
-              <Image
-                src="/note.png"
-                alt="Enquiry"
-                width={208}
-                height={36}
-                priority
-              />
-            </Link>
+            {!isHome && (
+              <Link href="/">
+                <Image
+                  src="/homelogo.png"
+                  alt="logo"
+                  width={0}
+                  height={0}
+                  sizes="70vw"
+                  className="imagee-stlak"
+                  priority
+                />
+              </Link>
+            )}
           </div>
         </div>
 

@@ -25,15 +25,10 @@ const Hero = () => {
     <>
       <section className="relative h-screen overflow-hidden hero-video">
         <div className="image-miannew">
-          <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-            src="/cartshop.png"
-            alt="logo logo"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="sdsaimagee-stlakdsdtt"
-            priority
-          /></a>
+          <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents">
+           
+          <img src="/cartshop.png" alt="Digital Kangaroos" className="w-full h-auto animate-spin-slow" />
+          </a>
         </div>
 
         {/* Video */}

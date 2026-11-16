@@ -67,14 +67,15 @@ const Ourlatest = () => {
     ))}
   </div>
 </Link>
-         <Link
+         {/* <Link
   href={item.link}
   
   aria-label={`View ${item.title} project`}
 >
 <h3 className="mt-4 font-black text-xl tracking-tighter uppercase text-gray-800 text-center">
   {item.title}
-</h3></Link>
+</h3>
+</Link> */}
             </div>
           ))}
         </div>

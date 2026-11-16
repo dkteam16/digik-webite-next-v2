@@ -3,15 +3,15 @@ export default function stalkus() {
   return (
   <>
      <div className='stalkus'>
-            <Image
-            src="/stalk.png"
+         <Image
+            src="/newstalk.png"
             alt="logo logo"
             width={0}
             height={0}
             sizes="100vw"
             className="imagee-stlak"  
             priority
-            />
+            />    
          
           <div className='stalk-iner'>
                <div className='stalk-iner-in'>

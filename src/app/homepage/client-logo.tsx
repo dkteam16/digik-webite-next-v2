@@ -23,16 +23,17 @@ export default function ClientsSection() {
         </div>
 
         {/* --- Logo Grid --- */}
-        <div className="flex flex-wrap justify-center gap-3   mx-auto">
+     {/* --- Logo Grid --- */}
+<div className="mainsfdsfdsf ">  
   {clientLogos.map((logo, index) => (
-    <div 
-      key={index} 
-      className="bg-[#2a2a2a] img-client-div   flex items-center justify-center   hover:bg-[#333] transition-colors duration-300  "
+    <div
+      key={index}
+      className="dsafsvfbtre "
     >
-      <img 
-        src={logo} 
-        alt={`Client ${index + 1}`} 
-        className="max-w-full max-h-full w-auto h-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+      <img
+        src={logo}
+        alt={`Client ${index + 1}`}
+        className=" "
       />
     </div>
   ))}

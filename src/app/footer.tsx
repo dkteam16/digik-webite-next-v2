@@ -43,7 +43,8 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <p className="dk-logo-sub">Web Development & Software Company</p>
+          <p className="dk-logo-sub">B2B Web Design agency</p>
+          <p className="dk-logo-sub">(ISO 9001:2015 Company)</p>
         </div>
 
         {/* COLUMN 2: ADDRESS & CONTACT */}

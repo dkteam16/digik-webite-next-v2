@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function BuildManu() {
   return (
-  <div className='build-manu  relative'>
+  <div className='build-manu  relative'> 
     <section className="relative build-manu-iinner   w-full       flex items-center ">
       
       {/* --- Left Top ISO Badge --- */}
@@ -106,60 +106,29 @@ export default function BuildManu() {
          
           <div className="relative w-full  desktop-view  flex items-center justify-end  gap-5  relative build-manu-iinner-right">
             
-            <div className='build-manu-iinner-right-one '>
-                  <div className="  w-[165px] m-auto   relative left-5 group overflow-hidden   ">
-                    <img 
-                      src="/build1.png" 
-                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110" 
+                <Image
+                    src="/newbuild.png"
+                    alt="logo "
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="imagee-stlakdsd"  
+                    priority
                     />
-                  </div>
-
-                
-                  <div className=" w-[285px] m-auto mt-5 mb-2  group overflow-hidden   ">
-                    <img 
-                      src="/build3.png" 
-                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110" 
-                    />
-                  </div>
-
-                
-                  <div className=" w-[170px] m-auto  top-[160px] left-[-20px]    group overflow-hidden   ">
-                    <img 
-                      src="/build5.png" 
-                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110" 
-                    />
-                  </div>
-            </div>
-                <div className='build-manu-iinner-right-two'>
-                    <div className=" w-[267px]  my-8  bottom-0 left-20  group overflow-hidden   ">
-                      <img 
-                        src="/build2.png" 
-                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110" 
-                      />
-                    </div>
-
-                    
-                    <div className="w-[321px]    bottom-10 right-[-10px]  group overflow-hidden   ">
-                      <img 
-                        src="/build4.png" 
-                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110" 
-                      />
-                    </div>
-                </div>
           </div>
         
         <div className='mobile-view  build-for-mobile'>
                 <Image
-                                                       src="/build.png"
-                                                       alt="logo "
-                                                       width={0}
-                                                       height={0}
-                                                       sizes="100vw"
-                                                       className="imagee-stlakdsd"  
-                                                       priority
-                                                       />
+                    src="/builds.png"
+                    alt="logo "
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="imagee-stlakdsd"  
+                    priority
+                    />
         </div>
-
+    
       </div>
 
       {/* --- Bottom Right Badge --- */}

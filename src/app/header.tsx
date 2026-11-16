@@ -267,12 +267,12 @@ export default function Header() {
 
   return (
     <>
-      <header
-        onMouseLeave={() => setOpenMenu(null)}
-        className={`header ${
-          isHome ? "headerHome" : "headerSolid"
-        }`}
-      >
+     <header
+  onMouseLeave={() => setOpenMenu(null)}
+  className={`header ${isHome ? "headerHome" : "headerSolid"} ${
+    activeMenu ? "headerMenuOpen" : ""
+  }`}
+>
         <div className="inner">
 
           {/* =========================

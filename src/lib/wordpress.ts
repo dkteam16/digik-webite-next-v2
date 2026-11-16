@@ -32,28 +32,19 @@ export interface WPPost {
   };
 }
 
+/* =========================================================
+   ACF fields of "New work" group
+========================================================= */
 export interface WorkACF {
-  case_study_content_for_all?: string;
-  case_study_title?: string;
-  banner_content?: string;
-  logo1?: number | string | { url?: string; source_url?: string };
-  "s-head1"?: string;
-  client_overview?: string;
-  logo2?: number | string | { url?: string; source_url?: string };
-  "s-head2"?: string;
-  challenge?: string;
-  logo3?: number | string | { url?: string; source_url?: string };
-  "s-head3"?: string;
-  solutions?: string;
-  feature_title?: string;
-  features_info?: string;
-  impact_title?: string;
-  impact_info?: string;
-  case_study_image?: number | string | { url?: string; source_url?: string };
-  case_study_image_second?: number | string | { url?: string; source_url?: string };
-  case_study_image_third?: number | string | { url?: string; source_url?: string };
-  conclusion_title?: string;
-  conclusion_info?: string;
+  multi_image?: number | string | { url?: string; source_url?: string };
+  sub_heading?: string;
+  heading?: string;
+  description?: string;
+  sub_descrip?: string;
+  number_value?: string;
+  last_left_side?: string;
+  last_right_side?: string;
+
   [key: string]: any;
 }
 
@@ -110,30 +101,36 @@ export function cleanExcerpt(excerpt?: string): string {
   );
 }
 
+function stripTags(html?: string): string {
+  return html ? html.replace(/<[^>]+>/g, "").trim() : "";
+}
+
 /**
  * Formats a raw WordPress REST API post into our clean Blog structure.
+ * Listing image: ACF "multi_image" first, then WordPress Featured Image.
  */
 export function formatWPPost(post: any): Blog {
+  const acf: WorkACF | undefined = Array.isArray(post.acf) ? undefined : post.acf;
+
+  // multi_image (Return Format = Image URL) -> string. Object is also handled.
+  const acfImage =
+    typeof acf?.multi_image === "string"
+      ? acf.multi_image
+      : typeof acf?.multi_image === "object" && acf?.multi_image
+      ? acf.multi_image.url || acf.multi_image.source_url
+      : undefined;
+
   const featuredImage =
-    post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || undefined;
+    acfImage || post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || undefined;
+
   const authorName = post._embedded?.author?.[0]?.name || "Digital Kangaroos";
   const primaryCategory = post._embedded?.["wp:term"]?.[0]?.[0];
 
-  const acf: WorkACF | undefined = post.acf;
-  const excerptText =
-    acf?.case_study_content_for_all ||
-    acf?.banner_content ||
-    post.excerpt?.rendered ||
-    "";
-
-  const rawTitle =
-    acf?.case_study_title
-      ? acf.case_study_title.replace(/<[^>]+>/g, "").trim()
-      : post.title?.rendered || "";
+  const excerptText = acf?.description || post.excerpt?.rendered || "";
 
   return {
     id: post.id,
-    title: decodeHtmlEntities(rawTitle),
+    title: decodeHtmlEntities(stripTags(post.title?.rendered || "")),
     slug: post.slug,
     excerpt: cleanExcerpt(excerptText),
     content: post.content?.rendered || "",
@@ -187,9 +184,12 @@ export async function getWPPosts(page = 1, perPage = 12): Promise<{
  */
 export async function getWPPostBySlug(slug: string): Promise<Blog | null> {
   try {
-    const res = await fetch(`${WP_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed`, {
-      next: { revalidate: 60 },
-    });
+    const res = await fetch(
+      `${WP_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed`,
+      {
+        next: { revalidate: 60 },
+      }
+    );
 
     if (!res.ok) return null;
 
@@ -213,7 +213,7 @@ export async function getWPWorkPosts(page = 1, perPage = 20): Promise<{
   totalPosts: number;
 }> {
   const res = await fetch(
-    `${WP_API_BASE}/work?_embed&page=${page}&per_page=${perPage}&status=publish`,
+    `${WP_API_BASE}/new-work?_embed&page=${page}&per_page=${perPage}&status=publish`,
     {
       next: { revalidate: 60 },
     }
@@ -238,7 +238,10 @@ export async function getWPWorkPosts(page = 1, perPage = 20): Promise<{
 /**
  * Fetches the latest posts for sidebar recommendations.
  */
-export async function getLatestWPPosts(currentSlug: string, count = 5): Promise<Blog[]> {
+export async function getLatestWPPosts(
+  currentSlug: string,
+  count = 5
+): Promise<Blog[]> {
   try {
     const res = await fetch(
       `${WP_API_BASE}/posts?_embed&per_page=${count + 2}&status=publish`,
@@ -268,7 +271,7 @@ export async function getLatestWPPosts(currentSlug: string, count = 5): Promise<
 export async function getWPWorkPostBySlug(slug: string): Promise<any | null> {
   try {
     const res = await fetch(
-      `${WP_API_BASE}/work?slug=${encodeURIComponent(slug)}&_embed`,
+      `${WP_API_BASE}/new-work?slug=${encodeURIComponent(slug)}&_embed`,
       {
         next: { revalidate: 60 },
       }
@@ -281,7 +284,10 @@ export async function getWPWorkPostBySlug(slug: string): Promise<any | null> {
 
     return posts[0];
   } catch (error) {
-    console.error(`Failed to fetch WordPress work post with slug "${slug}":`, error);
+    console.error(
+      `Failed to fetch WordPress work post with slug "${slug}":`,
+      error
+    );
     return null;
   }
 }
@@ -290,6 +296,17 @@ export interface CaseStudyFocusCard {
   image?: string;
   title: string;
   text: string;
+}
+
+export interface NewWorkData {
+  multi_image: string;
+  sub_heading: string;
+  heading: string;
+  description: string;
+  sub_descrip: string;
+  number_items: string[];
+  last_left_side: string;
+  last_right_side: string;
 }
 
 export interface CaseStudyData {
@@ -310,11 +327,8 @@ export interface CaseStudyData {
   hero_image_url?: string;
   listing_image_url?: string;
   case_study_images?: string[];
+  new_work?: NewWorkData;
   acf?: WorkACF;
-}
-
-function stripTags(html?: string): string {
-  return html ? html.replace(/<[^>]+>/g, "").trim() : "";
 }
 
 const mediaCache = new Map<number, string>();
@@ -348,131 +362,55 @@ export async function resolveMediaUrl(
 }
 
 /**
- * Fetches case study data for /work/[slug] directly from WordPress ACF fields.
+ * Fetches case study data for /work/[slug] from the "New work" ACF fields.
  */
-export async function getLiveWorkCaseStudy(slug: string): Promise<CaseStudyData | null> {
+export async function getLiveWorkCaseStudy(
+  slug: string
+): Promise<CaseStudyData | null> {
   if (!slug) return null;
 
   try {
     const wpPost = await getWPWorkPostBySlug(slug);
     if (!wpPost) return null;
 
-    const acf: WorkACF = wpPost.acf || {};
+    const acf: WorkACF = Array.isArray(wpPost.acf) ? {} : wpPost.acf || {};
 
-    // Resolve ACF media images in parallel
-    const [logo1Url, logo2Url, logo3Url, img1Url, img2Url, img3Url] = await Promise.all([
-      resolveMediaUrl(acf.logo1),
-      resolveMediaUrl(acf.logo2),
-      resolveMediaUrl(acf.logo3),
-      resolveMediaUrl(acf.case_study_image),
-      resolveMediaUrl(acf.case_study_image_second),
-      resolveMediaUrl(acf.case_study_image_third),
-    ]);
+    const title = decodeHtmlEntities(stripTags(wpPost.title?.rendered || slug));
+    const imageUrl = await resolveMediaUrl(acf.multi_image);
 
-    const rawTitle = acf.case_study_title || wpPost.title?.rendered || slug;
-    const fullTitle = decodeHtmlEntities(stripTags(rawTitle));
-
-    // Extract client name from <span> in title, or from title split, or fallback
-    const spanMatch = (acf.case_study_title || "").match(/<span[^>]*>([\s\S]*?)<\/span>/i);
-    const client = spanMatch
-      ? decodeHtmlEntities(stripTags(spanMatch[1]))
-      : fullTitle.includes(":")
-      ? fullTitle.split(":")[0].trim()
-      : fullTitle;
-
-    const shortDesc = decodeHtmlEntities(
-      stripTags(acf.banner_content || acf.case_study_content_for_all || wpPost.excerpt?.rendered || "")
-    );
-
-    // Build Focus Area Cards from ACF (logo1-3, s-head1-3, client_overview, challenge, solutions)
-    const focus_cards: CaseStudyFocusCard[] = [];
-    if (acf["s-head1"] || acf.client_overview) {
-      focus_cards.push({
-        image: logo1Url,
-        title: acf["s-head1"] || "Overview",
-        text: acf.client_overview || "",
-      });
-    }
-    if (acf["s-head2"] || acf.challenge) {
-      focus_cards.push({
-        image: logo2Url,
-        title: acf["s-head2"] || "Challenge",
-        text: acf.challenge || "",
-      });
-    }
-    if (acf["s-head3"] || acf.solutions) {
-      focus_cards.push({
-        image: logo3Url,
-        title: acf["s-head3"] || "Solutions",
-        text: acf.solutions || "",
-      });
-    }
-
-    // Solution sections from ACF
-    const problem: Array<{ title: string; content: string }> = [];
-    if (acf.features_info) {
-      problem.push({
-        title: acf.feature_title || "Solution",
-        content: acf.features_info,
-      });
-    }
-
-    // Outcome / Impact / Conclusion sections from ACF
-    const outcome: Array<{ title: string; content: string }> = [];
-    if (acf.impact_info) {
-      outcome.push({
-        title: acf.impact_title || "Results & Impact",
-        content: acf.impact_info,
-      });
-    }
-    if (acf.conclusion_info) {
-      outcome.push({
-        title: acf.conclusion_title || "Conclusion",
-        content: acf.conclusion_info,
-      });
-    }
-
-    // Parse statistics from impact_info
-    const statistics: Array<{ value: string; description: string }> = [];
-    if (acf.impact_info) {
-      const lines = acf.impact_info.split(/[\r\n]+|<br\s*\/?>/i);
-      for (const line of lines) {
-        const cleaned = decodeHtmlEntities(stripTags(line)).trim();
-        if (!cleaned) continue;
-        const valMatch = cleaned.match(/^([0-9]+%|[0-9]+\+|[0-9]+x|[0-9]+–[0-9]+|[0-9]+)/i);
-        if (valMatch) {
-          const val = valMatch[1];
-          const desc = cleaned.slice(val.length).replace(/^[\s–—:-]+/, "").trim();
-          statistics.push({ value: val, description: desc || cleaned });
-        }
-      }
-    }
-
-    const showcaseImages = [img1Url, img2Url, img3Url].filter(Boolean);
-    const featuredImage = wpPost._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+    const new_work: NewWorkData = {
+      multi_image: imageUrl,
+      sub_heading: decodeHtmlEntities(stripTags(acf.sub_heading)),
+      heading: decodeHtmlEntities(stripTags(acf.heading)),
+      description: decodeHtmlEntities(stripTags(acf.description)),
+      sub_descrip: acf.sub_descrip || "",
+      number_items: (acf.number_value || "")
+        .split(/\r?\n/)
+        .map((l: string) => l.trim())
+        .filter(Boolean),
+      last_left_side: acf.last_left_side || "",
+      last_right_side: acf.last_right_side || "",
+    };
 
     return {
-      title: fullTitle,
-      client: client || fullTitle,
-      short_description: shortDesc,
-      project_tags: ["Case Study", "Web Development", "UI/UX Design"],
-      statistics,
-      project_information: [
-        { label: "Client:", value: client || fullTitle },
-        { label: "Industry:", value: "Digital Solutions & Services" },
-        { label: "Platform:", value: "Digital Kangaroos" },
-      ],
-      focus_cards,
-      problem,
-      outcome,
-      services_delivered: [acf["s-head1"], acf["s-head2"], acf["s-head3"]].filter(Boolean) as string[],
-      industries: ["Digital Solutions", "Branding & Strategy"],
+      title,
+      client: title,
+      short_description: new_work.description,
+      project_tags: [],
+      statistics: [],
+      project_information: [],
+      focus_cards: [],
+      problem: [],
+      outcome: [],
+      services_delivered: [],
+      industries: [],
       cta_heading: "In a similar industry and want results like these?",
       cta_button: "Get Free Audit",
       cta_url: "/contact-us",
-      hero_image_url: featuredImage || showcaseImages[0],
-      listing_image_url: featuredImage,
-      case_study_images: showcaseImages,
+      hero_image_url: imageUrl,
+      listing_image_url: imageUrl,
+      case_study_images: imageUrl ? [imageUrl] : [],
+      new_work,
       acf,
     };
   } catch (error) {
@@ -480,6 +418,3 @@ export async function getLiveWorkCaseStudy(slug: string): Promise<CaseStudyData 
     return null;
   }
 }
-
-
-
