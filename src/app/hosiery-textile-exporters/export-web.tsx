@@ -45,7 +45,7 @@ export default function beleive() {
                   <p className='text-[#333333]'>From the product catalogue to the enquiry form, every element of your website is designed to make an overseas buyer feel confident placing an order with you.</p>
                </div>
                  <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-                                    src="/cartshop.png"
+                                    src="/cartshop-new.png"
                                     alt="logo"
                                     width={0}
                                     height={0}

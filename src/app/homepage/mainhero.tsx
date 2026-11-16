@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="image-miannew">
           <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents">
            
-          <img src="/cartshop.png" alt="Digital Kangaroos" className="w-full h-auto animate-spin-slow" />
+          <img src="/cartshop-new.png" alt="Digital Kangaroos" className="w-full h-auto animate-spin-slow" />
           </a>
         </div>
 

@@ -41,7 +41,7 @@ export default function beleive() {
                   <p className='text-[#333333]'>Most manufacturing websites in India are outdated, slow, and fail to communicate what the company is actually capable of. International buyers move on in seconds.</p>
                </div>
                  <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-                    src="/cartshop.png"
+                    src="/cartshop-new.png"
                     alt="logo"
                     width={0}
                     height={0}

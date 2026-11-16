@@ -17,7 +17,7 @@ export default function loacl() {
                 <p className="text-[#333333]">Digital Kangaroos is a specialist web and SEO agency for B2B industrial companies. We're a tight team — and we hire people who care about the work, not just the brief.</p>
         </div>    
           {/* <Image 
-            src="/cartshop.png"
+            src="/cartshop-new.png"
             alt="logo"
             width={0}
             height={0}

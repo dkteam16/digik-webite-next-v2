@@ -54,7 +54,7 @@ export default function beleive() {
                   <p className='text-[#333333]'>When a procurement manager in Germany evaluates Indian suppliers, they cannot fly to every factory. Your photography & Videography is their factory visit. Stock photos & Videos destroy trust. Professional photography & Videography builds it.</p>
                </div>
                  <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-                                    src="/cartshop.png"
+                                    src="/cartshop-new.png"
                                     alt="logo"
                                     width={0}
                                     height={0}

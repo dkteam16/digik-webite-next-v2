@@ -31,7 +31,7 @@ export default function beleive() {
                   <p className='text-[#333333]'>The way a procurement engineer searches Google is fundamentally different from a consumer purchase. Our SEO is built around that reality.</p>
                </div>
                  <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-                    src="/cartshop.png"
+                    src="/cartshop-new.png"
                     alt="logo"
                     width={0}
                     height={0}

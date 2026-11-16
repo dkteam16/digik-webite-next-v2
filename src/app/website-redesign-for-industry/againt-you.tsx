@@ -44,7 +44,7 @@ export default function beleive() {
                   {/* <p className='text-[#333333]'>Every day, procurement managers in the UK, USA, Germany, and Australia search Google for Indian manufacturers. The question is whether they find you or your competitor.</p> */}
                </div>
                  <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-                                    src="/cartshop.png"
+                                    src="/cartshop-new.png"
                                     alt="logo"
                                     width={0}
                                     height={0}

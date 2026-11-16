@@ -14,7 +14,7 @@ export default function Principles() {
                     <p className="text-[#535353]">These are not aspirational wall-posters. They are the actual principles that govern every decision we make, every project we take on, and every recommendation we give a client.</p>
                 </div>
                 <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-                          src="/cartshop.png"
+                          src="/cartshop-new.png"
                           alt="logo logo"
                           width={0}
                           height={0}

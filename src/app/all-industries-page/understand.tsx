@@ -54,7 +54,7 @@ export default function beleive() {
                   <p className='text-[#333333]'>Most web agencies build websites that look good in a portfolio. We build websites that generate RFQs, rank on Google for buyer search terms, and make overseas buyers trust you before they even send an email.</p>
                </div>
                  <a href="http://cartpotato.com/" target="_blank" rel="noopener noreferrer" className="contents"><Image
-                                    src="/cartshop.png"
+                                    src="/cartshop-new.png"
                                     alt="logo"
                                     width={0}
                                     height={0}
