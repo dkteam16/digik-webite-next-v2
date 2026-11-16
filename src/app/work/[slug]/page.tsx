@@ -39,6 +39,7 @@ export default async function CaseStudyDetailPage({
   if (!data) {
     return (
       <div style={{ padding: "80px 20px", textAlign: "center" }}>
+        
         <h2>Case study not found</h2>
         <p style={{ marginTop: "12px", color: "#666" }}>
           The requested case study could not be located.
@@ -328,6 +329,9 @@ export default async function CaseStudyDetailPage({
           />
         </div>
       </div>
+
+
+      
     </section>
   );
 }
