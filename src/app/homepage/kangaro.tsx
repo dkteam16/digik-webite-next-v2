@@ -44,8 +44,17 @@ export default function Kangaroo() {
            </div>
            <div className='kangarooleft-right'>
               <Image
-                 className=""
+                 className="desktop-view"
                  src="/kangaroo.png"
+                 alt="logo logo"
+                 width={426}
+                 height={117}
+                 priority
+                />
+
+                <Image
+                 className="mobile-view"
+                 src="/kangaroo-mobile.png"
                  alt="logo logo"
                  width={426}
                  height={117}

@@ -54,10 +54,10 @@ export default function Footer() {
             <p><span className="dk-label-orange">INDIA:</span> SCO-4, 1ST FLOOR, OMAXE ROYAL RESIDENCY, LUDHIANA, 142022.</p>
             <p><u><a href="https://maps.app.goo.gl/tSENydQRWLV5wHse6" target="blank">View on Google Maps</a></u></p>
           </div>
-          <div className="dk-contact-item">
+          {/* <div className="dk-contact-item">
             
             <p><span className="dk-label-orange">USA:</span> 48870 EAGLE VIEW TERRACE, FREMONT CA 94539.</p>
-          </div>
+          </div> */}
           <div className="dk-contact-item">
             <span className="dk-label-orange">PHONE:</span>
             <p className="dk-phone-num"><a href="tel:+919814820845">+91 9814820845</a></p>

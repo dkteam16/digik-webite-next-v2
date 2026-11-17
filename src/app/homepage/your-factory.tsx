@@ -66,20 +66,7 @@ const Yourfactory = () => {
                     THE PROBLEM WE SOLVE
                 </p>
 
-                <h2 className="problem-title">
-
-                    YOUR BUSINESS IS
-                    <br />
-
-                    WORLD-CLASS.
-                    <br />
-
-                    <span>YOUR WEBSITE</span>
-                    <br />
-
-                    IS NOT.
-
-                </h2>
+                <h2 className="problem-title">YOUR BUSINESS IS<br /> WORLD-CLASS.<br /> <span>YOUR WEBSITE</span><br /> IS NOT.</h2>
 
                 <p className="problem-text">
 

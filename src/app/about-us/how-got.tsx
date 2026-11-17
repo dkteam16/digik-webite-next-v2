@@ -66,9 +66,19 @@ export default function HowWeGotHere() {
                                             width={0}
                                             height={0}
                                             sizes="100vw"
-                                            className="iso"  
+                                            className="desktop-view"  
                                             priority
                                             />
+
+
+                                              <Image
+                                                             className="mobile-view"
+                                                             src="/kangaroo-mobile.png"
+                                                             alt="logo logo"
+                                                             width={426}
+                                                             height={117}
+                                                             priority
+                                                            />
           </div>
         </div>
 
