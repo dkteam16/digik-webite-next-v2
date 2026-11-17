@@ -1,15 +1,16 @@
-/* Sticky side icons (desktop only, mobile header me already icons hain) */
-.floatContact { 
+/* Floating Contact Icons */
+.floatContact {
   position: fixed;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
   z-index: 40;
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 6px;
 }
-  
+
 .floatContactBtn {
   display: flex;
   align-items: center;
@@ -23,24 +24,28 @@
   transition: width 0.25s ease, background 0.2s ease;
 }
 
-/* .floatContactBtn img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-} */
+.floatContactBtn img {
+  width: 29px !important;
+  height: 29px !important;
+  object-fit: contain !important;
+  flex-shrink: 0;
+}
 
 .floatContactBtn:hover {
   width: 78px;
   background: #ffb91f;
 }
 
- 
-  .floatContact {
-    display: flex;
+@media screen and (max-width: 600px) {
+  .floatContactBtn {
+    width: 42px;
+    height: 42px;
+    padding-left: 0;
   }
- 
-@media screen and (max-width:600px){
-.floatContactBtn{width:42px;height:42px;}
-.floatContactBtn img{width: 24px;height: 24px;object-fit: scale-down;}
 
+  .floatContactBtn img {
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain !important;
+  }
 }
