@@ -4,7 +4,7 @@ export default function stalkus() {
   <>
      <div className='stalkus'>
          <Image
-            src="/newstalk.png"
+            src="/newstalknew.png"
             alt="logo logo"
             width={0}
             height={0}

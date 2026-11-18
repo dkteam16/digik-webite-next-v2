@@ -2,11 +2,155 @@
 
  
 
-"use client";
+// "use client";
+
+// import { useEffect, useState } from "react";
+// import Link from "next/link";
+// import { getWPWorkPosts, type Blog } from "@/lib/wordpress";
+
+// export default function WorkPage() {
+//   const [blogs, setBlogs] = useState<Blog[]>([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState("");
+
+//   useEffect(() => {
+//     getWPWorkPosts()
+//       .then((response) => {
+//         setBlogs(response.blogs);
+
+//         console.log("Work posts:", response.blogs);
+//         console.log("First work ACF:", response.blogs[0]?.acf);
+//       })
+//       .catch((error) => {
+//         console.error("Failed to fetch work posts:", error);
+//         setError("Unable to load work posts.");
+//       })
+//       .finally(() => {
+//         setLoading(false);
+//       });
+//   }, []);
+
+//   if (loading) return <p>Loading work posts...</p>;
+
+//   if (error) return <p>{error}</p>;
+
+//   return (
+//     <div className="workContainermian">
+//       <div className="workContainer">
+//         <div className="workGrid">
+//           {blogs.map((work) => {
+//             const acf = work.acf;
+
+//             // ACF Multi Image
+//             const workImage =
+//               typeof acf?.multi_image === "string"
+//                 ? acf.multi_image
+//                 : typeof acf?.multi_image === "object"
+//                 ? acf.multi_image?.url ||
+//                   acf.multi_image?.source_url
+//                 : work.featured_image;
+
+//             return (
+//               <Link
+//                 key={work.id}
+//                 href={`/work/${work.slug}`}
+//                 className="workCard"
+//               >
+//                 <div className="workImageThumb">
+//                   {workImage ? (
+//                     <img
+//                       src={workImage}
+//                       alt={work.title}
+//                       className="workImage"
+//                     />
+//                   ) : (
+//                     <div className="placeholder">
+//                       No Image
+//                     </div>
+//                   )}
+//                 </div>
+
+//                 <div className="workBody">
+//                   <div>
+
+                  
+
+//                     {/* ACF Sub Heading - HTML Supported */}
+//                     {acf?.sub_heading && (
+//                       <div
+//                         className="workSubHeading"
+//                         dangerouslySetInnerHTML={{
+//                           __html: acf.sub_heading,
+//                         }}
+//                       />  
+//                     )}
+
+//                     {/* ACF Heading */}
+//                     <h2 className="workTitle">
+//                       {acf?.heading || work.title}
+//                     </h2>
+
+//                     {/* ACF Description */}
+//                     <div className="workDesc">
+//                       {acf?.description ? (
+//                         <div
+//                           dangerouslySetInnerHTML={{
+//                             __html: acf.description,
+//                           }}
+//                         />
+//                       ) : (
+//                         work.excerpt || "No description available"
+//                       )}
+//                     </div>
+
+//                       {/* ACF Sub Heading - HTML Supported */}
+//                     {acf?.single_sub_description && (
+//                       <div
+//                         className="workSubHeading"
+//                         dangerouslySetInnerHTML={{
+//                           __html: acf.single_sub_description,
+//                         }}
+//                       />  
+//                     )}
+
+
+
+
+ 
+//                   </div>
+
+                  
+
+//                 </div>
+//               </Link>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+ 
+ "use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getWPWorkPosts, type Blog } from "@/lib/wordpress";
+
+// Oldest post first. Agar `date` ho to uske basis par, warna `id` ke basis par sort hoga.
+function sortOldestFirst(list: Blog[]): Blog[] {
+  return [...list].sort((a: any, b: any) => {
+    const dateA = a.date ? new Date(a.date).getTime() : 0;
+    const dateB = b.date ? new Date(b.date).getTime() : 0;
+
+    if (dateA && dateB && dateA !== dateB) {
+      return dateA - dateB;
+    }
+
+    return Number(a.id) - Number(b.id);
+  });
+}
 
 export default function WorkPage() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -16,10 +160,7 @@ export default function WorkPage() {
   useEffect(() => {
     getWPWorkPosts()
       .then((response) => {
-        setBlogs(response.blogs);
-
-        console.log("Work posts:", response.blogs);
-        console.log("First work ACF:", response.blogs[0]?.acf);
+        setBlogs(sortOldestFirst(response.blogs));
       })
       .catch((error) => {
         console.error("Failed to fetch work posts:", error);
@@ -46,8 +187,7 @@ export default function WorkPage() {
               typeof acf?.multi_image === "string"
                 ? acf.multi_image
                 : typeof acf?.multi_image === "object"
-                ? acf.multi_image?.url ||
-                  acf.multi_image?.source_url
+                ? acf.multi_image?.url || acf.multi_image?.source_url
                 : work.featured_image;
 
             return (
@@ -64,63 +204,44 @@ export default function WorkPage() {
                       className="workImage"
                     />
                   ) : (
-                    <div className="placeholder">
-                      No Image
-                    </div>
+                    <div className="placeholder">No Image</div>
                   )}
                 </div>
 
                 <div className="workBody">
                   <div>
-
-                  
-
                     {/* ACF Sub Heading - HTML Supported */}
                     {acf?.sub_heading && (
                       <div
                         className="workSubHeading"
-                        dangerouslySetInnerHTML={{
-                          __html: acf.sub_heading,
-                        }}
-                      />  
+                        dangerouslySetInnerHTML={{ __html: acf.sub_heading }}
+                      />
                     )}
 
                     {/* ACF Heading */}
-                    <h2 className="workTitle">
-                      {acf?.heading || work.title}
-                    </h2>
+                    <h2 className="workTitle">{acf?.heading || work.title}</h2>
 
                     {/* ACF Description */}
                     <div className="workDesc">
                       {acf?.description ? (
                         <div
-                          dangerouslySetInnerHTML={{
-                            __html: acf.description,
-                          }}
+                          dangerouslySetInnerHTML={{ __html: acf.description }}
                         />
                       ) : (
                         work.excerpt || "No description available"
                       )}
                     </div>
 
-                      {/* ACF Sub Heading - HTML Supported */}
+                    {/* ACF Single Sub Description - HTML Supported */}
                     {acf?.single_sub_description && (
                       <div
                         className="workSubHeading"
                         dangerouslySetInnerHTML={{
                           __html: acf.single_sub_description,
                         }}
-                      />  
+                      />
                     )}
-
-
-
-
- 
                   </div>
-
-                  
-
                 </div>
               </Link>
             );
@@ -130,6 +251,3 @@ export default function WorkPage() {
     </div>
   );
 }
-
- 
- 
