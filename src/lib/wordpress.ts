@@ -421,7 +421,7 @@
 
 
 export const WP_API_BASE =
-  "https://digitalkangaroos.com/wp-json/wp/v2";
+  "https://dkteam.in/roos/wp-json/wp/v2";
 
 /* =========================================================
    WORDPRESS TYPES
