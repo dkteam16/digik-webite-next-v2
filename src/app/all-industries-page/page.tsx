@@ -72,7 +72,7 @@ export default function loacl() {
                 description="Free website audit for cycle and sports equipment manufacturers. No commitment, just clarity."
                 buttonText="Get Free Website Audit"
                 buttonLink="/contact-us"
-                buttonTextSecond="all Us Now"
+                buttonTextSecond="Call Us Now"
                 buttonLinkSecond="/contact-us"
                 footerText="Free Consultation · Pan-India Available"
                 />

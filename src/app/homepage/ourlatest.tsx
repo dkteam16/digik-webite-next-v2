@@ -6,21 +6,21 @@ const slides = [
     title: 'AVON STEEL',
     tags: ['WEBSITE', 'PHOTOGRAPHY', 'VIDEOGRAPHY'],
     image: '/homeavon.png',
-    link: '/our-work/avon-steel',
+    link: '/work/avon-steel-from-invisible-to-undeniable',
   },
   {
     id: 2,
     title: 'Q&Q SOLUTIONS',
     tags: ['WEBSITE', 'SEO'],
     image: '/homeqqs.png',
-    link: '/our-work/qqs-solutions',
+    link: '/work/qq-solutions-two-verticals-one-powerful-position',
   },
   {
     id: 3,
     title: 'OCTAVE METTLE',
     tags: ['BRANDING', 'WEBSITE'],
     image: '/homeoctave.png',  
-    link: '/our-work/right-horizons',
+    link: '/work/octave-mettle-240-locations-one-consistent-presence',
   },
 ];
 

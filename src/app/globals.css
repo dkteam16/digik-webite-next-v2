@@ -1742,7 +1742,7 @@ transform: translateX(-20%) scale(0.8); opacity: 0.4;z-index: 10;cursor: pointer
 .mobileHeaderHome {position: absolute;top: 0;left: 0;background: transparent;}
 .mobileHeaderSolid {position: relative;background: #333333;}
 .mobileBar {display: flex;align-items: center;justify-content: space-between;padding: 16px 20px;}
-.mobileHamburger {display: flex;flex-direction: column;justify-content: center;gap: 6px;width: 44px;height: 44px;background: none;border: none;cursor: pointer;padding: 0;}
+.mobileHamburger {display: flex;flex-direction: column;justify-content: center;gap: 6px;width: 44px;height: 44px;background: none;border: none;cursor: pointer;padding: 0;position:relative;z-index:70;}  
 .mobileHamburger span {display: block;width: 28px;height: 3px;background: #ffffff;}
 .mobileIcons {display: flex;gap: 10px;}  
 .mobileIconBtn {display: flex;align-items: center;justify-content: center;width: 44px;height: 44px; text-decoration: none;} 
