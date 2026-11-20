@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Media | Digital Kangaroos",
+  title: {
+    absolute: "Media & Updates | Digital Kangaroos",
+  },
   description:
-    "Media features, seminars, awards, and events featuring Digital Kangaroos.",
+    "Explore media, news and updates from Digital Kangaroos. Discover our work, announcements and insights supporting manufacturers, exporters and industrial businesses.",
 };
 
 const BASE = "https://digitalkangaroos.com/wp-content/uploads/";

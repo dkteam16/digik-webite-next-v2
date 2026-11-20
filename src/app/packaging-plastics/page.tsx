@@ -14,8 +14,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Packaging & Plastics Manufacturers",
-  description: "Packaging buyers choose suppliers in minutes online. Web design and SEO for packaging and plastics manufacturers. Get a free website audit.",
+  title: "Website Design for Packaging & Plastics Manufacturers",
+  description:
+    "Promote packaging solutions and plastic products with a professional manufacturing website. Showcase product types, customisation options and production capabilities to B2B buyers.",
 };
 
 

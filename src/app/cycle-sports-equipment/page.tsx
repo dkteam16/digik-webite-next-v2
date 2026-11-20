@@ -13,8 +13,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Cycle Parts & Sports Equipment",
-  description: "Give the Ludhiana cycle cluster a world-class digital presence. Websites and SEO for cycle parts and sports equipment manufacturers. Get a free audit.",
+  title: "Website Design for Cycle & Sports Equipment Manufacturers",
+  description:
+    "Reach distributors and global buyers with website design for cycle and sports equipment manufacturers in Ludhiana. Showcase product ranges, specifications and export capabilities.",
 };
 
 

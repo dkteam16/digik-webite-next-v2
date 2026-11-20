@@ -14,8 +14,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Machine Tools & Precision Engineering",
-  description: "Your engineering precision deserves a technically sharp website. Web design and SEO for machine tool and precision engineering companies. Get a free audit.",
+  title: "Website Design for Machine Tools & Precision Engineering",
+  description:
+    "Get a website for machine tools and precision engineering companies that highlights equipment, technical capabilities and product details. Make it easier for industrial buyers to send enquiries.",
 };
 
 

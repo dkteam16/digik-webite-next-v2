@@ -9,8 +9,9 @@ import CommonCTA from "../common-components/last-second"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industrial Website Design That Wins Orders",
-  description: "High-performance websites for manufacturers, exporters and B2B industrial companies, designed to turn visitors into RFQs. Request a free website audit.",
+  title: "Industrial Website Design Company in India",
+  description:
+    "Get a professional industrial website designed to showcase machinery, capabilities, certifications and products. Our B2B websites help manufacturers build buyer trust and capture RFQs.",
 };
 
 export default function Industrial() {

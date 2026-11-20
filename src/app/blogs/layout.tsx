@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Industrial SEO & B2B Web Design Insights",
+  title: {
+    absolute: "Manufacturing & B2B Marketing Blog | Digital Kangaroos",
+  },
   description:
-    "Practical articles on SEO, website design and digital marketing for manufacturers, exporters and B2B industrial companies in India.",
+    "Explore insights on industrial website design, B2B branding, SEO and digital marketing for manufacturers and exporters. Get practical ideas to improve visibility and generate qualified leads.",
 };
 
 export default function BlogLayout({

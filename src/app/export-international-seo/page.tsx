@@ -8,8 +8,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "International SEO for Exporters",
-  description: "Get found by buyers in the UK, USA and Europe. Export-focused SEO for Indian manufacturers who want international orders. Get a free export SEO audit.",
+  title: "International SEO Services for Indian Exporters",
+  description:
+    "Reach overseas buyers with international SEO for Indian exporters. Improve search visibility in target markets, attract relevant B2B traffic and generate more export enquiries.",
 };
 
 

@@ -15,8 +15,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Steel & Metal Fabrication Companies",
-  description: "Industrial-strength websites for steel and metal fabricators that win serious buyers. Web design and SEO built for fabrication. Get a free audit.",
+  title: "Website Design for Steel & Metal Fabrication Companies",
+  description:
+    "Present fabrication services, materials, machinery and completed projects with a website for steel and metal fabrication companies. Help industrial buyers assess your capabilities and request quotes.",
 };
 
 

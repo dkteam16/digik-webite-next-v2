@@ -5,8 +5,11 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Careers",
-  description: "careers",
+  title: {
+    absolute: "Careers at Digital Kangaroos | Join Our Digital Agency",
+  },
+  description:
+    "Explore career opportunities at Digital Kangaroos Team and work on digital projects across website design, SEO, branding and marketing. Discover opportunities to grow your skills with our team.",
 };
  
  

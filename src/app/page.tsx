@@ -14,8 +14,9 @@ import Testimonials from "./homepage/testimonial"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Kangaroos | Web Development & Software Company",
-  description: "Elevate your online presence with Digital Kangaroos, a leading website development and software company. We specialize in crafting digital solutions that empower your business to thrive in the digital landscape.",
+  title: "Web Design & SEO Agency for B2B in India",
+  description:
+    "Grow your manufacturing business with a B2B web design and SEO agency in India. Build a buyer-ready website that showcases your products and generates qualified enquiries.",
 };
 
 

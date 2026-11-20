@@ -8,8 +8,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product Catalogue Websites for Manufacturers",
-  description: "Searchable product catalogues for manufacturers and exporters that make it easy for buyers to find products and send RFQs. Discuss your catalogue with us.",
+  title: "Product Catalogue Website Design for Manufacturers",
+  description:
+    "Present your products with a searchable, SEO-friendly catalogue website for manufacturers. Organise specifications, categories and downloads to help B2B buyers request a quote.",
 };
 
 

@@ -9,8 +9,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Redesign for Industrial Companies",
-  description: "Is an outdated website costing you leads? We audit your current site and redesign it to rank higher, load faster and generate more RFQs. Get a free audit.",
+  title: "Manufacturing Website Redesign to Generate B2B Leads",
+  description:
+    "Replace an outdated manufacturing website with a modern, mobile-friendly design built for industrial buyers. Improve product presentation, enquiry journeys and RFQ conversions.",
 };
 
 

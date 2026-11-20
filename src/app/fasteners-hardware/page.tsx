@@ -15,8 +15,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Fasteners & Hardware Manufacturers",
-  description: "A world-class website wins fastener and industrial hardware orders faster. Web design and SEO for nut-bolt and hardware manufacturers. Get a free audit.",
+  title: "Website Design for Fasteners & Hardware Manufacturers",
+  description:
+    "Showcase bolts, nuts, screws and industrial hardware with a professional manufacturer website. Organise product specifications and enquiry forms for buyers across India and overseas.",
 };
 
 
