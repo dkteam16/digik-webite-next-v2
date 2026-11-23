@@ -90,6 +90,19 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Digital Kangaroos",
+              url: "https://digitalkangaroos.com/",
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Header />
         <MobileHeader />

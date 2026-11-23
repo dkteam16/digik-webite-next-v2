@@ -7,29 +7,25 @@ const servicesData = [
     id: 1,
     title: "Specialisation Over Scale",
     description: "We would rather be the best agency for manufacturers than a large agency for everyone. Depth always beats breadth.",
-    tags: ["Manufacturing Co Sites", "B2B Web Design", "Export-Ready", "Engineering Firms"],
-    img: "/icons/industrial.png"
+    tags: ["Manufacturing Co Sites", "B2B Web Design", "Export-Ready", "Engineering Firms"]
   },
   {
     id: 2,
     title: "Results, Not Deliverables",
     description: "We measure success in RFQs, rankings, and revenue — not in pages delivered, reports sent, or hours billed.",
-    tags: ["Product Pages", "Spec Sheets", "RFQ Forms", "Category Architecture"],
-    img: "/icons/catalogue.png"
+    tags: ["Product Pages", "Spec Sheets", "RFQ Forms", "Category Architecture"]
   },
   {
     id: 3,
     title: "Honest Before Comfortable",
     description: "We will tell you when your idea won't work. We will tell you when your budget is too low for what you need. We don't tell clients what they want to hear.",
-    tags: ["Full Redesign", "Content Migration", "SEO Preservation", "Speed Optimisation"],
-    img: "/icons/redesign.png"
+    tags: ["Full Redesign", "Content Migration", "SEO Preservation", "Speed Optimisation"]
   },
   {
     id: 4,
     title: "Build Assets, Not Dependencies",
     description: "Everything we build for you is something you own and that compounds in value over time. Never a subscription to someone else's platform.",
-    tags: ["Export-Focused", "Trust Architecture", "Cert Display", "Multilingual Ready"],
-    img: "/icons/international.png"
+    tags: ["Export-Focused", "Trust Architecture", "Cert Display", "Multilingual Ready"]
   } 
    
 ];

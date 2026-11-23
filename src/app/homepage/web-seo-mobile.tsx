@@ -7,43 +7,37 @@ const servicesData = [
     id: 1,
     title: "INDUSTRIAL WEBSITE DESIGN",
     description: "High-performance websites built specifically for manufacturers, exporters, and B2B engineering companies. Credible, fast, mobile-first, and designed to convert international buyers into enquiries.",
-    tags: ["Manufacturing Co Sites", "B2B Web Design", "Export-Ready", "Engineering Firms"],
-    img: "/icons/industrial.png"
+    tags: ["Manufacturing Co Sites", "B2B Web Design", "Export-Ready", "Engineering Firms"]
   },
   {
     id: 2,
     title: "PRODUCT CATALOGUE WEBSITES",
     description: "Structured, searchable product catalogue websites that let buyers find the exact component or product they need – with technical specs, material options, and a clear path to an RFQ submission.",
-    tags: ["Product Pages", "Spec Sheets", "RFQ Forms", "Category Architecture"],
-    img: "/icons/catalogue.png"
+    tags: ["Product Pages", "Spec Sheets", "RFQ Forms", "Category Architecture"]
   },
   {
     id: 3,
     title: "WEBSITE REDESIGN FOR INDUSTRY",
     description: "Your existing website is costing you leads every day it remains live. We rebuild it from the ground up – faster, more credible, fully optimised – without disrupting your existing business operations.",
-    tags: ["Full Redesign", "Content Migration", "SEO Preservation", "Speed Optimisation"],
-    img: "/icons/redesign.png"
+    tags: ["Full Redesign", "Content Migration", "SEO Preservation", "Speed Optimisation"]
   },
   {
     id: 4,
     title: "INTERNATIONAL BUYER-READY WEBSITES",
     description: "Websites built to impress procurement managers and sourcing engineers in the UK, USA, Germany, and Australia – with the right trust signals, certifications display, and inquiry flow they expect.",
-    tags: ["Export-Focused", "Trust Architecture", "Cert Display", "Multilingual Ready"],
-    img: "/icons/international.png"
+    tags: ["Export-Focused", "Trust Architecture", "Cert Display", "Multilingual Ready"]
   },
   {
     id: 5,
     title: "B2B CONTENT & SEO GROWTH",
     description: "Long-form technical content that ranks on Google, educates your buyers, and positions your company as the expert in your niche – consistently generating inbound enquiries month after month.",
-    tags: ["Technical Blogging", "Keyword Strategy", "Link Building", "Content Calendar"],
-    img: "/icons/seo.png"
+    tags: ["Technical Blogging", "Keyword Strategy", "Link Building", "Content Calendar"]
   },
   {
     id: 6,
     title: "B2B BRANDING",
     description: "Your brand is more than a logo. We create a visual identity that screams industrial expertise and reliability, ensuring you stand out in a crowded global marketplace.",
-    tags: ["Technical Blogging", "Keyword Strategy", "Link Building", "Content Calendar"],
-    img: "/icons/branding.png"
+    tags: ["Technical Blogging", "Keyword Strategy", "Link Building", "Content Calendar"]
   }
 ];
 
@@ -80,10 +74,6 @@ const ServicesSection = () => {
               {/* Collapsible Content Drawer Block */}
               <div className="ms-card-drawer">
                 <div className="ms-drawer-inner">
-                  {/* Service Icon */}
-                  <div className="w-12 h-12 mb-4 flex items-center justify-center bg-white rounded-xl p-2 shadow-sm">
-                    <img src={service.img} alt={service.title} className="w-full h-full object-contain" />
-                  </div>
 
                   {/* Description */}
                   <p className="ms-card-description">{service.description}</p>
