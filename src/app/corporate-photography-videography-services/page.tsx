@@ -8,8 +8,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Corporate photography videography services",
-  description: "",
+  title: "Corporate Photography & Videography for Manufacturers",
+  description:
+    "Show buyers your people, products and production capabilities with professional corporate photography and videography for manufacturing and engineering companies.",
 };
 
 

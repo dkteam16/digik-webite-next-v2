@@ -12,8 +12,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Auto Parts Manufacturers",
-  description: "Websites built to win OEM contracts and export orders for auto component and engineering manufacturers. Get a free website and SEO audit.",
+  title: "Website Design for Auto Parts Manufacturers in Punjab",
+  description:
+    "Create a professional website for auto parts and engineering manufacturers in Punjab. Showcase components, technical specifications and capabilities to reach distributors and B2B buyers.",
 };
 
 

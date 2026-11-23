@@ -8,8 +8,9 @@ import Induskey from "@/app/local-google-business-seo/indus-key"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industrial SEO Services in India",
-  description: "SEO that gets your factory found on Google. Technical SEO, local SEO and Google Business Profile optimisation for manufacturers. Request a free SEO audit.",
+  title: "Local SEO for Manufacturing Companies in India",
+  description:
+    "Improve local visibility for your manufacturing unit with Google Business Profile optimisation and local SEO. Help nearby industrial buyers find your business and contact your team.",
 };
 
 

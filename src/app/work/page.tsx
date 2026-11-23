@@ -6,9 +6,11 @@ import CommonCTA from "../common-components/last-industries";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Portfolio of Successful Projects | Digital Kangaroos",
+  title: {
+    absolute: "Our Work & Projects | Manufacturing Website Design",
+  },
   description:
-    "Explore our diverse portfolio of successful projects, showcasing our expertise in web development, mobile app development, SEO, and more at Digital Kangaroos.",
+    "Explore Digital Kangaroos projects in industrial website design, B2B branding and SEO. See how we help manufacturers and exporters present their capabilities and connect with business buyers.",
 };
 export default function loacl() {
   return (

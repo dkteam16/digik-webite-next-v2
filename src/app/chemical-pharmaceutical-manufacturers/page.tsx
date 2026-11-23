@@ -14,8 +14,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Chemical & Pharma Manufacturers",
-  description: "Compliance-ready websites and SEO for chemical manufacturers and pharmaceutical exporters who want to win international buyers. Get a free audit.",
+  title: "Website Design for Chemical & Pharmaceutical Manufacturers",
+  description:
+    "Build a credible website for chemical and pharmaceutical manufacturers in India. Organise product information, certifications and company capabilities for business and export enquiries.",
 };
 
 

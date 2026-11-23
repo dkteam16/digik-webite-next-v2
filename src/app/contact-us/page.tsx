@@ -4,8 +4,12 @@ import Contactright from "../contact-us/contact-form-right"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get in Touch with Digital Kangaroos | Contact Information",
-  description: "Have questions or ready to start a project? Contact Digital Kangaroos today. Find our contact information and reach out to our experts for all your digital needs.",
+  title: {
+    absolute:
+      "Contact Digital Kangaroos | Manufacturing Website & SEO Services",
+  },
+  description:
+    "Contact Digital Kangaroos to discuss industrial website design, B2B branding or SEO for your manufacturing business. Share your goals and connect with our team about your next project.",
 };
  
  

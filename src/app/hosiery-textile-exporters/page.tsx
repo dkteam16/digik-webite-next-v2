@@ -13,8 +13,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website & SEO for Hosiery & Textile Exporters",
-  description: "Show overseas buyers your knitwear quality online. Web design and SEO for hosiery, knitwear and textile exporters. Get a free website audit.",
+  title: "Hosiery & Textile Exporter Website Design in Ludhiana",
+  description:
+    "Build an export-ready website for hosiery and textile manufacturers in Ludhiana. Present product collections, manufacturing strengths and export details to overseas buyers.",
 };
 
 

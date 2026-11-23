@@ -8,8 +8,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "B2B Branding for Industrial Companies",
-  description: "Brand identity built for industrial companies: logos, messaging and visual systems that build trust with serious B2B buyers. Discuss your branding with us.",
+  title: "B2B Branding Agency India for Manufacturing Companies",
+  description:
+    "Build a trusted B2B brand with strategic branding for manufacturers, exporters and industrial businesses. Stand out to buyers with consistent messaging and a professional identity.",
 };
 
 
