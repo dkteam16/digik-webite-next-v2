@@ -64,7 +64,19 @@ export default function Footer() {
           </div>
           <div className="dk-contact-item">
             <span className="dk-label-orange">EMAIL:</span>
-            <p><a href="mailto:info@digitalkangaroos.com">INFO@DIGITALKANGAROOS.COM</a></p>  
+            <p><a href="mailto:info@digitalkangaroos.com">
+              <Image
+                src="/Email.png"
+                alt="logo logo"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="dfsgdsgdsgimagee-stlak"
+                priority
+              />
+              
+              
+              </a></p>  
           </div>
         </div>
 
